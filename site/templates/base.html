@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{title}}</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="brand">
+        <a href="index.html" class="brand-link">Epstein Files Library</a>
+        <span class="badge">Official Sources Only</span>
+      </div>
+      <nav class="nav">
+        <a href="index.html">Search</a>
+        <a href="sources.html">Sources</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    {{content}}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-info">{{build_info}}</div>
+      <div class="footer-note">Raw files are preserved as released. Derived artifacts are generated for search and display.</div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
