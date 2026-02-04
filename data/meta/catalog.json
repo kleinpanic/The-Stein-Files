@@ -1,6 +1,6 @@
 [
   {
-    "downloaded_at": "2026-02-04T07:19:50+00:00",
+    "downloaded_at": "2026-02-04T07:37:25+00:00",
     "file_path": "data/raw/a2d4c4624e43-a-evidence-list/A. Evidence List_0_0_0_0.pdf",
     "id": "a2d4c4624e43-a-evidence-list",
     "is_official": true,
@@ -26,7 +26,7 @@
     "title": "A. Evidence List"
   },
   {
-    "downloaded_at": "2026-02-04T07:19:50+00:00",
+    "downloaded_at": "2026-02-04T07:37:29+00:00",
     "file_path": "data/raw/10fa669e5b63-b-flight-log-released-in-us-v-maxwell/B. Flight Log_Released in U.S. v. Maxwell_0_0_0_0.pdf",
     "id": "10fa669e5b63-b-flight-log-released-in-us-v-maxwell",
     "is_official": true,
@@ -52,7 +52,7 @@
     "title": "B. Flight Log_Released in U.S. v. Maxwell"
   },
   {
-    "downloaded_at": "2026-02-04T07:19:51+00:00",
+    "downloaded_at": "2026-02-04T07:37:30+00:00",
     "file_path": "data/raw/f2f8c7628ddc-b-flight-log-released-in-us-v-maxwell-part1/B. Flight Log_Released in U.S. v. Maxwell_Part1_0_0_0_0.pdf",
     "id": "f2f8c7628ddc-b-flight-log-released-in-us-v-maxwell-part1",
     "is_official": true,
@@ -78,7 +78,7 @@
     "title": "B. Flight Log_Released in U.S. v. Maxwell_Part1"
   },
   {
-    "downloaded_at": "2026-02-04T07:19:51+00:00",
+    "downloaded_at": "2026-02-04T07:37:31+00:00",
     "file_path": "data/raw/77acffcbcfeb-b-flight-log-released-in-us-v-maxwell-part2/B. Flight Log_Released in U.S. v. Maxwell_Part2_0_0_0_0.pdf",
     "id": "77acffcbcfeb-b-flight-log-released-in-us-v-maxwell-part2",
     "is_official": true,
@@ -104,7 +104,7 @@
     "title": "B. Flight Log_Released in U.S. v. Maxwell_Part2"
   },
   {
-    "downloaded_at": "2026-02-04T07:19:52+00:00",
+    "downloaded_at": "2026-02-04T07:37:31+00:00",
     "file_path": "data/raw/6d7c2a8cc3fb-b-flight-log-released-in-us-v-maxwell-part3/B. Flight Log_Released in U.S. v. Maxwell_Part3_0_0_0_0.pdf",
     "id": "6d7c2a8cc3fb-b-flight-log-released-in-us-v-maxwell-part3",
     "is_official": true,
@@ -130,7 +130,7 @@
     "title": "B. Flight Log_Released in U.S. v. Maxwell_Part3"
   },
   {
-    "downloaded_at": "2026-02-04T07:19:52+00:00",
+    "downloaded_at": "2026-02-04T07:37:32+00:00",
     "file_path": "data/raw/ad8cfd3d50c7-b-flight-log-released-in-us-v-maxwell-part4/B. Flight Log_Released in U.S. v. Maxwell_Part4_0_0_0_0.pdf",
     "id": "ad8cfd3d50c7-b-flight-log-released-in-us-v-maxwell-part4",
     "is_official": true,
@@ -156,7 +156,7 @@
     "title": "B. Flight Log_Released in U.S. v. Maxwell_Part4"
   },
   {
-    "downloaded_at": "2026-02-04T07:19:53+00:00",
+    "downloaded_at": "2026-02-04T07:37:32+00:00",
     "file_path": "data/raw/f10a6e4fe662-b-flight-log-released-in-us-v-maxwell-part5/B. Flight Log_Released in U.S. v. Maxwell_Part5_0.pdf",
     "id": "f10a6e4fe662-b-flight-log-released-in-us-v-maxwell-part5",
     "is_official": true,
@@ -182,7 +182,7 @@
     "title": "B. Flight Log_Released in U.S. v. Maxwell_Part5"
   },
   {
-    "downloaded_at": "2026-02-04T07:19:53+00:00",
+    "downloaded_at": "2026-02-04T07:37:33+00:00",
     "file_path": "data/raw/788f62233f95-b-flight-log-released-in-us-v-maxwell-part6/B. Flight Log_Released in U.S. v. Maxwell_Part6_0.pdf",
     "id": "788f62233f95-b-flight-log-released-in-us-v-maxwell-part6",
     "is_official": true,
@@ -208,7 +208,7 @@
     "title": "B. Flight Log_Released in U.S. v. Maxwell_Part6"
   },
   {
-    "downloaded_at": "2026-02-04T07:19:54+00:00",
+    "downloaded_at": "2026-02-04T07:37:34+00:00",
     "file_path": "data/raw/b395c578ed93-c-contact-book-redacted/C. Contact Book_Redacted_0.pdf",
     "id": "b395c578ed93-c-contact-book-redacted",
     "is_official": true,
@@ -234,7 +234,7 @@
     "title": "C. Contact Book_Redacted"
   },
   {
-    "downloaded_at": "2026-02-04T07:19:55+00:00",
+    "downloaded_at": "2026-02-04T07:37:34+00:00",
     "file_path": "data/raw/3b2cedff3ebf-d-masseuse-list-redacted/D. Masseuse List_Redacted_0.pdf",
     "id": "3b2cedff3ebf-d-masseuse-list-redacted",
     "is_official": true,
@@ -260,7 +260,7 @@
     "title": "D. Masseuse List_Redacted"
   },
   {
-    "downloaded_at": "2026-02-04T07:19:55+00:00",
+    "downloaded_at": "2026-02-04T07:37:34+00:00",
     "file_path": "data/raw/9d8ab52be79e-here/Letter from Attorney General Bondi to FBI Director Patel February 27, 2025_0.pdf",
     "id": "9d8ab52be79e-here",
     "is_official": true,
