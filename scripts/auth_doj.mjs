@@ -1,5 +1,5 @@
 import { chromium } from "playwright";
-import { writeFile } from "node:fs/promises";
+import { writeFile, mkdir } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -25,10 +25,19 @@ async function main() {
   const browser = await chromium.launch({ headless: false });
   const context = await browser.newContext();
   const page = await context.newPage();
+  await mkdir(resolve(ROOT, ".secrets"), { recursive: true });
 
   console.log("[auth] opening DOJ Epstein Library in a real browser...");
-  await page.goto("https://www.justice.gov/epstein", { waitUntil: "domcontentloaded" });
-  await page.waitForTimeout(2000);
+  const urls = [
+    "https://www.justice.gov/epstein",
+    "https://www.justice.gov/epstein/doj-disclosures",
+    "https://www.justice.gov/epstein/court-records",
+    "https://www.justice.gov/epstein/foia",
+  ];
+  for (const url of urls) {
+    await page.goto(url, { waitUntil: "domcontentloaded" });
+    await page.waitForTimeout(2000);
+  }
   await prompt("[auth] complete any advisory prompts, then press Enter to capture cookies...");
 
   const cookies = await context.cookies("https://www.justice.gov");
@@ -50,6 +59,23 @@ async function main() {
   if (result.status !== 0) {
     process.exit(result.status ?? 1);
   }
+  const verify = spawnSync(
+    PYTHON,
+    [
+      "-m",
+      "scripts.cookies",
+      "--verify",
+      "--jar",
+      COOKIE_JAR,
+      "--urls",
+      ...urls,
+    ],
+    { stdio: "inherit", cwd: ROOT }
+  );
+  if (verify.status !== 0) {
+    process.exit(verify.status ?? 1);
+  }
+
   console.log(`[auth] cookie jar written to ${COOKIE_JAR}`);
 }
 
