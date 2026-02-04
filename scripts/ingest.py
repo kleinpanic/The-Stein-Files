@@ -241,8 +241,12 @@ class DojDisclosuresAdapter(SourceAdapter):
         next_url = page_url
         while next_url and next_url not in visited:
             visited.add(next_url)
-            resp = session.get(next_url, timeout=timeout)
-            resp.raise_for_status()
+            try:
+                resp = session.get(next_url, timeout=timeout)
+                resp.raise_for_status()
+            except requests.RequestException as exc:
+                print(f"[ingest] dataset page fetch failed: {next_url} ({exc})")
+                break
             links = collect_links(resp.text)
             page_title = next(
                 (link["heading"] for link in links if link["heading"]), ""
@@ -436,7 +440,11 @@ def ingest() -> None:
 
     for source in sources:
         adapter = adapter_for(source, config)
-        discovered = adapter.discover(session)
+        try:
+            discovered = adapter.discover(session)
+        except requests.RequestException as exc:
+            print(f"[ingest] {source.id}: discovery failed ({exc})")
+            continue
         discovered = sorted({d.url: d for d in discovered}.values(), key=lambda d: d.url)
         max_docs = limits.get("max_docs", 0)
         max_bytes = limits.get("max_bytes", 0)
