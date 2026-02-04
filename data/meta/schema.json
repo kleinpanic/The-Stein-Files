@@ -1,0 +1,49 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Epstein Files Document Metadata",
+  "type": "object",
+  "required": [
+    "id",
+    "title",
+    "source_name",
+    "source_url",
+    "release_date",
+    "downloaded_at",
+    "sha256",
+    "file_path",
+    "mime_type",
+    "pages",
+    "tags",
+    "notes",
+    "is_official",
+    "license_or_terms",
+    "sources"
+  ],
+  "properties": {
+    "id": {"type": "string"},
+    "title": {"type": "string"},
+    "source_name": {"type": "string"},
+    "source_url": {"type": "string", "format": "uri"},
+    "release_date": {"type": "string"},
+    "downloaded_at": {"type": "string"},
+    "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "file_path": {"type": "string"},
+    "mime_type": {"type": "string"},
+    "pages": {"type": ["integer", "null"]},
+    "tags": {"type": "array", "items": {"type": "string"}},
+    "notes": {"type": ["string", "null"]},
+    "is_official": {"type": "boolean"},
+    "license_or_terms": {"type": "string"},
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["source_name", "source_url"],
+        "properties": {
+          "source_name": {"type": "string"},
+          "source_url": {"type": "string", "format": "uri"}
+        }
+      }
+    }
+  }
+}
