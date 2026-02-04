@@ -28,6 +28,12 @@ make setup
 - `make test` to run validation checks
 - `make dev` to build then serve `dist/` locally
 
+### Ingest caps
+You can override download limits per run:
+```bash
+EPPIE_MAX_DOWNLOADS_PER_SOURCE=30 EPPIE_MAX_BYTES_PER_RUN=250000000 make ingest
+```
+
 ### DOJ Epstein Library access (cookies)
 Some DOJ Epstein Library pages are age-gated. Use the interactive auth helper once to
 capture a local cookie jar:
@@ -36,7 +42,9 @@ make auth-doj
 ```
 The first run will download the Playwright Chromium browser if needed.
 Cookies are stored locally in `.secrets/justice.gov.cookies.txt` and are not committed.
-`make ingest` will automatically use the jar when present. You can also override it:
+`make ingest` will automatically use the jar when present (canonical format is the `.txt` Netscape jar).
+The auth helper also writes `.secrets/doj.storage-state.json` for Playwright-based discovery.
+You can override the jar explicitly:
 ```bash
 EPPIE_COOKIE_JAR=/path/to/cookies.txt make ingest
 ```
