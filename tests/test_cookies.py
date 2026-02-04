@@ -34,6 +34,26 @@ def test_cookiejar_writer_filters_and_formats(tmp_path: Path) -> None:
     assert "example.com" not in content
 
 
+def test_cookiejar_writer_creates_parent_dir(tmp_path: Path) -> None:
+    output = tmp_path / "nested" / "cookies.txt"
+    count = write_netscape_cookiejar(
+        [
+            {
+                "domain": ".justice.gov",
+                "path": "/",
+                "secure": False,
+                "expires": 2000000000,
+                "name": "session",
+                "value": "abc123",
+            }
+        ],
+        output,
+        "justice.gov",
+    )
+    assert count == 1
+    assert output.exists()
+
+
 def test_load_cookie_jar_from_json(tmp_path: Path) -> None:
     cookies = [
         {
