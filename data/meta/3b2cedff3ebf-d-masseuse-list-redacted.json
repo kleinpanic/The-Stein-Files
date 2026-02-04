@@ -1,0 +1,26 @@
+{
+  "downloaded_at": "2026-02-04T07:13:43+00:00",
+  "file_path": "data/raw/3b2cedff3ebf-d-masseuse-list-redacted/D. Masseuse List_Redacted_0.pdf",
+  "id": "3b2cedff3ebf-d-masseuse-list-redacted",
+  "is_official": true,
+  "license_or_terms": "as published by source",
+  "mime_type": "application/pdf",
+  "notes": "Press release with direct links to the first phase of declassified PDFs.",
+  "pages": 7,
+  "release_date": "2025-02-27",
+  "sha256": "3b2cedff3ebfbf2e2bce593c827f266774c56aa743fd9210be92043c974cae02",
+  "source_name": "DOJ OPA Press Release \u2014 First Phase Declassified (Feb 27, 2025)",
+  "source_url": "https://www.justice.gov/ag/media/1391326/dl?inline",
+  "sources": [
+    {
+      "source_name": "DOJ OPA Press Release \u2014 First Phase Declassified (Feb 27, 2025)",
+      "source_url": "https://www.justice.gov/opa/pr/attorney-general-pamela-bondi-releases-first-phase-declassified-epstein-files"
+    }
+  ],
+  "tags": [
+    "doj",
+    "opa",
+    "press-release"
+  ],
+  "title": "D. Masseuse List_Redacted"
+}
