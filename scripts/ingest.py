@@ -425,6 +425,8 @@ class OpaPressReleaseAdapter(SourceAdapter):
             if "/ag/media/" not in url:
                 continue
             title_text = link["text"].strip() or Path(urlparse(url).path).name
+            if title_text.lower() == "here":
+                title_text = "Attorney General Letter (Feb 27, 2025)"
             files.append(
                 DiscoveredFile(
                     url=url,
@@ -539,6 +541,10 @@ def ingest() -> None:
                     ensure_sources(existing, source.name, item.source_page or source.base_url)
                     existing["downloaded_at"] = utc_now_iso()
                     existing["source_url"] = result.final_url or item.url
+                    if existing.get("title", "").lower() in {"here", ""} and item.title:
+                        existing["title"] = item.title
+                    if not existing.get("release_date") and item.release_date:
+                        existing["release_date"] = item.release_date
                     if item.tags:
                         existing["tags"] = sorted(set(existing.get("tags", [])) | set(item.tags))
                     write_json(Path("data/meta") / f"{existing['id']}.json", existing)
