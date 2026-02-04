@@ -422,7 +422,7 @@ class OpaPressReleaseAdapter(SourceAdapter):
             url = normalize_url(self.source.base_url, link["href"])
             if not self._allowed(url) and "dl?inline" not in url:
                 continue
-            if "media" not in url:
+            if "/ag/media/" not in url:
                 continue
             title_text = link["text"].strip() or Path(urlparse(url).path).name
             files.append(
