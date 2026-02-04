@@ -665,17 +665,36 @@ def ingest() -> None:
                 sha = sha256_file(tmp_path)
                 existing = by_sha.get(sha)
                 if existing:
+                    changed = False
+                    sources_before = len(existing.get("sources", []))
                     ensure_sources(existing, source.name, item.source_page or source.base_url)
-                    existing["downloaded_at"] = utc_now_iso()
-                    existing["source_url"] = result.final_url or item.url
+                    if len(existing.get("sources", [])) != sources_before:
+                        changed = True
+
+                    new_source_url = result.final_url or item.url
+                    if existing.get("source_url") != new_source_url:
+                        existing["source_url"] = new_source_url
+                        changed = True
+
                     if existing.get("title", "").lower() in {"here", ""} and item.title:
                         existing["title"] = item.title
+                        changed = True
+
                     if not existing.get("release_date") and item.release_date:
                         existing["release_date"] = item.release_date
+                        changed = True
+
                     if item.tags:
-                        existing["tags"] = sorted(set(existing.get("tags", [])) | set(item.tags))
-                    write_json(Path("data/meta") / f"{existing['id']}.json", existing)
-                    updated = True
+                        new_tags = sorted(set(existing.get("tags", [])) | set(item.tags))
+                        if new_tags != existing.get("tags", []):
+                            existing["tags"] = new_tags
+                            changed = True
+
+                    if changed:
+                        existing["downloaded_at"] = utc_now_iso()
+                        write_json(Path("data/meta") / f"{existing['id']}.json", existing)
+                        updated = True
+
                     total_bytes += result.size
                     downloaded += 1
                     continue

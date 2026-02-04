@@ -15,7 +15,7 @@ $(VENV_STAMP): requirements.txt
 venv: $(VENV_STAMP)
 
 $(NODE_STAMP): package.json package-lock.json
-	npm ci
+	npm ci --include=dev
 	@mkdir -p node_modules
 	touch $(NODE_STAMP)
 
@@ -41,6 +41,7 @@ test: venv extract
 	$(PY) -m pytest -q
 
 auth-doj: venv node
+	npx playwright install chromium
 	node scripts/auth_doj.mjs
 
 fmt: venv
