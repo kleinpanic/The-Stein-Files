@@ -28,6 +28,19 @@
   },
   "sources": [
     {
+      "id": "doj-epstein-hub",
+      "name": "DOJ Epstein Library — Hub",
+      "base_url": "https://www.justice.gov/epstein",
+      "discovery": {"type": "doj_hub"},
+      "is_official": true,
+      "notes": "Top-level DOJ Epstein Library hub with links to sections and featured releases.",
+      "constraints": "Age-gated landing page; cookies required.",
+      "release_date": "",
+      "tags": ["doj", "epstein-library", "hub"],
+      "requires_cookies": true,
+      "referer": "https://www.justice.gov/epstein"
+    },
+    {
       "id": "doj-epstein-doj-disclosures",
       "name": "DOJ Epstein Library — DOJ Disclosures",
       "base_url": "https://www.justice.gov/epstein/doj-disclosures",
@@ -36,7 +49,9 @@
       "notes": "DOJ Epstein Library disclosures released under the Epstein Files Transparency Act, including data set files and supplemental releases.",
       "constraints": "Age-gated landing page; very large corpus.",
       "release_date": "2026-01-30",
-      "tags": ["doj", "epstein-library", "doj-disclosures"]
+      "tags": ["doj", "epstein-library", "doj-disclosures"],
+      "requires_cookies": true,
+      "referer": "https://www.justice.gov/epstein"
     },
     {
       "id": "doj-epstein-court-records",
@@ -47,7 +62,9 @@
       "notes": "Court records hosted on the DOJ Epstein Library, including federal and state court releases.",
       "constraints": "Age-gated landing page; some cases split across subpages.",
       "release_date": "",
-      "tags": ["court-records", "epstein-library"]
+      "tags": ["court-records", "epstein-library"],
+      "requires_cookies": true,
+      "referer": "https://www.justice.gov/epstein"
     },
     {
       "id": "doj-epstein-foia",
@@ -58,7 +75,9 @@
       "notes": "FOIA releases from multiple agencies, including media files.",
       "constraints": "Age-gated landing page; large media files.",
       "release_date": "2026-01-30",
-      "tags": ["foia", "epstein-library"]
+      "tags": ["foia", "epstein-library"],
+      "requires_cookies": true,
+      "referer": "https://www.justice.gov/epstein"
     },
     {
       "id": "doj-opa-2025-02-27",
@@ -69,7 +88,9 @@
       "notes": "Press release with direct links to the first phase of declassified PDFs.",
       "constraints": "None.",
       "release_date": "2025-02-27",
-      "tags": ["doj", "opa", "press-release"]
+      "tags": ["doj", "opa", "press-release"],
+      "requires_cookies": false,
+      "referer": "https://www.justice.gov/opa"
     }
   ]
 }
