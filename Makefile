@@ -4,20 +4,20 @@ PY := python3
 
 
 dev:
-	$(PY) scripts/build_site.py
+	$(PY) -m scripts.build_site
 	$(PY) -m http.server --directory dist 8000
 
 ingest:
-	$(PY) scripts/ingest.py
+	$(PY) -m scripts.ingest
 
 extract:
-	$(PY) scripts/extract.py
+	$(PY) -m scripts.extract
 
 build:
-	$(PY) scripts/build_site.py
+	$(PY) -m scripts.build_site
 
 test:
-	$(PY) scripts/validate.py
+	$(PY) -m scripts.validate
 	$(PY) -m pytest -q
 
 fmt:
