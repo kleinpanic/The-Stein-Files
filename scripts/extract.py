@@ -69,6 +69,7 @@ def extract_all() -> None:
             "release_date": entry.get("release_date", ""),
             "tags": entry.get("tags", []),
             "source_name": entry.get("source_name"),
+            "file_name": Path(entry.get("file_path", "")).name,
             "content": content,
         }
         index_docs.append(doc)

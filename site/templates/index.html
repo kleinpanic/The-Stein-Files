@@ -20,6 +20,14 @@
   <div class="search-input">
     <label class="sr-only" for="searchInput">Search documents</label>
     <input id="searchInput" type="search" placeholder="Search names, places, or terms" />
+    <label class="sr-only" for="searchMode">Search mode</label>
+    <select id="searchMode" class="search-mode">
+      <option value="full">Full text</option>
+      <option value="title">Title only</option>
+      <option value="tags">Tags only</option>
+      <option value="source">Source only</option>
+      <option value="file">Filename/ID</option>
+    </select>
     <button class="button ghost" id="clearFilters" type="button">Clear filters</button>
   </div>
   <div class="search-meta">

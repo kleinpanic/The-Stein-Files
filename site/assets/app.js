@@ -7,6 +7,22 @@ function escapeHtml(value) {
     .replaceAll("'", "&#039;");
 }
 
+const SEARCH_MODE_FIELDS = {
+  full: ["title", "content", "tags", "source_name", "file_name", "id"],
+  title: ["title"],
+  tags: ["tags"],
+  source: ["source_name"],
+  file: ["file_name", "id"],
+};
+
+const SEARCH_MODE_PLACEHOLDERS = {
+  full: "Search names, places, or terms",
+  title: "Search document titles",
+  tags: "Search tags",
+  source: "Search sources",
+  file: "Search filename or ID",
+};
+
 async function loadJson(path) {
   const res = await fetch(path);
   if (!res.ok) {
@@ -76,6 +92,7 @@ function getStateFromUrl() {
     year: params.get("year") || "",
     tag: params.get("tag") || "",
     sort: params.get("sort") || "relevance",
+    mode: params.get("mode") || "full",
   };
 }
 
@@ -86,6 +103,7 @@ function updateUrl(state) {
   if (state.year) params.set("year", state.year);
   if (state.tag) params.set("tag", state.tag);
   if (state.sort && state.sort !== "relevance") params.set("sort", state.sort);
+  if (state.mode && state.mode !== "full") params.set("mode", state.mode);
   const query = params.toString();
   const newUrl = query ? `${window.location.pathname}?${query}` : window.location.pathname;
   window.history.replaceState({}, "", newUrl);
@@ -157,6 +175,7 @@ async function init() {
   const filterTag = document.getElementById("filterTag");
   const sortBy = document.getElementById("sortBy");
   const searchInput = document.getElementById("searchInput");
+  const searchMode = document.getElementById("searchMode");
   const clearFilters = document.getElementById("clearFilters");
 
   filterSource.innerHTML = `<option value="">All sources</option>${sources
@@ -175,6 +194,9 @@ async function init() {
   filterYear.value = state.year;
   filterTag.value = state.tag;
   sortBy.value = state.sort;
+  searchMode.value = state.mode;
+
+  searchInput.placeholder = SEARCH_MODE_PLACEHOLDERS[searchMode.value] || SEARCH_MODE_PLACEHOLDERS.full;
 
   const shardLookup = manifest.shards || [];
 
@@ -189,6 +211,8 @@ async function init() {
       this.field("content");
       this.field("source_name");
       this.field("tags");
+      this.field("file_name");
+      this.field("id");
       indexDocs.forEach((doc) => this.add(doc));
     });
   }
@@ -246,7 +270,13 @@ async function init() {
 
     let docs = indexDocs;
     if (query && lunrIndex) {
-      const hits = lunrIndex.search(query);
+      const fields = SEARCH_MODE_FIELDS[searchMode.value] || SEARCH_MODE_FIELDS.full;
+      const terms = query.split(/\s+/).filter(Boolean);
+      const hits = lunrIndex.query((q) => {
+        terms.forEach((term) => {
+          q.term(term, { fields });
+        });
+      });
       const hitMap = new Map(hits.map((h) => [h.ref, h.score]));
       docs = indexDocs
         .filter((doc) => hitMap.has(doc.id))
@@ -267,13 +297,18 @@ async function init() {
       year: filterYear.value,
       tag: filterTag.value,
       sort: sortBy.value,
+      mode: searchMode.value,
     };
     updateUrl(nextState);
     performSearch();
   }
 
-  [filterSource, filterYear, filterTag, sortBy].forEach((el) =>
+  [filterSource, filterYear, filterTag, sortBy, searchMode].forEach((el) =>
     el.addEventListener("change", () => {
+      if (el === searchMode) {
+        searchInput.placeholder =
+          SEARCH_MODE_PLACEHOLDERS[searchMode.value] || SEARCH_MODE_PLACEHOLDERS.full;
+      }
       syncAndSearch();
       if (!filterSource.value && !filterYear.value) {
         loadAllShardsProgressively();
@@ -292,6 +327,8 @@ async function init() {
     filterYear.value = "";
     filterTag.value = "";
     sortBy.value = "relevance";
+    searchMode.value = "full";
+    searchInput.placeholder = SEARCH_MODE_PLACEHOLDERS.full;
     syncAndSearch();
     loadAllShardsProgressively();
   });
