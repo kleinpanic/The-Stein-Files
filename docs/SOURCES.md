@@ -25,6 +25,7 @@ Last verified: 2026-02-04
 - What’s available: DOJ disclosures responsive to the Epstein Files Transparency Act, including data set releases and supplemental disclosures.
 - Update cadence: Ongoing as additional documents are identified.
 - Access constraints: Age-gated entry; large corpus.
+- Discovery note: The exact disclosures landing path can change; Eppie discovers this link from the DOJ Epstein Library hub at ingest time.
 - Last verified: 2026-02-04
 
 ### DOJ Epstein Library — Court Records
@@ -33,6 +34,7 @@ Last verified: 2026-02-04
 - What’s available: Court record releases hosted on the DOJ Epstein Library, including federal and state court materials.
 - Update cadence: As court releases are added to the library.
 - Access constraints: Age-gated entry; some cases split across subpages.
+- Discovery note: The court records landing path can change; Eppie discovers this link from the DOJ Epstein Library hub at ingest time.
 - Last verified: 2026-02-04
 
 ### DOJ Epstein Library — FOIA
@@ -41,6 +43,7 @@ Last verified: 2026-02-04
 - What’s available: FOIA releases from multiple agencies; includes PDFs and media files.
 - Update cadence: As FOIA releases are added to the library.
 - Access constraints: Age-gated entry; large media files.
+- Discovery note: The FOIA landing path can change; Eppie discovers this link from the DOJ Epstein Library hub at ingest time.
 - Last verified: 2026-02-04
 
 ### DOJ Press Release — First phase declassified files (Feb 27, 2025)
