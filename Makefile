@@ -1,4 +1,4 @@
-.PHONY: dev ingest extract build test fmt lint venv node setup
+.PHONY: dev ingest extract build test fmt lint venv node setup auth-doj
 
 VENV := .venv
 PY := $(VENV)/bin/python
@@ -33,12 +33,15 @@ ingest: venv
 extract: venv
 	$(PY) -m scripts.extract
 
-build: venv
+build: venv extract
 	$(PY) -m scripts.build_site
 
-test: venv
+test: venv extract
 	$(PY) -m scripts.validate
 	$(PY) -m pytest -q
+
+auth-doj: venv node
+	node scripts/auth_doj.mjs
 
 fmt: venv
 	$(PY) -m ruff format .
