@@ -1,6 +1,7 @@
 from pathlib import Path
 
-from scripts.ingest import DojCourtRecordsAdapter, DojHubAdapter, SourceConfig, collect_links
+from scripts.doj_hub import collect_links
+from scripts.ingest import DojCourtRecordsAdapter, DojHubAdapter, SourceConfig
 
 
 def test_court_records_adapter_parses_links():
