@@ -1,0 +1,59 @@
+{
+  "documents": [
+    {
+      "title": "Evidence List (Redacted)",
+      "source_name": "DOJ OPA Press Release (Bondi, Feb 27, 2025)",
+      "source_url": "https://www.justice.gov/ag/media/1391271/dl?inline=",
+      "release_date": "2025-02-27",
+      "file_name": "evidence_list_redacted.pdf",
+      "tags": ["doj", "evidence"],
+      "notes": "Released with the Attorney General press release.",
+      "is_official": true,
+      "license_or_terms": "as published by source"
+    },
+    {
+      "title": "Flight Log Part 1 (Redacted)",
+      "source_name": "DOJ OPA Press Release (Bondi, Feb 27, 2025)",
+      "source_url": "https://www.justice.gov/ag/media/1391281/dl?inline=",
+      "release_date": "2025-02-27",
+      "file_name": "flight_log_part_1_redacted.pdf",
+      "tags": ["doj", "flight-log"],
+      "notes": "Released with the Attorney General press release.",
+      "is_official": true,
+      "license_or_terms": "as published by source"
+    },
+    {
+      "title": "Masseuse List (Redacted)",
+      "source_name": "DOJ OPA Press Release (Bondi, Feb 27, 2025)",
+      "source_url": "https://www.justice.gov/ag/media/1391326/dl?inline=",
+      "release_date": "2025-02-27",
+      "file_name": "masseuse_list_redacted.pdf",
+      "tags": ["doj", "list"],
+      "notes": "Released with the Attorney General press release.",
+      "is_official": true,
+      "license_or_terms": "as published by source"
+    },
+    {
+      "title": "Attorney General Letter (Feb 27, 2025)",
+      "source_name": "DOJ OPA Press Release (Bondi, Feb 27, 2025)",
+      "source_url": "https://www.justice.gov/ag/media/1391331/dl?inline=",
+      "release_date": "2025-02-27",
+      "file_name": "ag_letter_2025-02-27.pdf",
+      "tags": ["doj", "letter"],
+      "notes": "Released with the Attorney General press release.",
+      "is_official": true,
+      "license_or_terms": "as published by source"
+    },
+    {
+      "title": "Contact Book (Redacted)",
+      "source_name": "DOJ OPA Press Release (Bondi, Feb 27, 2025)",
+      "source_url": "https://www.justice.gov/ag/media/1391321/dl?inline=",
+      "release_date": "2025-02-27",
+      "file_name": "contact_book_redacted.pdf",
+      "tags": ["doj", "contact-book"],
+      "notes": "Released with the Attorney General press release.",
+      "is_official": true,
+      "license_or_terms": "as published by source"
+    }
+  ]
+}

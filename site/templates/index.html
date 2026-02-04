@@ -1,0 +1,40 @@
+<section class="hero">
+  <h1>Search the Epstein Files</h1>
+  <p>Browse officially released documents from U.S. federal government sources and official court releases.</p>
+</section>
+
+<section class="search-layout">
+  <aside class="filters" id="filters">
+    <div class="filter-header">
+      <h2>Filters</h2>
+      <button class="filter-toggle" id="filtersToggle" type="button">Toggle</button>
+    </div>
+    <label>
+      Source
+      <select id="filterSource"></select>
+    </label>
+    <label>
+      Year
+      <select id="filterYear"></select>
+    </label>
+    <label>
+      Tag
+      <select id="filterTag"></select>
+    </label>
+    <label>
+      Sort
+      <select id="sortBy">
+        <option value="relevance">Relevance</option>
+        <option value="date">Release date</option>
+      </select>
+    </label>
+  </aside>
+
+  <section class="results">
+    <div class="search-bar">
+      <input id="searchInput" type="search" placeholder="Search names, places, or terms" />
+      <span id="resultCount"></span>
+    </div>
+    <div id="results"></div>
+  </section>
+</section>
