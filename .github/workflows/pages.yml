@@ -32,6 +32,9 @@ jobs:
       - name: Install Python dependencies
         run: make setup
 
+      - name: Check source links
+        run: make check-links
+
       - name: Run tests
         run: make test
 

@@ -26,6 +26,7 @@ make setup
 - `make extract` to extract text and build the search index
 - `make build` to build the static site into `dist/`
 - `make test` to run validation checks
+- `make check-links` to verify configured source URLs are not stale
 - `make dev` to build then serve `dist/` locally
 
 ### Ingest caps
