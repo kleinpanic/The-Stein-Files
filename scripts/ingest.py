@@ -6,7 +6,7 @@ import os
 import re
 import shutil
 import tempfile
-from http.cookiejar import MozillaCookieJar
+from http.cookiejar import CookieJar
 from dataclasses import dataclass, field
 from html.parser import HTMLParser
 from pathlib import Path
@@ -29,8 +29,10 @@ from scripts.common import (
     utc_now_iso,
     write_json,
 )
+from scripts.cookies import load_cookie_jar_from_path
 
 CONFIG_PATH = Path("config/sources.json")
+STATE_PATH = Path("data/meta/ingest_state.json")
 
 
 @dataclass
@@ -154,7 +156,7 @@ def default_cookie_path() -> Path:
     return Path(".secrets") / "justice.gov.cookies.txt"
 
 
-def load_cookie_jar() -> Optional[MozillaCookieJar]:
+def load_cookie_jar() -> Optional[CookieJar]:
     jar_path = os.getenv("EPPIE_COOKIE_JAR", "").strip()
     if jar_path:
         path = Path(jar_path)
@@ -162,14 +164,13 @@ def load_cookie_jar() -> Optional[MozillaCookieJar]:
         path = default_cookie_path()
         if not path.exists():
             return None
-    if not path.exists():
-        print(f"[ingest] cookie jar not found at {path}")
-        return None
-    jar = MozillaCookieJar()
     try:
-        jar.load(str(path), ignore_discard=True, ignore_expires=True)
+        jar = load_cookie_jar_from_path(path, "justice.gov")
     except Exception as exc:
         print(f"[ingest] failed to load cookie jar: {exc}")
+        return None
+    if jar is None:
+        print(f"[ingest] cookie jar not found at {path}")
         return None
     return jar
 
@@ -301,7 +302,7 @@ def is_blocked_response(result: DownloadResult, path: Path) -> Optional[SkipReas
     return None
 
 
-def skip_reason_for_source(source: SourceConfig, cookie_jar: Optional[MozillaCookieJar]) -> Optional[SkipReason]:
+def skip_reason_for_source(source: SourceConfig, cookie_jar: Optional[CookieJar]) -> Optional[SkipReason]:
     if source.requires_cookies and not cookie_jar:
         return SkipReason(reason="cookie_required", detail="cookie jar missing")
     return None
@@ -583,13 +584,26 @@ def build_sources(config: Dict[str, Any]) -> List[SourceConfig]:
     return sources
 
 
+def load_state() -> Dict[str, Any]:
+    if not STATE_PATH.exists():
+        return {}
+    return json.loads(STATE_PATH.read_text(encoding="utf-8"))
+
+
+def save_state(state: Dict[str, Any]) -> None:
+    write_json(STATE_PATH, state)
+
+
 def select_limits(config: Dict[str, Any]) -> Dict[str, int]:
     limits = config.get("limits", {})
     env_key = "ci" if is_ci() else "local"
     env_limits = limits.get(env_key, {})
+    env_max_docs = os.getenv("EPPIE_MAX_DOWNLOADS_PER_SOURCE")
+    env_max_bytes = os.getenv("EPPIE_MAX_BYTES_PER_RUN")
     return {
-        "max_docs": int(env_limits.get("max_docs_per_source", 0)),
+        "max_docs": int(env_max_docs) if env_max_docs else int(env_limits.get("max_docs_per_source", 0)),
         "max_bytes": int(env_limits.get("max_bytes_per_source", 0)),
+        "max_bytes_run": int(env_max_bytes) if env_max_bytes else 0,
         "max_attempts": int(env_limits.get("max_attempts_per_source", 0)),
     }
 
@@ -603,12 +617,18 @@ def ingest() -> None:
     if cookie_jar:
         session.cookies = cookie_jar
     sources = build_sources(config)
+    state = load_state()
+    state_changed = False
+    run_bytes_limit = limits.get("max_bytes_run", 0)
+    run_bytes_used = 0
 
     catalog = load_catalog()
     by_sha = {entry["sha256"]: entry for entry in catalog}
     updated = False
 
     for source in sources:
+        if run_bytes_limit and run_bytes_used >= run_bytes_limit:
+            break
         skip_reason = skip_reason_for_source(source, cookie_jar)
         if skip_reason:
             print(
@@ -631,21 +651,31 @@ def ingest() -> None:
         new_docs = 0
         attempted = 0
         skipped_nonfile = 0
+        cursor = int(state.get(source.id, {}).get("cursor", 0))
+        if cursor >= len(discovered):
+            cursor = 0
         print(f"[ingest] {source.id}: discovered {len(discovered)} files")
 
-        for item in discovered:
+        for idx, item in enumerate(discovered[cursor:], start=cursor):
             if max_attempts and attempted >= max_attempts:
                 break
             if max_docs and downloaded >= max_docs:
                 break
             if max_bytes and total_bytes >= max_bytes:
                 break
+            if run_bytes_limit and run_bytes_used >= run_bytes_limit:
+                break
             attempted += 1
+            state[source.id] = {"cursor": idx + 1}
+            state_changed = True
 
             headers = source_headers(source)
             est_size = estimate_size(session, item.url, timeout, headers=headers)
             if max_bytes and est_size and total_bytes + est_size > max_bytes:
                 print(f"[ingest] skip (size cap) {item.url}")
+                continue
+            if run_bytes_limit and est_size and run_bytes_used + est_size > run_bytes_limit:
+                print(f"[ingest] skip (run size cap) {item.url}")
                 continue
 
             filename = Path(urlparse(item.url).path).name or f"document-{downloaded}.bin"
@@ -696,6 +726,7 @@ def ingest() -> None:
                         updated = True
 
                     total_bytes += result.size
+                    run_bytes_used += result.size
                     downloaded += 1
                     continue
 
@@ -742,6 +773,7 @@ def ingest() -> None:
                 updated = True
                 new_docs += 1
                 total_bytes += result.size
+                run_bytes_used += result.size
                 downloaded += 1
 
         print(
@@ -752,6 +784,8 @@ def ingest() -> None:
     if updated:
         catalog = sorted(catalog, key=lambda e: e.get("release_date") or "")
         save_catalog(catalog)
+    if state_changed:
+        save_state(state)
 
 
 if __name__ == "__main__":

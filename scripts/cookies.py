@@ -2,8 +2,9 @@ from __future__ import annotations
 
 import argparse
 import json
+from http.cookiejar import Cookie, CookieJar, MozillaCookieJar
 from pathlib import Path
-from typing import Iterable
+from typing import Iterable, Optional
 
 
 NETSCAPE_HEADER = """# Netscape HTTP Cookie File
@@ -53,12 +54,94 @@ def write_netscape_cookiejar(cookies: Iterable[dict], output_path: Path, domain_
     return len(filtered)
 
 
+def _cookie_from_json(cookie: dict) -> Cookie:
+    domain = str(cookie.get("domain", ""))
+    domain_initial_dot = domain.startswith(".")
+    return Cookie(
+        version=0,
+        name=str(cookie.get("name", "")),
+        value=str(cookie.get("value", "")),
+        port=None,
+        port_specified=False,
+        domain=domain,
+        domain_specified=bool(domain),
+        domain_initial_dot=domain_initial_dot,
+        path=str(cookie.get("path", "/")),
+        path_specified=True,
+        secure=bool(cookie.get("secure", False)),
+        expires=int(cookie.get("expires") or 0) or None,
+        discard=False,
+        comment=None,
+        comment_url=None,
+        rest={},
+        rfc2109=False,
+    )
+
+
+def cookiejar_from_json(cookies: Iterable[dict], domain_suffix: str) -> CookieJar:
+    jar = CookieJar()
+    for cookie in filter_cookies(cookies, domain_suffix):
+        jar.set_cookie(_cookie_from_json(cookie))
+    return jar
+
+
+def load_cookie_jar_from_path(path: Path, domain_suffix: str) -> Optional[CookieJar]:
+    if not path.exists():
+        return None
+    if path.suffix.lower() == ".json":
+        cookies = json.loads(path.read_text(encoding="utf-8"))
+        if isinstance(cookies, dict):
+            cookies = cookies.get("cookies", [])
+        return cookiejar_from_json(cookies, domain_suffix)
+    try:
+        cookies = json.loads(path.read_text(encoding="utf-8"))
+        if isinstance(cookies, list):
+            return cookiejar_from_json(cookies, domain_suffix)
+    except json.JSONDecodeError:
+        pass
+    jar = MozillaCookieJar()
+    jar.load(str(path), ignore_discard=True, ignore_expires=True)
+    return jar
+
+
+def verify_urls(cookie_jar: CookieJar, urls: Iterable[str]) -> list[tuple[str, int]]:
+    import requests
+
+    session = requests.Session()
+    session.cookies = cookie_jar
+    results = []
+    for url in urls:
+        try:
+            resp = session.get(url, timeout=20, allow_redirects=True)
+            results.append((url, resp.status_code))
+        except Exception:
+            results.append((url, 0))
+    return results
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Write Netscape cookie jar.")
-    parser.add_argument("--input", required=True, help="Path to JSON cookie list")
-    parser.add_argument("--output", required=True, help="Path to Netscape cookie jar")
+    parser.add_argument("--input", help="Path to JSON cookie list")
+    parser.add_argument("--output", help="Path to Netscape cookie jar")
     parser.add_argument("--domain", default="justice.gov", help="Domain suffix to include")
+    parser.add_argument("--verify", action="store_true", help="Verify URLs with cookie jar")
+    parser.add_argument("--jar", help="Path to cookie jar (json or netscape)")
+    parser.add_argument("--urls", nargs="*", default=[], help="URLs to verify")
     args = parser.parse_args()
+
+    if args.verify:
+        if not args.jar:
+            raise SystemExit("--jar is required for verification")
+        jar = load_cookie_jar_from_path(Path(args.jar), args.domain)
+        if jar is None:
+            raise SystemExit("cookie jar not found")
+        results = verify_urls(jar, args.urls)
+        for url, status in results:
+            print(f"[auth] verify {url} status={status}")
+        return
+
+    if not args.input or not args.output:
+        raise SystemExit("--input and --output are required")
 
     cookies = json.loads(Path(args.input).read_text(encoding="utf-8"))
     output_path = Path(args.output)
