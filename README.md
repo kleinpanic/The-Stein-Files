@@ -9,19 +9,31 @@ See `docs/SOURCES.md` for the canonical list of official upstream sources.
 - Raw files are stored exactly as released under `data/raw/`.
 - Derived artifacts (text, index) are stored under `data/derived/`.
 
-## Local usage
+## How to run locally
 
 ### Requirements
 - Python 3.11+
 - Node.js 20+
 - Optional: `pdftotext` from poppler
 
+### Setup
+```bash
+python3 -m venv .venv
+. .venv/bin/activate
+pip install -r requirements.txt
+npm ci
+```
+
 ### Common commands
 - `make ingest` to download/update official releases
 - `make extract` to extract text and build the search index
 - `make build` to build the static site into `dist/`
-- `make dev` to run a local dev server
 - `make test` to run validation checks
+
+### Serve the site
+```bash
+python3 -m http.server 8000 --directory dist
+```
 
 ## Build pipeline
 GitHub Actions runs a scheduled ingestion workflow that downloads new releases (if any), extracts text, rebuilds the site, validates integrity, and commits updates. Pushes to the default branch deploy to GitHub Pages.
