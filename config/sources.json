@@ -1,59 +1,73 @@
 {
-  "documents": [
+  "defaults": {
+    "user_agent": "EppieIngest/1.1.0 (Epstein Files Library)",
+    "timeout_seconds": 120,
+    "retries": 3,
+    "backoff_factor": 0.6,
+    "allowed_extensions": [
+      ".pdf",
+      ".rtf",
+      ".txt",
+      ".csv",
+      ".wav",
+      ".mp4"
+    ],
+    "ignore_extensions": [".zip"]
+  },
+  "limits": {
+    "local": {
+      "max_docs_per_source": 30,
+      "max_bytes_per_source": 250000000
+    },
+    "ci": {
+      "max_docs_per_source": 150,
+      "max_bytes_per_source": 1500000000
+    }
+  },
+  "sources": [
     {
-      "title": "Evidence List (Redacted)",
-      "source_name": "DOJ OPA Press Release (Bondi, Feb 27, 2025)",
-      "source_url": "https://www.justice.gov/ag/media/1391271/dl?inline=",
-      "release_date": "2025-02-27",
-      "file_name": "evidence_list_redacted.pdf",
-      "tags": ["doj", "evidence"],
-      "notes": "Released with the Attorney General press release.",
+      "id": "doj-epstein-doj-disclosures",
+      "name": "DOJ Epstein Library — DOJ Disclosures",
+      "base_url": "https://www.justice.gov/epstein/doj-disclosures",
+      "discovery": {"type": "doj_disclosures"},
       "is_official": true,
-      "license_or_terms": "as published by source"
+      "notes": "DOJ Epstein Library disclosures released under the Epstein Files Transparency Act, including data set files and supplemental releases.",
+      "constraints": "Age-gated landing page; very large corpus.",
+      "release_date": "2026-01-30",
+      "tags": ["doj", "epstein-library", "doj-disclosures"]
     },
     {
-      "title": "Flight Log Part 1 (Redacted)",
-      "source_name": "DOJ OPA Press Release (Bondi, Feb 27, 2025)",
-      "source_url": "https://www.justice.gov/ag/media/1391281/dl?inline=",
-      "release_date": "2025-02-27",
-      "file_name": "flight_log_part_1_redacted.pdf",
-      "tags": ["doj", "flight-log"],
-      "notes": "Released with the Attorney General press release.",
+      "id": "doj-epstein-court-records",
+      "name": "DOJ Epstein Library — Court Records",
+      "base_url": "https://www.justice.gov/epstein/court-records",
+      "discovery": {"type": "doj_court_records"},
       "is_official": true,
-      "license_or_terms": "as published by source"
+      "notes": "Court records hosted on the DOJ Epstein Library, including federal and state court releases.",
+      "constraints": "Age-gated landing page; some cases split across subpages.",
+      "release_date": "",
+      "tags": ["court-records", "epstein-library"]
     },
     {
-      "title": "Masseuse List (Redacted)",
-      "source_name": "DOJ OPA Press Release (Bondi, Feb 27, 2025)",
-      "source_url": "https://www.justice.gov/ag/media/1391326/dl?inline=",
-      "release_date": "2025-02-27",
-      "file_name": "masseuse_list_redacted.pdf",
-      "tags": ["doj", "list"],
-      "notes": "Released with the Attorney General press release.",
+      "id": "doj-epstein-foia",
+      "name": "DOJ Epstein Library — FOIA",
+      "base_url": "https://www.justice.gov/epstein/foia",
+      "discovery": {"type": "doj_foia"},
       "is_official": true,
-      "license_or_terms": "as published by source"
+      "notes": "FOIA releases from multiple agencies, including media files.",
+      "constraints": "Age-gated landing page; large media files.",
+      "release_date": "2026-01-30",
+      "tags": ["foia", "epstein-library"]
     },
     {
-      "title": "Attorney General Letter (Feb 27, 2025)",
-      "source_name": "DOJ OPA Press Release (Bondi, Feb 27, 2025)",
-      "source_url": "https://www.justice.gov/ag/media/1391331/dl?inline=",
-      "release_date": "2025-02-27",
-      "file_name": "ag_letter_2025-02-27.pdf",
-      "tags": ["doj", "letter"],
-      "notes": "Released with the Attorney General press release.",
+      "id": "doj-opa-2025-02-27",
+      "name": "DOJ OPA Press Release — First Phase Declassified (Feb 27, 2025)",
+      "base_url": "https://www.justice.gov/opa/pr/attorney-general-pamela-bondi-releases-first-phase-declassified-epstein-files",
+      "discovery": {"type": "opa_press_release"},
       "is_official": true,
-      "license_or_terms": "as published by source"
-    },
-    {
-      "title": "Contact Book (Redacted)",
-      "source_name": "DOJ OPA Press Release (Bondi, Feb 27, 2025)",
-      "source_url": "https://www.justice.gov/ag/media/1391321/dl?inline=",
+      "notes": "Press release with direct links to the first phase of declassified PDFs.",
+      "constraints": "None.",
       "release_date": "2025-02-27",
-      "file_name": "contact_book_redacted.pdf",
-      "tags": ["doj", "contact-book"],
-      "notes": "Released with the Attorney General press release.",
-      "is_official": true,
-      "license_or_terms": "as published by source"
+      "tags": ["doj", "opa", "press-release"]
     }
   ]
 }
