@@ -34,14 +34,19 @@ def validate_files() -> None:
 
 
 def validate_index() -> None:
+    catalog_entries = load_catalog()
     manifest_path = DERIVED_INDEX_DIR / "manifest.json"
     if not manifest_path.exists():
+        if not catalog_entries:
+            return
         raise FileNotFoundError("Missing manifest.json")
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
     shards = manifest.get("shards", [])
     if not shards:
+        if not catalog_entries:
+            return
         raise ValueError("No index shards found")
-    catalog = {entry["id"] for entry in load_catalog()}
+    catalog = {entry["id"] for entry in catalog_entries}
     for shard in shards:
         shard_path = Path(shard["path"])
         if not shard_path.exists():
