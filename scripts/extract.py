@@ -26,14 +26,18 @@ TEXT_EXTENSIONS = {".txt", ".rtf", ".csv"}
 def extract_pdf_text(pdf_path: Path, output_path: Path) -> None:
     output_path.parent.mkdir(parents=True, exist_ok=True)
     pdftotext = shutil.which("pdftotext")
-    if pdftotext:
-        subprocess.run(
-            [pdftotext, "-layout", str(pdf_path), str(output_path)],
-            check=True,
-        )
-        return
-    text = extract_text(str(pdf_path))
-    output_path.write_text(text, encoding="utf-8")
+    try:
+        if pdftotext:
+            subprocess.run(
+                [pdftotext, "-layout", str(pdf_path), str(output_path)],
+                check=True,
+            )
+            return
+        text = extract_text(str(pdf_path))
+        output_path.write_text(text, encoding="utf-8")
+    except Exception as exc:
+        print(f"[extract] failed to read {pdf_path.name}: {exc}")
+        output_path.write_text("", encoding="utf-8")
 
 
 def extract_all() -> None:
