@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <header class="site-header">
     <div class="container">
       <div class="brand">
@@ -20,7 +21,7 @@
     </div>
   </header>
 
-  <main class="container">
+  <main id="main-content" class="container">
     {{content}}
   </main>
 
@@ -32,6 +33,6 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script>
-  <script src="assets/app.js"></script>
+  <script src="assets/app.js" defer></script>
 </body>
 </html>
