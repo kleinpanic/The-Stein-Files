@@ -67,7 +67,10 @@ def build_detail_pages(build_info: str) -> None:
         doc_html = template
         for key, value in entry.items():
             if isinstance(value, list):
-                value = ", ".join(value)
+                if all(isinstance(item, str) for item in value):
+                    value = ", ".join(value)
+                else:
+                    value = json.dumps(value)
             doc_html = doc_html.replace(f"{{{{{key}}}}}", str(value))
         content = doc_html
         page = render_template(content, entry["title"], build_info)
