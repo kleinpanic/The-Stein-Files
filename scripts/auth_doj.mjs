@@ -1,4 +1,4 @@
-import { chromium } from "playwright";
+import { chromium, request } from "playwright";
 import { writeFile, mkdir } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import { dirname, resolve } from "node:path";
@@ -9,6 +9,7 @@ import { spawnSync } from "node:child_process";
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const COOKIE_JSON = resolve(ROOT, ".secrets", "justice.gov.cookies.json");
 const COOKIE_JAR = resolve(ROOT, ".secrets", "justice.gov.cookies.txt");
+const STORAGE_STATE = resolve(ROOT, ".secrets", "doj.storage-state.json");
 const PYTHON = resolve(ROOT, ".venv", "bin", "python");
 
 function prompt(message) {
@@ -42,6 +43,7 @@ async function main() {
 
   const cookies = await context.cookies("https://www.justice.gov");
   await writeFile(COOKIE_JSON, JSON.stringify(cookies, null, 2), "utf-8");
+  await context.storageState({ path: STORAGE_STATE });
 
   const pythonExists = existsSync(PYTHON);
   if (!pythonExists) {
@@ -59,21 +61,23 @@ async function main() {
   if (result.status !== 0) {
     process.exit(result.status ?? 1);
   }
-  const verify = spawnSync(
-    PYTHON,
-    [
-      "-m",
-      "scripts.cookies",
-      "--verify",
-      "--jar",
-      COOKIE_JAR,
-      "--urls",
-      ...urls,
-    ],
-    { stdio: "inherit", cwd: ROOT }
-  );
-  if (verify.status !== 0) {
-    process.exit(verify.status ?? 1);
+  const api = await request.newContext({ storageState: STORAGE_STATE });
+  let had403 = false;
+  for (const url of urls) {
+    try {
+      const resp = await api.get(url);
+      console.log(`[auth] verify ${url} status=${resp.status()}`);
+      if (resp.status() === 403) {
+        had403 = true;
+      }
+    } catch (err) {
+      console.log(`[auth] verify ${url} status=0`);
+      had403 = true;
+    }
+  }
+  await api.dispose();
+  if (had403) {
+    console.log("[auth] guidance: visit the 403 pages, scroll/ack prompts, then press Enter again.");
   }
 
   console.log(`[auth] cookie jar written to ${COOKIE_JAR}`);

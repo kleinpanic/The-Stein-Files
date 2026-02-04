@@ -7,6 +7,7 @@ import re
 import shutil
 import tempfile
 from http.cookiejar import CookieJar
+import subprocess
 from dataclasses import dataclass, field
 from html.parser import HTMLParser
 from pathlib import Path
@@ -163,7 +164,11 @@ def load_cookie_jar() -> Optional[CookieJar]:
     else:
         path = default_cookie_path()
         if not path.exists():
-            return None
+            json_path = path.with_suffix(".json")
+            if json_path.exists():
+                path = json_path
+            else:
+                return None
     try:
         jar = load_cookie_jar_from_path(path, "justice.gov")
     except Exception as exc:
@@ -186,6 +191,54 @@ def source_headers(source: SourceConfig) -> Dict[str, str]:
     if source.referer:
         headers["Referer"] = source.referer
     return headers
+
+
+def playwright_discovery_enabled() -> bool:
+    return os.getenv("EPPIE_PLAYWRIGHT_DISCOVERY", "").lower() in {"1", "true", "yes"}
+
+
+def storage_state_path() -> Path:
+    return Path(".secrets") / "doj.storage-state.json"
+
+
+def discover_with_playwright(
+    urls: List[str],
+    allowed_exts: List[str],
+) -> List[str]:
+    if not playwright_discovery_enabled():
+        return []
+    state_path = storage_state_path()
+    if not state_path.exists():
+        print("[ingest] skip playwright discovery (missing storage state)")
+        return []
+    node = shutil.which("node")
+    if not node:
+        print("[ingest] skip playwright discovery (node missing)")
+        return []
+    script = Path("scripts/playwright_discover.mjs")
+    if not script.exists():
+        print("[ingest] skip playwright discovery (script missing)")
+        return []
+    try:
+        result = subprocess.run(
+            [
+                node,
+                str(script),
+                "--urls",
+                ",".join(urls),
+                "--storage",
+                str(state_path),
+                "--allow",
+                ",".join(allowed_exts),
+            ],
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+        return json.loads(result.stdout.strip() or "[]")
+    except Exception as exc:
+        print(f"[ingest] playwright discovery failed: {exc}")
+        return []
 
 
 def normalize_url(base_url: str, href: str) -> str:
@@ -439,9 +492,23 @@ class DojDisclosuresAdapter(SourceAdapter):
 class DojCourtRecordsAdapter(SourceAdapter):
     def discover(self, session: requests.Session) -> List[DiscoveredFile]:
         timeout = int(self.config.get("defaults", {}).get("timeout_seconds", 120))
-        resp = session.get(
-            self.source.base_url, timeout=timeout, headers=source_headers(self.source)
-        )
+        headers = source_headers(self.source)
+        resp = session.get(self.source.base_url, timeout=timeout, headers=headers)
+        if resp.status_code == 403 and playwright_discovery_enabled():
+            urls = discover_with_playwright(
+                [self.source.base_url],
+                self.config.get("defaults", {}).get("allowed_extensions", []),
+            )
+            return [
+                DiscoveredFile(
+                    url=url,
+                    title=Path(urlparse(url).path).name,
+                    source_page=self.source.base_url,
+                    release_date=self.source.release_date,
+                    tags=self.source.tags,
+                )
+                for url in urls
+            ]
         resp.raise_for_status()
         links = collect_links(resp.text)
 
@@ -493,9 +560,23 @@ class DojCourtRecordsAdapter(SourceAdapter):
 class DojFoiaAdapter(SourceAdapter):
     def discover(self, session: requests.Session) -> List[DiscoveredFile]:
         timeout = int(self.config.get("defaults", {}).get("timeout_seconds", 120))
-        resp = session.get(
-            self.source.base_url, timeout=timeout, headers=source_headers(self.source)
-        )
+        headers = source_headers(self.source)
+        resp = session.get(self.source.base_url, timeout=timeout, headers=headers)
+        if resp.status_code == 403 and playwright_discovery_enabled():
+            urls = discover_with_playwright(
+                [self.source.base_url],
+                self.config.get("defaults", {}).get("allowed_extensions", []),
+            )
+            return [
+                DiscoveredFile(
+                    url=url,
+                    title=Path(urlparse(url).path).name,
+                    source_page=self.source.base_url,
+                    release_date=self.source.release_date,
+                    tags=self.source.tags,
+                )
+                for url in urls
+            ]
         resp.raise_for_status()
         links = collect_links(resp.text)
         files: List[DiscoveredFile] = []
