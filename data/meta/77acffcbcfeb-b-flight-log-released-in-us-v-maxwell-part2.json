@@ -1,0 +1,26 @@
+{
+  "downloaded_at": "2026-02-04T07:37:31+00:00",
+  "file_path": "data/raw/77acffcbcfeb-b-flight-log-released-in-us-v-maxwell-part2/B. Flight Log_Released in U.S. v. Maxwell_Part2_0_0_0_0.pdf",
+  "id": "77acffcbcfeb-b-flight-log-released-in-us-v-maxwell-part2",
+  "is_official": true,
+  "license_or_terms": "as published by source",
+  "mime_type": "application/pdf",
+  "notes": "Press release with direct links to the first phase of declassified PDFs.",
+  "pages": 20,
+  "release_date": "2025-02-27",
+  "sha256": "77acffcbcfeb31400c0f8a5847f4cba270acbfb67a6b6adfbed0e9c1ac60794c",
+  "source_name": "DOJ OPA Press Release \u2014 First Phase Declassified (Feb 27, 2025)",
+  "source_url": "https://www.justice.gov/ag/media/1391291/dl?inline",
+  "sources": [
+    {
+      "source_name": "DOJ OPA Press Release \u2014 First Phase Declassified (Feb 27, 2025)",
+      "source_url": "https://www.justice.gov/opa/pr/attorney-general-pamela-bondi-releases-first-phase-declassified-epstein-files"
+    }
+  ],
+  "tags": [
+    "doj",
+    "opa",
+    "press-release"
+  ],
+  "title": "B. Flight Log_Released in U.S. v. Maxwell_Part2"
+}

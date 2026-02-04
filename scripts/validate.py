@@ -34,14 +34,27 @@ def validate_files() -> None:
 
 
 def validate_index() -> None:
-    index_path = DERIVED_INDEX_DIR / "search-index.json"
-    if not index_path.exists():
-        raise FileNotFoundError("Missing search-index.json")
-    index_docs = json.loads(index_path.read_text(encoding="utf-8"))
-    catalog = {entry["id"] for entry in load_catalog()}
-    for doc in index_docs:
-        if doc["id"] not in catalog:
-            raise ValueError(f"Index id not found in catalog: {doc['id']}")
+    catalog_entries = load_catalog()
+    manifest_path = DERIVED_INDEX_DIR / "manifest.json"
+    if not manifest_path.exists():
+        if not catalog_entries:
+            return
+        raise FileNotFoundError("Missing manifest.json")
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    shards = manifest.get("shards", [])
+    if not shards:
+        if not catalog_entries:
+            return
+        raise ValueError("No index shards found")
+    catalog = {entry["id"] for entry in catalog_entries}
+    for shard in shards:
+        shard_path = Path(shard["path"])
+        if not shard_path.exists():
+            raise FileNotFoundError(f"Missing shard file: {shard_path}")
+        shard_docs = json.loads(shard_path.read_text(encoding="utf-8"))
+        for doc in shard_docs:
+            if doc["id"] not in catalog:
+                raise ValueError(f"Index id not found in catalog: {doc['id']}")
 
 
 def main() -> None:

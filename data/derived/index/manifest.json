@@ -1,0 +1,19 @@
+{
+  "generated_at": "2026-02-04T07:37:35+00:00",
+  "shards": [
+    {
+      "count": 11,
+      "path": "data/derived/index/shards/doj-opa-press-release-first-phase-declassified-feb-27-2025/2025.json",
+      "source_name": "DOJ OPA Press Release \u2014 First Phase Declassified (Feb 27, 2025)",
+      "source_slug": "doj-opa-press-release-first-phase-declassified-feb-27-2025",
+      "year": "2025"
+    }
+  ],
+  "sources": [
+    "DOJ OPA Press Release \u2014 First Phase Declassified (Feb 27, 2025)"
+  ],
+  "total_docs": 11,
+  "years": [
+    "2025"
+  ]
+}
