@@ -34,6 +34,7 @@ capture a local cookie jar:
 ```bash
 make auth-doj
 ```
+The first run will download the Playwright Chromium browser if needed.
 Cookies are stored locally in `.secrets/justice.gov.cookies.txt` and are not committed.
 `make ingest` will automatically use the jar when present. You can also override it:
 ```bash
