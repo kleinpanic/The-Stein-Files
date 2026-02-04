@@ -55,6 +55,14 @@ class DiscoveredFile:
     notes: Optional[str] = None
 
 
+@dataclass
+class DownloadResult:
+    size: int
+    content_type: str
+    content_disposition: str
+    final_url: str
+
+
 class LinkCollector(HTMLParser):
     def __init__(self) -> None:
         super().__init__()
@@ -158,17 +166,24 @@ def estimate_size(session: requests.Session, url: str, timeout: int) -> Optional
     return None
 
 
-def download_file(session: requests.Session, url: str, dest: Path, timeout: int) -> int:
+def download_file(session: requests.Session, url: str, dest: Path, timeout: int) -> DownloadResult:
     dest.parent.mkdir(parents=True, exist_ok=True)
     size = 0
     with session.get(url, stream=True, timeout=timeout) as resp:
         resp.raise_for_status()
+        content_type = resp.headers.get("Content-Type", "")
+        content_disposition = resp.headers.get("Content-Disposition", "")
         with dest.open("wb") as f:
             for chunk in resp.iter_content(chunk_size=1024 * 1024):
                 if chunk:
                     size += len(chunk)
                     f.write(chunk)
-    return size
+    return DownloadResult(
+        size=size,
+        content_type=content_type,
+        content_disposition=content_disposition,
+        final_url=resp.url,
+    )
 
 
 def count_pdf_pages(path: Path) -> int | None:
@@ -184,6 +199,42 @@ def extract_year(text: str) -> str:
     if match:
         return match.group(0)
     return ""
+
+
+def filename_from_disposition(disposition: str) -> str:
+    if not disposition:
+        return ""
+    match = re.search(r'filename="?([^";]+)"?', disposition)
+    if match:
+        return match.group(1)
+    return ""
+
+
+def extension_from_content_type(content_type: str) -> str:
+    content_type = content_type.lower()
+    if "pdf" in content_type:
+        return ".pdf"
+    if "rtf" in content_type:
+        return ".rtf"
+    if "text/plain" in content_type:
+        return ".txt"
+    if "csv" in content_type:
+        return ".csv"
+    if "audio/wav" in content_type or "audio/x-wav" in content_type:
+        return ".wav"
+    if "video/mp4" in content_type:
+        return ".mp4"
+    return ""
+
+
+def is_html_file(path: Path, content_type: str) -> bool:
+    if "text/html" in (content_type or "").lower():
+        return True
+    try:
+        head = path.read_bytes()[:200].lstrip()
+    except Exception:
+        return False
+    return head.startswith(b"<!DOCTYPE html") or head.startswith(b"<html")
 
 
 class SourceAdapter:
@@ -369,7 +420,7 @@ class OpaPressReleaseAdapter(SourceAdapter):
         files: List[DiscoveredFile] = []
         for link in links:
             url = normalize_url(self.source.base_url, link["href"])
-            if not self._allowed(url):
+            if not self._allowed(url) and "dl?inline=" not in url:
                 continue
             if "media" not in url:
                 continue
@@ -468,26 +519,34 @@ def ingest() -> None:
             filename = Path(urlparse(item.url).path).name or f"document-{downloaded}.bin"
             with tempfile.TemporaryDirectory(prefix="epstein-ingest-") as tmpdir:
                 tmp_path = Path(tmpdir) / filename
-                size = download_file(session, item.url, tmp_path, timeout)
+                result = download_file(session, item.url, tmp_path, timeout)
+                if is_html_file(tmp_path, result.content_type):
+                    print(f"[ingest] skip non-file response: {item.url}")
+                    continue
 
                 sha = sha256_file(tmp_path)
                 existing = by_sha.get(sha)
                 if existing:
                     ensure_sources(existing, source.name, item.source_page or source.base_url)
                     existing["downloaded_at"] = utc_now_iso()
-                    existing["source_url"] = item.url
+                    existing["source_url"] = result.final_url or item.url
                     if item.tags:
                         existing["tags"] = sorted(set(existing.get("tags", [])) | set(item.tags))
                     write_json(Path("data/meta") / f"{existing['id']}.json", existing)
                     updated = True
-                    total_bytes += size
+                    total_bytes += result.size
                     downloaded += 1
                     continue
 
                 doc_id = f"{sha[:12]}-{slugify(item.title)}"
                 raw_dir = RAW_DIR / doc_id
                 raw_dir.mkdir(parents=True, exist_ok=True)
-                dest_path = raw_dir / filename
+                header_name = filename_from_disposition(result.content_disposition)
+                final_name = header_name or filename
+                if final_name in {"dl", "download"} or "." not in final_name:
+                    ext = extension_from_content_type(result.content_type)
+                    final_name = f"{slugify(item.title)}{ext}" if ext else final_name
+                dest_path = raw_dir / final_name
                 shutil.move(str(tmp_path), dest_path)
 
                 mime_type = detect_mime(dest_path)
@@ -497,7 +556,7 @@ def ingest() -> None:
                     "id": doc_id,
                     "title": item.title,
                     "source_name": source.name,
-                    "source_url": item.url,
+                    "source_url": result.final_url or item.url,
                     "release_date": item.release_date or "",
                     "downloaded_at": utc_now_iso(),
                     "sha256": sha,
@@ -521,7 +580,7 @@ def ingest() -> None:
                 by_sha[sha] = entry
                 updated = True
                 new_docs += 1
-                total_bytes += size
+                total_bytes += result.size
                 downloaded += 1
 
         print(
