@@ -1,3 +1,12 @@
+function escapeHtml(value) {
+  return String(value || "")
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
+}
+
 async function loadJson(path) {
   const res = await fetch(path);
   if (!res.ok) {
@@ -12,41 +21,43 @@ function uniqueSorted(values) {
 
 function formatDate(dateStr) {
   if (!dateStr) return "Unknown";
+  if (dateStr.length >= 10) return dateStr;
   return dateStr;
 }
 
 function buildSnippet(content, query) {
   const text = content || "";
-  if (!query) return text.slice(0, 200);
+  if (!query) return text.slice(0, 220);
   const lower = text.toLowerCase();
   const q = query.toLowerCase();
   const idx = lower.indexOf(q);
-  if (idx === -1) return text.slice(0, 200);
-  const start = Math.max(0, idx - 80);
-  const end = Math.min(text.length, idx + 120);
+  if (idx === -1) return text.slice(0, 220);
+  const start = Math.max(0, idx - 90);
+  const end = Math.min(text.length, idx + 130);
   return text.slice(start, end);
 }
 
-function renderResults(target, results, metaById, query) {
-  target.innerHTML = "";
-  results.forEach((result) => {
-    const meta = metaById[result.id];
-    if (!meta) return;
-    const card = document.createElement("div");
-    card.className = "result-card";
-    const tags = (meta.tags || []).map((tag) => `<span class="tag">${tag}</span>`).join("");
-    card.innerHTML = `
-      <h3>${meta.title}</h3>
-      <div class="result-meta">${formatDate(meta.release_date)} | ${meta.source_name}</div>
-      <div class="result-tags">${tags}</div>
-      <p>${buildSnippet(result.content, query)}</p>
-      <div class="result-actions">
-        <a class="button" href="${meta.file_path}">View original</a>
-        <a class="button" href="data/derived/text/${meta.id}.txt">View text</a>
-        <a class="button" href="documents/${meta.id}.html">Details</a>
-      </div>
-    `;
-    target.appendChild(card);
+function escapeRegExp(value) {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+function highlightSnippet(snippet, query) {
+  if (!query) return escapeHtml(snippet);
+  const escaped = escapeHtml(snippet);
+  const escapedQuery = escapeRegExp(escapeHtml(query));
+  const regex = new RegExp(`(${escapedQuery})`, "ig");
+  return escaped.replace(regex, "<mark>$1</mark>");
+}
+
+function applyFilters(docs, { source, year, tag }) {
+  return docs.filter((doc) => {
+    if (source && doc.source_name !== source) return false;
+    if (year) {
+      const docYear = (doc.release_date || "").slice(0, 4);
+      if (docYear !== year) return false;
+    }
+    if (tag && !(doc.tags || []).includes(tag)) return false;
+    return true;
   });
 }
 
@@ -57,20 +68,76 @@ function sortResults(results, sortBy) {
   return results.sort((a, b) => (b.score || 0) - (a.score || 0));
 }
 
-function applyFilters(docs, { source, year, tag }) {
-  return docs.filter((doc) => {
-    if (source && doc.source_name !== source) return false;
-    if (year && (!doc.release_date || !doc.release_date.startsWith(year))) return false;
-    if (tag && !(doc.tags || []).includes(tag)) return false;
-    return true;
+function getStateFromUrl() {
+  const params = new URLSearchParams(window.location.search);
+  return {
+    q: params.get("q") || "",
+    source: params.get("source") || "",
+    year: params.get("year") || "",
+    tag: params.get("tag") || "",
+    sort: params.get("sort") || "relevance",
+  };
+}
+
+function updateUrl(state) {
+  const params = new URLSearchParams();
+  if (state.q) params.set("q", state.q);
+  if (state.source) params.set("source", state.source);
+  if (state.year) params.set("year", state.year);
+  if (state.tag) params.set("tag", state.tag);
+  if (state.sort && state.sort !== "relevance") params.set("sort", state.sort);
+  const query = params.toString();
+  const newUrl = query ? `${window.location.pathname}?${query}` : window.location.pathname;
+  window.history.replaceState({}, "", newUrl);
+}
+
+function renderResults(target, results, metaById, query) {
+  target.innerHTML = "";
+  results.forEach((result) => {
+    const meta = metaById[result.id];
+    if (!meta) return;
+    const tags = (meta.tags || []).map((tag) => `<span class="tag">${escapeHtml(tag)}</span>`).join("");
+    const snippet = buildSnippet(result.content, query);
+    const snippetHtml = highlightSnippet(snippet, query);
+    const card = document.createElement("div");
+    card.className = "result-card";
+    card.innerHTML = `
+      <h3>${escapeHtml(meta.title)}</h3>
+      <div class="result-meta">
+        <span>${formatDate(meta.release_date)}</span>
+        <span>${escapeHtml(meta.source_name)}</span>
+      </div>
+      <div class="result-tags">${tags}</div>
+      <p class="result-snippet">${snippetHtml}</p>
+      <div class="result-actions">
+        <a class="button" href="${meta.file_path}">Original</a>
+        <a class="button outline" href="data/derived/text/${meta.id}.txt">Text</a>
+        <a class="button ghost" href="documents/${meta.id}.html">Details</a>
+      </div>
+    `;
+    target.appendChild(card);
   });
 }
 
 async function init() {
-  const [indexDocs, catalog] = await Promise.all([
-    loadJson("data/derived/index/search-index.json"),
+  const loadingState = document.getElementById("loadingState");
+  const emptyState = document.getElementById("emptyState");
+  const noResultsState = document.getElementById("noResultsState");
+  const resultCount = document.getElementById("resultCount");
+  const loadStatus = document.getElementById("loadStatus");
+  const resultsEl = document.getElementById("results");
+
+  loadingState.hidden = false;
+  const [manifest, catalog] = await Promise.all([
+    loadJson("data/derived/index/manifest.json"),
     loadJson("data/meta/catalog.json"),
   ]);
+
+  const hasCatalog = catalog.length > 0;
+  if (!hasCatalog) {
+    emptyState.hidden = false;
+    noResultsState.hidden = true;
+  }
 
   const metaById = {};
   catalog.forEach((doc) => {
@@ -80,8 +147,8 @@ async function init() {
   const sources = uniqueSorted(catalog.map((doc) => doc.source_name));
   const years = uniqueSorted(
     catalog
-      .map((doc) => (doc.release_date ? doc.release_date.slice(0, 4) : null))
-      .filter(Boolean)
+      .map((doc) => (doc.release_date ? doc.release_date.slice(0, 4) : ""))
+      .filter((year) => year && /\d{4}/.test(year))
   );
   const tags = uniqueSorted(catalog.flatMap((doc) => doc.tags || []));
 
@@ -90,29 +157,86 @@ async function init() {
   const filterTag = document.getElementById("filterTag");
   const sortBy = document.getElementById("sortBy");
   const searchInput = document.getElementById("searchInput");
-  const resultsEl = document.getElementById("results");
-  const resultCount = document.getElementById("resultCount");
+  const clearFilters = document.getElementById("clearFilters");
 
-  filterSource.innerHTML = `<option value="">All</option>${sources
-    .map((s) => `<option value="${s}">${s}</option>`)
+  filterSource.innerHTML = `<option value="">All sources</option>${sources
+    .map((s) => `<option value="${escapeHtml(s)}">${escapeHtml(s)}</option>`)
     .join("")}`;
-  filterYear.innerHTML = `<option value="">All</option>${years
+  filterYear.innerHTML = `<option value="">All years</option>${years
     .map((y) => `<option value="${y}">${y}</option>`)
     .join("")}`;
-  filterTag.innerHTML = `<option value="">All</option>${tags
-    .map((t) => `<option value="${t}">${t}</option>`)
+  filterTag.innerHTML = `<option value="">All tags</option>${tags
+    .map((t) => `<option value="${escapeHtml(t)}">${escapeHtml(t)}</option>`)
     .join("")}`;
 
-  const lunrIndex = lunr(function () {
-    this.ref("id");
-    this.field("title");
-    this.field("content");
-    this.field("source_name");
-    this.field("tags");
-    indexDocs.forEach((doc) => this.add(doc));
-  });
+  const state = getStateFromUrl();
+  searchInput.value = state.q;
+  filterSource.value = state.source;
+  filterYear.value = state.year;
+  filterTag.value = state.tag;
+  sortBy.value = state.sort;
+
+  const shardLookup = manifest.shards || [];
+
+  const loadedShards = new Map();
+  let indexDocs = [];
+  let lunrIndex = null;
+
+  function rebuildIndex() {
+    lunrIndex = lunr(function () {
+      this.ref("id");
+      this.field("title");
+      this.field("content");
+      this.field("source_name");
+      this.field("tags");
+      indexDocs.forEach((doc) => this.add(doc));
+    });
+  }
+
+  async function loadShard(path) {
+    if (loadedShards.has(path)) return;
+    const docs = await loadJson(path);
+    loadedShards.set(path, docs);
+    indexDocs = Array.from(loadedShards.values()).flat();
+    rebuildIndex();
+    if (loadingState.hidden === false) {
+      loadingState.hidden = true;
+    }
+  }
+
+  async function loadShardsForState(currentState) {
+    const desired = shardLookup.filter((shard) => {
+      if (currentState.source && shard.source_name !== currentState.source) return false;
+      if (currentState.year && shard.year !== currentState.year) return false;
+      return true;
+    });
+    if (!desired.length) return;
+    for (const shard of desired) {
+      await loadShard(shard.path);
+      loadStatus.textContent = `Loaded ${loadedShards.size} of ${shardLookup.length} shards`;
+      performSearch();
+    }
+  }
+
+  async function loadAllShardsProgressively() {
+    for (const shard of shardLookup) {
+      await loadShard(shard.path);
+      loadStatus.textContent = `Loaded ${loadedShards.size} of ${shardLookup.length} shards`;
+      performSearch();
+    }
+  }
 
   function performSearch() {
+    if (!indexDocs.length) {
+      resultsEl.innerHTML = "";
+      resultCount.textContent = "0 results";
+      if (!hasCatalog) {
+        noResultsState.hidden = true;
+      } else {
+        noResultsState.hidden = loadingState.hidden === false;
+      }
+      return;
+    }
     const query = searchInput.value.trim();
     const filters = {
       source: filterSource.value,
@@ -121,7 +245,7 @@ async function init() {
     };
 
     let docs = indexDocs;
-    if (query) {
+    if (query && lunrIndex) {
       const hits = lunrIndex.search(query);
       const hitMap = new Map(hits.map((h) => [h.ref, h.score]));
       docs = indexDocs
@@ -133,20 +257,69 @@ async function init() {
     const sorted = sortResults(docs, sortBy.value);
     renderResults(resultsEl, sorted, metaById, query);
     resultCount.textContent = `${sorted.length} results`;
+    noResultsState.hidden = sorted.length > 0;
+  }
+
+  function syncAndSearch() {
+    const nextState = {
+      q: searchInput.value.trim(),
+      source: filterSource.value,
+      year: filterYear.value,
+      tag: filterTag.value,
+      sort: sortBy.value,
+    };
+    updateUrl(nextState);
+    performSearch();
   }
 
   [filterSource, filterYear, filterTag, sortBy].forEach((el) =>
-    el.addEventListener("change", performSearch)
+    el.addEventListener("change", () => {
+      syncAndSearch();
+      if (!filterSource.value && !filterYear.value) {
+        loadAllShardsProgressively();
+      } else {
+        loadShardsForState({
+          source: filterSource.value,
+          year: filterYear.value,
+        });
+      }
+    })
   );
-  searchInput.addEventListener("input", performSearch);
-
-  const filters = document.getElementById("filters");
-  const toggle = document.getElementById("filtersToggle");
-  toggle.addEventListener("click", () => {
-    filters.classList.toggle("collapsed");
+  searchInput.addEventListener("input", syncAndSearch);
+  clearFilters.addEventListener("click", () => {
+    searchInput.value = "";
+    filterSource.value = "";
+    filterYear.value = "";
+    filterTag.value = "";
+    sortBy.value = "relevance";
+    syncAndSearch();
+    loadAllShardsProgressively();
   });
 
-  performSearch();
+  const filtersPanel = document.getElementById("filtersPanel");
+  const openFilters = document.getElementById("openFilters");
+  const closeFilters = document.getElementById("closeFilters");
+  const backdrop = document.getElementById("filtersBackdrop");
+  openFilters.addEventListener("click", () => {
+    filtersPanel.classList.add("open");
+    backdrop.hidden = false;
+  });
+  closeFilters.addEventListener("click", () => {
+    filtersPanel.classList.remove("open");
+    backdrop.hidden = true;
+  });
+  backdrop.addEventListener("click", () => {
+    filtersPanel.classList.remove("open");
+    backdrop.hidden = true;
+  });
+
+  if (filterSource.value || filterYear.value) {
+    await loadShardsForState({ source: filterSource.value, year: filterYear.value });
+  } else {
+    await loadAllShardsProgressively();
+  }
+
+  syncAndSearch();
 }
 
 init().catch((err) => {

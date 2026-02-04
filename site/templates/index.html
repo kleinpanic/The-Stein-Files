@@ -1,40 +1,67 @@
 <section class="hero">
-  <h1>Search the Epstein Files</h1>
-  <p>Browse officially released documents from U.S. federal government sources and official court releases.</p>
+  <div class="hero-text">
+    <p class="eyebrow">Official Releases Only</p>
+    <h1>Epstein Files Library</h1>
+    <p>Search and browse officially released documents from U.S. federal government sources and official court releases.</p>
+  </div>
+  <div class="hero-panel">
+    <div class="hero-card">
+      <h2>Preserved As Released</h2>
+      <p>Raw files are stored exactly as published. Text and index artifacts are derived for search only.</p>
+    </div>
+    <div class="hero-card">
+      <h2>Shareable Views</h2>
+      <p>Search, filter, and sort states are reflected in the URL so your view is linkable.</p>
+    </div>
+  </div>
 </section>
 
-<section class="search-layout">
-  <aside class="filters" id="filters">
-    <div class="filter-header">
-      <h2>Filters</h2>
-      <button class="filter-toggle" id="filtersToggle" type="button">Toggle</button>
+<section class="search-toolbar">
+  <div class="search-input">
+    <label class="sr-only" for="searchInput">Search documents</label>
+    <input id="searchInput" type="search" placeholder="Search names, places, or terms" />
+    <button class="button ghost" id="clearFilters" type="button">Clear filters</button>
+  </div>
+  <div class="search-meta">
+    <div class="meta-left">
+      <span id="resultCount">0 results</span>
+      <span id="loadStatus" class="muted"></span>
     </div>
-    <label>
-      Source
+    <button class="button outline filter-open" id="openFilters" type="button">Filters</button>
+  </div>
+</section>
+
+<div id="loadingState" class="state-banner" role="status">Loading index…</div>
+<div id="emptyState" class="state-banner empty" hidden>
+  No documents yet. The library populates when the ingest workflow downloads official releases.
+  See the <a href="sources.html">Sources</a> page for upstream releases and status.
+</div>
+<div id="noResultsState" class="state-banner empty" hidden>No results match your filters.</div>
+
+<section class="search-layout">
+  <aside class="filters-panel" id="filtersPanel" aria-label="Filters">
+    <div class="filters-header">
+      <h2>Filters</h2>
+      <button class="button ghost" id="closeFilters" type="button">Close</button>
+    </div>
+    <div class="filters-fields">
+      <label for="filterSource">Source</label>
       <select id="filterSource"></select>
-    </label>
-    <label>
-      Year
+      <label for="filterYear">Year</label>
       <select id="filterYear"></select>
-    </label>
-    <label>
-      Tag
+      <label for="filterTag">Tag</label>
       <select id="filterTag"></select>
-    </label>
-    <label>
-      Sort
+      <label for="sortBy">Sort</label>
       <select id="sortBy">
         <option value="relevance">Relevance</option>
         <option value="date">Release date</option>
       </select>
-    </label>
+    </div>
   </aside>
 
   <section class="results">
-    <div class="search-bar">
-      <input id="searchInput" type="search" placeholder="Search names, places, or terms" />
-      <span id="resultCount"></span>
-    </div>
     <div id="results"></div>
   </section>
 </section>
+
+<div class="filters-backdrop" id="filtersBackdrop" hidden></div>
