@@ -9,7 +9,6 @@ import tempfile
 from http.cookiejar import CookieJar
 import subprocess
 from dataclasses import dataclass, field
-from html.parser import HTMLParser
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional
 from urllib.parse import urljoin, urlparse
@@ -31,6 +30,7 @@ from scripts.common import (
     write_json,
 )
 from scripts.cookies import load_cookie_jar_from_path
+from scripts.doj_hub import collect_links, discover_doj_hub_targets
 
 CONFIG_PATH = Path("config/sources.json")
 STATE_PATH = Path("data/meta/ingest_state.json")
@@ -73,50 +73,6 @@ class DownloadResult:
 class SkipReason:
     reason: str
     detail: str
-
-
-class LinkCollector(HTMLParser):
-    def __init__(self) -> None:
-        super().__init__()
-        self.links: List[Dict[str, str]] = []
-        self._current_link: Optional[Dict[str, str]] = None
-        self._heading_text: List[str] = []
-        self._active_heading = ""
-        self._heading_tag: Optional[str] = None
-
-    def handle_starttag(self, tag: str, attrs: List[tuple[str, Optional[str]]]) -> None:
-        if tag in {"h1", "h2", "h3", "h4", "h5"}:
-            self._heading_tag = tag
-            self._heading_text = []
-        if tag == "a":
-            attrs_dict = dict(attrs)
-            href = attrs_dict.get("href")
-            if href:
-                self._current_link = {"href": href, "text": "", "heading": self._active_heading}
-
-    def handle_data(self, data: str) -> None:
-        if self._heading_tag:
-            self._heading_text.append(data.strip())
-        if self._current_link is not None:
-            self._current_link["text"] += data
-
-    def handle_endtag(self, tag: str) -> None:
-        if tag == self._heading_tag:
-            heading = " ".join(part for part in self._heading_text if part)
-            if heading:
-                self._active_heading = heading
-            self._heading_tag = None
-            self._heading_text = []
-        if tag == "a" and self._current_link is not None:
-            text = self._current_link["text"].strip()
-            self.links.append(
-                {
-                    "href": self._current_link["href"],
-                    "text": text,
-                    "heading": self._current_link["heading"],
-                }
-            )
-            self._current_link = None
 
 
 def load_config() -> Dict[str, Any]:
@@ -178,12 +134,6 @@ def load_cookie_jar() -> Optional[CookieJar]:
         print(f"[ingest] cookie jar not found at {path}")
         return None
     return jar
-
-
-def collect_links(html: str) -> List[Dict[str, str]]:
-    parser = LinkCollector()
-    parser.feed(html)
-    return parser.links
 
 
 def source_headers(source: SourceConfig) -> Dict[str, str]:
@@ -353,6 +303,70 @@ def is_blocked_response(result: DownloadResult, path: Path) -> Optional[SkipReas
     if result.size < 4096 and is_html_file(path, content_type):
         return SkipReason(reason="html_body", detail="small_html_body")
     return None
+
+
+def response_is_not_found(resp: requests.Response) -> bool:
+    if resp.status_code == 404:
+        return True
+    content_type = resp.headers.get("Content-Type", "").lower()
+    if "text/html" not in content_type:
+        return False
+    text = resp.text.lower()
+    return "page not found" in text or "404" in text[:2000]
+
+
+def resolve_hub_targets(
+    session: requests.Session,
+    hub_url: str,
+    timeout: int,
+    headers: Optional[Dict[str, str]] = None,
+) -> Dict[str, str]:
+    resp = session.get(hub_url, timeout=timeout, headers=headers)
+    resp.raise_for_status()
+    return discover_doj_hub_targets(resp.text, hub_url)
+
+
+def resolve_source_base_url(
+    session: requests.Session,
+    source: SourceConfig,
+    timeout: int,
+    hub_cache: Dict[str, Dict[str, str]],
+) -> str:
+    hub_target = source.discovery.get("hub_target")
+    hub_url = source.discovery.get("hub_url")
+    if not hub_target or not hub_url:
+        return source.base_url
+    targets = hub_cache.get(hub_url)
+    if targets is None:
+        try:
+            targets = resolve_hub_targets(
+                session, hub_url, timeout, headers=source_headers(source)
+            )
+        except requests.RequestException as exc:
+            print(f"[ingest] hub discovery failed: {hub_url} ({exc})")
+            targets = {}
+        hub_cache[hub_url] = targets
+    discovered = targets.get(hub_target)
+    if not discovered:
+        return source.base_url
+    if discovered == source.base_url:
+        return source.base_url
+    try:
+        resp = session.get(
+            source.base_url,
+            timeout=min(timeout, 20),
+            headers=source_headers(source),
+            allow_redirects=True,
+        )
+        if response_is_not_found(resp):
+            print(
+                f"[ingest] {source.id}: configured URL not found; using hub {discovered}"
+            )
+        else:
+            print(f"[ingest] {source.id}: using hub-discovered URL {discovered}")
+    except requests.RequestException:
+        print(f"[ingest] {source.id}: using hub-discovered URL {discovered}")
+    return discovered
 
 
 def skip_reason_for_source(source: SourceConfig, cookie_jar: Optional[CookieJar]) -> Optional[SkipReason]:
@@ -702,6 +716,7 @@ def ingest() -> None:
     state_changed = False
     run_bytes_limit = limits.get("max_bytes_run", 0)
     run_bytes_used = 0
+    hub_cache: Dict[str, Dict[str, str]] = {}
 
     catalog = load_catalog()
     by_sha = {entry["sha256"]: entry for entry in catalog}
@@ -717,6 +732,9 @@ def ingest() -> None:
                 f"reason={skip_reason.reason} url={source.base_url}"
             )
             continue
+        resolved_url = resolve_source_base_url(session, source, timeout, hub_cache)
+        if resolved_url != source.base_url:
+            source.base_url = resolved_url
         adapter = adapter_for(source, config)
         try:
             discovered = adapter.discover(session)

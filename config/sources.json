@@ -44,40 +44,55 @@
       "id": "doj-epstein-doj-disclosures",
       "name": "DOJ Epstein Library — DOJ Disclosures",
       "base_url": "https://www.justice.gov/epstein/doj-disclosures",
-      "discovery": {"type": "doj_disclosures"},
+      "discovery": {
+        "type": "doj_disclosures",
+        "hub_url": "https://www.justice.gov/epstein",
+        "hub_target": "disclosures"
+      },
       "is_official": true,
       "notes": "DOJ Epstein Library disclosures released under the Epstein Files Transparency Act, including data set files and supplemental releases.",
       "constraints": "Age-gated landing page; very large corpus.",
       "release_date": "2026-01-30",
       "tags": ["doj", "epstein-library", "doj-disclosures"],
       "requires_cookies": true,
-      "referer": "https://www.justice.gov/epstein"
+      "referer": "https://www.justice.gov/epstein",
+      "link_check": {"allow_403": true}
     },
     {
       "id": "doj-epstein-court-records",
       "name": "DOJ Epstein Library — Court Records",
       "base_url": "https://www.justice.gov/epstein/court-records",
-      "discovery": {"type": "doj_court_records"},
+      "discovery": {
+        "type": "doj_court_records",
+        "hub_url": "https://www.justice.gov/epstein",
+        "hub_target": "court_records"
+      },
       "is_official": true,
       "notes": "Court records hosted on the DOJ Epstein Library, including federal and state court releases.",
       "constraints": "Age-gated landing page; some cases split across subpages.",
       "release_date": "",
       "tags": ["court-records", "epstein-library"],
       "requires_cookies": true,
-      "referer": "https://www.justice.gov/epstein"
+      "referer": "https://www.justice.gov/epstein",
+      "link_check": {"allow_403": true}
     },
     {
       "id": "doj-epstein-foia",
       "name": "DOJ Epstein Library — FOIA",
       "base_url": "https://www.justice.gov/epstein/foia",
-      "discovery": {"type": "doj_foia"},
+      "discovery": {
+        "type": "doj_foia",
+        "hub_url": "https://www.justice.gov/epstein",
+        "hub_target": "foia"
+      },
       "is_official": true,
       "notes": "FOIA releases from multiple agencies, including media files.",
       "constraints": "Age-gated landing page; large media files.",
       "release_date": "2026-01-30",
       "tags": ["foia", "epstein-library"],
       "requires_cookies": true,
-      "referer": "https://www.justice.gov/epstein"
+      "referer": "https://www.justice.gov/epstein",
+      "link_check": {"allow_403": true}
     },
     {
       "id": "doj-opa-2025-02-27",
