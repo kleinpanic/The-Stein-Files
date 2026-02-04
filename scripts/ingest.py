@@ -420,7 +420,7 @@ class OpaPressReleaseAdapter(SourceAdapter):
         files: List[DiscoveredFile] = []
         for link in links:
             url = normalize_url(self.source.base_url, link["href"])
-            if not self._allowed(url) and "dl?inline=" not in url:
+            if not self._allowed(url) and "dl?inline" not in url:
                 continue
             if "media" not in url:
                 continue
