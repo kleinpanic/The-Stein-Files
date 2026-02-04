@@ -6,6 +6,7 @@ import os
 import re
 import shutil
 import tempfile
+from http.cookiejar import MozillaCookieJar
 from dataclasses import dataclass, field
 from html.parser import HTMLParser
 from pathlib import Path
@@ -43,6 +44,8 @@ class SourceConfig:
     constraints: str
     release_date: str
     tags: List[str] = field(default_factory=list)
+    requires_cookies: bool = False
+    referer: str = ""
 
 
 @dataclass
@@ -61,6 +64,12 @@ class DownloadResult:
     content_type: str
     content_disposition: str
     final_url: str
+
+
+@dataclass
+class SkipReason:
+    reason: str
+    detail: str
 
 
 class LinkCollector(HTMLParser):
@@ -128,16 +137,54 @@ def build_session(config: Dict[str, Any]) -> requests.Session:
     )
     adapter = HTTPAdapter(max_retries=retry)
     session = requests.Session()
-    session.headers.update({"User-Agent": defaults.get("user_agent", "EppieIngest/1.1.0")})
+    session.headers.update(
+        {
+            "User-Agent": defaults.get("user_agent", "EppieIngest/1.1.0"),
+            "Accept": "text/html,application/xhtml+xml,application/pdf,application/octet-stream;q=0.9,*/*;q=0.8",
+            "Accept-Language": "en-US,en;q=0.9",
+            "Upgrade-Insecure-Requests": "1",
+        }
+    )
     session.mount("http://", adapter)
     session.mount("https://", adapter)
     return session
+
+
+def default_cookie_path() -> Path:
+    return Path(".secrets") / "justice.gov.cookies.txt"
+
+
+def load_cookie_jar() -> Optional[MozillaCookieJar]:
+    jar_path = os.getenv("EPPIE_COOKIE_JAR", "").strip()
+    if jar_path:
+        path = Path(jar_path)
+    else:
+        path = default_cookie_path()
+        if not path.exists():
+            return None
+    if not path.exists():
+        print(f"[ingest] cookie jar not found at {path}")
+        return None
+    jar = MozillaCookieJar()
+    try:
+        jar.load(str(path), ignore_discard=True, ignore_expires=True)
+    except Exception as exc:
+        print(f"[ingest] failed to load cookie jar: {exc}")
+        return None
+    return jar
 
 
 def collect_links(html: str) -> List[Dict[str, str]]:
     parser = LinkCollector()
     parser.feed(html)
     return parser.links
+
+
+def source_headers(source: SourceConfig) -> Dict[str, str]:
+    headers: Dict[str, str] = {}
+    if source.referer:
+        headers["Referer"] = source.referer
+    return headers
 
 
 def normalize_url(base_url: str, href: str) -> str:
@@ -156,9 +203,11 @@ def allowed_extension(url: str, allowed: Iterable[str], ignored: Iterable[str]) 
     return ext in allowed
 
 
-def estimate_size(session: requests.Session, url: str, timeout: int) -> Optional[int]:
+def estimate_size(
+    session: requests.Session, url: str, timeout: int, headers: Optional[Dict[str, str]] = None
+) -> Optional[int]:
     try:
-        resp = session.head(url, timeout=timeout, allow_redirects=True)
+        resp = session.head(url, timeout=timeout, allow_redirects=True, headers=headers)
         if resp.ok and resp.headers.get("Content-Length"):
             return int(resp.headers["Content-Length"])
     except Exception:
@@ -166,10 +215,16 @@ def estimate_size(session: requests.Session, url: str, timeout: int) -> Optional
     return None
 
 
-def download_file(session: requests.Session, url: str, dest: Path, timeout: int) -> DownloadResult:
+def download_file(
+    session: requests.Session,
+    url: str,
+    dest: Path,
+    timeout: int,
+    headers: Optional[Dict[str, str]] = None,
+) -> DownloadResult:
     dest.parent.mkdir(parents=True, exist_ok=True)
     size = 0
-    with session.get(url, stream=True, timeout=timeout) as resp:
+    with session.get(url, stream=True, timeout=timeout, headers=headers) as resp:
         resp.raise_for_status()
         content_type = resp.headers.get("Content-Type", "")
         content_disposition = resp.headers.get("Content-Disposition", "")
@@ -237,6 +292,21 @@ def is_html_file(path: Path, content_type: str) -> bool:
     return head.startswith(b"<!DOCTYPE html") or head.startswith(b"<html")
 
 
+def is_blocked_response(result: DownloadResult, path: Path) -> Optional[SkipReason]:
+    content_type = (result.content_type or "").lower()
+    if "text/html" in content_type:
+        return SkipReason(reason="html_response", detail=content_type)
+    if result.size < 4096 and is_html_file(path, content_type):
+        return SkipReason(reason="html_body", detail="small_html_body")
+    return None
+
+
+def skip_reason_for_source(source: SourceConfig, cookie_jar: Optional[MozillaCookieJar]) -> Optional[SkipReason]:
+    if source.requires_cookies and not cookie_jar:
+        return SkipReason(reason="cookie_required", detail="cookie jar missing")
+    return None
+
+
 class SourceAdapter:
     def __init__(self, source: SourceConfig, config: Dict[str, Any]) -> None:
         self.source = source
@@ -252,10 +322,38 @@ class SourceAdapter:
         return allowed_extension(url, allowed, ignored)
 
 
+class DojHubAdapter(SourceAdapter):
+    def discover(self, session: requests.Session) -> List[DiscoveredFile]:
+        timeout = int(self.config.get("defaults", {}).get("timeout_seconds", 120))
+        resp = session.get(
+            self.source.base_url, timeout=timeout, headers=source_headers(self.source)
+        )
+        resp.raise_for_status()
+        links = collect_links(resp.text)
+        files: List[DiscoveredFile] = []
+        for link in links:
+            url = normalize_url(self.source.base_url, link["href"])
+            if not self._allowed(url):
+                continue
+            title_text = link["text"].strip() or Path(urlparse(url).path).name
+            files.append(
+                DiscoveredFile(
+                    url=url,
+                    title=title_text,
+                    source_page=self.source.base_url,
+                    release_date=self.source.release_date,
+                    tags=self.source.tags,
+                )
+            )
+        return files
+
+
 class DojDisclosuresAdapter(SourceAdapter):
     def discover(self, session: requests.Session) -> List[DiscoveredFile]:
         timeout = int(self.config.get("defaults", {}).get("timeout_seconds", 120))
-        resp = session.get(self.source.base_url, timeout=timeout)
+        resp = session.get(
+            self.source.base_url, timeout=timeout, headers=source_headers(self.source)
+        )
         resp.raise_for_status()
         links = collect_links(resp.text)
         dataset_pages = [
@@ -294,7 +392,9 @@ class DojDisclosuresAdapter(SourceAdapter):
         while next_url and next_url not in visited:
             visited.add(next_url)
             try:
-                resp = session.get(next_url, timeout=timeout)
+                resp = session.get(
+                    next_url, timeout=timeout, headers=source_headers(self.source)
+                )
                 resp.raise_for_status()
             except requests.RequestException as exc:
                 print(f"[ingest] dataset page fetch failed: {next_url} ({exc})")
@@ -338,7 +438,9 @@ class DojDisclosuresAdapter(SourceAdapter):
 class DojCourtRecordsAdapter(SourceAdapter):
     def discover(self, session: requests.Session) -> List[DiscoveredFile]:
         timeout = int(self.config.get("defaults", {}).get("timeout_seconds", 120))
-        resp = session.get(self.source.base_url, timeout=timeout)
+        resp = session.get(
+            self.source.base_url, timeout=timeout, headers=source_headers(self.source)
+        )
         resp.raise_for_status()
         links = collect_links(resp.text)
 
@@ -353,7 +455,9 @@ class DojCourtRecordsAdapter(SourceAdapter):
         for page in subpages:
             if page == self.source.base_url:
                 continue
-            sub_resp = session.get(page, timeout=timeout)
+            sub_resp = session.get(
+                page, timeout=timeout, headers=source_headers(self.source)
+            )
             sub_resp.raise_for_status()
             sub_links = collect_links(sub_resp.text)
             files.extend(self._parse_court_links(sub_links, page))
@@ -388,7 +492,9 @@ class DojCourtRecordsAdapter(SourceAdapter):
 class DojFoiaAdapter(SourceAdapter):
     def discover(self, session: requests.Session) -> List[DiscoveredFile]:
         timeout = int(self.config.get("defaults", {}).get("timeout_seconds", 120))
-        resp = session.get(self.source.base_url, timeout=timeout)
+        resp = session.get(
+            self.source.base_url, timeout=timeout, headers=source_headers(self.source)
+        )
         resp.raise_for_status()
         links = collect_links(resp.text)
         files: List[DiscoveredFile] = []
@@ -414,7 +520,9 @@ class DojFoiaAdapter(SourceAdapter):
 class OpaPressReleaseAdapter(SourceAdapter):
     def discover(self, session: requests.Session) -> List[DiscoveredFile]:
         timeout = int(self.config.get("defaults", {}).get("timeout_seconds", 120))
-        resp = session.get(self.source.base_url, timeout=timeout)
+        resp = session.get(
+            self.source.base_url, timeout=timeout, headers=source_headers(self.source)
+        )
         resp.raise_for_status()
         links = collect_links(resp.text)
         files: List[DiscoveredFile] = []
@@ -441,6 +549,8 @@ class OpaPressReleaseAdapter(SourceAdapter):
 
 def adapter_for(source: SourceConfig, config: Dict[str, Any]) -> SourceAdapter:
     kind = source.discovery.get("type")
+    if kind == "doj_hub":
+        return DojHubAdapter(source, config)
     if kind == "doj_disclosures":
         return DojDisclosuresAdapter(source, config)
     if kind == "doj_court_records":
@@ -466,6 +576,8 @@ def build_sources(config: Dict[str, Any]) -> List[SourceConfig]:
                 constraints=item.get("constraints", ""),
                 release_date=item.get("release_date", ""),
                 tags=item.get("tags", []),
+                requires_cookies=bool(item.get("requires_cookies", False)),
+                referer=item.get("referer", ""),
             )
         )
     return sources
@@ -487,6 +599,9 @@ def ingest() -> None:
     limits = select_limits(config)
     timeout = int(config.get("defaults", {}).get("timeout_seconds", 120))
     session = build_session(config)
+    cookie_jar = load_cookie_jar()
+    if cookie_jar:
+        session.cookies = cookie_jar
     sources = build_sources(config)
 
     catalog = load_catalog()
@@ -494,6 +609,13 @@ def ingest() -> None:
     updated = False
 
     for source in sources:
+        skip_reason = skip_reason_for_source(source, cookie_jar)
+        if skip_reason:
+            print(
+                "[ingest] skip gated source "
+                f"reason={skip_reason.reason} url={source.base_url}"
+            )
+            continue
         adapter = adapter_for(source, config)
         try:
             discovered = adapter.discover(session)
@@ -520,7 +642,8 @@ def ingest() -> None:
                 break
             attempted += 1
 
-            est_size = estimate_size(session, item.url, timeout)
+            headers = source_headers(source)
+            est_size = estimate_size(session, item.url, timeout, headers=headers)
             if max_bytes and est_size and total_bytes + est_size > max_bytes:
                 print(f"[ingest] skip (size cap) {item.url}")
                 continue
@@ -528,11 +651,15 @@ def ingest() -> None:
             filename = Path(urlparse(item.url).path).name or f"document-{downloaded}.bin"
             with tempfile.TemporaryDirectory(prefix="epstein-ingest-") as tmpdir:
                 tmp_path = Path(tmpdir) / filename
-                result = download_file(session, item.url, tmp_path, timeout)
-                if is_html_file(tmp_path, result.content_type):
+                result = download_file(session, item.url, tmp_path, timeout, headers=headers)
+                blocked = is_blocked_response(result, tmp_path)
+                if blocked:
                     skipped_nonfile += 1
                     if skipped_nonfile <= 5:
-                        print(f"[ingest] skip non-file response: {item.url}")
+                        print(
+                            "[ingest] skip gated response "
+                            f"url={item.url} reason={blocked.reason} detail={blocked.detail}"
+                        )
                     continue
 
                 sha = sha256_file(tmp_path)

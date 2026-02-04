@@ -1,10 +1,13 @@
 {
   "name": "epstein-files-library",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Official Epstein files library with a searchable static site.",
   "private": true,
   "license": "MIT",
   "dependencies": {
     "lunr": "2.3.9"
+  },
+  "devDependencies": {
+    "playwright": "^1.58.1"
   }
 }
