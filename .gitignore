@@ -3,3 +3,6 @@ node_modules/
 __pycache__/
 *.pyc
 /dist/
+.secrets/
+data/derived/
+*.cookies*.txt
