@@ -4,6 +4,7 @@ from __future__ import annotations
 import json
 import os
 import re
+import shutil
 import tempfile
 from dataclasses import dataclass, field
 from html.parser import HTMLParser
@@ -487,7 +488,7 @@ def ingest() -> None:
                 raw_dir = RAW_DIR / doc_id
                 raw_dir.mkdir(parents=True, exist_ok=True)
                 dest_path = raw_dir / filename
-                tmp_path.replace(dest_path)
+                shutil.move(str(tmp_path), dest_path)
 
                 mime_type = detect_mime(dest_path)
                 pages = count_pdf_pages(dest_path) if dest_path.suffix.lower() == ".pdf" else None
