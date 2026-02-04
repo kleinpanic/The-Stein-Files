@@ -1,16 +1,19 @@
 <article class="detail">
-  <h1>{{title}}</h1>
+  <header class="detail-header">
+    <p class="eyebrow">Document Details</p>
+    <h1>{{title}}</h1>
+    <div class="detail-actions">
+      <a class="button" href="../{{file_path}}">Original file</a>
+      <a class="button outline" href="../data/derived/text/{{id}}.txt">Text</a>
+      <a class="button ghost" href="{{source_url}}" rel="noopener" target="_blank">Source page</a>
+    </div>
+  </header>
   <div class="meta-grid">
     <div><strong>Release date</strong><div>{{release_date}}</div></div>
     <div><strong>Source</strong><div>{{source_name}}</div></div>
     <div><strong>Tags</strong><div>{{tags}}</div></div>
     <div><strong>SHA-256</strong><div class="mono">{{sha256}}</div></div>
     <div><strong>Pages</strong><div>{{pages}}</div></div>
-  </div>
-  <div class="actions">
-    <a class="button" href="../{{file_path}}">View original</a>
-    <a class="button" href="../data/derived/text/{{id}}.txt">View text</a>
-    <a class="button" href="{{source_url}}" rel="noopener" target="_blank">Source page</a>
   </div>
   <div class="notes">
     <h2>Notes</h2>

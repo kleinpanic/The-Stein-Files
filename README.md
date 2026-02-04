@@ -18,10 +18,7 @@ See `docs/SOURCES.md` for the canonical list of official upstream sources.
 
 ### Setup
 ```bash
-python3 -m venv .venv
-. .venv/bin/activate
-pip install -r requirements.txt
-npm ci
+make setup
 ```
 
 ### Common commands
@@ -29,11 +26,10 @@ npm ci
 - `make extract` to extract text and build the search index
 - `make build` to build the static site into `dist/`
 - `make test` to run validation checks
+- `make dev` to build then serve `dist/` locally
 
 ### Serve the site
-```bash
-python3 -m http.server 8000 --directory dist
-```
+`make dev` builds the site and starts a local static server at `http://localhost:8000`.
 
 ## Build pipeline
 GitHub Actions runs a scheduled ingestion workflow that downloads new releases (if any), extracts text, rebuilds the site, validates integrity, and commits updates. Pushes to the default branch deploy to GitHub Pages.
