@@ -17,11 +17,13 @@
   "limits": {
     "local": {
       "max_docs_per_source": 30,
-      "max_bytes_per_source": 250000000
+      "max_bytes_per_source": 250000000,
+      "max_attempts_per_source": 60
     },
     "ci": {
       "max_docs_per_source": 150,
-      "max_bytes_per_source": 1500000000
+      "max_bytes_per_source": 1500000000,
+      "max_attempts_per_source": 300
     }
   },
   "sources": [

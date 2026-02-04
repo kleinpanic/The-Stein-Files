@@ -476,6 +476,7 @@ def select_limits(config: Dict[str, Any]) -> Dict[str, int]:
     return {
         "max_docs": int(env_limits.get("max_docs_per_source", 0)),
         "max_bytes": int(env_limits.get("max_bytes_per_source", 0)),
+        "max_attempts": int(env_limits.get("max_attempts_per_source", 0)),
     }
 
 
@@ -500,16 +501,22 @@ def ingest() -> None:
         discovered = sorted({d.url: d for d in discovered}.values(), key=lambda d: d.url)
         max_docs = limits.get("max_docs", 0)
         max_bytes = limits.get("max_bytes", 0)
+        max_attempts = limits.get("max_attempts", 0)
         total_bytes = 0
         downloaded = 0
         new_docs = 0
+        attempted = 0
+        skipped_nonfile = 0
         print(f"[ingest] {source.id}: discovered {len(discovered)} files")
 
         for item in discovered:
+            if max_attempts and attempted >= max_attempts:
+                break
             if max_docs and downloaded >= max_docs:
                 break
             if max_bytes and total_bytes >= max_bytes:
                 break
+            attempted += 1
 
             est_size = estimate_size(session, item.url, timeout)
             if max_bytes and est_size and total_bytes + est_size > max_bytes:
@@ -521,7 +528,9 @@ def ingest() -> None:
                 tmp_path = Path(tmpdir) / filename
                 result = download_file(session, item.url, tmp_path, timeout)
                 if is_html_file(tmp_path, result.content_type):
-                    print(f"[ingest] skip non-file response: {item.url}")
+                    skipped_nonfile += 1
+                    if skipped_nonfile <= 5:
+                        print(f"[ingest] skip non-file response: {item.url}")
                     continue
 
                 sha = sha256_file(tmp_path)
@@ -584,7 +593,8 @@ def ingest() -> None:
                 downloaded += 1
 
         print(
-            f"[ingest] {source.id}: downloaded {downloaded} files, new {new_docs}, bytes {total_bytes}"
+            f"[ingest] {source.id}: downloaded {downloaded} files, new {new_docs}, "
+            f"bytes {total_bytes}, attempts {attempted}, non-file {skipped_nonfile}"
         )
 
     if updated:
