@@ -581,6 +581,10 @@ class SourceAdapter:
         ignored = defaults.get("ignore_extensions", [])
         return allowed_extension(url, allowed, ignored)
 
+    def _is_relevant_file_link(self, url: str) -> bool:
+        path = urlparse(url).path.lower()
+        return "/multimedia/" in path or "/epstein/" in path
+
     def fetch(
         self,
         session: requests.Session,
@@ -754,6 +758,8 @@ class DojCourtRecordsAdapter(SourceAdapter):
         discovered: List[DiscoveredFile] = []
         for link in links:
             url = normalize_url(page_url, link["href"])
+            if not self._is_relevant_file_link(url):
+                continue
             if not self._allowed(url):
                 continue
             heading = link["heading"] or "Court Records"
@@ -798,6 +804,8 @@ class DojFoiaAdapter(SourceAdapter):
         files: List[DiscoveredFile] = []
         for link in links:
             url = normalize_url(self.source.base_url, link["href"])
+            if not self._is_relevant_file_link(url):
+                continue
             if not self._allowed(url):
                 continue
             heading = link["heading"] or "FOIA"
