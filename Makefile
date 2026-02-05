@@ -1,4 +1,4 @@
-.PHONY: dev ingest extract build test fmt lint venv node setup auth-doj check-links
+.PHONY: dev ingest extract build test fmt lint venv node setup auth-doj check-links verify-doj
 
 VENV := .venv
 PY := $(VENV)/bin/python
@@ -42,6 +42,9 @@ test: venv extract
 
 check-links: venv
 	$(PY) -m scripts.check_links
+
+verify-doj: venv
+	$(PY) -m scripts.verify_doj
 
 auth-doj: venv node
 	npx playwright install chromium
