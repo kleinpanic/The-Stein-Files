@@ -585,6 +585,66 @@ class SourceAdapter:
         path = urlparse(url).path.lower()
         return "/multimedia/" in path or "/epstein/" in path
 
+    def _anchor_has_allowed_extension(self, text: str) -> bool:
+        defaults = self.config.get("defaults", {})
+        allowed = defaults.get("allowed_extensions", [])
+        text_lower = text.strip().lower()
+        return any(text_lower.endswith(ext) for ext in allowed)
+
+    def _content_type_allowed(self, content_type: str) -> bool:
+        content_type = (content_type or "").lower()
+        allowed_types = {
+            "application/pdf",
+            "application/rtf",
+            "text/plain",
+            "text/csv",
+            "audio/wav",
+            "audio/x-wav",
+            "video/mp4",
+        }
+        return any(token in content_type for token in allowed_types)
+
+    def _multimedia_allowed_by_head(
+        self,
+        session: requests.Session,
+        url: str,
+        headers: Optional[Dict[str, str]],
+    ) -> bool:
+        try:
+            if self.requester:
+                resp = request_with_retry(
+                    session,
+                    "HEAD",
+                    url,
+                    timeout=self.requester.timeout,
+                    headers=headers,
+                    retry_max=self.requester.retry_max,
+                    backoff_base=self.requester.backoff_base,
+                    limiter=self.requester.limiter,
+                )
+            else:
+                resp = session.head(url, timeout=120, headers=headers, allow_redirects=True)
+        except requests.RequestException:
+            return False
+        return self._content_type_allowed(resp.headers.get("Content-Type", ""))
+
+    def _should_include_link(
+        self,
+        session: requests.Session,
+        url: str,
+        link_text: str,
+        headers: Optional[Dict[str, str]],
+    ) -> bool:
+        if not self._is_relevant_file_link(url):
+            return False
+        if self._allowed(url):
+            return True
+        if "/multimedia/" in urlparse(url).path.lower():
+            if self._anchor_has_allowed_extension(link_text):
+                return True
+            return self._multimedia_allowed_by_head(session, url, headers)
+        return False
+
     def fetch(
         self,
         session: requests.Session,
@@ -741,26 +801,26 @@ class DojCourtRecordsAdapter(SourceAdapter):
         ]
         subpages = sorted(set(subpages))
 
-        files = self._parse_court_links(links, self.source.base_url)
+        files = self._parse_court_links(session, links, self.source.base_url)
         for page in subpages:
             if page == self.source.base_url:
                 continue
             sub_resp = self.fetch(session, page, headers=source_headers(self.source))
             sub_resp.raise_for_status()
             sub_links = collect_links(sub_resp.text)
-            files.extend(self._parse_court_links(sub_links, page))
+            files.extend(self._parse_court_links(session, sub_links, page))
 
         return files
 
     def _parse_court_links(
-        self, links: List[Dict[str, str]], page_url: str
+        self, session: requests.Session, links: List[Dict[str, str]], page_url: str
     ) -> List[DiscoveredFile]:
         discovered: List[DiscoveredFile] = []
+        headers = source_headers(self.source)
         for link in links:
             url = normalize_url(page_url, link["href"])
-            if not self._is_relevant_file_link(url):
-                continue
-            if not self._allowed(url):
+            link_text = link.get("text", "")
+            if not self._should_include_link(session, url, link_text, headers):
                 continue
             heading = link["heading"] or "Court Records"
             title_text = link["text"].strip() or Path(urlparse(url).path).name
@@ -804,9 +864,8 @@ class DojFoiaAdapter(SourceAdapter):
         files: List[DiscoveredFile] = []
         for link in links:
             url = normalize_url(self.source.base_url, link["href"])
-            if not self._is_relevant_file_link(url):
-                continue
-            if not self._allowed(url):
+            link_text = link.get("text", "")
+            if not self._should_include_link(session, url, link_text, headers):
                 continue
             heading = link["heading"] or "FOIA"
             title_text = link["text"].strip() or Path(urlparse(url).path).name
