@@ -128,6 +128,8 @@ async function visitSharePointFrames(page, context) {
   }
 }
 
+let browserRef = null;
+
 async function main() {
   const channel = process.env.EPPIE_PLAYWRIGHT_CHANNEL || undefined;
   const browser = await chromium.launch({
@@ -135,6 +137,7 @@ async function main() {
     channel,
     args: ["--no-sandbox", "--disable-dev-shm-usage"],
   });
+  browserRef = browser;
   const context = await browser.newContext();
   const page = await context.newPage();
   await mkdir(resolve(ROOT, ".secrets"), { recursive: true });
@@ -146,7 +149,7 @@ async function main() {
     let rounds = 0;
     while (rounds < maxRounds) {
       rounds += 1;
-      const response = await page.goto(url, { waitUntil: "networkidle" });
+      const response = await page.goto(url, { waitUntil: "domcontentloaded" });
       const status = response ? response.status() : 0;
       await page.waitForTimeout(1500);
       await tryAcceptAdvisory(page);
@@ -154,7 +157,7 @@ async function main() {
       const resolved = normalizeDojUrl(page.url());
       const notFound = await isPageNotFound(status, page);
       const denied = await isAccessDenied(page);
-      const blocked = status === 403 || denied;
+      const blocked = status === 401 || status === 403 || denied;
       console.log(
         `[auth] visit url=${url} resolved=${resolved} status=${status} blocked=${blocked} not_found=${notFound} round=${rounds}`
       );
@@ -162,7 +165,7 @@ async function main() {
         break;
       }
       await prompt(
-        `[auth] blocked for ${url}. Complete any prompts, then press Enter to retry...`
+        `[auth] blocked for ${url}. Switch to the browser window, complete any prompts, then press Enter to retry...`
       );
     }
   }
@@ -221,4 +224,15 @@ async function main() {
 main().catch((err) => {
   console.error(err);
   process.exit(1);
+});
+
+process.on("SIGINT", async () => {
+  if (browserRef) {
+    try {
+      await browserRef.close();
+    } catch (_err) {
+      // ignore
+    }
+  }
+  process.exit(130);
 });
