@@ -54,6 +54,7 @@ def extract_all() -> None:
         if suffix == ".pdf":
             extract_pdf_text(file_path, text_path)
         elif suffix in TEXT_EXTENSIONS or mime_type.startswith("text/"):
+            text_path.parent.mkdir(parents=True, exist_ok=True)
             text_path.write_text(file_path.read_text(encoding="utf-8"), encoding="utf-8")
         else:
             text_path.parent.mkdir(parents=True, exist_ok=True)
