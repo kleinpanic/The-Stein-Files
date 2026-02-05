@@ -51,8 +51,10 @@ make auth-doj
 ```
 The first run will download the Playwright Chromium browser if needed.
 Cookies are stored locally in `.secrets/justice.gov.cookies.txt` and are not committed.
-`make ingest` will automatically use the jar when present (canonical format is the `.txt` Netscape jar).
-The auth helper also writes `.secrets/doj.storage-state.json` for Playwright-based discovery.
+The auth helper also writes:
+- `.secrets/justice.gov.cookies.json`
+- `.secrets/doj.storage-state.json`
+`make ingest` will automatically use the `.txt` jar when present.
 You can override the jar explicitly:
 ```bash
 EPPIE_COOKIE_JAR=/path/to/cookies.txt make ingest
