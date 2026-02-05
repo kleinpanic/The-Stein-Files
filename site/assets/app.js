@@ -128,7 +128,7 @@ function renderResults(target, results, metaById, query) {
       <div class="result-tags">${tags}</div>
       <p class="result-snippet">${snippetHtml}</p>
       <div class="result-actions">
-        <a class="button" href="${meta.file_path}">Original</a>
+        <a class="button" href="${meta.source_url || meta.file_path}">Original</a>
         <a class="button outline" href="data/derived/text/${meta.id}.txt">Text</a>
         <a class="button ghost" href="documents/${meta.id}.html">Details</a>
       </div>
