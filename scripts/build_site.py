@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import json
+import os
 import shutil
 from pathlib import Path
 
@@ -25,7 +26,11 @@ def copy_assets() -> None:
 
 
 def copy_data() -> None:
-    for path in [Path("data/raw"), Path("data/derived"), Path("data/meta/catalog.json")]:
+    mirror_mode = os.getenv("EPPIE_MIRROR_MODE", "").lower() in {"1", "true", "yes"}
+    paths = [Path("data/derived"), Path("data/meta/catalog.json")]
+    if mirror_mode:
+        paths.insert(0, Path("data/raw"))
+    for path in paths:
         if path.is_dir():
             dest = DIST_DIR / path
             dest.parent.mkdir(parents=True, exist_ok=True)
