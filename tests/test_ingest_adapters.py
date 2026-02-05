@@ -21,12 +21,19 @@ def test_court_records_adapter_parses_links():
     config = {"defaults": {"allowed_extensions": [".pdf"], "ignore_extensions": []}}
     adapter = DojCourtRecordsAdapter(source, config)
 
-    files = adapter._parse_court_links(links, source.base_url)
+    class DummySession:
+        def head(self, url, **kwargs):
+            class HeadResp:
+                status_code = 200
+                headers = {"Content-Type": "application/pdf"}
+
+            return HeadResp()
+
+    files = adapter._parse_court_links(DummySession(), links, source.base_url)
     assert len(files) == 2
     assert files[0].title.startswith("United States v. Maxwell")
     assert files[0].release_date == "2021-01-01"
     assert "/multimedia/" in files[0].url
-    assert files[0].url.endswith("indictment.pdf")
 
 
 def test_hub_adapter_parses_links():
@@ -86,12 +93,20 @@ def test_foia_adapter_parses_multimedia_links():
         def raise_for_status(self):
             return None
 
+    class HeadResp:
+        status_code = 200
+        headers = {"Content-Type": "application/pdf"}
+
     class DummySession:
         def get(self, *args, **kwargs):
             return DummyResp()
 
+        def head(self, url, **kwargs):
+            return HeadResp()
+
     files = adapter.discover(DummySession())
-    assert len(files) == 2
+    assert len(files) == 3
     urls = {file.url for file in files}
-    assert any(url.endswith(".pdf") for url in urls)
-    assert any(url.endswith(".wav") for url in urls)
+    assert any(url.endswith("/multimedia/foia/release-1") for url in urls)
+    assert any(url.endswith("/multimedia/foia/audio-1") for url in urls)
+    assert any(url.endswith("/multimedia/foia/opaque") for url in urls)
