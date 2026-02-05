@@ -27,6 +27,7 @@ make setup
 - `make build` to build the static site into `dist/`
 - `make test` to run validation checks
 - `make check-links` to verify configured source URLs are not stale
+- `make verify-doj` to check DOJ Epstein endpoints using the current cookie jar
 - `make dev` to build then serve `dist/` locally
 
 ### Ingest caps

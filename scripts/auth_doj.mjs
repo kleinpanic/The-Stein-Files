@@ -80,9 +80,10 @@ async function visitSharePointFrames(page, context) {
   const iframeSrcs = await page.$$eval("iframe", (frames) =>
     frames.map((frame) => frame.getAttribute("src") || "").filter(Boolean)
   );
-  const sharepointSrcs = iframeSrcs.filter((src) =>
-    src.toLowerCase().includes("sharepoint")
-  );
+  const sharepointSrcs = iframeSrcs.filter((src) => {
+    const lower = src.toLowerCase();
+    return lower.includes("sharepoint") || lower.includes("doj365");
+  });
   for (const src of sharepointSrcs) {
     const target = normalizeDojUrl(src);
     const framePage = await context.newPage();
@@ -112,16 +113,25 @@ async function main() {
 
   console.log("[auth] opening DOJ Epstein Library in a real browser...");
   const urls = await loadDojUrls();
-  let hadNotFound = false;
   for (const url of urls) {
-    await page.goto(url, { waitUntil: "domcontentloaded" });
+    const initial = await page.goto(url, { waitUntil: "domcontentloaded" });
+    const initialStatus = initial ? initial.status() : 0;
     await page.waitForTimeout(2000);
-    if (await isPageNotFound(page)) {
-      console.log(`[auth] page not found: ${url}`);
-      hadNotFound = true;
-      continue;
+    const initialNotFound = await isPageNotFound(page);
+    if (initialStatus === 403 || initialNotFound) {
+      console.log(
+        `[auth] blocked initial url=${url} status=${initialStatus} page_not_found=${initialNotFound}`
+      );
     }
     await visitSharePointFrames(page, context);
+    const verify = await page.goto(url, { waitUntil: "domcontentloaded" });
+    const verifyStatus = verify ? verify.status() : 0;
+    await page.waitForTimeout(1000);
+    const verifyNotFound = await isPageNotFound(page);
+    const blocked = verifyStatus === 403 || verifyNotFound;
+    console.log(
+      `[auth] verify url=${url} status=${verifyStatus} blocked=${blocked}`
+    );
   }
   await prompt("[auth] complete any advisory prompts, then press Enter to capture cookies...");
 
@@ -160,9 +170,6 @@ async function main() {
     }
   }
   await api.dispose();
-  if (hadNotFound) {
-    console.log("[auth] warning: one or more URLs returned Page not found");
-  }
   if (had403) {
     console.log("[auth] guidance: visit the 403 pages, scroll/ack prompts, then press Enter again.");
   }
