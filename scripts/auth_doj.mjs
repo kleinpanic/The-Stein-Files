@@ -67,13 +67,41 @@ async function loadDojUrls() {
   return urls;
 }
 
-async function isPageNotFound(page) {
+async function isPageNotFound(status, page) {
+  if (status !== 404) return false;
   try {
     const heading = await page.textContent("h1");
     return heading && heading.toLowerCase().includes("page not found");
   } catch (_err) {
     return false;
   }
+}
+
+async function isAccessDenied(page) {
+  try {
+    const text = (await page.textContent("body")) || "";
+    const lower = text.toLowerCase();
+    return (
+      lower.includes("access denied") ||
+      lower.includes("forbidden") ||
+      lower.includes("not authorized")
+    );
+  } catch (_err) {
+    return false;
+  }
+}
+
+async function tryAcceptAdvisory(page) {
+  const labels = ["I Agree", "Agree", "Accept", "Continue", "Yes"];
+  for (const label of labels) {
+    const button = page.getByRole("button", { name: label });
+    if (await button.isVisible().catch(() => false)) {
+      await button.click().catch(() => {});
+      await page.waitForTimeout(1500);
+      return true;
+    }
+  }
+  return false;
 }
 
 async function visitSharePointFrames(page, context) {
@@ -113,25 +141,30 @@ async function main() {
 
   console.log("[auth] opening DOJ Epstein Library in a real browser...");
   const urls = await loadDojUrls();
+  const maxRounds = Number.parseInt(process.env.EPPIE_AUTH_MAX_ROUNDS || "3", 10);
   for (const url of urls) {
-    const initial = await page.goto(url, { waitUntil: "domcontentloaded" });
-    const initialStatus = initial ? initial.status() : 0;
-    await page.waitForTimeout(2000);
-    const initialNotFound = await isPageNotFound(page);
-    if (initialStatus === 403 || initialNotFound) {
+    let rounds = 0;
+    while (rounds < maxRounds) {
+      rounds += 1;
+      const response = await page.goto(url, { waitUntil: "networkidle" });
+      const status = response ? response.status() : 0;
+      await page.waitForTimeout(1500);
+      await tryAcceptAdvisory(page);
+      await visitSharePointFrames(page, context);
+      const resolved = normalizeDojUrl(page.url());
+      const notFound = await isPageNotFound(status, page);
+      const denied = await isAccessDenied(page);
+      const blocked = status === 403 || denied;
       console.log(
-        `[auth] blocked initial url=${url} status=${initialStatus} page_not_found=${initialNotFound}`
+        `[auth] visit url=${url} resolved=${resolved} status=${status} blocked=${blocked} not_found=${notFound} round=${rounds}`
+      );
+      if (!blocked && !notFound) {
+        break;
+      }
+      await prompt(
+        `[auth] blocked for ${url}. Complete any prompts, then press Enter to retry...`
       );
     }
-    await visitSharePointFrames(page, context);
-    const verify = await page.goto(url, { waitUntil: "domcontentloaded" });
-    const verifyStatus = verify ? verify.status() : 0;
-    await page.waitForTimeout(1000);
-    const verifyNotFound = await isPageNotFound(page);
-    const blocked = verifyStatus === 403 || verifyNotFound;
-    console.log(
-      `[auth] verify url=${url} status=${verifyStatus} blocked=${blocked}`
-    );
   }
   await prompt("[auth] complete any advisory prompts, then press Enter to capture cookies...");
 
@@ -156,22 +189,30 @@ async function main() {
     process.exit(result.status ?? 1);
   }
   const api = await request.newContext({ storageState: STORAGE_STATE });
-  let had403 = false;
+  let hadBlocked = false;
   for (const url of urls) {
     try {
       const resp = await api.get(url);
-      console.log(`[auth] verify ${url} status=${resp.status()}`);
-      if (resp.status() === 403) {
-        had403 = true;
+      const status = resp.status();
+      const body = (await resp.text()) || "";
+      const blocked =
+        status === 403 ||
+        body.toLowerCase().includes("access denied") ||
+        body.toLowerCase().includes("forbidden");
+      console.log(
+        `[auth] verify url=${url} status=${status} blocked=${blocked}`
+      );
+      if (blocked) {
+        hadBlocked = true;
       }
     } catch (err) {
-      console.log(`[auth] verify ${url} status=0`);
-      had403 = true;
+      console.log(`[auth] verify ${url} status=0 blocked=true`);
+      hadBlocked = true;
     }
   }
   await api.dispose();
-  if (had403) {
-    console.log("[auth] guidance: visit the 403 pages, scroll/ack prompts, then press Enter again.");
+  if (hadBlocked) {
+    console.log("[auth] guidance: visit the blocked pages, scroll/ack prompts, then press Enter again.");
   }
 
   console.log(`[auth] cookie jar written to ${COOKIE_JAR}`);
