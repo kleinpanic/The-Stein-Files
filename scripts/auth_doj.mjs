@@ -86,13 +86,22 @@ async function main() {
 
   console.log("[auth] opening DOJ Epstein Library in a real browser...");
   const targets = await discoverHubTargets(page);
-  const urls = [HUB_URL];
+  const requiredUrls = [
+    "https://www.justice.gov/epstein",
+    "https://www.justice.gov/epstein/doj-disclosures",
+    "https://www.justice.gov/epstein/court-records",
+    "https://www.justice.gov/epstein/foia",
+  ];
+  const urls = Array.from(
+    new Set([
+      ...requiredUrls,
+      ...Object.values(targets).filter(Boolean),
+    ])
+  );
   for (const [label, url] of Object.entries(targets)) {
     if (!url) {
       console.log(`[auth] not found on hub; skipping navigation for ${label}`);
-      continue;
     }
-    urls.push(url);
   }
   for (const url of urls) {
     await page.goto(url, { waitUntil: "domcontentloaded" });
