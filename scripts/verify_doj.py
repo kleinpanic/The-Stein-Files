@@ -56,6 +56,13 @@ def load_cookie_jar() -> requests.cookies.RequestsCookieJar | None:
     return jar
 
 
+def detect_blocked(status: int, body: str) -> bool:
+    if status == 403:
+        return True
+    lower = (body or "").lower()
+    return "access denied" in lower or "forbidden" in lower
+
+
 def main() -> int:
     config = load_config()
     defaults = config.get("defaults", {})
@@ -76,9 +83,12 @@ def main() -> int:
     for url in urls:
         try:
             resp = session.get(url, timeout=30, allow_redirects=True)
-            print(f"[verify-doj] {url} status={resp.status_code}")
+            blocked = detect_blocked(resp.status_code, resp.text)
+            print(
+                f"[verify-doj] {url} status={resp.status_code} blocked={blocked}"
+            )
         except requests.RequestException as exc:
-            print(f"[verify-doj] {url} status=0 error={exc}")
+            print(f"[verify-doj] {url} status=0 blocked=true error={exc}")
     return 0
 
 
