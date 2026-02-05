@@ -14,6 +14,8 @@ jobs:
     env:
       EPPIE_MAX_DOWNLOADS_PER_SOURCE: "30"
       EPPIE_MAX_BYTES_PER_RUN: "250000000"
+      EPPIE_TIME_BUDGET_SECONDS: "1200"
+      EPPIE_REQUESTS_PER_SECOND: "1"
     steps:
       - name: Checkout
         uses: actions/checkout@v4

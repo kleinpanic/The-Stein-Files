@@ -24,6 +24,7 @@
     "title": {"type": "string"},
     "source_name": {"type": "string"},
     "source_url": {"type": "string", "format": "uri"},
+    "source_page": {"type": ["string", "null"], "format": "uri"},
     "release_date": {"type": "string"},
     "downloaded_at": {"type": "string"},
     "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
@@ -33,6 +34,9 @@
     "tags": {"type": "array", "items": {"type": "string"}},
     "notes": {"type": ["string", "null"]},
     "is_official": {"type": "boolean"},
+    "etag": {"type": ["string", "null"]},
+    "last_modified": {"type": ["string", "null"]},
+    "content_disposition": {"type": ["string", "null"]},
     "license_or_terms": {"type": "string"},
     "sources": {
       "type": "array",
