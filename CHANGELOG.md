@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.3.0
+- Removed default ingest caps and added explicit throttling/backoff knobs with time budgets for CI.
+- Made ingest resumable with per-source seen/failed tracking and conditional requests (ETag/Last-Modified).
+- Added mirror mode toggle for build output and improved tests for backoff, state, and shard extraction.
+
 ## 1.2.0
 - Added interactive DOJ auth capture (`make auth-doj`) with local cookie jar handling for gated sources.
 - Added explicit search modes (full/title/tags/source/file) with shareable URL params.
