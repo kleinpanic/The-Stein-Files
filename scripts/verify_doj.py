@@ -43,13 +43,22 @@ def load_urls(config: Dict[str, object]) -> List[str]:
 
 def load_cookie_jar() -> requests.cookies.RequestsCookieJar | None:
     jar_path = os.getenv("EPPIE_COOKIE_JAR", "").strip()
-    if not jar_path:
+
+    path: Path | None = None
+    if jar_path:
+        path = Path(jar_path)
+    else:
         default = Path(".secrets") / "justice.gov.cookies.txt"
         if default.exists():
-            jar_path = str(default)
-    if not jar_path:
+            path = default
+        else:
+            json_default = default.with_suffix(".json")
+            if json_default.exists():
+                path = json_default
+
+    if not path:
         return None
-    path = Path(jar_path)
+
     jar = load_cookie_jar_from_path(path, "justice.gov")
     if jar is None:
         return None

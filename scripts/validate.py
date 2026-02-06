@@ -46,15 +46,28 @@ def validate_index() -> None:
         if not catalog_entries:
             return
         raise ValueError("No index shards found")
-    catalog = {entry["id"] for entry in catalog_entries}
+
+    catalog_ids = {entry["id"] for entry in catalog_entries}
+    indexed_ids: set[str] = set()
+
     for shard in shards:
         shard_path = Path(shard["path"])
         if not shard_path.exists():
             raise FileNotFoundError(f"Missing shard file: {shard_path}")
         shard_docs = json.loads(shard_path.read_text(encoding="utf-8"))
         for doc in shard_docs:
-            if doc["id"] not in catalog:
-                raise ValueError(f"Index id not found in catalog: {doc['id']}")
+            doc_id = doc["id"]
+            indexed_ids.add(doc_id)
+            if doc_id not in catalog_ids:
+                raise ValueError(f"Index id not found in catalog: {doc_id}")
+
+    missing = sorted(catalog_ids - indexed_ids)
+    if missing:
+        # Keep message short; full list can be huge.
+        sample = ", ".join(missing[:10])
+        raise ValueError(
+            f"Index missing {len(missing)} catalog entries (sample: {sample})"
+        )
 
 
 def main() -> None:
