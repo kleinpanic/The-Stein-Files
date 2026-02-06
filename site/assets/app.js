@@ -271,7 +271,11 @@ async function init() {
     let docs = indexDocs;
     if (query && lunrIndex) {
       const fields = SEARCH_MODE_FIELDS[searchMode.value] || SEARCH_MODE_FIELDS.full;
-      const terms = query.split(/\s+/).filter(Boolean);
+      // Normalize query terms so search is case-insensitive.
+      const terms = query
+        .split(/\s+/)
+        .filter(Boolean)
+        .map((term) => term.toLowerCase());
       const hits = lunrIndex.query((q) => {
         terms.forEach((term) => {
           q.term(term, { fields });

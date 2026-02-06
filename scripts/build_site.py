@@ -41,28 +41,31 @@ def copy_data() -> None:
             shutil.copy2(path, dest)
 
 
-def render_template(content: str, title: str, build_info: str) -> str:
+def render_template(content: str, title: str, build_info: str, asset_version: str) -> str:
     base = (SITE_DIR / "templates" / "base.html").read_text(encoding="utf-8")
-    return base.replace("{{title}}", title).replace("{{content}}", content).replace(
-        "{{build_info}}", build_info
+    return (
+        base.replace("{{title}}", title)
+        .replace("{{content}}", content)
+        .replace("{{build_info}}", build_info)
+        .replace("{{asset_version}}", asset_version)
     )
 
 
-def build_sources_page(build_info: str) -> None:
+def build_sources_page(build_info: str, asset_version: str) -> None:
     md = Path("docs/SOURCES.md").read_text(encoding="utf-8")
     html = markdown.markdown(md)
     content = f"<article class='prose'>{html}</article>"
-    page = render_template(content, "Sources", build_info)
+    page = render_template(content, "Sources", build_info, asset_version)
     (DIST_DIR / "sources.html").write_text(page, encoding="utf-8")
 
 
-def build_index_page(build_info: str) -> None:
+def build_index_page(build_info: str, asset_version: str) -> None:
     content = (SITE_DIR / "templates" / "index.html").read_text(encoding="utf-8")
-    page = render_template(content, "Epstein Files Library", build_info)
+    page = render_template(content, "Epstein Files Library", build_info, asset_version)
     (DIST_DIR / "index.html").write_text(page, encoding="utf-8")
 
 
-def build_detail_pages(build_info: str) -> None:
+def build_detail_pages(build_info: str, asset_version: str) -> None:
     catalog = load_catalog()
     detail_dir = DIST_DIR / "documents"
     detail_dir.mkdir(parents=True, exist_ok=True)
@@ -78,7 +81,7 @@ def build_detail_pages(build_info: str) -> None:
                     value = json.dumps(value)
             doc_html = doc_html.replace(f"{{{{{key}}}}}", str(value))
         content = doc_html
-        page = render_template(content, entry["title"], build_info)
+        page = render_template(content, entry["title"], build_info, asset_version)
         (detail_dir / f"{entry['id']}.html").write_text(page, encoding="utf-8")
 
 
@@ -90,9 +93,10 @@ def build() -> None:
     sha = current_git_sha()
     catalog = load_catalog()
     build_info = f"Built {build_time} | Commit {sha} | Documents {len(catalog)}"
-    build_index_page(build_info)
-    build_sources_page(build_info)
-    build_detail_pages(build_info)
+    asset_version = sha
+    build_index_page(build_info, asset_version)
+    build_sources_page(build_info, asset_version)
+    build_detail_pages(build_info, asset_version)
 
 
 if __name__ == "__main__":
