@@ -1,5 +1,24 @@
 {
+  "doj-epstein-doj-disclosures": {
+    "cursor": 1,
+    "failed_urls": {},
+    "last_run": "2026-02-07T10:23:15+00:00",
+    "seen_urls": [
+      "https://www.justice.gov/epstein/files/DataSet%201/EFTA00000001.pdf"
+    ]
+  },
+  "doj-epstein-hub": {
+    "cursor": 0,
+    "failed_urls": {},
+    "last_run": "2026-02-07T10:22:51+00:00",
+    "seen_urls": []
+  },
   "doj-opa-2025-02-27": {
-    "cursor": 11
+    "cursor": 1,
+    "failed_urls": {},
+    "last_run": "2026-02-07T10:23:19+00:00",
+    "seen_urls": [
+      "https://www.justice.gov/ag/media/1391271/dl?inline"
+    ]
   }
 }

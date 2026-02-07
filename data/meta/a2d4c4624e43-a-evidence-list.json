@@ -1,8 +1,10 @@
 {
-  "downloaded_at": "2026-02-04T07:37:25+00:00",
+  "content_disposition": "inline; filename=\"A. Evidence List_0_0_0_0.pdf\"",
+  "downloaded_at": "2026-02-07T10:23:19+00:00",
   "file_path": "data/raw/a2d4c4624e43-a-evidence-list/A. Evidence List_0_0_0_0.pdf",
   "id": "a2d4c4624e43-a-evidence-list",
   "is_official": true,
+  "last_modified": "Fri, 28 Feb 2025 01:15:08 GMT",
   "license_or_terms": "as published by source",
   "mime_type": "application/pdf",
   "notes": "Press release with direct links to the first phase of declassified PDFs.",
@@ -10,6 +12,7 @@
   "release_date": "2025-02-27",
   "sha256": "a2d4c4624e434b381d523764d51ca8e91da114beea7d658b69e41433f9dd89e5",
   "source_name": "DOJ OPA Press Release \u2014 First Phase Declassified (Feb 27, 2025)",
+  "source_page": "https://www.justice.gov/opa/pr/attorney-general-pamela-bondi-releases-first-phase-declassified-epstein-files",
   "source_url": "https://www.justice.gov/ag/media/1391271/dl?inline",
   "sources": [
     {
