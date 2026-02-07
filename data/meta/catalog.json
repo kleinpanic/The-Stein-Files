@@ -1,9 +1,11 @@
 [
   {
-    "downloaded_at": "2026-02-04T07:37:25+00:00",
+    "content_disposition": "inline; filename=\"A. Evidence List_0_0_0_0.pdf\"",
+    "downloaded_at": "2026-02-07T10:23:19+00:00",
     "file_path": "data/raw/a2d4c4624e43-a-evidence-list/A. Evidence List_0_0_0_0.pdf",
     "id": "a2d4c4624e43-a-evidence-list",
     "is_official": true,
+    "last_modified": "Fri, 28 Feb 2025 01:15:08 GMT",
     "license_or_terms": "as published by source",
     "mime_type": "application/pdf",
     "notes": "Press release with direct links to the first phase of declassified PDFs.",
@@ -11,6 +13,7 @@
     "release_date": "2025-02-27",
     "sha256": "a2d4c4624e434b381d523764d51ca8e91da114beea7d658b69e41433f9dd89e5",
     "source_name": "DOJ OPA Press Release \u2014 First Phase Declassified (Feb 27, 2025)",
+    "source_page": "https://www.justice.gov/opa/pr/attorney-general-pamela-bondi-releases-first-phase-declassified-epstein-files",
     "source_url": "https://www.justice.gov/ag/media/1391271/dl?inline",
     "sources": [
       {
@@ -284,5 +287,35 @@
       "press-release"
     ],
     "title": "Attorney General Letter (Feb 27, 2025)"
+  },
+  {
+    "content_disposition": "",
+    "downloaded_at": "2026-02-07T10:23:15+00:00",
+    "etag": "\"2b85b15404986b114a9256654783f930\"",
+    "file_path": "data/raw/d8f6ba273d41-utilities-efta00000001pdf/EFTA00000001.pdf",
+    "id": "d8f6ba273d41-utilities-efta00000001pdf",
+    "is_official": true,
+    "last_modified": "Fri, 19 Dec 2025 21:24:38 GMT",
+    "license_or_terms": "as published by source",
+    "mime_type": "application/pdf",
+    "notes": "DOJ Epstein Library disclosures released under the Epstein Files Transparency Act, including data set files and supplemental releases.",
+    "pages": 1,
+    "release_date": "2026-01-30",
+    "sha256": "d8f6ba273d416f1b3160b94b5646374b218a9ecef9d2cb3ae33cd3788f8f862b",
+    "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
+    "source_page": "https://www.justice.gov/epstein/doj-disclosures/data-set-1-files",
+    "source_url": "https://www.justice.gov/epstein/files/DataSet%201/EFTA00000001.pdf",
+    "sources": [
+      {
+        "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
+        "source_url": "https://www.justice.gov/epstein/doj-disclosures/data-set-1-files"
+      }
+    ],
+    "tags": [
+      "doj",
+      "epstein-library",
+      "doj-disclosures"
+    ],
+    "title": "Utilities \u2014 EFTA00000001.pdf"
   }
 ]
