@@ -6,3 +6,8 @@ __pycache__/
 .secrets/
 data/derived/
 *.cookies*.txt
+
+# Local autonomy / agent scratch
+DEV_PROMPT_OVERNIGHT.txt
+OVERNIGHT_AUTONOMY.md
+data/meta/autonomy_status.json

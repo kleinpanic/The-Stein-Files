@@ -31,7 +31,7 @@ from scripts.common import (
     utc_now_iso,
     write_json,
 )
-from scripts.cookies import load_cookie_jar_from_path
+from scripts.cookies import ensure_doj_age_verified_cookie, load_cookie_jar_from_path
 from scripts.doj_hub import collect_links, discover_doj_hub_targets
 
 CONFIG_PATH = Path("config/sources.json")
@@ -203,16 +203,28 @@ def default_cookie_path() -> Path:
 
 def load_cookie_jar() -> Optional[CookieJar]:
     jar_path = os.getenv("EPPIE_COOKIE_JAR", "").strip()
+
+    path: Optional[Path] = None
     if jar_path:
         path = Path(jar_path)
     else:
-        path = default_cookie_path()
-        if not path.exists():
-            json_path = path.with_suffix(".json")
+        default = default_cookie_path()
+        if default.exists():
+            path = default
+        else:
+            json_path = default.with_suffix(".json")
             if json_path.exists():
                 path = json_path
-            else:
-                return None
+
+    if path is None:
+        # CI-friendly default: DOJ endpoints are age-gated, and we can satisfy the
+        # gate with a minimal cookie. If a real cookie jar is required, callers can
+        # still provide EPPIE_COOKIE_JAR.
+        jar = CookieJar()
+        ensure_doj_age_verified_cookie(jar)
+        print("[ingest] using built-in DOJ age-verification cookie (no cookie jar file found)")
+        return jar
+
     try:
         jar = load_cookie_jar_from_path(path, "justice.gov")
     except Exception as exc:
@@ -221,6 +233,8 @@ def load_cookie_jar() -> Optional[CookieJar]:
     if jar is None:
         print(f"[ingest] cookie jar not found at {path}")
         return None
+
+    ensure_doj_age_verified_cookie(jar)
     return jar
 
 

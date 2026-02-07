@@ -104,6 +104,57 @@ def load_cookie_jar_from_path(path: Path, domain_suffix: str) -> Optional[Cookie
     return jar
 
 
+def ensure_cookie(
+    cookie_jar: CookieJar,
+    *,
+    domain: str,
+    name: str,
+    value: str,
+    path: str = "/",
+) -> None:
+    for cookie in cookie_jar:
+        if cookie.name == name and cookie.domain == domain and cookie.path == path:
+            return
+    domain_initial_dot = domain.startswith(".")
+    cookie_jar.set_cookie(
+        Cookie(
+            version=0,
+            name=name,
+            value=value,
+            port=None,
+            port_specified=False,
+            domain=domain,
+            domain_specified=True,
+            domain_initial_dot=domain_initial_dot,
+            path=path,
+            path_specified=True,
+            secure=False,
+            expires=None,
+            discard=False,
+            comment=None,
+            comment_url=None,
+            rest={},
+            rfc2109=False,
+        )
+    )
+
+
+def ensure_doj_age_verified_cookie(cookie_jar: CookieJar) -> None:
+    """Ensure the DOJ age-verification cookie exists.
+
+    The DOJ Epstein Library serves some file URLs via an /age-verify gate unless the
+    `justiceGovAgeVerified=true` cookie is present.
+    """
+
+    ensure_cookie(
+        cookie_jar,
+        domain=".justice.gov",
+        name="justiceGovAgeVerified",
+        value="true",
+        path="/",
+    )
+
+
 def verify_urls(cookie_jar: CookieJar, urls: Iterable[str]) -> list[tuple[str, int]]:
     import requests
 
