@@ -1,8 +1,10 @@
 {
-  "downloaded_at": "2026-02-04T07:37:34+00:00",
+  "content_disposition": "inline; filename=\"C. Contact Book_Redacted_0.pdf\"",
+  "downloaded_at": "2026-02-07T11:41:18+00:00",
   "file_path": "data/raw/b395c578ed93-c-contact-book-redacted/C. Contact Book_Redacted_0.pdf",
   "id": "b395c578ed93-c-contact-book-redacted",
   "is_official": true,
+  "last_modified": "Fri, 28 Feb 2025 01:21:19 GMT",
   "license_or_terms": "as published by source",
   "mime_type": "application/pdf",
   "notes": "Press release with direct links to the first phase of declassified PDFs.",
@@ -10,6 +12,7 @@
   "release_date": "2025-02-27",
   "sha256": "b395c578ed9394206eaae4f724f99b094d81a5fce45006b247150433b38016c6",
   "source_name": "DOJ OPA Press Release \u2014 First Phase Declassified (Feb 27, 2025)",
+  "source_page": "https://www.justice.gov/opa/pr/attorney-general-pamela-bondi-releases-first-phase-declassified-epstein-files",
   "source_url": "https://www.justice.gov/ag/media/1391321/dl?inline",
   "sources": [
     {

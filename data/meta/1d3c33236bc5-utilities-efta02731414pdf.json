@@ -1,0 +1,30 @@
+{
+  "content_disposition": "",
+  "downloaded_at": "2026-02-07T11:20:20+00:00",
+  "etag": "\"2ff6169689a1b4431cf520747097e398\"",
+  "file_path": "data/raw/1d3c33236bc5-utilities-efta02731414pdf/EFTA02731414.pdf",
+  "id": "1d3c33236bc5-utilities-efta02731414pdf",
+  "is_official": true,
+  "last_modified": "Sat, 31 Jan 2026 02:43:48 GMT",
+  "license_or_terms": "as published by source",
+  "mime_type": "application/pdf",
+  "notes": "DOJ Epstein Library disclosures released under the Epstein Files Transparency Act, including data set files and supplemental releases.",
+  "pages": 1,
+  "release_date": "2026-01-30",
+  "sha256": "1d3c33236bc5f915b4085ebe0f7fb0085d118f2b3cef8d5dd185bfb3424a1e43",
+  "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
+  "source_page": "https://www.justice.gov/epstein/doj-disclosures/data-set-12-files",
+  "source_url": "https://www.justice.gov/epstein/files/DataSet%2012/EFTA02731414.pdf",
+  "sources": [
+    {
+      "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
+      "source_url": "https://www.justice.gov/epstein/doj-disclosures/data-set-12-files"
+    }
+  ],
+  "tags": [
+    "doj",
+    "epstein-library",
+    "doj-disclosures"
+  ],
+  "title": "Utilities \u2014 EFTA02731414.pdf"
+}
