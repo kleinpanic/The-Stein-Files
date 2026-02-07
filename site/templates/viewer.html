@@ -1,0 +1,24 @@
+<section class="viewer">
+  <header class="viewer-header">
+    <p class="eyebrow">Document Viewer</p>
+    <h1 id="viewer-title">Loading…</h1>
+    <div class="detail-actions viewer-actions">
+      <a class="button" id="viewer-original" rel="noopener" target="_blank">Original file</a>
+      <a class="button outline" id="viewer-text">Text</a>
+      <a class="button ghost" id="viewer-github" rel="noopener" target="_blank">GitHub</a>
+    </div>
+    <p class="viewer-note">
+      If the PDF doesn’t render in-page, use the GitHub link above.
+    </p>
+  </header>
+
+  <div class="viewer-frame-wrap">
+    <iframe
+      id="viewer-frame"
+      class="viewer-frame"
+      title="PDF viewer"
+      loading="lazy"
+      referrerpolicy="no-referrer"
+    ></iframe>
+  </div>
+</section>

@@ -375,6 +375,27 @@ img {
   gap: 10px;
 }
 
+.viewer-frame-wrap {
+  margin-top: 14px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.viewer-frame {
+  width: 100%;
+  height: min(80vh, 900px);
+  border: 0;
+  background: white;
+}
+
+.viewer-note {
+  color: var(--muted);
+  margin-top: 12px;
+}
+
 .meta-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));

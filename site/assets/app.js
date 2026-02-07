@@ -363,6 +363,76 @@ async function init() {
   syncAndSearch();
 }
 
-init().catch((err) => {
+function encodePath(path) {
+  return String(path)
+    .split("/")
+    .map((part) => encodeURIComponent(part))
+    .join("/");
+}
+
+function getMetaContent(name) {
+  const meta = document.querySelector(`meta[name="${name}"]`);
+  return meta ? meta.getAttribute("content") || "" : "";
+}
+
+async function initViewer() {
+  const frame = document.getElementById("viewer-frame");
+  if (!frame) return;
+
+  const titleEl = document.getElementById("viewer-title");
+  const originalLink = document.getElementById("viewer-original");
+  const githubLink = document.getElementById("viewer-github");
+  const textLink = document.getElementById("viewer-text");
+
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get("id") || "";
+  if (!id) {
+    if (titleEl) titleEl.textContent = "Missing document id";
+    return;
+  }
+
+  const catalogResp = await fetch("data/meta/catalog.json");
+  const catalog = await catalogResp.json();
+  const entry = (catalog || []).find((item) => item.id === id);
+  if (!entry) {
+    if (titleEl) titleEl.textContent = `Unknown document: ${id}`;
+    return;
+  }
+
+  if (titleEl) titleEl.textContent = entry.title || id;
+  if (originalLink) originalLink.href = entry.source_url || "#";
+  if (textLink) textLink.href = `data/derived/text/${encodeURIComponent(id)}.txt`;
+
+  const buildSha = getMetaContent("build-sha");
+  const repoSlug = getMetaContent("repo-slug") || "kleinpanic/The-Stein-Files";
+  const filePath = entry.file_path || "";
+
+  let pdfUrl = "";
+  if (filePath && (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1")) {
+    // Local dev: raw files may be present if EPPIE_MIRROR_MODE=1 during build.
+    pdfUrl = encodePath(filePath);
+  } else if (filePath && buildSha) {
+    pdfUrl = `https://raw.githubusercontent.com/${repoSlug}/${buildSha}/${encodePath(filePath)}`;
+  }
+
+  if (githubLink && filePath && buildSha) {
+    githubLink.href = `https://github.com/${repoSlug}/blob/${buildSha}/${encodePath(filePath)}`;
+  }
+
+  if (!pdfUrl) {
+    if (titleEl) titleEl.textContent = `${entry.title || id} (no PDF link)`;
+    return;
+  }
+
+  frame.src = pdfUrl;
+}
+
+if (document.getElementById("searchInput") && document.getElementById("loadingState")) {
+  init().catch((err) => {
+    console.error(err);
+  });
+}
+
+initViewer().catch((err) => {
   console.error(err);
 });
