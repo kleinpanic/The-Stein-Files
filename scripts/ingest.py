@@ -441,6 +441,13 @@ def is_blocked_response(result: DownloadResult, path: Path) -> Optional[SkipReas
     return None
 
 
+def status_code_from_http_error(exc: requests.HTTPError) -> int:
+    resp = exc.response
+    if resp is None:
+        return 0
+    return resp.status_code
+
+
 def response_is_not_found(resp: requests.Response) -> bool:
     if resp.status_code == 404:
         return True
@@ -1155,7 +1162,7 @@ def ingest() -> None:
                         limiter=limiter,
                     )
                 except requests.HTTPError as exc:
-                    status = exc.response.status_code if exc.response else 0
+                    status = status_code_from_http_error(exc)
                     if status in {403, 404}:
                         print(f"[ingest] skip status={status} url={item.url}")
                         failed_urls[item.url] = {"status": status, "at": utc_now_iso()}
