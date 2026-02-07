@@ -3,13 +3,14 @@ from __future__ import annotations
 
 import json
 import os
+from http.cookiejar import CookieJar
 from pathlib import Path
 from typing import Dict, List
 from urllib.parse import urlparse, urlunparse
 
 import requests
 
-from scripts.cookies import load_cookie_jar_from_path
+from scripts.cookies import ensure_doj_age_verified_cookie, load_cookie_jar_from_path
 
 CONFIG_PATH = Path("config/sources.json")
 SOURCE_IDS = {
@@ -41,7 +42,7 @@ def load_urls(config: Dict[str, object]) -> List[str]:
     return [url for url in urls if url]
 
 
-def load_cookie_jar() -> requests.cookies.RequestsCookieJar | None:
+def load_cookie_jar() -> CookieJar | None:
     jar_path = os.getenv("EPPIE_COOKIE_JAR", "").strip()
 
     path: Path | None = None
@@ -57,19 +58,32 @@ def load_cookie_jar() -> requests.cookies.RequestsCookieJar | None:
                 path = json_default
 
     if not path:
-        return None
+        jar = CookieJar()
+        ensure_doj_age_verified_cookie(jar)
+        return jar
 
     jar = load_cookie_jar_from_path(path, "justice.gov")
     if jar is None:
         return None
+
+    ensure_doj_age_verified_cookie(jar)
     return jar
 
 
-def detect_blocked(status: int, body: str) -> bool:
-    if status == 403:
+def detect_blocked(status: int, body: str, final_url: str = "") -> bool:
+    if status in {401, 403}:
         return True
+
     lower = (body or "").lower()
-    return "access denied" in lower or "forbidden" in lower
+    final_lower = (final_url or "").lower()
+
+    # If we ended up on the age-verify gate, we're blocked.
+    if "/age-verify" in final_lower:
+        return True
+    if "rel=\"canonical\" href=\"https://www.justice.gov/age-verify\"" in lower:
+        return True
+
+    return False
 
 
 def main() -> int:
@@ -92,7 +106,7 @@ def main() -> int:
     for url in urls:
         try:
             resp = session.get(url, timeout=30, allow_redirects=True)
-            blocked = detect_blocked(resp.status_code, resp.text)
+            blocked = detect_blocked(resp.status_code, resp.text, resp.url)
             print(
                 f"[verify-doj] {url} status={resp.status_code} blocked={blocked}"
             )
