@@ -78,6 +78,12 @@ def build_viewer_page(build_info: str, asset_version: str, repo_slug: str) -> No
     (DIST_DIR / "viewer.html").write_text(page, encoding="utf-8")
 
 
+def build_stats_page(build_info: str, asset_version: str, repo_slug: str) -> None:
+    content = (SITE_DIR / "templates" / "stats.html").read_text(encoding="utf-8")
+    page = render_template(content, "Collection Statistics", build_info, asset_version, repo_slug)
+    (DIST_DIR / "stats.html").write_text(page, encoding="utf-8")
+
+
 def build_detail_pages(build_info: str, asset_version: str, repo_slug: str) -> None:
     catalog = load_catalog()
     detail_dir = DIST_DIR / "documents"
@@ -111,6 +117,7 @@ def build() -> None:
     build_index_page(build_info, asset_version, repo_slug)
     build_sources_page(build_info, asset_version, repo_slug)
     build_viewer_page(build_info, asset_version, repo_slug)
+    build_stats_page(build_info, asset_version, repo_slug)
     build_detail_pages(build_info, asset_version, repo_slug)
 
 
