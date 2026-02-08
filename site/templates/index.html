@@ -59,10 +59,29 @@
       <select id="filterYear"></select>
       <label for="filterTag">Tag</label>
       <select id="filterTag"></select>
+      <label for="filterType">Document Type</label>
+      <select id="filterType">
+        <option value="">All types</option>
+        <option value="text">📄 Text-based</option>
+        <option value="image">🖼️ Image-based</option>
+        <option value="hybrid">🔀 Hybrid</option>
+      </select>
+      <label for="filterCategory">Category</label>
+      <select id="filterCategory">
+        <option value="">All categories</option>
+      </select>
+      <label for="filterQuality">Text Quality</label>
+      <select id="filterQuality">
+        <option value="">All quality</option>
+        <option value="high">⭐ High (70-100)</option>
+        <option value="medium">⚠️ Medium (30-70)</option>
+        <option value="low">❌ Low (0-30)</option>
+      </select>
       <label for="sortBy">Sort</label>
       <select id="sortBy">
         <option value="relevance">Relevance</option>
         <option value="date">Release date</option>
+        <option value="quality">Text quality</option>
       </select>
     </div>
   </aside>

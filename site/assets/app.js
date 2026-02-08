@@ -65,7 +65,7 @@ function highlightSnippet(snippet, query) {
   return escaped.replace(regex, "<mark>$1</mark>");
 }
 
-function applyFilters(docs, { source, year, tag }) {
+function applyFilters(docs, { source, year, tag, type, category, quality }) {
   return docs.filter((doc) => {
     if (source && doc.source_name !== source) return false;
     if (year) {
@@ -73,6 +73,14 @@ function applyFilters(docs, { source, year, tag }) {
       if (docYear !== year) return false;
     }
     if (tag && !(doc.tags || []).includes(tag)) return false;
+    if (type && doc.pdf_type !== type) return false;
+    if (category && doc.document_category !== category) return false;
+    if (quality) {
+      const score = doc.text_quality_score || 0;
+      if (quality === "high" && score < 70) return false;
+      if (quality === "medium" && (score < 30 || score >= 70)) return false;
+      if (quality === "low" && score >= 30) return false;
+    }
     return true;
   });
 }
@@ -80,6 +88,9 @@ function applyFilters(docs, { source, year, tag }) {
 function sortResults(results, sortBy) {
   if (sortBy === "date") {
     return results.sort((a, b) => (b.release_date || "").localeCompare(a.release_date || ""));
+  }
+  if (sortBy === "quality") {
+    return results.sort((a, b) => (b.text_quality_score || 0) - (a.text_quality_score || 0));
   }
   return results.sort((a, b) => (b.score || 0) - (a.score || 0));
 }
@@ -91,6 +102,9 @@ function getStateFromUrl() {
     source: params.get("source") || "",
     year: params.get("year") || "",
     tag: params.get("tag") || "",
+    type: params.get("type") || "",
+    category: params.get("category") || "",
+    quality: params.get("quality") || "",
     sort: params.get("sort") || "relevance",
     mode: params.get("mode") || "full",
   };
@@ -102,6 +116,9 @@ function updateUrl(state) {
   if (state.source) params.set("source", state.source);
   if (state.year) params.set("year", state.year);
   if (state.tag) params.set("tag", state.tag);
+  if (state.type) params.set("type", state.type);
+  if (state.category) params.set("category", state.category);
+  if (state.quality) params.set("quality", state.quality);
   if (state.sort && state.sort !== "relevance") params.set("sort", state.sort);
   if (state.mode && state.mode !== "full") params.set("mode", state.mode);
   const query = params.toString();
@@ -117,6 +134,68 @@ function renderResults(target, results, metaById, query) {
     const tags = (meta.tags || []).map((tag) => `<span class="tag">${escapeHtml(tag)}</span>`).join("");
     const snippet = buildSnippet(result.content, query);
     const snippetHtml = highlightSnippet(snippet, query);
+    
+    // Build metadata badges
+    const metaBadges = [];
+    
+    // PDF type badge
+    if (meta.pdf_type) {
+      const typeIcons = {
+        text: '📄',
+        image: '🖼️',
+        hybrid: '🔀'
+      };
+      const icon = typeIcons[meta.pdf_type] || '';
+      metaBadges.push(`<span class="meta-badge type-${meta.pdf_type}">${icon} ${meta.pdf_type}</span>`);
+    }
+    
+    // Quality badge
+    if (meta.text_quality_score != null) {
+      const score = meta.text_quality_score;
+      let qualityClass = 'quality-low';
+      let qualityLabel = 'Low quality';
+      let qualityIcon = '❌';
+      
+      if (score >= 70) {
+        qualityClass = 'quality-high';
+        qualityLabel = 'High quality';
+        qualityIcon = '⭐';
+      } else if (score >= 30) {
+        qualityClass = 'quality-medium';
+        qualityLabel = 'Medium quality';
+        qualityIcon = '⚠️';
+      }
+      
+      metaBadges.push(`<span class="meta-badge ${qualityClass}" title="${score}/100">${qualityIcon} ${qualityLabel}</span>`);
+    }
+    
+    // Category badge
+    if (meta.document_category) {
+      const categoryLabels = {
+        'evidence-list': 'Evidence List',
+        'correspondence': 'Correspondence',
+        'legal-filing': 'Legal Filing',
+        'memorandum': 'Memorandum',
+        'report': 'Report',
+        'flight-log': 'Flight Log'
+      };
+      const label = categoryLabels[meta.document_category] || meta.document_category;
+      metaBadges.push(`<span class="meta-badge">${label}</span>`);
+    }
+    
+    // OCR indicator
+    if (meta.ocr_applied) {
+      metaBadges.push(`<span class="meta-badge" title="OCR applied">🔍 OCR</span>`);
+    }
+    
+    const metadataHtml = metaBadges.length > 0 ? `<div class="doc-metadata">${metaBadges.join('')}</div>` : '';
+    
+    // File numbers
+    const fileNumbers = (meta.extracted_file_numbers || []).slice(0, 5)
+      .map(num => `<span class="file-number">${escapeHtml(num)}</span>`)
+      .join('');
+    const fileNumbersHtml = fileNumbers ? `<div class="file-numbers">${fileNumbers}</div>` : '';
+    
     const card = document.createElement("div");
     card.className = "result-card";
     card.innerHTML = `
@@ -125,6 +204,8 @@ function renderResults(target, results, metaById, query) {
         <span>${formatDate(meta.release_date)}</span>
         <span>${escapeHtml(meta.source_name)}</span>
       </div>
+      ${metadataHtml}
+      ${fileNumbersHtml}
       <div class="result-tags">${tags}</div>
       <p class="result-snippet">${snippetHtml}</p>
       <div class="result-actions">
@@ -169,10 +250,18 @@ async function init() {
       .filter((year) => year && /\d{4}/.test(year))
   );
   const tags = uniqueSorted(catalog.flatMap((doc) => doc.tags || []));
+  const categories = uniqueSorted(
+    catalog
+      .map((doc) => doc.document_category)
+      .filter(cat => cat)
+  );
 
   const filterSource = document.getElementById("filterSource");
   const filterYear = document.getElementById("filterYear");
   const filterTag = document.getElementById("filterTag");
+  const filterType = document.getElementById("filterType");
+  const filterCategory = document.getElementById("filterCategory");
+  const filterQuality = document.getElementById("filterQuality");
   const sortBy = document.getElementById("sortBy");
   const searchInput = document.getElementById("searchInput");
   const searchMode = document.getElementById("searchMode");
@@ -187,12 +276,30 @@ async function init() {
   filterTag.innerHTML = `<option value="">All tags</option>${tags
     .map((t) => `<option value="${escapeHtml(t)}">${escapeHtml(t)}</option>`)
     .join("")}`;
+  
+  // Populate category filter
+  if (categories.length > 0) {
+    const categoryLabels = {
+      'evidence-list': 'Evidence List',
+      'correspondence': 'Correspondence',
+      'legal-filing': 'Legal Filing',
+      'memorandum': 'Memorandum',
+      'report': 'Report',
+      'flight-log': 'Flight Log'
+    };
+    filterCategory.innerHTML += categories
+      .map((cat) => `<option value="${cat}">${categoryLabels[cat] || cat}</option>`)
+      .join("");
+  }
 
   const state = getStateFromUrl();
   searchInput.value = state.q;
   filterSource.value = state.source;
   filterYear.value = state.year;
   filterTag.value = state.tag;
+  filterType.value = state.type || "";
+  filterCategory.value = state.category || "";
+  filterQuality.value = state.quality || "";
   sortBy.value = state.sort;
   searchMode.value = state.mode;
 
@@ -266,6 +373,9 @@ async function init() {
       source: filterSource.value,
       year: filterYear.value,
       tag: filterTag.value,
+      type: filterType.value,
+      category: filterCategory.value,
+      quality: filterQuality.value,
     };
 
     let docs = indexDocs;
@@ -300,6 +410,9 @@ async function init() {
       source: filterSource.value,
       year: filterYear.value,
       tag: filterTag.value,
+      type: filterType.value,
+      category: filterCategory.value,
+      quality: filterQuality.value,
       sort: sortBy.value,
       mode: searchMode.value,
     };
@@ -307,7 +420,7 @@ async function init() {
     performSearch();
   }
 
-  [filterSource, filterYear, filterTag, sortBy, searchMode].forEach((el) =>
+  [filterSource, filterYear, filterTag, filterType, filterCategory, filterQuality, sortBy, searchMode].forEach((el) =>
     el.addEventListener("change", () => {
       if (el === searchMode) {
         searchInput.placeholder =
@@ -330,6 +443,9 @@ async function init() {
     filterSource.value = "";
     filterYear.value = "";
     filterTag.value = "";
+    filterType.value = "";
+    filterCategory.value = "";
+    filterQuality.value = "";
     sortBy.value = "relevance";
     searchMode.value = "full";
     searchInput.placeholder = SEARCH_MODE_PLACEHOLDERS.full;
