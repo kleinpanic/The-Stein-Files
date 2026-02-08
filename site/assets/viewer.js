@@ -41,11 +41,15 @@ async function initPDFViewer() {
   const repoSlug = document.querySelector('meta[name="repo-slug"]')?.content || "kleinpanic/The-Stein-Files";
   const filePath = entry.file_path || "";
 
-  // Use source_url (original DOJ URL) as primary PDF source
-  // GitHub Pages doesn't serve LFS files, so we load from original source
-  let pdfUrl = entry.source_url || "";
+  // Use local mirror path if available (MIRROR_MODE enabled in build)
+  // Falls back to source_url if mirror not available
+  let pdfUrl = "";
+  if (filePath) {
+    pdfUrl = filePath; // Try local path first (served from same origin)
+  } else if (entry.source_url) {
+    pdfUrl = entry.source_url; // Fallback to original URL (may have CORS issues)
+  }
   
-  // If no source_url, can't display PDF
   if (!pdfUrl) {
     if (titleEl) titleEl.textContent = `${entry.title || id} (no PDF available)`;
     container.innerHTML = '<p class="error">PDF source URL not available.</p>';
