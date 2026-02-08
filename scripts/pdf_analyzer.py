@@ -181,34 +181,53 @@ def extract_dates(text: str) -> List[str]:
 
 def classify_document_type(title: str, text_sample: str) -> Optional[str]:
     """
-    Classify document type based on title and content.
+    Enhanced document classification with photo/redaction detection.
+    
+    Returns:
+        Category slug: evidence-list, correspondence, legal-filing, 
+                      memorandum, report, flight-log, evidence-photo,
+                      redacted-document, or None for uncategorized
     """
     title_lower = title.lower()
-    text_lower = text_sample[:1000].lower()
+    text_lower = text_sample.lower()
     
-    # Evidence/exhibits
-    if any(word in title_lower for word in ['evidence', 'exhibit', 'list']):
-        return "evidence-list"
+    # Photo detection (FBI evidence photos)
+    if 'photographer' in text_lower and 'location' in text_lower and 'case id' in text_lower:
+        return 'evidence-photo'
+    
+    # Flight logs (check early - specific pattern)
+    if 'flight' in text_lower and ('log' in text_lower or 'manifest' in text_lower):
+        return 'flight-log'
+    if 'tail number' in text_lower or ('aircraft' in text_lower and 'date' in text_lower):
+        return 'flight-log'
+    
+    # Evidence lists
+    if 'evidence' in text_lower and ('list' in text_lower or 'index' in text_lower):
+        return 'evidence-list'
+    if any(word in title_lower for word in ['evidence', 'exhibit']) and 'list' in title_lower:
+        return 'evidence-list'
+    
+    # Legal filings
+    if 'plaintiff' in text_lower or 'defendant' in text_lower:
+        return 'legal-filing'
+    if 'united states district court' in text_lower or 'docket' in text_lower:
+        return 'legal-filing'
     
     # Correspondence
     if any(word in text_lower for word in ['dear ', 'sincerely', 'regards', 'cc:']):
-        return "correspondence"
+        return 'correspondence'
     
-    # Legal/court
-    if any(word in text_lower for word in ['plaintiff', 'defendant', 'court', 'docket']):
-        return "legal-filing"
-    
-    # Memos
-    if any(word in title_lower for word in ['memo', 'memorandum']):
-        return "memorandum"
+    # Memorandum
+    if 'memorandum' in text_lower or 'memo' in title_lower:
+        return 'memorandum'
+    if text_lower.strip().startswith('to:') or text_lower.strip().startswith('from:'):
+        return 'memorandum'
     
     # Reports
     if any(word in title_lower for word in ['report', 'analysis', 'summary']):
-        return "report"
-    
-    # Flight logs
-    if any(word in title_lower for word in ['flight', 'log', 'manifest']):
-        return "flight-log"
+        return 'report'
+    if 'findings' in text_lower or 'investigation' in text_lower:
+        return 'report'
     
     return None
 
@@ -329,54 +348,3 @@ def detect_redaction(extracted_text: str, pdf_path: Path) -> bool:
     return False
 
 
-def classify_document_type(extracted_text: str, filename: str) -> str:
-    """
-    Enhanced document classification with photo/redaction detection.
-    
-    Returns:
-        Category slug: evidence-list, correspondence, legal-filing, 
-                      memorandum, report, flight-log, photo, redacted
-    """
-    text_lower = extracted_text.lower()
-    fname_lower = filename.lower()
-    
-    # Photo detection
-    if 'photographer' in text_lower or 'location' in text_lower and 'case id' in text_lower:
-        # FBI evidence photo markers
-        return 'evidence-photo'
-    
-    # Redaction detection
-    if detect_redaction(extracted_text, Path(filename)):
-        return 'redacted-document'
-    
-    # Evidence list
-    if 'evidence' in text_lower and ('list' in text_lower or 'index' in text_lower):
-        return 'evidence-list'
-    
-    # Flight logs
-    if 'flight' in text_lower and ('log' in text_lower or 'manifest' in text_lower):
-        return 'flight-log'
-    if 'tail number' in text_lower or 'aircraft' in text_lower:
-        return 'flight-log'
-    
-    # Correspondence
-    if any(word in text_lower for word in ['dear ', 'sincerely', 'regards', 'cc:']):
-        return 'correspondence'
-    
-    # Legal filing
-    if 'plaintiff' in text_lower or 'defendant' in text_lower or 'court' in text_lower:
-        return 'legal-filing'
-    if 'united states district court' in text_lower:
-        return 'legal-filing'
-    
-    # Memorandum
-    if 'memorandum' in text_lower or 'memo' in fname_lower:
-        return 'memorandum'
-    if text_lower.startswith('to:') or text_lower.startswith('from:'):
-        return 'memorandum'
-    
-    # Report
-    if 'report' in text_lower or 'findings' in text_lower or 'summary' in text_lower:
-        return 'report'
-    
-    return 'uncategorized'
