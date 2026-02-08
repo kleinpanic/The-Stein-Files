@@ -77,52 +77,6 @@
       }
     },
     {
-      "id": "doj-epstein-court-records",
-      "name": "DOJ Epstein Library — Court Records",
-      "base_url": "https://www.justice.gov/epstein/court-records",
-      "discovery": {
-        "type": "doj_court_records",
-        "hub_url": "https://www.justice.gov/epstein",
-        "hub_target": "court_records"
-      },
-      "is_official": true,
-      "notes": "Court records hosted on the DOJ Epstein Library, including federal and state court releases.",
-      "constraints": "Age-gated landing page; some cases split across subpages.",
-      "release_date": "",
-      "tags": [
-        "court-records",
-        "epstein-library"
-      ],
-      "requires_cookies": true,
-      "referer": "https://www.justice.gov/epstein",
-      "link_check": {
-        "allow_403": true
-      }
-    },
-    {
-      "id": "doj-epstein-foia",
-      "name": "DOJ Epstein Library — FOIA",
-      "base_url": "https://www.justice.gov/epstein/foia",
-      "discovery": {
-        "type": "doj_foia",
-        "hub_url": "https://www.justice.gov/epstein",
-        "hub_target": "foia"
-      },
-      "is_official": true,
-      "notes": "FOIA releases from multiple agencies, including media files.",
-      "constraints": "Age-gated landing page; large media files.",
-      "release_date": "2026-01-30",
-      "tags": [
-        "foia",
-        "epstein-library"
-      ],
-      "requires_cookies": true,
-      "referer": "https://www.justice.gov/epstein",
-      "link_check": {
-        "allow_403": true
-      }
-    },
-    {
       "id": "doj-opa-2025-02-27",
       "name": "DOJ OPA Press Release — First Phase Declassified (Feb 27, 2025)",
       "base_url": "https://www.justice.gov/opa/pr/attorney-general-pamela-bondi-releases-first-phase-declassified-epstein-files",
