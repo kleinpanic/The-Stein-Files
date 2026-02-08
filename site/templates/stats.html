@@ -1,0 +1,61 @@
+<section class="stats-hero">
+  <h1>Collection Statistics</h1>
+  <p class="subtitle">Analysis of 947 officially released documents</p>
+</section>
+
+<section class="stats-grid">
+  <div class="stat-card">
+    <h2>PDF Types</h2>
+    <div id="typeChart" class="chart"></div>
+    <ul id="typeBreakdown" class="stat-list"></ul>
+  </div>
+
+  <div class="stat-card">
+    <h2>Text Quality</h2>
+    <div id="qualityChart" class="chart"></div>
+    <ul id="qualityBreakdown" class="stat-list"></ul>
+  </div>
+
+  <div class="stat-card">
+    <h2>Document Categories</h2>
+    <ul id="categoryBreakdown" class="stat-list"></ul>
+  </div>
+
+  <div class="stat-card">
+    <h2>OCR Status</h2>
+    <ul id="ocrBreakdown" class="stat-list"></ul>
+  </div>
+</section>
+
+<section class="stats-detail">
+  <h2>Quality Distribution by Type</h2>
+  <table class="stats-table">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Count</th>
+        <th>Avg Quality</th>
+        <th>High Quality</th>
+        <th>Medium Quality</th>
+        <th>Low Quality</th>
+      </tr>
+    </thead>
+    <tbody id="qualityTable"></tbody>
+  </table>
+</section>
+
+<section class="stats-detail">
+  <h2>Sources</h2>
+  <table class="stats-table">
+    <thead>
+      <tr>
+        <th>Source</th>
+        <th>Documents</th>
+        <th>Avg Quality</th>
+      </tr>
+    </thead>
+    <tbody id="sourceTable"></tbody>
+  </table>
+</section>
+
+<script type="module" src="assets/stats.js"></script>
