@@ -41,10 +41,11 @@ async function initPDFViewer() {
   const repoSlug = document.querySelector('meta[name="repo-slug"]')?.content || "kleinpanic/The-Stein-Files";
   const filePath = entry.file_path || "";
 
-  // Construct PDF URL (GitHub raw)
+  // Construct PDF URL (GitHub LFS media CDN for LFS-stored PDFs)
   let pdfUrl = "";
-  if (filePath && buildSha) {
-    pdfUrl = `https://raw.githubusercontent.com/${repoSlug}/${buildSha}/${filePath.split('/').map(encodeURIComponent).join('/')}`;
+  if (filePath) {
+    // Use media CDN for LFS files instead of raw.githubusercontent.com
+    pdfUrl = `https://media.githubusercontent.com/media/${repoSlug}/main/${filePath.split('/').map(encodeURIComponent).join('/')}`;
   }
 
   if (githubLink && filePath && buildSha) {
