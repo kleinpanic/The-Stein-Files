@@ -1,5 +1,20 @@
 # Changelog
 
+## 1.5.0
+- **OCR Extraction**: Applied Tesseract OCR to 279 image PDFs for improved text extraction and searchability
+- **Stats Dashboard**: Added comprehensive `/stats.html` page with quality breakdowns, type distributions, OCR status, and source-level analytics
+- **Enhanced Classification**: Improved document categorization with robust FBI evidence photo detection (handles OCR errors), redaction detection, and better pattern matching
+- **Photo Detection**: Added evidence-photo category for FBI evidence photographs with case ID, photographer, and location metadata
+- **Redaction Detection**: Identifies heavily redacted documents based on FOIA markers and sparse text patterns
+- **Quality Analysis**: 
+  - Text PDFs: 497 docs @ 78.1/100 avg quality
+  - Hybrid PDFs: 106 docs @ 76.0/100 avg quality  
+  - Image PDFs: 344 docs @ 11.0/100 avg quality (279 OCR'd)
+- **Category Distribution**: 416 categorized documents across correspondence, memorandum, legal filings, evidence lists, flight logs, reports, and photos
+- **Batch Re-classification**: Added `reclassify_catalog.py` script for applying improved classification logic to existing catalog
+- **Mirror Mode**: Enabled PDF mirroring in GitHub Pages deployment to serve all PDFs locally (solves CORS issues with DOJ sources)
+- **Mobile Optimizations**: Enhanced CSS for iOS/mobile devices with better touch targets and responsive layouts
+
 ## 1.4.0
 - Added in-page PDF viewer with GitHub raw integration for lightweight Pages deployment (viewer.html + build-sha/repo-slug meta tags).
 - Implemented case-insensitive search with query normalization (toLowerCase) for better UX.
