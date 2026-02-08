@@ -41,21 +41,19 @@ async function initPDFViewer() {
   const repoSlug = document.querySelector('meta[name="repo-slug"]')?.content || "kleinpanic/The-Stein-Files";
   const filePath = entry.file_path || "";
 
-  // Construct PDF URL (GitHub LFS media CDN for LFS-stored PDFs)
-  let pdfUrl = "";
-  if (filePath) {
-    // Use media CDN for LFS files instead of raw.githubusercontent.com
-    pdfUrl = `https://media.githubusercontent.com/media/${repoSlug}/main/${filePath.split('/').map(encodeURIComponent).join('/')}`;
+  // Use source_url (original DOJ URL) as primary PDF source
+  // GitHub Pages doesn't serve LFS files, so we load from original source
+  let pdfUrl = entry.source_url || "";
+  
+  // If no source_url, can't display PDF
+  if (!pdfUrl) {
+    if (titleEl) titleEl.textContent = `${entry.title || id} (no PDF available)`;
+    container.innerHTML = '<p class="error">PDF source URL not available.</p>';
+    return;
   }
 
   if (githubLink && filePath && buildSha) {
     githubLink.href = `https://github.com/${repoSlug}/blob/${buildSha}/${filePath.split('/').map(encodeURIComponent).join('/')}`;
-  }
-
-  if (!pdfUrl) {
-    if (titleEl) titleEl.textContent = `${entry.title || id} (no PDF link)`;
-    container.innerHTML = '<p class="error">PDF file path not available.</p>';
-    return;
   }
 
   // Load PDF with PDF.js
