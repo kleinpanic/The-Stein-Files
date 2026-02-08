@@ -1,0 +1,30 @@
+{
+  "content_disposition": "inline; filename=\"EFTA First Level Review Protocol - Final - Jan 26 - 508.pdf\"",
+  "downloaded_at": "2026-02-08T05:15:15+00:00",
+  "etag": "",
+  "file_path": "data/raw/eff4797fa848-efta-first-level-review-protocol/EFTA First Level Review Protocol - Final - Jan 26 - 508.pdf",
+  "id": "eff4797fa848-efta-first-level-review-protocol",
+  "is_official": true,
+  "last_modified": "Sat, 07 Feb 2026 22:31:21 GMT",
+  "license_or_terms": "as published by source",
+  "mime_type": "application/pdf",
+  "notes": "Memoranda and correspondence related to the Epstein Files Transparency Act review process.",
+  "pages": 9,
+  "release_date": "2026-01-30",
+  "sha256": "eff4797fa8485116c82948d7d73dea83fd5914451db275a9f05d75d340d3c2e4",
+  "source_name": "DOJ Epstein Library \u2014 Memoranda and Correspondence",
+  "source_page": "https://www.justice.gov/epstein/doj-disclosures",
+  "source_url": "https://www.justice.gov/media/1426281/dl?inline",
+  "sources": [
+    {
+      "source_name": "DOJ Epstein Library \u2014 Memoranda and Correspondence",
+      "source_url": "https://www.justice.gov/epstein/doj-disclosures"
+    }
+  ],
+  "tags": [
+    "doj",
+    "epstein-library",
+    "memoranda"
+  ],
+  "title": "EFTA First Level Review Protocol"
+}

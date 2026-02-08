@@ -930,6 +930,27 @@ class OpaPressReleaseAdapter(SourceAdapter):
         return files
 
 
+class DirectListAdapter(SourceAdapter):
+    """Adapter for sources with a pre-defined list of file URLs."""
+    def discover(self, session: requests.Session) -> List[DiscoveredFile]:
+        files_config = self.source.discovery.get("files", [])
+        files: List[DiscoveredFile] = []
+        for file_info in files_config:
+            url = file_info.get("url")
+            if not url:
+                continue
+            files.append(
+                DiscoveredFile(
+                    url=url,
+                    title=file_info.get("title", file_info.get("filename", Path(urlparse(url).path).name)),
+                    source_page=self.source.base_url,
+                    release_date=self.source.release_date,
+                    tags=self.source.tags,
+                )
+            )
+        return files
+
+
 def adapter_for(
     source: SourceConfig,
     config: Dict[str, Any],
@@ -946,6 +967,8 @@ def adapter_for(
         return DojFoiaAdapter(source, config, requester)
     if kind == "opa_press_release":
         return OpaPressReleaseAdapter(source, config, requester)
+    if kind == "direct_list":
+        return DirectListAdapter(source, config, requester)
     raise ValueError(f"Unknown discovery type: {kind}")
 
 
@@ -1334,3 +1357,4 @@ def ingest() -> None:
 
 if __name__ == "__main__":
     ingest()
+
