@@ -1,8 +1,31 @@
 # Eppie Improvement Plan - 2026-02-08
 
+## Status: Phases 1-4 COMPLETE ✅
+
+**Commits:**
+- `63f9712` - Phase 1: PDF.js viewer + text extraction fixes
+- `da2cc87` - Phases 2-4: PDF analysis + metadata + mobile UI + filters
+
+**Deployed:** Waiting for CI/CD (GitHub Actions building now)
+
+**What Works:**
+- ✅ PDFs render in browser (PDF.js)
+- ✅ Text extraction working (947 PDFs)
+- ✅ PDF type detection infrastructure
+- ✅ Quality scoring system
+- ✅ File number & date extraction
+- ✅ Document categorization
+- ✅ Advanced filters (type, category, quality)
+- ✅ Mobile-optimized UI (iOS-focused)
+- ✅ Metadata badges & quality indicators
+
+**What's Pending:**
+- ⏳ OCR execution (requires Tesseract installation in CI)
+- ⏳ House Committee source (requires Google Drive adapter)
+
 ## Critical Issues
 
-### 1. PDF Viewer Not Working ❌ BLOCKING
+### 1. PDF Viewer Not Working ✅ FIXED (Phase 1)
 **Problem:** PDFs don't render in iframe on GitHub Pages
 **Root cause:** GitHub raw URLs for LFS files don't work in iframes (CORS/headers)
 **Solutions:**
