@@ -31,6 +31,22 @@
     "file_path": {"type": "string"},
     "mime_type": {"type": "string"},
     "pages": {"type": ["integer", "null"]},
+    "file_size_bytes": {"type": ["integer", "null"]},
+    "pdf_type": {"type": ["string", "null"], "enum": ["text", "image", "hybrid", null]},
+    "has_extractable_text": {"type": ["boolean", "null"]},
+    "ocr_applied": {"type": ["boolean", "null"]},
+    "text_quality_score": {"type": ["number", "null"], "minimum": 0, "maximum": 100},
+    "extracted_file_numbers": {"type": "array", "items": {"type": "string"}},
+    "extracted_dates": {"type": "array", "items": {"type": "string"}},
+    "extracted_entities": {
+      "type": ["object", "null"],
+      "properties": {
+        "people": {"type": "array", "items": {"type": "string"}},
+        "organizations": {"type": "array", "items": {"type": "string"}},
+        "locations": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "document_category": {"type": ["string", "null"]},
     "tags": {"type": "array", "items": {"type": "string"}},
     "notes": {"type": ["string", "null"]},
     "is_official": {"type": "boolean"},

@@ -551,3 +551,217 @@ img {
     margin-bottom: 0.5rem;
   }
 }
+
+/* Enhanced Mobile/iOS Optimizations */
+@media (max-width: 768px) {
+  /* Touch-friendly tap targets */
+  .button,
+  button,
+  a,
+  select,
+  input {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Prevent text size adjustment on iOS */
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  /* Smooth scrolling on iOS */
+  body {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Hero section mobile layout */
+  .hero {
+    flex-direction: column;
+    padding: 1.5rem 1rem;
+  }
+
+  .hero-text h1 {
+    font-size: 1.75rem;
+  }
+
+  .hero-panel {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  /* Search toolbar mobile */
+  .search-toolbar {
+    padding: 1rem;
+  }
+
+  .search-input {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  #searchInput {
+    width: 100%;
+    font-size: 16px; /* Prevent iOS zoom on focus */
+  }
+
+  .search-mode {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  /* Results cards mobile */
+  .result-card {
+    padding: 1rem;
+  }
+
+  .result-title {
+    font-size: 1rem;
+  }
+
+  .detail-actions {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .detail-actions .button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Filters mobile drawer */
+  .filters-fields label {
+    font-size: 0.9rem;
+  }
+
+  .filters-fields select {
+    font-size: 16px; /* Prevent iOS zoom */
+  }
+
+  /* Results meta mobile */
+  .result-meta {
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+  }
+
+  .meta-left,
+  .meta-right {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
+/* iOS-specific fixes */
+@supports (-webkit-touch-callout: none) {
+  /* Fix iOS Safari bottom bar overlap */
+  .search-toolbar {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  /* Fix for iOS input shadows */
+  input,
+  select,
+  textarea {
+    -webkit-appearance: none;
+    border-radius: 8px;
+  }
+
+  /* Prevent iOS button styling */
+  button,
+  .button {
+    -webkit-appearance: none;
+  }
+}
+
+/* Document metadata display */
+.doc-metadata {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+}
+
+.meta-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  background: var(--gray-100);
+  border-radius: 4px;
+  color: var(--gray-700);
+}
+
+.meta-badge.type-text {
+  background: var(--blue-50);
+  color: var(--blue-700);
+}
+
+.meta-badge.type-image {
+  background: var(--purple-50);
+  color: var(--purple-700);
+}
+
+.meta-badge.type-hybrid {
+  background: var(--orange-50);
+  color: var(--orange-700);
+}
+
+.meta-badge.quality-high {
+  background: var(--green-50);
+  color: var(--green-700);
+}
+
+.meta-badge.quality-medium {
+  background: var(--yellow-50);
+  color: var(--yellow-700);
+}
+
+.meta-badge.quality-low {
+  background: var(--red-50);
+  color: var(--red-700);
+}
+
+.file-numbers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  margin-top: 0.5rem;
+}
+
+.file-number {
+  font-family: 'Monaco', 'Courier New', monospace;
+  font-size: 0.75rem;
+  padding: 0.125rem 0.375rem;
+  background: var(--gray-100);
+  border-radius: 3px;
+  color: var(--gray-700);
+}
+
+/* Small screen optimizations */
+@media (max-width: 480px) {
+  .hero-text h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-text p {
+    font-size: 0.9rem;
+  }
+
+  .eyebrow {
+    font-size: 0.75rem;
+  }
+
+  .result-card {
+    padding: 0.875rem;
+  }
+
+  .doc-metadata {
+    font-size: 0.75rem;
+  }
+
+  .meta-badge {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.4rem;
+  }
+}

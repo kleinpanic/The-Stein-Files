@@ -2,14 +2,16 @@
 from __future__ import annotations
 
 import json
+import os
 import shutil
 import subprocess
 from pathlib import Path
-from typing import Any, Dict, List
+from typing import Any, Dict, List, Optional
 
 from pdfminer.high_level import extract_text
 
 from scripts.common import (
+    DATA_META_DIR,
     DERIVED_INDEX_DIR,
     DERIVED_TEXT_DIR,
     load_catalog,
@@ -17,13 +19,20 @@ from scripts.common import (
     utc_now_iso,
     write_json,
 )
+from scripts.pdf_analyzer import analyze_pdf
 
 
 MAX_CONTENT_CHARS = 20000
 TEXT_EXTENSIONS = {".txt", ".rtf", ".csv"}
 
 
-def extract_pdf_text(pdf_path: Path, output_path: Path) -> None:
+def extract_pdf_text(pdf_path: Path, output_path: Path) -> Optional[str]:
+    """
+    Extract text from PDF and return it.
+    
+    Returns:
+        Extracted text or None on failure
+    """
     output_path.parent.mkdir(parents=True, exist_ok=True)
     pdftotext = shutil.which("pdftotext")
     try:
@@ -32,18 +41,25 @@ def extract_pdf_text(pdf_path: Path, output_path: Path) -> None:
                 [pdftotext, "-layout", str(pdf_path), str(output_path)],
                 check=True,
             )
-            return
+            return output_path.read_text(encoding="utf-8", errors="ignore")
         text = extract_text(str(pdf_path))
         output_path.write_text(text, encoding="utf-8")
+        return text
     except Exception as exc:
         print(f"[extract] failed to read {pdf_path.name}: {exc}")
         output_path.write_text("", encoding="utf-8")
+        return ""
 
 
 def extract_all() -> None:
     catalog = load_catalog()
     index_docs: List[Dict[str, Any]] = []
     shards: Dict[tuple[str, str], List[Dict[str, Any]]] = {}
+    
+    # Check if OCR is enabled
+    enable_ocr = os.getenv("EPPIE_OCR_ENABLED", "0") == "1"
+    
+    catalog_updated = False
 
     for entry in catalog:
         file_path = Path(entry["file_path"])
@@ -52,7 +68,28 @@ def extract_all() -> None:
         suffix = file_path.suffix.lower()
 
         if suffix == ".pdf":
-            extract_pdf_text(file_path, text_path)
+            extracted_text = extract_pdf_text(file_path, text_path)
+            
+            # Analyze PDF for metadata enrichment
+            if extracted_text is not None:
+                analysis = analyze_pdf(file_path, extracted_text, enable_ocr=enable_ocr)
+                
+                # Update catalog entry with analysis results
+                if analysis:
+                    entry["pdf_type"] = analysis["pdf_type"]
+                    entry["has_extractable_text"] = analysis["has_extractable_text"]
+                    entry["ocr_applied"] = analysis["ocr_applied"]
+                    entry["text_quality_score"] = analysis["text_quality_score"]
+                    entry["file_size_bytes"] = analysis["file_size_bytes"]
+                    entry["extracted_file_numbers"] = analysis["extracted_file_numbers"]
+                    entry["extracted_dates"] = analysis["extracted_dates"]
+                    entry["document_category"] = analysis["document_category"]
+                    catalog_updated = True
+                    
+                    # If OCR was applied and produced better text, save it
+                    if analysis.get("enhanced_text"):
+                        text_path.write_text(analysis["enhanced_text"], encoding="utf-8")
+                        print(f"[extract] Applied OCR to {file_path.name}")
         elif suffix in TEXT_EXTENSIONS or mime_type.startswith("text/"):
             text_path.parent.mkdir(parents=True, exist_ok=True)
             text_path.write_text(file_path.read_text(encoding="utf-8"), encoding="utf-8")
@@ -72,6 +109,11 @@ def extract_all() -> None:
             "source_name": entry.get("source_name"),
             "file_name": Path(entry.get("file_path", "")).name,
             "content": content,
+            # Add enriched metadata to search index
+            "pdf_type": entry.get("pdf_type"),
+            "text_quality_score": entry.get("text_quality_score"),
+            "document_category": entry.get("document_category"),
+            "extracted_file_numbers": entry.get("extracted_file_numbers", []),
         }
         index_docs.append(doc)
 
@@ -80,6 +122,12 @@ def extract_all() -> None:
         release_date = entry.get("release_date", "")
         year = release_date[:4] if release_date[:4].isdigit() else "unknown"
         shards.setdefault((source_slug, year), []).append(doc)
+    
+    # Save updated catalog if metadata was enriched
+    if catalog_updated:
+        catalog_path = DATA_META_DIR / "catalog.json"
+        write_json(catalog_path, catalog)
+        print(f"[extract] Updated catalog with PDF analysis metadata")
 
     DERIVED_INDEX_DIR.mkdir(parents=True, exist_ok=True)
     shards_dir = DERIVED_INDEX_DIR / "shards"
