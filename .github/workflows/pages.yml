@@ -42,6 +42,8 @@ jobs:
 
       - name: Build site
         run: make build
+        env:
+          EPPIE_MIRROR_MODE: "1"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
