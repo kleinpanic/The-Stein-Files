@@ -11,6 +11,7 @@ from typing import Any, Dict, List, Optional
 
 CATALOG_PATH = Path("data/meta/catalog.json")
 SCHEMA_PATH = Path("data/meta/schema.json")
+DATA_META_DIR = Path("data/meta")
 RAW_DIR = Path("data/raw")
 DERIVED_TEXT_DIR = Path("data/derived/text")
 DERIVED_INDEX_DIR = Path("data/derived/index")
