@@ -14,6 +14,12 @@ import json
 from pathlib import Path
 from typing import List, Dict
 
+import sys
+from pathlib import Path
+
+# Add project root to path
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
 from scripts.common import load_catalog, write_json, DATA_META_DIR, DERIVED_TEXT_DIR
 from scripts.pdf_analyzer import apply_ocr_to_pdf, calculate_text_quality_score, classify_document_type, extract_file_numbers, extract_dates
 
