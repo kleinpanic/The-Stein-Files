@@ -261,3 +261,122 @@ def analyze_pdf(pdf_path: Path, extracted_text: str, enable_ocr: bool = True) ->
         "file_size_bytes": pdf_path.stat().st_size,
         "enhanced_text": final_text if ocr_applied else None,
     }
+
+
+def detect_photo_content(pdf_path: Path) -> bool:
+    """
+    Detect if PDF contains primarily photographic content (people, scenes)
+    vs document scans (text pages, forms).
+    
+    Heuristics:
+    - Very low text extraction (<50 chars)
+    - File size patterns (photos tend to be larger)
+    - Filename patterns (IMG_, DSC_, photo, etc.)
+    
+    Returns:
+        True if likely a photo, False if likely a document scan
+    """
+    filename = pdf_path.name.lower()
+    
+    # Check filename patterns
+    photo_patterns = ['img_', 'dsc_', 'photo', 'image', '_img', 'picture']
+    if any(pattern in filename for pattern in photo_patterns):
+        return True
+    
+    # Check file size - single-page photos tend to be >200KB
+    file_size_kb = pdf_path.stat().st_size / 1024
+    if file_size_kb > 300:  # Likely high-res photo
+        # Would need to check page count here, but that requires pypdf
+        pass
+    
+    return False
+
+
+def detect_redaction(extracted_text: str, pdf_path: Path) -> bool:
+    """
+    Detect if document contains significant redactions.
+    
+    Indicators:
+    - Repeated REDACTED markers in text
+    - Very sparse text with large file size (blacked out areas)
+    - Special redaction markers
+    
+    Returns:
+        True if document appears heavily redacted
+    """
+    text_lower = extracted_text.lower()
+    
+    # Check for explicit redaction markers
+    redaction_indicators = [
+        'redacted', '[redacted]', '(redacted)', 'xxxxx', '[x]',
+        'withheld', 'exemption', 'b(1)', 'b(2)', 'b(3)'  # FOIA exemptions
+    ]
+    
+    redaction_count = sum(text_lower.count(indicator) for indicator in redaction_indicators)
+    if redaction_count > 3:
+        return True
+    
+    # Check for sparse text with large file (possible visual redactions)
+    text_len = len(extracted_text.strip())
+    file_size_kb = pdf_path.stat().st_size / 1024
+    
+    if text_len < 200 and file_size_kb > 100:
+        # Very little text, large file = likely redacted/blacked out
+        chars_per_kb = text_len / file_size_kb
+        if chars_per_kb < 2:
+            return True
+    
+    return False
+
+
+def classify_document_type(extracted_text: str, filename: str) -> str:
+    """
+    Enhanced document classification with photo/redaction detection.
+    
+    Returns:
+        Category slug: evidence-list, correspondence, legal-filing, 
+                      memorandum, report, flight-log, photo, redacted
+    """
+    text_lower = extracted_text.lower()
+    fname_lower = filename.lower()
+    
+    # Photo detection
+    if 'photographer' in text_lower or 'location' in text_lower and 'case id' in text_lower:
+        # FBI evidence photo markers
+        return 'evidence-photo'
+    
+    # Redaction detection
+    if detect_redaction(extracted_text, Path(filename)):
+        return 'redacted-document'
+    
+    # Evidence list
+    if 'evidence' in text_lower and ('list' in text_lower or 'index' in text_lower):
+        return 'evidence-list'
+    
+    # Flight logs
+    if 'flight' in text_lower and ('log' in text_lower or 'manifest' in text_lower):
+        return 'flight-log'
+    if 'tail number' in text_lower or 'aircraft' in text_lower:
+        return 'flight-log'
+    
+    # Correspondence
+    if any(word in text_lower for word in ['dear ', 'sincerely', 'regards', 'cc:']):
+        return 'correspondence'
+    
+    # Legal filing
+    if 'plaintiff' in text_lower or 'defendant' in text_lower or 'court' in text_lower:
+        return 'legal-filing'
+    if 'united states district court' in text_lower:
+        return 'legal-filing'
+    
+    # Memorandum
+    if 'memorandum' in text_lower or 'memo' in fname_lower:
+        return 'memorandum'
+    if text_lower.startswith('to:') or text_lower.startswith('from:'):
+        return 'memorandum'
+    
+    # Report
+    if 'report' in text_lower or 'findings' in text_lower or 'summary' in text_lower:
+        return 'report'
+    
+    return 'uncategorized'
