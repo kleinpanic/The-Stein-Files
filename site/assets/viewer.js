@@ -136,7 +136,29 @@ async function initPDFViewer() {
 
   } catch (error) {
     console.error('PDF loading error:', error);
-    container.innerHTML = `<p class="error">Failed to load PDF. <a href="${pdfUrl}" target="_blank">Try opening directly</a></p>`;
+    
+    // Check if this is a CORS error (common when loading from external sources)
+    const isCorsError = error.message?.includes('CORS') || 
+                        error.name === 'MissingPDFException' ||
+                        error.message?.includes('fetch');
+    
+    const sourceUrl = entry.source_url || pdfUrl;
+    
+    if (isCorsError && sourceUrl.includes('justice.gov')) {
+      // CORS error loading from DOJ - provide helpful fallback
+      container.innerHTML = `
+        <div class="pdf-fallback">
+          <p>📄 This PDF cannot be embedded due to browser security restrictions.</p>
+          <p><strong>View the document:</strong></p>
+          <a href="${sourceUrl}" target="_blank" rel="noopener" class="btn btn-primary">
+            Open PDF from DOJ.gov →
+          </a>
+          <p class="hint">The PDF will open in a new tab from the official source.</p>
+        </div>
+      `;
+    } else {
+      container.innerHTML = `<p class="error">Failed to load PDF. <a href="${pdfUrl}" target="_blank">Try opening directly</a></p>`;
+    }
   }
 }
 

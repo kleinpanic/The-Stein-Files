@@ -877,3 +877,39 @@ img {
     padding: 0.5rem;
   }
 }
+
+/* PDF Fallback */
+.pdf-fallback {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: var(--bg-alt);
+  border-radius: 8px;
+  max-width: 500px;
+  margin: 2rem auto;
+}
+
+.pdf-fallback p {
+  margin-bottom: 1rem;
+  color: var(--text-secondary);
+}
+
+.pdf-fallback .hint {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin-top: 1.5rem;
+}
+
+.btn-primary {
+  display: inline-block;
+  background: var(--accent);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.btn-primary:hover {
+  background: var(--accent-hover, #3a5bc7);
+}

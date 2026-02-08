@@ -16,10 +16,44 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Checkout
+      - name: Checkout (without LFS)
         uses: actions/checkout@v4
         with:
-          lfs: true
+          lfs: false
+
+      - name: Cache LFS objects
+        uses: actions/cache@v4
+        id: lfs-cache
+        with:
+          path: .git/lfs
+          key: lfs-v1-${{ hashFiles('.gitattributes') }}
+          restore-keys: |
+            lfs-v1-
+
+      - name: Pull LFS files
+        id: lfs-pull
+        continue-on-error: true
+        run: |
+          git lfs install
+          if [ "${{ steps.lfs-cache.outputs.cache-hit }}" == "true" ]; then
+            echo "Using cached LFS objects"
+            git lfs checkout
+          else
+            echo "Pulling LFS objects from remote"
+            git lfs pull
+          fi
+          echo "lfs_available=true" >> $GITHUB_OUTPUT
+
+      - name: Check LFS status
+        id: lfs-status
+        run: |
+          if [ "${{ steps.lfs-pull.outcome }}" == "success" ]; then
+            echo "mirror_mode=1" >> $GITHUB_OUTPUT
+            echo "✅ LFS files available - enabling mirror mode"
+          else
+            echo "mirror_mode=0" >> $GITHUB_OUTPUT
+            echo "⚠️ LFS unavailable - PDFs will load from source URLs"
+          fi
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -43,7 +77,7 @@ jobs:
       - name: Build site
         run: make build
         env:
-          EPPIE_MIRROR_MODE: "1"
+          EPPIE_MIRROR_MODE: ${{ steps.lfs-status.outputs.mirror_mode }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
