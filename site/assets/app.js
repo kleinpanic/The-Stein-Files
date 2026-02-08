@@ -400,7 +400,7 @@ async function init() {
     docs = applyFilters(docs, filters);
     const sorted = sortResults(docs, sortBy.value);
     renderResults(resultsEl, sorted, metaById, query);
-    resultCount.textContent = `${sorted.length} results`;
+    resultCount.textContent = `${sorted.length.toLocaleString()} result${sorted.length === 1 ? '' : 's'}`;
     noResultsState.hidden = sorted.length > 0;
   }
 
