@@ -191,8 +191,16 @@ def classify_document_type(title: str, text_sample: str) -> Optional[str]:
     title_lower = title.lower()
     text_lower = text_sample.lower()
     
-    # Photo detection (FBI evidence photos)
-    if 'photographer' in text_lower and 'location' in text_lower and 'case id' in text_lower:
+    # Photo detection (FBI evidence photos) - robust against OCR errors
+    # FBI evidence photos have: PHOTOGRAPHER, LOCATION, CASE ID fields
+    has_photographer = 'photographer' in text_lower
+    has_location = 'location' in text_lower
+    # OCR often mistakes "id" as "ip" or "1d" - be flexible
+    has_case_marker = 'case' in text_lower and any(marker in text_lower for marker in ['case id', 'case ip', 'case 1d', 'caseid'])
+    # FBI case number pattern: 91E-NYC-323571 or similar
+    has_fbi_case_number = bool(re.search(r'\b\d{1,3}[a-z]{1,3}-[a-z]{2,5}-\d{5,7}\b', text_lower, re.IGNORECASE))
+    
+    if has_photographer and has_location and (has_case_marker or has_fbi_case_number):
         return 'evidence-photo'
     
     # Flight logs (check early - specific pattern)
