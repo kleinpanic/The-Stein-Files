@@ -7,18 +7,19 @@
       <a class="button outline" id="viewer-text">Text</a>
       <a class="button ghost" id="viewer-github" rel="noopener" target="_blank">GitHub</a>
     </div>
+    <div class="page-navigation">
+      <button id="prev-page" class="button outline" disabled>Previous</button>
+      <span id="page-info" class="page-info"></span>
+      <button id="next-page" class="button outline" disabled>Next</button>
+    </div>
     <p class="viewer-note">
-      If the PDF doesn’t render in-page, use the GitHub link above.
+      If the PDF doesn't render, use the GitHub link above.
     </p>
   </header>
 
-  <div class="viewer-frame-wrap">
-    <iframe
-      id="viewer-frame"
-      class="viewer-frame"
-      title="PDF viewer"
-      loading="lazy"
-      referrerpolicy="no-referrer"
-    ></iframe>
+  <div class="pdf-viewer-wrap">
+    <div id="pdf-container" class="pdf-container"></div>
   </div>
 </section>
+
+<script type="module" src="assets/viewer.js"></script>
