@@ -58,7 +58,9 @@ def extract_all() -> None:
     
     # Check if OCR is enabled
     enable_ocr = os.getenv("EPPIE_OCR_ENABLED", "0") == "1"
-    
+    # Force re-extraction (ignore existing derived text)
+    force_reextract = os.getenv("EPPIE_FORCE_REEXTRACT", "0") == "1"
+
     catalog_updated = False
 
     for entry in catalog:
@@ -68,24 +70,47 @@ def extract_all() -> None:
         suffix = file_path.suffix.lower()
 
         if suffix == ".pdf":
-            extracted_text = extract_pdf_text(file_path, text_path)
-            
-            # Analyze PDF for metadata enrichment
-            if extracted_text is not None:
-                analysis = analyze_pdf(file_path, extracted_text, enable_ocr=enable_ocr)
-                
+            # Prefer existing derived text (preserves OCR output and avoids expensive re-extract)
+            extracted_text: Optional[str] = None
+            if not force_reextract and text_path.exists():
+                extracted_text = text_path.read_text(encoding="utf-8", errors="ignore")
+
+            if extracted_text is None:
+                extracted_text = extract_pdf_text(file_path, text_path)
+
+            # Analyze PDF for metadata enrichment only when needed
+            has_analysis_fields = all(
+                key in entry
+                for key in [
+                    "pdf_type",
+                    "has_extractable_text",
+                    "ocr_applied",
+                    "text_quality_score",
+                    "file_size_bytes",
+                    "extracted_file_numbers",
+                    "extracted_dates",
+                    "document_category",
+                ]
+            )
+
+            should_ocr = enable_ocr and (not entry.get("ocr_applied", False))
+            needs_analysis = force_reextract or (not has_analysis_fields) or should_ocr
+
+            if extracted_text is not None and needs_analysis:
+                analysis = analyze_pdf(file_path, extracted_text, enable_ocr=should_ocr)
+
                 # Update catalog entry with analysis results
                 if analysis:
                     entry["pdf_type"] = analysis["pdf_type"]
                     entry["has_extractable_text"] = analysis["has_extractable_text"]
-                    entry["ocr_applied"] = analysis["ocr_applied"]
+                    entry["ocr_applied"] = analysis["ocr_applied"] or entry.get("ocr_applied", False)
                     entry["text_quality_score"] = analysis["text_quality_score"]
                     entry["file_size_bytes"] = analysis["file_size_bytes"]
                     entry["extracted_file_numbers"] = analysis["extracted_file_numbers"]
                     entry["extracted_dates"] = analysis["extracted_dates"]
                     entry["document_category"] = analysis["document_category"]
                     catalog_updated = True
-                    
+
                     # If OCR was applied and produced better text, save it
                     if analysis.get("enhanced_text"):
                         text_path.write_text(analysis["enhanced_text"], encoding="utf-8")

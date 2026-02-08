@@ -26,22 +26,20 @@ jobs:
         id: lfs-cache
         with:
           path: .git/lfs
-          key: lfs-v1-${{ hashFiles('.gitattributes') }}
+          # Use sha in the key so caches can be updated when new LFS objects are added.
+          # Restore key pulls the most recent cache for this branch.
+          key: lfs-v2-${{ github.ref_name }}-${{ github.sha }}
           restore-keys: |
-            lfs-v1-
+            lfs-v2-${{ github.ref_name }}-
 
       - name: Pull LFS files
         id: lfs-pull
         continue-on-error: true
         run: |
           git lfs install
-          if [ "${{ steps.lfs-cache.outputs.cache-hit }}" == "true" ]; then
-            echo "Using cached LFS objects"
-            git lfs checkout
-          else
-            echo "Pulling LFS objects from remote"
-            git lfs pull
-          fi
+          # Always pull: if objects are already in the restored cache, this should be a no-op.
+          # If new LFS objects were added in this commit, only the missing ones are downloaded.
+          git lfs pull
           echo "lfs_available=true" >> $GITHUB_OUTPUT
 
       - name: Check LFS status
