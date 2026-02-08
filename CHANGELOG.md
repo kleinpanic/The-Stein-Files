@@ -1,5 +1,16 @@
 # Changelog
 
+## 1.4.0
+- Added in-page PDF viewer with GitHub raw integration for lightweight Pages deployment (viewer.html + build-sha/repo-slug meta tags).
+- Implemented case-insensitive search with query normalization (toLowerCase) for better UX.
+- Added asset cache-busting using git SHA as version parameter for CSS/JS to prevent stale cache issues.
+- Fixed DOJ age-verify gate with automatic cookie injection (justiceGovAgeVerified=true) for PDF URL access.
+- Fixed ingest crash on 404 responses due to falsey HTTPError.response handling (added status_code_from_http_error utility).
+- Strengthened index completeness validation to ensure all catalog entries are present in search shards (bidirectional check).
+- Updated verify-doj cookie jar fallback to match ingest behavior (.txt → .json).
+- Raised CI ingest limits for bulk ingestion (EPPIE_MAX_DOWNLOADS_PER_SOURCE=0, EPPIE_TIME_BUDGET_SECONDS=20000).
+- Successfully ingested 946 PDFs from DOJ Epstein Library disclosures (4 URLs returned 404).
+
 ## 1.3.0
 - Removed default ingest caps and added explicit throttling/backoff knobs with time budgets for CI.
 - Made ingest resumable with per-source seen/failed tracking and conditional requests (ETag/Last-Modified).
