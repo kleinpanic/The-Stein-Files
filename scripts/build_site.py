@@ -84,6 +84,12 @@ def build_stats_page(build_info: str, asset_version: str, repo_slug: str) -> Non
     (DIST_DIR / "stats.html").write_text(page, encoding="utf-8")
 
 
+def build_emails_page(build_info: str, asset_version: str, repo_slug: str) -> None:
+    content = (SITE_DIR / "templates" / "emails.html").read_text(encoding="utf-8")
+    page = render_template(content, "Email Documents", build_info, asset_version, repo_slug)
+    (DIST_DIR / "emails.html").write_text(page, encoding="utf-8")
+
+
 def build_detail_pages(build_info: str, asset_version: str, repo_slug: str) -> None:
     catalog = load_catalog()
     detail_dir = DIST_DIR / "documents"
@@ -115,6 +121,7 @@ def build() -> None:
     asset_version = sha
     repo_slug = os.getenv("EPPIE_REPO_SLUG", "kleinpanic/The-Stein-Files")
     build_index_page(build_info, asset_version, repo_slug)
+    build_emails_page(build_info, asset_version, repo_slug)
     build_sources_page(build_info, asset_version, repo_slug)
     build_viewer_page(build_info, asset_version, repo_slug)
     build_stats_page(build_info, asset_version, repo_slug)
