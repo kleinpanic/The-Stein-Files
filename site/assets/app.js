@@ -384,9 +384,19 @@ function renderResults(target, results, metaById, query) {
       .join('');
     const fileNumbersHtml = fileNumbers ? `<div class="file-numbers">${fileNumbers}</div>` : '';
     
-    // Phase 1: Person names
+    // Phase 1: Person names (with clickable filters and profile links)
     const personNames = (meta.person_names || []).slice(0, 3)
-      .map(name => `<span class="person-name">👤 ${escapeHtml(name)}</span>`)
+      .map(name => {
+        const escapedName = escapeHtml(name);
+        const dataAttr = `data-person="${escapedName}"`;
+        // Check if this is a major person (will be replaced with actual data check later)
+        const majorPeople = ['Jeffrey Epstein', 'Ghislaine Maxwell', 'Lesley Groff'];
+        const isMajor = majorPeople.includes(name);
+        const profileLink = isMajor 
+          ? ` <a href="people/${name.toLowerCase().replace(/\s+/g, '-')}.html" class="person-profile-link" title="View ${escapedName}'s profile">»</a>`
+          : '';
+        return `<span class="person-name clickable-person" ${dataAttr} title="Click to filter by ${escapedName}">👤 ${escapedName}${profileLink}</span>`;
+      })
       .join('');
     const personNamesHtml = personNames ? `<div class="person-names">${personNames}</div>` : '';
     
@@ -922,6 +932,22 @@ async function init() {
   backdrop.addEventListener("click", () => {
     filtersPanel.classList.remove("open");
     backdrop.hidden = true;
+  });
+
+  // Person name click handler (delegated event)
+  resultsEl.addEventListener("click", (e) => {
+    const personSpan = e.target.closest(".clickable-person");
+    if (personSpan && personSpan.dataset.person) {
+      e.preventDefault();
+      const personName = personSpan.dataset.person;
+      // Set search mode to person and query to the person name
+      searchMode.value = "person";
+      searchInput.value = personName;
+      searchInput.placeholder = SEARCH_MODE_PLACEHOLDERS.person;
+      syncAndSearch();
+      // Scroll to top
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
   });
 
   // Initial shard loading based on URL state

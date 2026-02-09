@@ -1,0 +1,187 @@
+<section class="hero">
+  <div class="hero-text">
+    <p class="eyebrow">People Mentioned</p>
+    <h1>Major People in Documents</h1>
+    <p>Explore the individuals most frequently mentioned across the Epstein files. Click any person to see their detailed profile, timeline, and all associated documents.</p>
+  </div>
+</section>
+
+<section class="people-grid" id="peopleGrid">
+  <div id="peopleLoadingState" class="state-banner" role="status">Loading people data…</div>
+  <div id="peopleEmptyState" class="state-banner empty" hidden>No people data available.</div>
+</section>
+
+<style>
+.people-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.person-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  background: white;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.person-card:hover {
+  border-color: #0066cc;
+  box-shadow: 0 4px 12px rgba(0, 102, 204, 0.1);
+  transform: translateY(-2px);
+}
+
+.person-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.person-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #0066cc;
+  margin: 0;
+}
+
+.person-mention-count {
+  background: #0066cc;
+  color: white;
+  padding: 0.3rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.person-categories {
+  margin: 0.75rem 0;
+}
+
+.person-categories h3 {
+  font-size: 0.85rem;
+  color: #666;
+  margin: 0 0 0.5rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.category-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.category-tag {
+  background: #f0f0f0;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  color: #333;
+}
+
+.person-cta {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #f0f0f0;
+  color: #0066cc;
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.person-cta::after {
+  content: '→';
+  font-size: 1.2rem;
+}
+
+.threshold-note {
+  background: #f8f9fa;
+  border-left: 4px solid #0066cc;
+  padding: 1rem 1.5rem;
+  margin: 2rem 0;
+  border-radius: 4px;
+}
+
+.threshold-note p {
+  margin: 0;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .people-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+
+<script>
+async function loadPeopleHub() {
+  try {
+    const response = await fetch('data/derived/people.json');
+    const data = await response.json();
+    
+    const grid = document.getElementById('peopleGrid');
+    const loading = document.getElementById('peopleLoadingState');
+    const empty = document.getElementById('peopleEmptyState');
+    
+    loading.hidden = true;
+    
+    if (!data.people || data.people.length === 0) {
+      empty.hidden = false;
+      return;
+    }
+    
+    // Add threshold note
+    const note = document.createElement('div');
+    note.className = 'threshold-note';
+    note.innerHTML = `
+      <p><strong>Note:</strong> This page shows people mentioned in ${data.threshold_mentions}+ documents. 
+      ${data.total_people} people meet this threshold out of the full collection.</p>
+    `;
+    grid.appendChild(note);
+    
+    // Create person cards
+    data.people.forEach(person => {
+      const card = document.createElement('div');
+      card.className = 'person-card';
+      card.onclick = () => window.location.href = `people/${person.slug}.html`;
+      
+      // Top 3 categories
+      const topCategories = person.categories.slice(0, 3);
+      const categoryTags = topCategories
+        .map(([cat, count]) => `<span class="category-tag">${cat} (${count})</span>`)
+        .join('');
+      
+      card.innerHTML = `
+        <div class="person-card-header">
+          <h2 class="person-name">${person.name}</h2>
+          <div class="person-mention-count">${person.mention_count} docs</div>
+        </div>
+        <div class="person-categories">
+          <h3>Most Common Document Types</h3>
+          <div class="category-list">
+            ${categoryTags}
+          </div>
+        </div>
+        <div class="person-cta">View full profile</div>
+      `;
+      
+      grid.appendChild(card);
+    });
+    
+  } catch (error) {
+    console.error('Failed to load people data:', error);
+    document.getElementById('peopleLoadingState').textContent = 'Error loading people data';
+  }
+}
+
+document.addEventListener('DOMContentLoaded', loadPeopleHub);
+</script>
