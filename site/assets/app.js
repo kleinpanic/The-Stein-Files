@@ -921,14 +921,57 @@ async function init() {
   const openFilters = document.getElementById("openFilters");
   const closeFilters = document.getElementById("closeFilters");
   const backdrop = document.getElementById("filtersBackdrop");
+  
+  // Phase 3: Swipe gesture support for mobile drawer
+  let touchStartY = 0;
+  let touchEndY = 0;
+  let isDragging = false;
+  
+  function handleSwipeGesture() {
+    const swipeDistance = touchStartY - touchEndY;
+    const threshold = 50; // Minimum swipe distance in pixels
+    
+    if (Math.abs(swipeDistance) > threshold) {
+      if (swipeDistance > 0) {
+        // Swiped up - open drawer
+        filtersPanel.classList.add("open");
+        backdrop.hidden = false;
+      } else {
+        // Swiped down - close drawer
+        filtersPanel.classList.remove("open");
+        backdrop.hidden = true;
+      }
+    }
+  }
+  
+  // Touch event listeners for swipe gesture
+  filtersPanel.addEventListener("touchstart", (e) => {
+    touchStartY = e.touches[0].clientY;
+    isDragging = true;
+  }, { passive: true });
+  
+  filtersPanel.addEventListener("touchmove", (e) => {
+    if (!isDragging) return;
+    touchEndY = e.touches[0].clientY;
+  }, { passive: true });
+  
+  filtersPanel.addEventListener("touchend", () => {
+    if (!isDragging) return;
+    handleSwipeGesture();
+    isDragging = false;
+  });
+  
+  // Standard click handlers
   openFilters.addEventListener("click", () => {
     filtersPanel.classList.add("open");
     backdrop.hidden = false;
   });
+  
   closeFilters.addEventListener("click", () => {
     filtersPanel.classList.remove("open");
     backdrop.hidden = true;
   });
+  
   backdrop.addEventListener("click", () => {
     filtersPanel.classList.remove("open");
     backdrop.hidden = true;
