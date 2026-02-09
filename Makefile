@@ -32,6 +32,7 @@ ingest: venv
 
 extract: venv
 	$(PY) -m scripts.extract
+	$(PY) -m scripts.prepare_person_data
 
 build: venv extract
 	$(PY) -m scripts.build_site
