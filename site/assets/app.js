@@ -177,15 +177,28 @@ function renderResults(target, results, metaById, query) {
         'legal-filing': 'Legal Filing',
         'memorandum': 'Memorandum',
         'report': 'Report',
-        'flight-log': 'Flight Log'
+        'flight-log': 'Flight Log',
+        // Phase 1 categories
+        'email': '📧 Email',
+        'deposition': '📝 Deposition',
+        'subpoena': '⚖️ Subpoena',
+        'case-photo': '📷 Case Photo',
+        'evidence-photo': '📷 Evidence Photo',
+        'handwritten-note': '✍️ Handwritten Note'
       };
       const label = categoryLabels[meta.document_category] || meta.document_category;
       metaBadges.push(`<span class="meta-badge">${label}</span>`);
     }
     
-    // OCR indicator
+    // OCR indicator + confidence (Phase 1)
     if (meta.ocr_applied) {
-      metaBadges.push(`<span class="meta-badge" title="OCR applied">🔍 OCR</span>`);
+      if (meta.ocr_confidence != null) {
+        const conf = Math.round(meta.ocr_confidence);
+        const confClass = conf >= 70 ? 'ocr-high' : conf >= 50 ? 'ocr-medium' : 'ocr-low';
+        metaBadges.push(`<span class="meta-badge ${confClass}" title="OCR applied with ${conf}% confidence">🔍 OCR ${conf}%</span>`);
+      } else {
+        metaBadges.push(`<span class="meta-badge" title="OCR applied">🔍 OCR</span>`);
+      }
     }
     
     const metadataHtml = metaBadges.length > 0 ? `<div class="doc-metadata">${metaBadges.join('')}</div>` : '';
@@ -195,6 +208,24 @@ function renderResults(target, results, metaById, query) {
       .map(num => `<span class="file-number">${escapeHtml(num)}</span>`)
       .join('');
     const fileNumbersHtml = fileNumbers ? `<div class="file-numbers">${fileNumbers}</div>` : '';
+    
+    // Phase 1: Person names
+    const personNames = (meta.person_names || []).slice(0, 3)
+      .map(name => `<span class="person-name">👤 ${escapeHtml(name)}</span>`)
+      .join('');
+    const personNamesHtml = personNames ? `<div class="person-names">${personNames}</div>` : '';
+    
+    // Phase 1: Locations
+    const locations = (meta.locations || []).slice(0, 3)
+      .map(loc => `<span class="location">📍 ${escapeHtml(loc)}</span>`)
+      .join('');
+    const locationsHtml = locations ? `<div class="locations">${locations}</div>` : '';
+    
+    // Phase 1: Case numbers
+    const caseNumbers = (meta.case_numbers || []).slice(0, 3)
+      .map(num => `<span class="case-number">⚖️ ${escapeHtml(num)}</span>`)
+      .join('');
+    const caseNumbersHtml = caseNumbers ? `<div class="case-numbers">${caseNumbers}</div>` : '';
     
     const card = document.createElement("div");
     card.className = "result-card";
@@ -206,6 +237,9 @@ function renderResults(target, results, metaById, query) {
       </div>
       ${metadataHtml}
       ${fileNumbersHtml}
+      ${personNamesHtml}
+      ${locationsHtml}
+      ${caseNumbersHtml}
       <div class="result-tags">${tags}</div>
       <p class="result-snippet">${snippetHtml}</p>
       <div class="result-actions">

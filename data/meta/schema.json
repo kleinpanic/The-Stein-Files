@@ -38,6 +38,10 @@
     "text_quality_score": {"type": ["number", "null"], "minimum": 0, "maximum": 100},
     "extracted_file_numbers": {"type": "array", "items": {"type": "string"}},
     "extracted_dates": {"type": "array", "items": {"type": "string"}},
+    "person_names": {"type": ["array", "null"], "items": {"type": "string"}},
+    "locations": {"type": ["array", "null"], "items": {"type": "string"}},
+    "case_numbers": {"type": ["array", "null"], "items": {"type": "string"}},
+    "ocr_confidence": {"type": ["number", "null"], "minimum": 0, "maximum": 100},
     "extracted_entities": {
       "type": ["object", "null"],
       "properties": {
