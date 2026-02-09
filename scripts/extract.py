@@ -20,6 +20,7 @@ from scripts.common import (
     write_json,
 )
 from scripts.pdf_analyzer import analyze_pdf
+from scripts.auto_tagging import generate_auto_tags
 
 
 MAX_CONTENT_CHARS = 20000
@@ -125,6 +126,19 @@ def extract_all() -> None:
                     if analysis.get("enhanced_text"):
                         text_path.write_text(analysis["enhanced_text"], encoding="utf-8")
                         print(f"[extract] Applied OCR to {file_path.name}")
+                    
+                    # Phase 2: Generate auto-tags
+                    if extracted_text:
+                        auto_tags = generate_auto_tags(
+                            text=extracted_text,
+                            category=analysis.get("document_category"),
+                            person_names=analysis.get("person_names", []),
+                            locations=analysis.get("locations", []),
+                            release_date=entry.get("release_date"),
+                        )
+                        if auto_tags:
+                            entry["auto_tags"] = auto_tags
+                            print(f"[extract] Generated {len(auto_tags)} auto-tags for {file_path.name}")
         elif suffix in TEXT_EXTENSIONS or mime_type.startswith("text/"):
             text_path.parent.mkdir(parents=True, exist_ok=True)
             text_path.write_text(file_path.read_text(encoding="utf-8"), encoding="utf-8")
@@ -149,6 +163,10 @@ def extract_all() -> None:
             "text_quality_score": entry.get("text_quality_score"),
             "document_category": entry.get("document_category"),
             "extracted_file_numbers": entry.get("extracted_file_numbers", []),
+            # Phase 2: Auto-tags for advanced search
+            "auto_tags": entry.get("auto_tags", []),
+            "person_names": entry.get("person_names", []),
+            "locations": entry.get("locations", []),
         }
         index_docs.append(doc)
 
