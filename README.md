@@ -4,6 +4,37 @@
 
 This repository collects and preserves officially released Epstein-related public documents from U.S. federal government sources or clearly official court releases, and publishes a searchable static site.
 
+## ✨ Features
+
+### Search & Discovery
+- **Advanced Search Modes**: Full-text (fuzzy), person search, location search, file number lookup
+- **Smart Filters**: Multi-select sources/years/tags, date ranges, file size, page count, document quality, OCR status
+- **Auto-Tagging**: Documents automatically tagged by keywords, people mentioned, locations, date ranges, and document types
+- **Related Documents**: Each result shows up to 3 related documents based on case numbers, people, locations, and dates
+- **Search Suggestions**: Autocomplete adapts to current search mode
+
+### Document Organization
+- **Person Profiles**: Dedicated pages for major people (5+ mentions) with timeline, document breakdown, and full document lists
+- **Emails Section**: Browse 149+ emails with From/To/Subject metadata extraction and Epstein-specific filtering
+- **Document Categories**: Correspondence, depositions, legal filings, flight logs, evidence photos, and more
+
+### Enhanced Metadata
+- **Character Extraction**: 194 person names, 417 locations, 15 case numbers extracted from documents
+- **OCR Applied**: 279 image-only PDFs processed with OCR for searchable text
+- **Quality Scores**: Document text quality rated on 0-100 scale
+- **Document Classification**: Text, image, or hybrid PDFs with confidence indicators
+
+### User Experience
+- **CSV Export**: Export search results with full metadata for offline analysis
+- **Keyboard Shortcuts**: Ctrl+K to focus search, Esc to clear
+- **Share Search**: Copy current search/filter state URL to clipboard
+- **Mobile Optimized**: Swipe-up filter drawer, WCAG 2.1 AAA touch targets, optimized PDF rendering
+- **PDF Viewer**: In-page PDF viewing with GitHub LFS integration (graceful fallback when bandwidth limited)
+
+### Statistics & Analytics
+- **Stats Dashboard**: Timeline visualizations, document type breakdowns, quality distributions, source-level analytics
+- **Coverage Metrics**: Track OCR status, categorization progress, and collection completeness
+
 ## Sources
 See `docs/SOURCES.md` for the canonical list of official upstream sources.
 
