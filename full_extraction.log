@@ -1,0 +1,18 @@
+============================================================
+FULL ENHANCED EXTRACTION - Phase 1
+============================================================
+Enhanced OCR: ENABLED
+Total documents: 947
+Expected time: 2-4 hours
+Started: 2026-02-09 06:02:21
+============================================================
+
+[extract] Updated catalog with PDF analysis metadata
+
+============================================================
+EXTRACTION COMPLETE
+============================================================
+Total time: 0.7 minutes (0.0 hours)
+Completed: 2026-02-09 06:03:02
+
+Next: Run 'make build' to regenerate site with enhanced metadata
