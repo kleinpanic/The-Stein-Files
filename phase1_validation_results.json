@@ -1,0 +1,123 @@
+{
+  "summary": {
+    "avg_old_quality": 0.0,
+    "avg_new_quality": 2.24,
+    "avg_improvement": 2.24,
+    "total_with_names": 0,
+    "total_with_locations": 1
+  },
+  "results": [
+    {
+      "id": "a0950db37328-utilities-efta00008420pdf",
+      "title": "Utilities \u2014 EFTA00008420.pdf",
+      "old_quality": 0,
+      "new_quality": 0,
+      "improvement": 0,
+      "ocr_confidence": 89.0,
+      "person_names": [],
+      "locations": [],
+      "category": null
+    },
+    {
+      "id": "c2206cab22a8-utilities-efta00003159pdf",
+      "title": "Utilities \u2014 EFTA00003159.pdf",
+      "old_quality": 0,
+      "new_quality": 0,
+      "improvement": 0,
+      "ocr_confidence": 88.0,
+      "person_names": [],
+      "locations": [],
+      "category": null
+    },
+    {
+      "id": "3826177fc52c-utilities-efta00000100pdf",
+      "title": "Utilities \u2014 EFTA00000100.pdf",
+      "old_quality": 0,
+      "new_quality": 0,
+      "improvement": 0,
+      "ocr_confidence": 81.0,
+      "person_names": [],
+      "locations": [],
+      "category": null
+    },
+    {
+      "id": "777629bd2d9c-utilities-efta00000025pdf",
+      "title": "Utilities \u2014 EFTA00000025.pdf",
+      "old_quality": 0,
+      "new_quality": 0,
+      "improvement": 0,
+      "ocr_confidence": 77.0,
+      "person_names": [],
+      "locations": [],
+      "category": null
+    },
+    {
+      "id": "ac4f8c48e06f-utilities-efta00000010pdf",
+      "title": "Utilities \u2014 EFTA00000010.pdf",
+      "old_quality": 0,
+      "new_quality": 0,
+      "improvement": 0,
+      "ocr_confidence": 74.0,
+      "person_names": [],
+      "locations": [],
+      "category": null
+    },
+    {
+      "id": "bb4a65085a3e-utilities-efta00008508pdf",
+      "title": "Utilities \u2014 EFTA00008508.pdf",
+      "old_quality": 0,
+      "new_quality": 0,
+      "improvement": 0,
+      "ocr_confidence": 85.0,
+      "person_names": [],
+      "locations": [],
+      "category": null
+    },
+    {
+      "id": "31f9dea226bc-utilities-efta00008426pdf",
+      "title": "Utilities \u2014 EFTA00008426.pdf",
+      "old_quality": 0,
+      "new_quality": 0,
+      "improvement": 0,
+      "ocr_confidence": 87.0,
+      "person_names": [],
+      "locations": [],
+      "category": null
+    },
+    {
+      "id": "9529f09bdc0d-utilities-efta02731416pdf",
+      "title": "Utilities \u2014 EFTA02731416.pdf",
+      "old_quality": 0,
+      "new_quality": 21.8,
+      "improvement": 21.8,
+      "ocr_confidence": 29.5,
+      "person_names": [],
+      "locations": [
+        "Bd Pe, we"
+      ],
+      "category": null
+    },
+    {
+      "id": "558dab2b786d-utilities-efta00000066pdf",
+      "title": "Utilities \u2014 EFTA00000066.pdf",
+      "old_quality": 0,
+      "new_quality": 0,
+      "improvement": 0,
+      "ocr_confidence": 80.0,
+      "person_names": [],
+      "locations": [],
+      "category": null
+    },
+    {
+      "id": "24e5a98080c7-utilities-efta00008465pdf",
+      "title": "Utilities \u2014 EFTA00008465.pdf",
+      "old_quality": 0,
+      "new_quality": 0.6,
+      "improvement": 0.6,
+      "ocr_confidence": 33.0,
+      "person_names": [],
+      "locations": [],
+      "category": null
+    }
+  ]
+}
