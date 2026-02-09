@@ -78,22 +78,40 @@ async function initPDFViewer() {
       pageInfo.textContent = `Page ${currentPage} of ${totalPages}`;
     }
 
-    // Render function
+    // Phase 3: Mobile detection for optimized rendering
+    function isMobileDevice() {
+      return window.innerWidth <= 768 || 
+             /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    }
+
+    // Render function with Phase 3 mobile optimization
     async function renderPage(num) {
       const page = await pdf.getPage(num);
       const canvas = document.createElement('canvas');
       const ctx = canvas.getContext('2d');
 
-      // Scale for high-DPI displays
-      const scale = window.devicePixelRatio || 1;
-      const viewport = page.getViewport({ scale: 1.5 });
+      // Phase 3: Lower resolution for mobile devices to improve performance
+      const isMobile = isMobileDevice();
+      const baseScale = isMobile ? 1.0 : 1.5; // Lower base scale on mobile
+      const pixelRatio = isMobile ? 
+        Math.min(window.devicePixelRatio || 1, 2) : // Cap at 2x on mobile
+        (window.devicePixelRatio || 1);
 
-      canvas.height = viewport.height * scale;
-      canvas.width = viewport.width * scale;
+      // Calculate viewport to fit container width on mobile
+      const containerWidth = container.clientWidth || window.innerWidth - 32;
+      const baseViewport = page.getViewport({ scale: 1.0 });
+      const scaleToFit = isMobile ? 
+        Math.min(baseScale, containerWidth / baseViewport.width) : 
+        baseScale;
+
+      const viewport = page.getViewport({ scale: scaleToFit });
+
+      canvas.height = viewport.height * pixelRatio;
+      canvas.width = viewport.width * pixelRatio;
       canvas.style.width = `${viewport.width}px`;
       canvas.style.height = `${viewport.height}px`;
 
-      ctx.scale(scale, scale);
+      ctx.scale(pixelRatio, pixelRatio);
 
       await page.render({
         canvasContext: ctx,
