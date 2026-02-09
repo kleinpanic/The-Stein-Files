@@ -2,43 +2,53 @@
   <div class="hero-text">
     <p class="eyebrow">People Mentioned</p>
     <h1>Major People in Documents</h1>
-    <p>Explore the individuals most frequently mentioned across the Epstein files. Click any person to see their detailed profile, timeline, and all associated documents.</p>
+    <p>Explore the individuals most frequently mentioned across the Epstein files. Click any person to expand their profile and see detailed timeline, document breakdown, and full document list.</p>
   </div>
 </section>
 
-<section class="people-grid" id="peopleGrid">
+<section class="people-container" id="peopleContainer">
   <div id="peopleLoadingState" class="state-banner" role="status">Loading people data…</div>
   <div id="peopleEmptyState" class="state-banner empty" hidden>No people data available.</div>
 </section>
 
 <style>
-.people-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  gap: 1.5rem;
+.people-container {
   margin-top: 2rem;
 }
 
-.person-card {
+.person-accordion {
   border: 1px solid #e0e0e0;
   border-radius: 8px;
-  padding: 1.5rem;
+  margin-bottom: 1rem;
   background: white;
+  overflow: hidden;
   transition: all 0.2s;
-  cursor: pointer;
 }
 
-.person-card:hover {
+.person-accordion.expanded {
   border-color: #0066cc;
   box-shadow: 0 4px 12px rgba(0, 102, 204, 0.1);
-  transform: translateY(-2px);
 }
 
-.person-card-header {
+.person-header {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 1rem;
+  align-items: center;
+  padding: 1.5rem;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.2s;
+}
+
+.person-header:hover {
+  background: #f8f9fa;
+}
+
+.person-header-left {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex: 1;
 }
 
 .person-name {
@@ -58,22 +68,11 @@
   white-space: nowrap;
 }
 
-.person-categories {
-  margin: 0.75rem 0;
-}
-
-.person-categories h3 {
-  font-size: 0.85rem;
-  color: #666;
-  margin: 0 0 0.5rem 0;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-.category-list {
+.person-top-categories {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
+  flex: 1;
 }
 
 .category-tag {
@@ -84,21 +83,239 @@
   color: #333;
 }
 
-.person-cta {
-  margin-top: 1rem;
-  padding-top: 1rem;
-  border-top: 1px solid #f0f0f0;
-  color: #0066cc;
-  font-size: 0.9rem;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+.expand-icon {
+  font-size: 1.5rem;
+  color: #666;
+  transition: transform 0.3s;
+  margin-left: 1rem;
 }
 
-.person-cta::after {
-  content: '→';
-  font-size: 1.2rem;
+.person-accordion.expanded .expand-icon {
+  transform: rotate(180deg);
+}
+
+.person-details {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out;
+  border-top: 1px solid #e0e0e0;
+}
+
+.person-accordion.expanded .person-details {
+  max-height: 10000px;
+}
+
+.person-details-inner {
+  padding: 2rem 1.5rem;
+}
+
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.stat-box {
+  background: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0066cc;
+  margin-bottom: 0.25rem;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.person-section {
+  margin: 2rem 0;
+}
+
+.person-section h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.categories-breakdown {
+  display: grid;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.category-bar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.category-bar-label {
+  min-width: 150px;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.category-bar-visual {
+  flex: 1;
+  background: #f0f0f0;
+  height: 24px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.category-bar-fill {
+  background: linear-gradient(90deg, #0066cc, #0052a3);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 0.75rem;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: width 0.5s ease-out;
+}
+
+.timeline-controls {
+  margin-bottom: 1rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.timeline-controls label {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.inline-select {
+  padding: 0.4rem 0.75rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  background: white;
+  cursor: pointer;
+}
+
+.timeline {
+  margin-bottom: 2rem;
+}
+
+.timeline-year {
+  margin-bottom: 1.5rem;
+}
+
+.timeline-year-header {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #0066cc;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #0066cc;
+}
+
+.timeline-doc {
+  padding: 0.75rem;
+  border-left: 3px solid #e0e0e0;
+  margin-left: 0.5rem;
+  margin-bottom: 0.75rem;
+  background: #fafafa;
+  transition: all 0.2s;
+}
+
+.timeline-doc:hover {
+  border-left-color: #0066cc;
+  background: white;
+}
+
+.timeline-doc-title {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.25rem;
+}
+
+.timeline-doc-meta {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.timeline-doc-link {
+  color: #0066cc;
+  text-decoration: none;
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+  display: inline-block;
+}
+
+.timeline-doc-link:hover {
+  text-decoration: underline;
+}
+
+.search-input {
+  margin-bottom: 1rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.search-input input[type="search"] {
+  flex: 1;
+  min-width: 250px;
+  padding: 0.6rem 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+.documents-list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.document-item {
+  padding: 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  background: white;
+  transition: all 0.2s;
+}
+
+.document-item:hover {
+  border-color: #0066cc;
+  box-shadow: 0 2px 8px rgba(0, 102, 204, 0.1);
+}
+
+.document-title {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.document-meta {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.document-link {
+  color: #0066cc;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.document-link:hover {
+  text-decoration: underline;
 }
 
 .threshold-note {
@@ -116,19 +333,57 @@
 }
 
 @media (max-width: 768px) {
-  .people-grid {
+  .person-header-left {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  
+  .person-top-categories {
+    width: 100%;
+  }
+  
+  .stats-row {
     grid-template-columns: 1fr;
+  }
+  
+  .category-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .category-bar-label {
+    min-width: auto;
+  }
+  
+  .category-bar-visual {
+    width: 100%;
+  }
+  
+  .search-input {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .search-input input[type="search"],
+  .search-input select {
+    width: 100%;
   }
 }
 </style>
 
 <script>
+let peopleData = null;
+let expandedPersonSlug = null;
+
 async function loadPeopleHub() {
   try {
     const response = await fetch('data/derived/people.json');
     const data = await response.json();
+    peopleData = data;
     
-    const grid = document.getElementById('peopleGrid');
+    const container = document.getElementById('peopleContainer');
     const loading = document.getElementById('peopleLoadingState');
     const empty = document.getElementById('peopleEmptyState');
     
@@ -146,41 +401,252 @@ async function loadPeopleHub() {
       <p><strong>Note:</strong> This page shows people mentioned in ${data.threshold_mentions}+ documents. 
       ${data.total_people} people meet this threshold out of the full collection.</p>
     `;
-    grid.appendChild(note);
+    container.appendChild(note);
     
-    // Create person cards
+    // Create person accordions
     data.people.forEach(person => {
-      const card = document.createElement('div');
-      card.className = 'person-card';
-      card.onclick = () => window.location.href = `people/${person.slug}.html`;
-      
-      // Top 3 categories
-      const topCategories = person.categories.slice(0, 3);
-      const categoryTags = topCategories
-        .map(([cat, count]) => `<span class="category-tag">${cat} (${count})</span>`)
-        .join('');
-      
-      card.innerHTML = `
-        <div class="person-card-header">
-          <h2 class="person-name">${person.name}</h2>
-          <div class="person-mention-count">${person.mention_count} docs</div>
-        </div>
-        <div class="person-categories">
-          <h3>Most Common Document Types</h3>
-          <div class="category-list">
-            ${categoryTags}
-          </div>
-        </div>
-        <div class="person-cta">View full profile</div>
-      `;
-      
-      grid.appendChild(card);
+      const accordion = createPersonAccordion(person);
+      container.appendChild(accordion);
     });
     
   } catch (error) {
     console.error('Failed to load people data:', error);
     document.getElementById('peopleLoadingState').textContent = 'Error loading people data';
   }
+}
+
+function createPersonAccordion(person) {
+  const accordion = document.createElement('div');
+  accordion.className = 'person-accordion';
+  accordion.dataset.slug = person.slug;
+  
+  // Top 3 categories for header preview
+  const topCategories = person.categories.slice(0, 3);
+  const categoryTags = topCategories
+    .map(([cat, count]) => `<span class="category-tag">${cat} (${count})</span>`)
+    .join('');
+  
+  accordion.innerHTML = `
+    <div class="person-header">
+      <div class="person-header-left">
+        <h2 class="person-name">${person.name}</h2>
+        <div class="person-mention-count">${person.mention_count} docs</div>
+        <div class="person-top-categories">
+          ${categoryTags}
+        </div>
+      </div>
+      <div class="expand-icon">▼</div>
+    </div>
+    <div class="person-details">
+      <div class="person-details-inner" data-slug="${person.slug}">
+        <div class="loading-placeholder">Loading details...</div>
+      </div>
+    </div>
+  `;
+  
+  const header = accordion.querySelector('.person-header');
+  header.addEventListener('click', () => togglePersonDetails(accordion, person));
+  
+  return accordion;
+}
+
+async function togglePersonDetails(accordion, person) {
+  const isExpanded = accordion.classList.contains('expanded');
+  
+  // Close any other expanded accordion
+  document.querySelectorAll('.person-accordion.expanded').forEach(el => {
+    if (el !== accordion) {
+      el.classList.remove('expanded');
+    }
+  });
+  
+  if (isExpanded) {
+    accordion.classList.remove('expanded');
+    expandedPersonSlug = null;
+  } else {
+    accordion.classList.add('expanded');
+    expandedPersonSlug = person.slug;
+    
+    // Load person details if not already loaded
+    const detailsInner = accordion.querySelector('.person-details-inner');
+    if (detailsInner.querySelector('.loading-placeholder')) {
+      await loadPersonDetails(person, detailsInner);
+    }
+  }
+}
+
+async function loadPersonDetails(person, container) {
+  try {
+    const response = await fetch(`data/derived/people/${person.slug}.json`);
+    const data = await response.json();
+    
+    container.innerHTML = renderPersonDetails(data);
+    
+    // Set up event listeners for timeline sorting and doc filtering
+    setupPersonDetailInteractions(data, container);
+    
+  } catch (error) {
+    console.error('Failed to load person details:', error);
+    container.innerHTML = '<p>Error loading person details.</p>';
+  }
+}
+
+function renderPersonDetails(data) {
+  // Stats
+  const timelineSpan = data.timeline.length > 0 
+    ? `${data.timeline[0].year} – ${data.timeline[data.timeline.length - 1].year}`
+    : '—';
+  
+  // Categories breakdown
+  const categoriesHtml = data.categories
+    .map(([cat, count]) => {
+      const percentage = (count / data.mention_count) * 100;
+      return `
+        <div class="category-bar">
+          <div class="category-bar-label">${cat}</div>
+          <div class="category-bar-visual">
+            <div class="category-bar-fill" style="width: ${percentage}%">${count}</div>
+          </div>
+        </div>
+      `;
+    })
+    .join('');
+  
+  // Timeline (default: newest first)
+  const timelineHtml = renderTimeline(data.timeline, 'desc');
+  
+  // All documents
+  const documentsHtml = renderDocumentsList(data.documents);
+  
+  // Category filter options
+  const categoryOptions = data.categories
+    .map(([cat]) => `<option value="${cat}">${cat}</option>`)
+    .join('');
+  
+  return `
+    <div class="stats-row">
+      <div class="stat-box">
+        <div class="stat-number">${data.mention_count}</div>
+        <div class="stat-label">Total Mentions</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-number">${data.categories.length}</div>
+        <div class="stat-label">Document Types</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-number">${timelineSpan}</div>
+        <div class="stat-label">Timeline Span</div>
+      </div>
+    </div>
+    
+    <div class="person-section">
+      <h3>Document Type Breakdown</h3>
+      <div class="categories-breakdown">
+        ${categoriesHtml}
+      </div>
+    </div>
+    
+    <div class="person-section">
+      <h3>Timeline of Mentions</h3>
+      <div class="timeline-controls">
+        <label for="timelineSort-${data.slug}">Sort:</label>
+        <select id="timelineSort-${data.slug}" class="inline-select">
+          <option value="desc">Newest First</option>
+          <option value="asc">Oldest First</option>
+        </select>
+      </div>
+      <div class="timeline" data-slug="${data.slug}">
+        ${timelineHtml}
+      </div>
+    </div>
+    
+    <div class="person-section">
+      <h3>All Documents (${data.documents.length})</h3>
+      <div class="search-input">
+        <input type="search" id="docSearch-${data.slug}" placeholder="Search within this person's documents..." />
+        <label for="docFilter-${data.slug}">Filter by type:</label>
+        <select id="docFilter-${data.slug}" class="inline-select">
+          <option value="">All Types</option>
+          ${categoryOptions}
+        </select>
+      </div>
+      <div class="documents-list" data-slug="${data.slug}">
+        ${documentsHtml}
+      </div>
+    </div>
+  `;
+}
+
+function renderTimeline(timeline, order = 'desc') {
+  const sorted = order === 'desc' 
+    ? [...timeline].reverse() 
+    : [...timeline];
+  
+  return sorted.map(yearGroup => `
+    <div class="timeline-year">
+      <div class="timeline-year-header">${yearGroup.year}</div>
+      ${yearGroup.documents.map(doc => `
+        <div class="timeline-doc">
+          <div class="timeline-doc-title">${doc.title}</div>
+          <div class="timeline-doc-meta">
+            ${doc.release_date || 'Unknown date'} • ${doc.document_category || 'Uncategorized'}
+          </div>
+          <a href="${doc.id}.html" class="timeline-doc-link">View document →</a>
+        </div>
+      `).join('')}
+    </div>
+  `).join('');
+}
+
+function renderDocumentsList(documents) {
+  return documents.map(doc => `
+    <div class="document-item" data-category="${doc.document_category || ''}">
+      <div class="document-title">${doc.title}</div>
+      <div class="document-meta">
+        ${doc.release_date || 'Unknown date'} • ${doc.document_category || 'Uncategorized'} • ${doc.source_name}
+      </div>
+      <a href="${doc.id}.html" class="document-link">View document →</a>
+    </div>
+  `).join('');
+}
+
+function setupPersonDetailInteractions(data, container) {
+  const slug = data.slug;
+  
+  // Timeline sort
+  const timelineSort = container.querySelector(`#timelineSort-${slug}`);
+  if (timelineSort) {
+    timelineSort.addEventListener('change', (e) => {
+      const timeline = container.querySelector(`.timeline[data-slug="${slug}"]`);
+      timeline.innerHTML = renderTimeline(data.timeline, e.target.value);
+    });
+  }
+  
+  // Document search and filter
+  const docSearch = container.querySelector(`#docSearch-${slug}`);
+  const docFilter = container.querySelector(`#docFilter-${slug}`);
+  const docsList = container.querySelector(`.documents-list[data-slug="${slug}"]`);
+  
+  function filterDocuments() {
+    const searchTerm = docSearch?.value.toLowerCase() || '';
+    const filterCategory = docFilter?.value || '';
+    
+    const filtered = data.documents.filter(doc => {
+      const matchesSearch = !searchTerm || 
+        doc.title.toLowerCase().includes(searchTerm) ||
+        (doc.content_preview || '').toLowerCase().includes(searchTerm);
+      const matchesCategory = !filterCategory || 
+        doc.document_category === filterCategory;
+      return matchesSearch && matchesCategory;
+    });
+    
+    docsList.innerHTML = filtered.length > 0
+      ? renderDocumentsList(filtered)
+      : '<p style="padding: 1rem; color: #666;">No documents match your filters.</p>';
+  }
+  
+  if (docSearch) docSearch.addEventListener('input', filterDocuments);
+  if (docFilter) docFilter.addEventListener('change', filterDocuments);
 }
 
 document.addEventListener('DOMContentLoaded', loadPeopleHub);
