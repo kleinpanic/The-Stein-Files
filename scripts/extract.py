@@ -21,6 +21,7 @@ from scripts.common import (
 )
 from scripts.pdf_analyzer import analyze_pdf
 from scripts.auto_tagging import generate_auto_tags
+from scripts.email_metadata import extract_email_metadata, is_epstein_email
 
 
 MAX_CONTENT_CHARS = 20000
@@ -139,6 +140,18 @@ def extract_all() -> None:
                         if auto_tags:
                             entry["auto_tags"] = auto_tags
                             print(f"[extract] Generated {len(auto_tags)} auto-tags for {file_path.name}")
+            
+            # Extract email metadata for email/correspondence documents
+            if extracted_text and entry.get("document_category") in ["email", "correspondence"]:
+                email_meta = extract_email_metadata(extracted_text)
+                if email_meta.get("from_addr") or email_meta.get("to_addr") or email_meta.get("subject"):
+                    entry["email_from"] = email_meta.get("from_addr")
+                    entry["email_to"] = email_meta.get("to_addr")
+                    entry["email_subject"] = email_meta.get("subject")
+                    entry["email_date"] = email_meta.get("date")
+                    entry["is_epstein_email"] = is_epstein_email(email_meta, extracted_text)
+                    catalog_updated = True
+                    print(f"[extract] Extracted email metadata from {file_path.name}")
         elif suffix in TEXT_EXTENSIONS or mime_type.startswith("text/"):
             text_path.parent.mkdir(parents=True, exist_ok=True)
             text_path.write_text(file_path.read_text(encoding="utf-8"), encoding="utf-8")
@@ -167,6 +180,12 @@ def extract_all() -> None:
             "auto_tags": entry.get("auto_tags", []),
             "person_names": entry.get("person_names", []),
             "locations": entry.get("locations", []),
+            # Email metadata
+            "email_from": entry.get("email_from"),
+            "email_to": entry.get("email_to"),
+            "email_subject": entry.get("email_subject"),
+            "email_date": entry.get("email_date"),
+            "is_epstein_email": entry.get("is_epstein_email", False),
         }
         index_docs.append(doc)
 
