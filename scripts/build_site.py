@@ -163,7 +163,7 @@ def build() -> None:
     build_viewer_page(build_info, asset_version, repo_slug)
     build_stats_page(build_info, asset_version, repo_slug)
     build_detail_pages(build_info, asset_version, repo_slug)
-    build_person_detail_pages(build_info, asset_version, repo_slug)
+    # build_person_detail_pages(build_info, asset_version, repo_slug)  # Disabled: using single expandable page instead
 
 
 if __name__ == "__main__":
