@@ -110,6 +110,42 @@ def build_detail_pages(build_info: str, asset_version: str, repo_slug: str) -> N
         (detail_dir / f"{entry['id']}.html").write_text(page, encoding="utf-8")
 
 
+def build_people_hub_page(build_info: str, asset_version: str, repo_slug: str) -> None:
+    """Build the people hub landing page."""
+    content = (SITE_DIR / "templates" / "people.html").read_text(encoding="utf-8")
+    page = render_template(content, "Major People", build_info, asset_version, repo_slug)
+    (DIST_DIR / "people.html").write_text(page, encoding="utf-8")
+
+
+def build_person_detail_pages(build_info: str, asset_version: str, repo_slug: str) -> None:
+    """Build individual person detail pages."""
+    people_data_path = Path("data/derived/people.json")
+    if not people_data_path.exists():
+        print("⚠️  Warning: people.json not found, skipping person pages")
+        return
+    
+    with open(people_data_path) as f:
+        people_data = json.load(f)
+    
+    people_dir = DIST_DIR / "people"
+    people_dir.mkdir(parents=True, exist_ok=True)
+    
+    template = (SITE_DIR / "templates" / "person.html").read_text(encoding="utf-8")
+    
+    for person in people_data.get('people', []):
+        content = template
+        page = render_template(
+            content, 
+            f"{person['name']} - Person Profile", 
+            build_info, 
+            asset_version, 
+            repo_slug
+        )
+        (people_dir / f"{person['slug']}.html").write_text(page, encoding="utf-8")
+    
+    print(f"✓ Built {len(people_data.get('people', []))} person detail pages")
+
+
 def build() -> None:
     clean_dist()
     copy_assets()
@@ -122,10 +158,12 @@ def build() -> None:
     repo_slug = os.getenv("EPPIE_REPO_SLUG", "kleinpanic/The-Stein-Files")
     build_index_page(build_info, asset_version, repo_slug)
     build_emails_page(build_info, asset_version, repo_slug)
+    build_people_hub_page(build_info, asset_version, repo_slug)
     build_sources_page(build_info, asset_version, repo_slug)
     build_viewer_page(build_info, asset_version, repo_slug)
     build_stats_page(build_info, asset_version, repo_slug)
     build_detail_pages(build_info, asset_version, repo_slug)
+    build_person_detail_pages(build_info, asset_version, repo_slug)
 
 
 if __name__ == "__main__":

@@ -1009,6 +1009,33 @@ img {
   border-left: 3px solid #4a90e2;
 }
 
+.clickable-person {
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.clickable-person:hover {
+  background: #4a90e2;
+  color: white;
+  transform: translateY(-1px);
+}
+
+.person-profile-link {
+  margin-left: 0.25rem;
+  color: #4a90e2;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.clickable-person:hover .person-profile-link {
+  color: white;
+}
+
+.person-profile-link:hover {
+  text-decoration: underline;
+}
+
 .location {
   border-left: 3px solid #e24a4a;
 }
