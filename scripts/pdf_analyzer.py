@@ -1,6 +1,11 @@
 #!/usr/bin/env python3
 """
 PDF analysis utilities for type detection, OCR, and metadata extraction.
+
+Phase 1 enhancements:
+- Enhanced OCR with language hints, adaptive DPI, preprocessing
+- Enhanced metadata extraction (FBI numbers, person names, locations)
+- Enhanced document classification (email, deposition, subpoena)
 """
 from __future__ import annotations
 
@@ -22,6 +27,17 @@ try:
     HAS_OCR = True
 except ImportError:
     HAS_OCR = False
+
+# Phase 1: Import enhanced modules
+try:
+    from scripts.enhanced_ocr import apply_enhanced_ocr, HAS_OCR as HAS_ENHANCED_OCR
+except ImportError:
+    HAS_ENHANCED_OCR = False
+
+try:
+    from scripts.enhanced_metadata import extract_case_metadata
+except ImportError:
+    extract_case_metadata = None
 
 
 def detect_pdf_type(pdf_path: Path, extracted_text: str) -> str:
@@ -183,25 +199,58 @@ def classify_document_type(title: str, text_sample: str) -> Optional[str]:
     """
     Enhanced document classification with photo/redaction detection.
     
+    Phase 1 additions:
+    - email category
+    - case-photo subcategory
+    - handwritten notes detection
+    - deposition category
+    - subpoena category
+    
     Returns:
-        Category slug: evidence-list, correspondence, legal-filing, 
-                      memorandum, report, flight-log, evidence-photo,
-                      redacted-document, or None for uncategorized
+        Category slug or None for uncategorized
     """
     title_lower = title.lower()
     text_lower = text_sample.lower()
     
+    # Email detection (new in Phase 1)
+    has_email_headers = any(header in text_lower for header in ['from:', 'to:', 'subject:', 'sent:', 'date:'])
+    has_email_pattern = '@' in text_lower and bool(re.search(r'\b[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}\b', text_lower, re.IGNORECASE))
+    if has_email_headers and has_email_pattern:
+        return 'email'
+    
+    # Deposition detection (new in Phase 1)
+    has_qa_pattern = bool(re.search(r'\bQ:.*?\bA:', text_lower, re.DOTALL))
+    has_deposition_markers = any(word in text_lower for word in ['deposition', 'deposed', 'sworn testimony', 'court reporter'])
+    if has_qa_pattern or has_deposition_markers:
+        return 'deposition'
+    
+    # Subpoena detection (new in Phase 1)
+    has_subpoena_markers = any(word in text_lower for word in ['subpoena', 'compel', 'appear and testify', 'bring with you'])
+    has_court_command = 'you are commanded' in text_lower or 'you are hereby ordered' in text_lower
+    if has_subpoena_markers or has_court_command:
+        return 'subpoena'
+    
     # Photo detection (FBI evidence photos) - robust against OCR errors
-    # FBI evidence photos have: PHOTOGRAPHER, LOCATION, CASE ID fields
     has_photographer = 'photographer' in text_lower
     has_location = 'location' in text_lower
-    # OCR often mistakes "id" as "ip" or "1d" - be flexible
     has_case_marker = 'case' in text_lower and any(marker in text_lower for marker in ['case id', 'case ip', 'case 1d', 'caseid'])
-    # FBI case number pattern: 91E-NYC-323571 or similar
     has_fbi_case_number = bool(re.search(r'\b\d{1,3}[a-z]{1,3}-[a-z]{2,5}-\d{5,7}\b', text_lower, re.IGNORECASE))
     
     if has_photographer and has_location and (has_case_marker or has_fbi_case_number):
         return 'evidence-photo'
+    
+    # Case photo detection (new in Phase 1) - photos that aren't FBI evidence photos
+    # Characteristics: very short text, mentions of photo/image, large file size
+    text_len = len(text_sample.strip())
+    if text_len < 100 and any(word in text_lower for word in ['photo', 'image', 'picture', 'photograph']):
+        return 'case-photo'
+    
+    # Handwritten notes detection (new in Phase 1)
+    # Low quality + short text + image PDF indicators
+    if text_len < 150:
+        handwriting_indicators = ['handwritten', 'written by hand', 'manuscript', 'note', 'scrawl']
+        if any(word in text_lower for word in handwriting_indicators):
+            return 'handwritten-note'
     
     # Flight logs (check early - specific pattern)
     if 'flight' in text_lower and ('log' in text_lower or 'manifest' in text_lower):
@@ -242,7 +291,7 @@ def classify_document_type(title: str, text_sample: str) -> Optional[str]:
 
 def analyze_pdf(pdf_path: Path, extracted_text: str, enable_ocr: bool = True) -> Dict:
     """
-    Comprehensive PDF analysis.
+    Comprehensive PDF analysis with Phase 1 enhancements.
     
     Returns dict with:
         - pdf_type: str
@@ -253,41 +302,81 @@ def analyze_pdf(pdf_path: Path, extracted_text: str, enable_ocr: bool = True) ->
         - extracted_dates: List[str]
         - document_category: Optional[str]
         - file_size_bytes: int
+        - person_names: List[str] (Phase 1)
+        - locations: List[str] (Phase 1)
+        - case_numbers: List[str] (Phase 1)
+        - ocr_confidence: float (Phase 1)
     """
     pdf_type = detect_pdf_type(pdf_path, extracted_text)
     quality_score = calculate_text_quality_score(extracted_text)
     
-    # Apply OCR if needed
+    # Apply OCR if needed - use enhanced OCR if available
     ocr_applied = False
+    ocr_confidence = None
     final_text = extracted_text
+    use_enhanced = os.getenv("EPPIE_ENHANCED_OCR", "1") == "1"
     
     if enable_ocr and pdf_type == "image" and quality_score < 30:
         print(f"[PDF Analysis] Applying OCR to {pdf_path.name}")
-        ocr_text = apply_ocr_to_pdf(pdf_path, max_pages=5)
-        if ocr_text:
-            final_text = ocr_text
-            ocr_applied = True
-            quality_score = calculate_text_quality_score(ocr_text)
+        
+        if use_enhanced and HAS_ENHANCED_OCR:
+            # Use enhanced OCR with all Phase 1 improvements
+            print(f"[PDF Analysis] Using enhanced OCR for {pdf_path.name}")
+            ocr_result = apply_enhanced_ocr(pdf_path, max_pages=None, multipass=True)
+            if ocr_result["text"]:
+                final_text = ocr_result["text"]
+                ocr_applied = True
+                ocr_confidence = ocr_result["avg_confidence"]
+                quality_score = calculate_text_quality_score(ocr_result["text"])
+                print(f"[PDF Analysis] Enhanced OCR: {ocr_confidence:.1f}% confidence, strategy={ocr_result['ocr_strategy']}")
+        else:
+            # Fallback to basic OCR
+            ocr_text = apply_ocr_to_pdf(pdf_path, max_pages=5)
+            if ocr_text:
+                final_text = ocr_text
+                ocr_applied = True
+                quality_score = calculate_text_quality_score(ocr_text)
     
-    # Extract metadata from final text
-    file_numbers = extract_file_numbers(final_text)
+    # Extract metadata - use enhanced extraction if available
+    if extract_case_metadata:
+        enhanced_metadata = extract_case_metadata(final_text)
+        file_numbers = enhanced_metadata["file_numbers"]
+        person_names = enhanced_metadata["person_names"]
+        locations = enhanced_metadata["locations"]
+        case_numbers = enhanced_metadata["case_numbers"]
+    else:
+        # Fallback to basic extraction
+        file_numbers = extract_file_numbers(final_text)
+        person_names = []
+        locations = []
+        case_numbers = []
+    
     dates = extract_dates(final_text)
     
     # Classify document
     title = pdf_path.name
     doc_category = classify_document_type(title, final_text)
     
-    return {
+    result = {
         "pdf_type": pdf_type,
         "has_extractable_text": len(extracted_text.strip()) > 50,
         "ocr_applied": ocr_applied,
         "text_quality_score": quality_score,
-        "extracted_file_numbers": file_numbers[:10],  # Limit to top 10
-        "extracted_dates": dates[:20],  # Limit to top 20
+        "extracted_file_numbers": file_numbers[:10],
+        "extracted_dates": dates[:20],
         "document_category": doc_category,
         "file_size_bytes": pdf_path.stat().st_size,
         "enhanced_text": final_text if ocr_applied else None,
+        # Phase 1 additions
+        "person_names": person_names,
+        "locations": locations,
+        "case_numbers": case_numbers,
     }
+    
+    if ocr_confidence is not None:
+        result["ocr_confidence"] = ocr_confidence
+    
+    return result
 
 
 def detect_photo_content(pdf_path: Path) -> bool:
