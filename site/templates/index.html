@@ -22,7 +22,10 @@
     <input id="searchInput" type="search" placeholder="Search names, places, or terms" />
     <label class="sr-only" for="searchMode">Search mode</label>
     <select id="searchMode" class="search-mode">
-      <option value="full">Full text</option>
+      <option value="full">Full text (fuzzy)</option>
+      <option value="person">👤 Person</option>
+      <option value="location">📍 Location</option>
+      <option value="filenumber">🔢 File number</option>
       <option value="title">Title only</option>
       <option value="tags">Tags only</option>
       <option value="source">Source only</option>
@@ -53,12 +56,15 @@
       <button class="button ghost" id="closeFilters" type="button">Close</button>
     </div>
     <div class="filters-fields">
-      <label for="filterSource">Source</label>
-      <select id="filterSource"></select>
-      <label for="filterYear">Year</label>
-      <select id="filterYear"></select>
-      <label for="filterTag">Tag</label>
-      <select id="filterTag"></select>
+      <label for="filterSources">Sources (multi-select)</label>
+      <select id="filterSources" multiple size="4"></select>
+      
+      <label for="filterYears">Years (multi-select)</label>
+      <select id="filterYears" multiple size="4"></select>
+      
+      <label for="filterTags">Tags (multi-select)</label>
+      <select id="filterTags" multiple size="4"></select>
+      
       <label for="filterType">Document Type</label>
       <select id="filterType">
         <option value="">All types</option>
@@ -66,10 +72,12 @@
         <option value="image">🖼️ Image-based</option>
         <option value="hybrid">🔀 Hybrid</option>
       </select>
+      
       <label for="filterCategory">Category</label>
       <select id="filterCategory">
         <option value="">All categories</option>
       </select>
+      
       <label for="filterQuality">Text Quality</label>
       <select id="filterQuality">
         <option value="">All quality</option>
@@ -77,6 +85,44 @@
         <option value="medium">⚠️ Medium (30-70)</option>
         <option value="low">❌ Low (0-30)</option>
       </select>
+      
+      <hr class="filter-divider">
+      <h3 class="filter-section-title">Advanced Filters</h3>
+      
+      <label for="filterDateFrom">Date Range From</label>
+      <input type="date" id="filterDateFrom" class="date-input">
+      
+      <label for="filterDateTo">Date Range To</label>
+      <input type="date" id="filterDateTo" class="date-input">
+      
+      <label for="filterFileSizePreset">File Size</label>
+      <select id="filterFileSizePreset">
+        <option value="">Any size</option>
+        <option value="small">📄 Small (&lt; 100 KB)</option>
+        <option value="medium">📄 Medium (100 KB - 1 MB)</option>
+        <option value="large">📷 Large (1 MB - 10 MB)</option>
+        <option value="xlarge">📷 Extra Large (&gt; 10 MB)</option>
+      </select>
+      
+      <label for="filterPageCountPreset">Page Count</label>
+      <select id="filterPageCountPreset">
+        <option value="">Any page count</option>
+        <option value="single">📄 Single page</option>
+        <option value="few">📄 Few (2-5 pages)</option>
+        <option value="many">📄 Many (6-50 pages)</option>
+        <option value="large">📚 Large (&gt; 50 pages)</option>
+      </select>
+      
+      <label for="filterHasPhotos">Has Photos/Images</label>
+      <select id="filterHasPhotos">
+        <option value="">Any</option>
+        <option value="yes">📷 Yes (image/hybrid PDFs)</option>
+        <option value="no">📄 No (text-only PDFs)</option>
+      </select>
+      
+      <label for="filterOcrQuality">OCR Quality (minimum <span id="ocrQualityValue">0</span>%)</label>
+      <input type="range" id="filterOcrQuality" min="0" max="100" value="0" step="5" class="slider">
+      
       <label for="sortBy">Sort</label>
       <select id="sortBy">
         <option value="relevance">Relevance</option>

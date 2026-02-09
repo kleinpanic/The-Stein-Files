@@ -1,0 +1,411 @@
+<section class="hero">
+  <div class="hero-text">
+    <p class="eyebrow">Email & Correspondence</p>
+    <h1>Email Documents</h1>
+    <p>Browse 149 email and correspondence documents from the Epstein files. Filter by sender, recipient, or view only Epstein-related emails.</p>
+  </div>
+</section>
+
+<section class="search-toolbar">
+  <div class="search-input">
+    <label class="sr-only" for="emailSearch">Search emails</label>
+    <input id="emailSearch" type="search" placeholder="Search sender, recipient, subject, or content..." />
+    <button class="button ghost" id="clearEmailFilters" type="button">Clear filters</button>
+  </div>
+  <div class="search-meta">
+    <div class="meta-left">
+      <span id="emailCount">0 emails</span>
+      <span id="emailLoadStatus" class="muted"></span>
+    </div>
+    <div class="meta-right">
+      <label for="groupBy" class="inline-label">Group by:</label>
+      <select id="groupBy" class="inline-select">
+        <option value="chronological">📅 Chronological</option>
+        <option value="sender">📤 Sender</option>
+        <option value="recipient">📥 Recipient</option>
+      </select>
+      
+      <label for="sortOrder" class="inline-label">Sort:</label>
+      <select id="sortOrder" class="inline-select">
+        <option value="desc">Newest first</option>
+        <option value="asc">Oldest first</option>
+      </select>
+    </div>
+  </div>
+</section>
+
+<section class="filter-chips">
+  <button class="chip" id="filterAll" data-filter="all">All Emails (149)</button>
+  <button class="chip" id="filterEpstein" data-filter="epstein">⭐ Epstein-Related</button>
+  <button class="chip" id="filterEmail" data-filter="email">📧 Email (36)</button>
+  <button class="chip" id="filterCorrespondence" data-filter="correspondence">📄 Correspondence (113)</button>
+</section>
+
+<div id="emailLoadingState" class="state-banner" role="status">Loading emails…</div>
+<div id="emailEmptyState" class="state-banner empty" hidden>No emails found.</div>
+<div id="emailNoResultsState" class="state-banner empty" hidden>No emails match your filters.</div>
+
+<section class="emails-list" id="emailsList">
+  <!-- Email items will be populated here -->
+</section>
+
+<style>
+.filter-chips {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.chip {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ddd;
+  background: white;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.chip:hover {
+  border-color: #0066cc;
+  background: #f0f7ff;
+}
+
+.chip.active {
+  background: #0066cc;
+  color: white;
+  border-color: #0066cc;
+}
+
+.inline-label {
+  font-size: 0.9rem;
+  margin-left: 1rem;
+  margin-right: 0.3rem;
+}
+
+.inline-select {
+  font-size: 0.9rem;
+  padding: 0.3rem 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.meta-right {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.emails-list {
+  max-width: 1200px;
+}
+
+.email-group {
+  margin-bottom: 2rem;
+}
+
+.email-group-header {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  padding: 0.75rem 0;
+  border-bottom: 2px solid #0066cc;
+  margin-bottom: 1rem;
+}
+
+.email-item {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+  background: white;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.email-item:hover {
+  border-color: #0066cc;
+  box-shadow: 0 2px 8px rgba(0, 102, 204, 0.1);
+}
+
+.email-header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.5rem 1rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.email-label {
+  font-weight: 600;
+  color: #666;
+}
+
+.email-value {
+  color: #333;
+  word-break: break-word;
+}
+
+.email-subject {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #0066cc;
+  margin-bottom: 0.5rem;
+}
+
+.email-preview {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.5;
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid #f0f0f0;
+}
+
+.email-meta {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.85rem;
+  color: #999;
+  margin-top: 0.5rem;
+}
+
+.email-badge {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  background: #fff3cd;
+  color: #856404;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-left: 0.5rem;
+}
+
+.epstein-badge {
+  background: #d1ecf1;
+  color: #0c5460;
+}
+</style>
+
+<script type="module">
+// Load email data and render
+let allEmails = [];
+let filteredEmails = [];
+let activeFilter = 'all';
+let groupBy = 'chronological';
+let sortOrder = 'desc';
+let searchQuery = '';
+
+async function loadEmails() {
+  const loadingState = document.getElementById('emailLoadingState');
+  const emailsList = document.getElementById('emailsList');
+  
+  try {
+    // Load manifest to get all shards
+    const manifestRes = await fetch('data/derived/index/manifest.json');
+    const manifest = await manifestRes.json();
+    
+    // Load all shards
+    const shardPromises = manifest.shards.map(shard => 
+      fetch(shard.path).then(r => r.json())
+    );
+    const shardResults = await Promise.all(shardPromises);
+    const allDocs = shardResults.flat();
+    
+    // Filter to email/correspondence only
+    allEmails = allDocs.filter(doc => 
+      doc.document_category === 'email' || doc.document_category === 'correspondence'
+    );
+    
+    loadingState.hidden = true;
+    applyFilters();
+    
+  } catch (err) {
+    console.error('Failed to load emails:', err);
+    loadingState.textContent = 'Failed to load emails. Please try again.';
+  }
+}
+
+function applyFilters() {
+  // Filter by category/type
+  let filtered = [...allEmails];
+  
+  if (activeFilter === 'email') {
+    filtered = filtered.filter(e => e.document_category === 'email');
+  } else if (activeFilter === 'correspondence') {
+    filtered = filtered.filter(e => e.document_category === 'correspondence');
+  } else if (activeFilter === 'epstein') {
+    filtered = filtered.filter(e => e.is_epstein_email === true);
+  }
+  
+  // Search filter
+  if (searchQuery) {
+    const q = searchQuery.toLowerCase();
+    filtered = filtered.filter(e => {
+      const from = (e.email_from || '').toLowerCase();
+      const to = (e.email_to || '').toLowerCase();
+      const subject = (e.email_subject || '').toLowerCase();
+      const content = (e.content || '').toLowerCase();
+      return from.includes(q) || to.includes(q) || subject.includes(q) || content.includes(q);
+    });
+  }
+  
+  filteredEmails = filtered;
+  updateCount();
+  renderEmails();
+}
+
+function updateCount() {
+  const countEl = document.getElementById('emailCount');
+  const count = filteredEmails.length;
+  countEl.textContent = `${count} email${count !== 1 ? 's' : ''}`;
+  
+  // Update chip counts
+  const epsteinCount = allEmails.filter(e => e.is_epstein_email).length;
+  document.getElementById('filterEpstein').textContent = `⭐ Epstein-Related (${epsteinCount})`;
+}
+
+function renderEmails() {
+  const emailsList = document.getElementById('emailsList');
+  const noResults = document.getElementById('emailNoResultsState');
+  
+  if (filteredEmails.length === 0) {
+    emailsList.innerHTML = '';
+    noResults.hidden = false;
+    return;
+  }
+  
+  noResults.hidden = true;
+  
+  // Group emails
+  const grouped = groupEmails(filteredEmails);
+  
+  emailsList.innerHTML = Object.entries(grouped).map(([groupName, emails]) => `
+    <div class="email-group">
+      <div class="email-group-header">${escapeHtml(groupName)}</div>
+      ${emails.map(renderEmail).join('')}
+    </div>
+  `).join('');
+  
+  // Attach click handlers
+  document.querySelectorAll('.email-item').forEach(item => {
+    item.addEventListener('click', () => {
+      const id = item.dataset.id;
+      window.location.href = `viewer.html?id=${id}`;
+    });
+  });
+}
+
+function groupEmails(emails) {
+  // Sort first
+  const sorted = [...emails].sort((a, b) => {
+    const dateA = a.release_date || '';
+    const dateB = b.release_date || '';
+    return sortOrder === 'desc' ? dateB.localeCompare(dateA) : dateA.localeCompare(dateB);
+  });
+  
+  const groups = {};
+  
+  if (groupBy === 'chronological') {
+    sorted.forEach(email => {
+      const year = email.release_date?.substring(0, 4) || 'Unknown';
+      if (!groups[year]) groups[year] = [];
+      groups[year].push(email);
+    });
+  } else if (groupBy === 'sender') {
+    sorted.forEach(email => {
+      const sender = email.email_from || 'Unknown Sender';
+      if (!groups[sender]) groups[sender] = [];
+      groups[sender].push(email);
+    });
+  } else if (groupBy === 'recipient') {
+    sorted.forEach(email => {
+      const recipient = email.email_to || 'Unknown Recipient';
+      if (!groups[recipient]) groups[recipient] = [];
+      groups[recipient].push(email);
+    });
+  }
+  
+  return groups;
+}
+
+function renderEmail(email) {
+  const from = email.email_from || '(Unknown)';
+  const to = email.email_to || '(Unknown)';
+  const subject = email.email_subject || '(No subject)';
+  const date = email.email_date || email.release_date || '';
+  const preview = (email.content || '').substring(0, 200);
+  const category = email.document_category === 'email' ? '📧 Email' : '📄 Correspondence';
+  const isEpstein = email.is_epstein_email;
+  
+  return `
+    <div class="email-item" data-id="${email.id}">
+      <div class="email-subject">
+        ${escapeHtml(subject)}
+        ${isEpstein ? '<span class="email-badge epstein-badge">⭐ Epstein-Related</span>' : ''}
+      </div>
+      <div class="email-header">
+        <span class="email-label">From:</span>
+        <span class="email-value">${escapeHtml(from)}</span>
+        <span class="email-label">To:</span>
+        <span class="email-value">${escapeHtml(to)}</span>
+        ${date ? `
+          <span class="email-label">Date:</span>
+          <span class="email-value">${escapeHtml(date)}</span>
+        ` : ''}
+      </div>
+      <div class="email-meta">
+        <span>${category}</span>
+        <span>•</span>
+        <span>${email.file_name || ''}</span>
+      </div>
+      ${preview ? `<div class="email-preview">${escapeHtml(preview)}${preview.length >= 200 ? '...' : ''}</div>` : ''}
+    </div>
+  `;
+}
+
+function escapeHtml(text) {
+  const div = document.createElement('div');
+  div.textContent = text;
+  return div.innerHTML;
+}
+
+// Event listeners
+document.getElementById('emailSearch').addEventListener('input', (e) => {
+  searchQuery = e.target.value;
+  applyFilters();
+});
+
+document.getElementById('clearEmailFilters').addEventListener('click', () => {
+  searchQuery = '';
+  activeFilter = 'all';
+  document.getElementById('emailSearch').value = '';
+  document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+  document.getElementById('filterAll').classList.add('active');
+  applyFilters();
+});
+
+document.querySelectorAll('.chip').forEach(chip => {
+  chip.addEventListener('click', () => {
+    document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+    chip.classList.add('active');
+    activeFilter = chip.dataset.filter;
+    applyFilters();
+  });
+});
+
+document.getElementById('groupBy').addEventListener('change', (e) => {
+  groupBy = e.target.value;
+  renderEmails();
+});
+
+document.getElementById('sortOrder').addEventListener('change', (e) => {
+  sortOrder = e.target.value;
+  renderEmails();
+});
+
+// Initialize
+document.getElementById('filterAll').classList.add('active');
+loadEmails();
+</script>
