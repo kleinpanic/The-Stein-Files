@@ -90,6 +90,10 @@ def extract_all() -> None:
                     "extracted_file_numbers",
                     "extracted_dates",
                     "document_category",
+                    # Phase 1 fields - require re-analysis if missing
+                    "person_names",
+                    "locations",
+                    "case_numbers",
                 ]
             )
 
@@ -109,6 +113,12 @@ def extract_all() -> None:
                     entry["extracted_file_numbers"] = analysis["extracted_file_numbers"]
                     entry["extracted_dates"] = analysis["extracted_dates"]
                     entry["document_category"] = analysis["document_category"]
+                    # Phase 1 fields
+                    entry["person_names"] = analysis.get("person_names", [])
+                    entry["locations"] = analysis.get("locations", [])
+                    entry["case_numbers"] = analysis.get("case_numbers", [])
+                    if "ocr_confidence" in analysis:
+                        entry["ocr_confidence"] = analysis["ocr_confidence"]
                     catalog_updated = True
 
                     # If OCR was applied and produced better text, save it
