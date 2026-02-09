@@ -275,6 +275,76 @@ img {
   background: #fff;
 }
 
+.filters-fields select[multiple] {
+  min-height: 120px;
+  padding: 6px;
+}
+
+.filters-fields select[multiple] option {
+  padding: 6px 8px;
+  border-radius: 4px;
+  margin: 2px 0;
+}
+
+.filters-fields select[multiple] option:checked {
+  background: var(--accent);
+  color: white;
+}
+
+.filter-divider {
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: 16px 0;
+}
+
+.filter-section-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--muted);
+  margin: 0 0 12px 0;
+}
+
+.date-input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: #fff;
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+
+.slider {
+  width: 100%;
+  height: 6px;
+  border-radius: 3px;
+  background: var(--border);
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--accent);
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--accent);
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
 .filter-open {
   display: none;
 }
@@ -961,4 +1031,40 @@ img {
 .meta-badge.ocr-low {
   background: #e74c3c;
   color: white;
+}
+
+/* Phase 2: Related Documents */
+.related-docs {
+  margin: 0.75rem 0;
+  padding: 0.75rem;
+  background: var(--bg-alt);
+  border-radius: 8px;
+  border-left: 3px solid var(--accent);
+  font-size: 0.9rem;
+}
+
+.related-docs strong {
+  color: var(--muted);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.related-link {
+  color: var(--accent);
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.related-link:hover {
+  color: var(--accent-ink);
+  text-decoration: underline;
+}
+
+/* Phase 2: Search suggestions enhancement */
+#searchSuggestions {
+  font-family: 'Manrope', sans-serif;
 }
