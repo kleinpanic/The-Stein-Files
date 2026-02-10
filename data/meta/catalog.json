@@ -385,6 +385,7 @@
   },
   {
     "case_numbers": [],
+    "category_confidence": 0.95,
     "content_disposition": "inline; filename=\"C. Contact Book_Redacted_0.pdf\"",
     "document_category": "contact-list",
     "downloaded_at": "2026-02-07T11:41:18+00:00",
@@ -427,11 +428,11 @@
       "press-release"
     ],
     "text_quality_score": 74.3,
-    "title": "C. Contact Book_Redacted",
-    "category_confidence": 0.95
+    "title": "C. Contact Book_Redacted"
   },
   {
     "case_numbers": [],
+    "category_confidence": 0.95,
     "content_disposition": "inline; filename=\"D. Masseuse List_Redacted_0.pdf\"",
     "document_category": "contact-list",
     "downloaded_at": "2026-02-07T11:41:19+00:00",
@@ -468,8 +469,7 @@
       "press-release"
     ],
     "text_quality_score": 67.0,
-    "title": "D. Masseuse List_Redacted",
-    "category_confidence": 0.95
+    "title": "D. Masseuse List_Redacted"
   },
   {
     "case_numbers": [],
@@ -1313,7 +1313,7 @@
     ],
     "mime_type": "application/pdf",
     "notes": "DOJ Epstein Library disclosures released under the Epstein Files Transparency Act, including data set files and supplemental releases.",
-    "ocr_applied": false,
+    "ocr_applied": true,
     "pages": 1,
     "pdf_type": "text",
     "person_names": [
@@ -1335,7 +1335,7 @@
       "epstein-library",
       "doj-disclosures"
     ],
-    "text_quality_score": 83.6,
+    "text_quality_score": 73.4,
     "title": "Utilities \u2014 EFTA00000019.pdf"
   },
   {
@@ -2023,7 +2023,7 @@
       "epstein-library",
       "doj-disclosures"
     ],
-    "text_quality_score": 0,
+    "text_quality_score": 15.7,
     "title": "Utilities \u2014 EFTA00000035.pdf"
   },
   {
@@ -2291,9 +2291,7 @@
     "downloaded_at": "2026-02-07T11:10:44+00:00",
     "etag": "\"6566c55c71e0adfaa4812d9779ee86e7\"",
     "extracted_dates": [],
-    "extracted_file_numbers": [
-      "EFTA00000042"
-    ],
+    "extracted_file_numbers": [],
     "file_path": "data/raw/c88310918679-utilities-efta00000042pdf/EFTA00000042.pdf",
     "file_size_bytes": 398436,
     "has_extractable_text": false,
@@ -2324,7 +2322,7 @@
       "epstein-library",
       "doj-disclosures"
     ],
-    "text_quality_score": 0,
+    "text_quality_score": 22.6,
     "title": "Utilities \u2014 EFTA00000042.pdf"
   },
   {
@@ -6310,6 +6308,7 @@
   },
   {
     "case_numbers": [],
+    "category_confidence": 1.0,
     "content_disposition": "",
     "document_category": "flight-log",
     "downloaded_at": "2026-02-07T11:13:28+00:00",
@@ -6363,8 +6362,7 @@
       "doj-disclosures"
     ],
     "text_quality_score": 89.8,
-    "title": "Utilities \u2014 EFTA01263152.pdf",
-    "category_confidence": 1.0
+    "title": "Utilities \u2014 EFTA01263152.pdf"
   },
   {
     "case_numbers": [],
@@ -6459,6 +6457,7 @@
   },
   {
     "case_numbers": [],
+    "category_confidence": 1.0,
     "content_disposition": "",
     "document_category": "flight-log",
     "downloaded_at": "2026-02-07T11:13:32+00:00",
@@ -6531,11 +6530,11 @@
       "doj-disclosures"
     ],
     "text_quality_score": 76.4,
-    "title": "Utilities \u2014 EFTA01263197.pdf",
-    "category_confidence": 1.0
+    "title": "Utilities \u2014 EFTA01263197.pdf"
   },
   {
     "case_numbers": [],
+    "category_confidence": 1.0,
     "content_disposition": "",
     "document_category": "flight-log",
     "downloaded_at": "2026-02-07T11:13:34+00:00",
@@ -6606,11 +6605,11 @@
       "doj-disclosures"
     ],
     "text_quality_score": 76.6,
-    "title": "Utilities \u2014 EFTA01263204.pdf",
-    "category_confidence": 1.0
+    "title": "Utilities \u2014 EFTA01263204.pdf"
   },
   {
     "case_numbers": [],
+    "category_confidence": 1.0,
     "content_disposition": "",
     "document_category": "flight-log",
     "downloaded_at": "2026-02-07T11:13:36+00:00",
@@ -6681,8 +6680,7 @@
       "doj-disclosures"
     ],
     "text_quality_score": 84.5,
-    "title": "Utilities \u2014 EFTA01263210.pdf",
-    "category_confidence": 1.0
+    "title": "Utilities \u2014 EFTA01263210.pdf"
   },
   {
     "case_numbers": [],
@@ -7599,6 +7597,7 @@
   },
   {
     "case_numbers": [],
+    "category_confidence": 1.0,
     "content_disposition": "",
     "document_category": "contact-list",
     "downloaded_at": "2026-02-07T11:14:09+00:00",
@@ -7655,8 +7654,7 @@
       "doj-disclosures"
     ],
     "text_quality_score": 80.6,
-    "title": "Utilities \u2014 EFTA01263776.pdf",
-    "category_confidence": 1.0
+    "title": "Utilities \u2014 EFTA01263776.pdf"
   },
   {
     "case_numbers": [],
@@ -8361,6 +8359,7 @@
   },
   {
     "case_numbers": [],
+    "category_confidence": 1.0,
     "content_disposition": "",
     "document_category": "contact-list",
     "downloaded_at": "2026-02-07T11:14:38+00:00",
@@ -8424,8 +8423,7 @@
       "doj-disclosures"
     ],
     "text_quality_score": 84.8,
-    "title": "Utilities \u2014 EFTA01264713.pdf",
-    "category_confidence": 1.0
+    "title": "Utilities \u2014 EFTA01264713.pdf"
   },
   {
     "case_numbers": [],
@@ -8487,6 +8485,7 @@
   },
   {
     "case_numbers": [],
+    "category_confidence": 1.0,
     "content_disposition": "",
     "document_category": "contact-list",
     "downloaded_at": "2026-02-07T11:14:41+00:00",
@@ -8540,8 +8539,7 @@
       "doj-disclosures"
     ],
     "text_quality_score": 87.8,
-    "title": "Utilities \u2014 EFTA01265168.pdf",
-    "category_confidence": 1.0
+    "title": "Utilities \u2014 EFTA01265168.pdf"
   },
   {
     "case_numbers": [],
@@ -8879,6 +8877,7 @@
   },
   {
     "case_numbers": [],
+    "category_confidence": 0.5,
     "content_disposition": "",
     "document_category": "report",
     "downloaded_at": "2026-02-07T11:14:55+00:00",
@@ -8961,8 +8960,7 @@
       "doj-disclosures"
     ],
     "text_quality_score": 87.0,
-    "title": "Utilities \u2014 EFTA01265225.pdf",
-    "category_confidence": 0.5
+    "title": "Utilities \u2014 EFTA01265225.pdf"
   },
   {
     "case_numbers": [],
@@ -9708,6 +9706,7 @@
   },
   {
     "case_numbers": [],
+    "category_confidence": 0.5,
     "content_disposition": "",
     "document_category": "email",
     "downloaded_at": "2026-02-07T11:15:21+00:00",
@@ -9747,11 +9746,11 @@
       "doj-disclosures"
     ],
     "text_quality_score": 64.0,
-    "title": "Utilities \u2014 EFTA01265483.pdf",
-    "category_confidence": 0.5
+    "title": "Utilities \u2014 EFTA01265483.pdf"
   },
   {
     "case_numbers": [],
+    "category_confidence": 0.75,
     "content_disposition": "",
     "document_category": "contact-list",
     "downloaded_at": "2026-02-07T11:15:23+00:00",
@@ -9793,11 +9792,11 @@
       "doj-disclosures"
     ],
     "text_quality_score": 69.3,
-    "title": "Utilities \u2014 EFTA01265484.pdf",
-    "category_confidence": 0.75
+    "title": "Utilities \u2014 EFTA01265484.pdf"
   },
   {
     "case_numbers": [],
+    "category_confidence": 1.0,
     "content_disposition": "",
     "document_category": "contact-list",
     "downloaded_at": "2026-02-07T11:15:25+00:00",
@@ -9841,11 +9840,11 @@
       "doj-disclosures"
     ],
     "text_quality_score": 70.4,
-    "title": "Utilities \u2014 EFTA01265485.pdf",
-    "category_confidence": 1.0
+    "title": "Utilities \u2014 EFTA01265485.pdf"
   },
   {
     "case_numbers": [],
+    "category_confidence": 0.75,
     "content_disposition": "",
     "document_category": "contact-list",
     "downloaded_at": "2026-02-07T11:15:27+00:00",
@@ -9885,8 +9884,7 @@
       "doj-disclosures"
     ],
     "text_quality_score": 64.9,
-    "title": "Utilities \u2014 EFTA01265486.pdf",
-    "category_confidence": 0.75
+    "title": "Utilities \u2014 EFTA01265486.pdf"
   },
   {
     "case_numbers": [],
@@ -9948,6 +9946,7 @@
   },
   {
     "case_numbers": [],
+    "category_confidence": 0.67,
     "content_disposition": "",
     "document_category": "contact-list",
     "downloaded_at": "2026-02-07T11:15:31+00:00",
@@ -9999,8 +9998,7 @@
       "doj-disclosures"
     ],
     "text_quality_score": 94.6,
-    "title": "Utilities \u2014 EFTA01265491.pdf",
-    "category_confidence": 0.67
+    "title": "Utilities \u2014 EFTA01265491.pdf"
   },
   {
     "case_numbers": [],
@@ -10398,6 +10396,7 @@
   },
   {
     "case_numbers": [],
+    "category_confidence": 0.67,
     "content_disposition": "",
     "document_category": "email",
     "downloaded_at": "2026-02-07T11:15:49+00:00",
@@ -10442,8 +10441,7 @@
       "doj-disclosures"
     ],
     "text_quality_score": 67.5,
-    "title": "Utilities \u2014 EFTA01265807.pdf",
-    "category_confidence": 0.67
+    "title": "Utilities \u2014 EFTA01265807.pdf"
   },
   {
     "case_numbers": [],
@@ -29632,6 +29630,7 @@
   },
   {
     "case_numbers": [],
+    "category_confidence": 1.0,
     "content_disposition": "",
     "document_category": "contact-list",
     "downloaded_at": "2026-02-07T11:28:52+00:00",
@@ -29690,8 +29689,7 @@
       "doj-disclosures"
     ],
     "text_quality_score": 80.6,
-    "title": "Utilities \u2014 EFTA00005855.pdf",
-    "category_confidence": 1.0
+    "title": "Utilities \u2014 EFTA00005855.pdf"
   },
   {
     "case_numbers": [],
@@ -30097,6 +30095,7 @@
   },
   {
     "case_numbers": [],
+    "category_confidence": 1.0,
     "content_disposition": "",
     "document_category": "contact-list",
     "downloaded_at": "2026-02-07T11:29:08+00:00",
@@ -30155,8 +30154,7 @@
       "doj-disclosures"
     ],
     "text_quality_score": 85.1,
-    "title": "Utilities \u2014 EFTA00005959.pdf",
-    "category_confidence": 1.0
+    "title": "Utilities \u2014 EFTA00005959.pdf"
   },
   {
     "case_numbers": [],
@@ -30286,6 +30284,7 @@
   },
   {
     "case_numbers": [],
+    "category_confidence": 1.0,
     "content_disposition": "",
     "document_category": "flight-log",
     "downloaded_at": "2026-02-07T11:29:15+00:00",
@@ -30344,11 +30343,11 @@
       "doj-disclosures"
     ],
     "text_quality_score": 74.6,
-    "title": "Utilities \u2014 EFTA00005994.pdf",
-    "category_confidence": 1.0
+    "title": "Utilities \u2014 EFTA00005994.pdf"
   },
   {
     "case_numbers": [],
+    "category_confidence": 1.0,
     "content_disposition": "",
     "document_category": "contact-list",
     "downloaded_at": "2026-02-07T11:29:16+00:00",
@@ -30408,8 +30407,7 @@
       "doj-disclosures"
     ],
     "text_quality_score": 87.8,
-    "title": "Utilities \u2014 EFTA00006025.pdf",
-    "category_confidence": 1.0
+    "title": "Utilities \u2014 EFTA00006025.pdf"
   },
   {
     "case_numbers": [],
@@ -30837,6 +30835,7 @@
   },
   {
     "case_numbers": [],
+    "category_confidence": 1.0,
     "content_disposition": "",
     "document_category": "report",
     "downloaded_at": "2026-02-07T11:29:34+00:00",
@@ -30890,8 +30889,7 @@
       "doj-disclosures"
     ],
     "text_quality_score": 87.5,
-    "title": "Utilities \u2014 EFTA00006085.pdf",
-    "category_confidence": 1.0
+    "title": "Utilities \u2014 EFTA00006085.pdf"
   },
   {
     "case_numbers": [],
@@ -31582,6 +31580,7 @@
   },
   {
     "case_numbers": [],
+    "category_confidence": 1.0,
     "content_disposition": "",
     "document_category": "deposition",
     "downloaded_at": "2026-02-07T11:30:04+00:00",
@@ -31623,8 +31622,7 @@
       "doj-disclosures"
     ],
     "text_quality_score": 86.6,
-    "title": "Utilities \u2014 EFTA00006380.pdf",
-    "category_confidence": 1.0
+    "title": "Utilities \u2014 EFTA00006380.pdf"
   },
   {
     "case_numbers": [],
@@ -32796,6 +32794,7 @@
   },
   {
     "case_numbers": [],
+    "category_confidence": 0.5,
     "content_disposition": "",
     "document_category": "flight-log",
     "downloaded_at": "2026-02-07T11:30:43+00:00",
@@ -32871,8 +32870,7 @@
       "doj-disclosures"
     ],
     "text_quality_score": 84.0,
-    "title": "Utilities \u2014 EFTA00007401.pdf",
-    "category_confidence": 0.5
+    "title": "Utilities \u2014 EFTA00007401.pdf"
   },
   {
     "case_numbers": [],
@@ -33499,6 +33497,7 @@
   },
   {
     "case_numbers": [],
+    "category_confidence": 0.67,
     "content_disposition": "",
     "document_category": "correspondence",
     "downloaded_at": "2026-02-07T11:31:10+00:00",
@@ -33545,8 +33544,7 @@
       "doj-disclosures"
     ],
     "text_quality_score": 83.2,
-    "title": "Utilities \u2014 EFTA00007582.pdf",
-    "category_confidence": 0.67
+    "title": "Utilities \u2014 EFTA00007582.pdf"
   },
   {
     "case_numbers": [],
@@ -33684,6 +33682,7 @@
   },
   {
     "case_numbers": [],
+    "category_confidence": 1.0,
     "content_disposition": "",
     "document_category": "contact-list",
     "downloaded_at": "2026-02-07T11:31:17+00:00",
@@ -33736,11 +33735,11 @@
       "doj-disclosures"
     ],
     "text_quality_score": 87.7,
-    "title": "Utilities \u2014 EFTA00007606.pdf",
-    "category_confidence": 1.0
+    "title": "Utilities \u2014 EFTA00007606.pdf"
   },
   {
     "case_numbers": [],
+    "category_confidence": 0.67,
     "content_disposition": "",
     "document_category": "correspondence",
     "downloaded_at": "2026-02-07T11:31:18+00:00",
@@ -33788,8 +33787,7 @@
       "doj-disclosures"
     ],
     "text_quality_score": 83.2,
-    "title": "Utilities \u2014 EFTA00007609.pdf",
-    "category_confidence": 0.67
+    "title": "Utilities \u2014 EFTA00007609.pdf"
   },
   {
     "case_numbers": [],
@@ -39010,6 +39008,7 @@
   },
   {
     "case_numbers": [],
+    "category_confidence": 1.0,
     "content_disposition": "",
     "document_category": "flight-log",
     "downloaded_at": "2026-02-07T11:35:15+00:00",
@@ -39065,8 +39064,7 @@
       "doj-disclosures"
     ],
     "text_quality_score": 75.2,
-    "title": "Utilities \u2014 EFTA00008863.pdf",
-    "category_confidence": 1.0
+    "title": "Utilities \u2014 EFTA00008863.pdf"
   },
   {
     "case_numbers": [],
@@ -40826,6 +40824,7 @@
   },
   {
     "case_numbers": [],
+    "category_confidence": 1.0,
     "content_disposition": "",
     "document_category": "deposition",
     "downloaded_at": "2026-02-07T11:36:09+00:00",
@@ -40880,8 +40879,7 @@
       "doj-disclosures"
     ],
     "text_quality_score": 85.4,
-    "title": "Utilities \u2014 EFTA00009775.pdf",
-    "category_confidence": 1.0
+    "title": "Utilities \u2014 EFTA00009775.pdf"
   },
   {
     "case_numbers": [
@@ -41129,6 +41127,7 @@
   },
   {
     "case_numbers": [],
+    "category_confidence": 1.0,
     "content_disposition": "",
     "document_category": "correspondence",
     "downloaded_at": "2026-02-07T11:36:19+00:00",
@@ -41172,8 +41171,7 @@
       "doj-disclosures"
     ],
     "text_quality_score": 89.1,
-    "title": "Utilities \u2014 EFTA00009796.pdf",
-    "category_confidence": 1.0
+    "title": "Utilities \u2014 EFTA00009796.pdf"
   },
   {
     "case_numbers": [],
@@ -42535,6 +42533,7 @@
   },
   {
     "case_numbers": [],
+    "category_confidence": 0.67,
     "content_disposition": "",
     "document_category": "evidence-list",
     "downloaded_at": "2026-02-07T11:37:11+00:00",
@@ -42581,8 +42580,7 @@
       "doj-disclosures"
     ],
     "text_quality_score": 67.2,
-    "title": "Utilities \u2014 EFTA00009870.pdf",
-    "category_confidence": 0.67
+    "title": "Utilities \u2014 EFTA00009870.pdf"
   },
   {
     "case_numbers": [],
@@ -43618,6 +43616,7 @@
   },
   {
     "case_numbers": [],
+    "category_confidence": 1.0,
     "content_disposition": "",
     "document_category": "contact-list",
     "downloaded_at": "2026-02-07T11:37:55+00:00",
@@ -43663,8 +43662,7 @@
       "doj-disclosures"
     ],
     "text_quality_score": 75.7,
-    "title": "Utilities \u2014 EFTA00009915.pdf",
-    "category_confidence": 1.0
+    "title": "Utilities \u2014 EFTA00009915.pdf"
   },
   {
     "case_numbers": [],
@@ -47640,6 +47638,7 @@
   },
   {
     "case_numbers": [],
+    "category_confidence": 0.67,
     "content_disposition": "",
     "document_category": "evidence-list",
     "downloaded_at": "2026-02-07T11:40:17+00:00",
@@ -47689,8 +47688,7 @@
       "doj-disclosures"
     ],
     "text_quality_score": 75.1,
-    "title": "Utilities \u2014 EFTA00039799.pdf",
-    "category_confidence": 0.67
+    "title": "Utilities \u2014 EFTA00039799.pdf"
   },
   {
     "case_numbers": [],
@@ -47757,6 +47755,7 @@
   },
   {
     "case_numbers": [],
+    "category_confidence": 0.4,
     "content_disposition": "",
     "document_category": "email",
     "downloaded_at": "2026-02-07T11:40:21+00:00",
@@ -47807,8 +47806,7 @@
       "doj-disclosures"
     ],
     "text_quality_score": 76.0,
-    "title": "Utilities \u2014 EFTA00039806.pdf",
-    "category_confidence": 0.4
+    "title": "Utilities \u2014 EFTA00039806.pdf"
   },
   {
     "case_numbers": [],
