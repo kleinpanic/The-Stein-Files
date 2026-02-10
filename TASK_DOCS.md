@@ -103,12 +103,14 @@ Only 23 people extracted. Audit found 44+ in documents.
 ---
 
 #### Task 4: Complete OCR Pass
-**Status:** PARTIAL - Diminishing Returns (307/344, 89.2%)
-**Assignee:** dev  
-**Blocker:** 37 resistant documents need manual review or alternative OCR approach
-**Note:** Current progress at diminishing returns, documented in PROGRESS.md
+**Status:** PARTIAL - Practical Limit Reached (307/344, 89.2%)
+**Assignee:** dev
+**Completed:** Enhanced OCR pipeline tested 2026-02-10 08:00 EST
+**Blocker:** 37 documents un-OCR-able (blank pages, pure images, or corrupted scans)
+**Resolution:** 89.2% is practical maximum for this dataset
 
 344 image PDFs exist, 307 have OCR applied (89.2%).
+Enhanced OCR (adaptive DPI, preprocessing, multi-pass) tested on all 37 resistant docs - no improvement.
 
 **Actions:**
 1. [ ] Identify 64 missing OCR documents
