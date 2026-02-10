@@ -27,7 +27,7 @@ def copy_assets() -> None:
 
 def copy_data() -> None:
     mirror_mode = os.getenv("EPPIE_MIRROR_MODE", "").lower() in {"1", "true", "yes"}
-    paths = [Path("data/derived"), Path("data/meta/catalog.json")]
+    paths = [Path("data/derived"), Path("data/meta/catalog.json"), Path("data/meta/relationships.json")]
     if mirror_mode:
         paths.insert(0, Path("data/raw"))
     for path in paths:
@@ -117,6 +117,13 @@ def build_people_hub_page(build_info: str, asset_version: str, repo_slug: str) -
     (DIST_DIR / "people.html").write_text(page, encoding="utf-8")
 
 
+def build_relationships_page(build_info: str, asset_version: str, repo_slug: str) -> None:
+    """Build the relationship graph page."""
+    content = (SITE_DIR / "templates" / "relationships.html").read_text(encoding="utf-8")
+    page = render_template(content, "Relationship Graph", build_info, asset_version, repo_slug)
+    (DIST_DIR / "relationships.html").write_text(page, encoding="utf-8")
+
+
 def build_person_detail_pages(build_info: str, asset_version: str, repo_slug: str) -> None:
     """Build individual person detail pages."""
     people_data_path = Path("data/derived/people.json")
@@ -159,6 +166,7 @@ def build() -> None:
     build_index_page(build_info, asset_version, repo_slug)
     build_emails_page(build_info, asset_version, repo_slug)
     build_people_hub_page(build_info, asset_version, repo_slug)
+    build_relationships_page(build_info, asset_version, repo_slug)
     build_sources_page(build_info, asset_version, repo_slug)
     build_viewer_page(build_info, asset_version, repo_slug)
     build_stats_page(build_info, asset_version, repo_slug)
