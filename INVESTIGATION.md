@@ -91,10 +91,18 @@
 
 ## Next Steps
 
-1. ⏳ Complete EasyOCR installation (alternative OCR engine, better for poor quality)
-2. 🔄 Run advanced OCR on all 247 poor-extraction docs
-3. 📊 Re-measure with adjusted threshold (20 chars real text vs 50 chars total)
-4. 🎯 Target: Get to 920+ docs (97%+) with meaningful extraction
+1. ✅ Advanced OCR test batch: **20/20 improved, avg +918 chars/doc** (100% success!)
+2. 🔄 RUNNING: Full re-OCR on all 247 poor-extraction docs (ETA: 20-30 min)
+3. ⏳ Re-measure metrics after full re-OCR completes
+4. 🎯 Expected result: 97%+ meaningful extraction coverage
+
+### Test Batch Results (20 docs)
+
+- Before: 275 total chars (avg 14 chars/doc)
+- After: 18,632 total chars (avg 932 chars/doc)
+- **67x improvement overall**
+- Range: +208 to +2680 chars per doc
+- Success rate: **100%** (20/20 improved)
 
 ---
 
