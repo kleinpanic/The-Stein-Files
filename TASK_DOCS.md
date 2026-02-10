@@ -49,11 +49,12 @@ print(f'Emails with From: {sum(1 for e in emails if e.get(\"email_from\"))}/{len
 ---
 
 #### Task 2: Improve Document Categorization
-**Status:** ✅ COMPLETE  
-**Assignee:** dev  
-**Completed:** 2026-02-10 04:00 EST
+**Status:** PARTIAL - Diminishing Returns (766/947, 80.9%)
+**Assignee:** dev
+**Blocker:** Remaining 181 docs are generic "Utilities — EFTA..." without clear categorization markers
+**Note:** Current 80.9% at diminishing returns, manual review needed for final 4.1%
 
-Categorization improved to 86.6% (820/947), exceeding 85% target. Added 16 new categories.
+Categorization: 766/947 (80.9%). Target was 85% (805 docs), gap of 39 documents.
 
 **Actions:**
 1. [ ] Analyze uncategorized document text samples
