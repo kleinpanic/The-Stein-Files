@@ -236,3 +236,22 @@ Reached diminishing returns on categorization. Remaining 38 docs (4.0%) likely l
 - Tests: 77 → 134 (+57 tests, +74%)
 - People: 34 → 141 (+107, +315%)
 - All tests passing: 134/134 ✅
+
+### 2026-02-10 05:15 EST - Task 6: Timeline Extraction Started
+**Actions:**
+- Created scripts/normalize_dates.py with ISO8601 date normalization
+- Integrated date normalization into pdf_analyzer.py
+- Added dates_iso8601 field to catalog schema
+- Supports MM/DD/YYYY, Month DD YYYY, DD Month YYYY → YYYY-MM-DD
+
+**Implementation:**
+- normalize_dates() function parses 1694 existing dates
+- HAS_NORMALIZE_DATES flag for graceful import handling
+- Unit tested: all common date formats convert correctly
+
+**Status:**
+- Code complete and committed
+- Tests passing: 134/134 ✅
+- Extraction running to populate dates_iso8601 field for all documents
+
+**Next:** Complete extraction and validate timeline data
