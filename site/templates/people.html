@@ -492,10 +492,22 @@ async function loadPersonDetails(person, container) {
 }
 
 function renderPersonDetails(data) {
-  // Stats
-  const timelineSpan = data.timeline.length > 0 
-    ? `${data.timeline[0].year} – ${data.timeline[data.timeline.length - 1].year}`
-    : '—';
+  // Stats - handle timeline as object {year: [...docs]} or array [{year, documents}]
+  let timelineSpan = '—';
+  if (data.timeline) {
+    const years = Array.isArray(data.timeline) 
+      ? data.timeline.map(yg => yg.year)
+      : Object.keys(data.timeline).filter(y => y !== 'Unknown');
+    
+    if (years.length > 0) {
+      const sortedYears = years.map(y => parseInt(y)).filter(y => !isNaN(y)).sort((a, b) => a - b);
+      if (sortedYears.length > 0) {
+        timelineSpan = sortedYears.length > 1 
+          ? `${sortedYears[0]} – ${sortedYears[sortedYears.length - 1]}`
+          : `${sortedYears[0]}`;
+      }
+    }
+  }
   
   // Categories breakdown
   const categoriesHtml = data.categories
@@ -578,9 +590,26 @@ function renderPersonDetails(data) {
 }
 
 function renderTimeline(timeline, order = 'desc') {
-  const sorted = order === 'desc' 
-    ? [...timeline].reverse() 
-    : [...timeline];
+  // Handle both object format {year: [...docs]} and array format [{year, documents}]
+  let yearGroups;
+  if (Array.isArray(timeline)) {
+    yearGroups = timeline;
+  } else if (timeline && typeof timeline === 'object') {
+    // Convert object format to array format
+    yearGroups = Object.entries(timeline).map(([year, documents]) => ({
+      year,
+      documents
+    }));
+  } else {
+    return '<p>No timeline data available.</p>';
+  }
+  
+  // Sort by year
+  const sorted = yearGroups.sort((a, b) => {
+    const yearA = a.year === 'Unknown' ? 0 : parseInt(a.year);
+    const yearB = b.year === 'Unknown' ? 0 : parseInt(b.year);
+    return order === 'desc' ? yearB - yearA : yearA - yearB;
+  });
   
   return sorted.map(yearGroup => `
     <div class="timeline-year">
@@ -589,7 +618,7 @@ function renderTimeline(timeline, order = 'desc') {
         <div class="timeline-doc">
           <div class="timeline-doc-title">${doc.title}</div>
           <div class="timeline-doc-meta">
-            ${doc.release_date || 'Unknown date'} • ${doc.document_category || 'Uncategorized'}
+            ${doc.date || 'Unknown date'} • ${doc.category || 'Uncategorized'}
           </div>
           <a href="${doc.id}.html" class="timeline-doc-link">View document →</a>
         </div>
@@ -600,10 +629,10 @@ function renderTimeline(timeline, order = 'desc') {
 
 function renderDocumentsList(documents) {
   return documents.map(doc => `
-    <div class="document-item" data-category="${doc.document_category || ''}">
+    <div class="document-item" data-category="${doc.category || doc.document_category || ''}">
       <div class="document-title">${doc.title}</div>
       <div class="document-meta">
-        ${doc.release_date || 'Unknown date'} • ${doc.document_category || 'Uncategorized'} • ${doc.source_name}
+        ${doc.date || doc.release_date || 'Unknown date'} • ${doc.category || doc.document_category || 'Uncategorized'} • ${doc.source_name}
       </div>
       <a href="${doc.id}.html" class="document-link">View document →</a>
     </div>
@@ -636,7 +665,7 @@ function setupPersonDetailInteractions(data, container) {
         doc.title.toLowerCase().includes(searchTerm) ||
         (doc.content_preview || '').toLowerCase().includes(searchTerm);
       const matchesCategory = !filterCategory || 
-        doc.document_category === filterCategory;
+        (doc.category || doc.document_category) === filterCategory;
       return matchesSearch && matchesCategory;
     });
     
