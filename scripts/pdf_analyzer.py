@@ -15,6 +15,12 @@ from pathlib import Path
 from typing import Dict, List, Optional, Tuple
 
 try:
+    from scripts.normalize_dates import normalize_dates
+    HAS_NORMALIZE_DATES = True
+except ImportError:
+    HAS_NORMALIZE_DATES = False
+
+try:
     import magic
     HAS_MAGIC = True
 except ImportError:
@@ -453,6 +459,12 @@ def analyze_pdf(pdf_path: Path, extracted_text: str, enable_ocr: bool = True) ->
     
     dates = extract_dates(final_text)
     
+    # Normalize dates to ISO8601 for timeline queries
+    if HAS_NORMALIZE_DATES:
+        dates_iso8601 = normalize_dates(dates)
+    else:
+        dates_iso8601 = []
+    
     # Classify document
     title = pdf_path.name
     doc_category = classify_document_type(title, final_text)
@@ -464,6 +476,7 @@ def analyze_pdf(pdf_path: Path, extracted_text: str, enable_ocr: bool = True) ->
         "text_quality_score": quality_score,
         "extracted_file_numbers": file_numbers[:10],
         "extracted_dates": dates[:20],
+        "dates_iso8601": dates_iso8601[:20],  # Normalized ISO8601 dates
         "document_category": doc_category,
         "file_size_bytes": pdf_path.stat().st_size,
         "enhanced_text": final_text if ocr_applied else None,
