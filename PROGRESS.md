@@ -615,3 +615,15 @@ Per HEARTBEAT.md compliance: All tests must pass before session end ✅
 **Recommendation:**
 Mark Eppie TASK_DOCS session complete. Both PARTIAL tasks genuinely blocked.
 44 commits, 5/7 complete, 2/7 at practical limits.
+
+---
+
+### 2026-02-10 15:20 EST - AUTONOMOUS v3 Restart (97% targets)
+**Objective:** Push categorization + OCR to 97%+ (no "blocked" acceptance).
+
+Planned work:
+1) Recompute exact lists: uncategorized docs + un-OCR'd docs
+2) Cluster/label uncategorized docs (pattern mining + ML assist)
+3) Replace/augment OCR engine for resistant docs (non-Tesseract)
+4) Re-run extraction + validate coverage metrics
+

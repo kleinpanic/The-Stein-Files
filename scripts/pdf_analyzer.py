@@ -125,7 +125,7 @@ def calculate_text_quality_score(text: str) -> float:
     return round(final_score, 1)
 
 
-def apply_ocr_to_pdf(pdf_path: Path, max_pages: int = 5) -> str:
+def apply_ocr_to_pdf(pdf_path: Path, max_pages: int | None = 5) -> str:
     """
     Apply OCR to PDF using Tesseract.
     
@@ -148,13 +148,16 @@ def apply_ocr_to_pdf(pdf_path: Path, max_pages: int = 5) -> str:
     # Fallback to basic OCR
     if not HAS_OCR:
         return ""
+
+    # If enhanced OCR failed and max_pages=None, basic OCR needs a concrete page limit.
+    basic_max_pages = max_pages if isinstance(max_pages, int) else 5
     
     try:
         # Convert PDF pages to images
         images = convert_from_path(
             str(pdf_path),
             first_page=1,
-            last_page=max_pages,
+            last_page=basic_max_pages,
             dpi=200,  # Balance quality vs speed
         )
         
@@ -433,7 +436,10 @@ def analyze_pdf(pdf_path: Path, extracted_text: str, enable_ocr: bool = True) ->
     final_text = extracted_text
     use_enhanced = os.getenv("EPPIE_ENHANCED_OCR", "1") == "1"
     
-    if enable_ocr and pdf_type == "image" and quality_score < 30:
+    # If extract.py asked us to OCR this PDF, do it for *all* image PDFs.
+    # (The previous quality_score < 30 gate left a tail of image PDFs un-OCR'd,
+    # even when they only contained a Bates stamp / cover sheet.)
+    if enable_ocr and pdf_type == "image":
         print(f"[PDF Analysis] Applying OCR to {pdf_path.name}")
         
         if use_enhanced and HAS_ENHANCED_OCR:
