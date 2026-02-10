@@ -1294,7 +1294,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "maintenance",
     "downloaded_at": "2026-02-07T11:09:58+00:00",
     "etag": "\"af2a3b91400d6742bd75f4e6b35b5c2a\"",
     "extracted_dates": [],
@@ -1336,7 +1336,9 @@
       "doj-disclosures"
     ],
     "text_quality_score": 73.4,
-    "title": "Utilities \u2014 EFTA00000019.pdf"
+    "title": "Utilities \u2014 EFTA00000019.pdf",
+    "category_confidence": 0.73,
+    "category_method": "fuzzy"
   },
   {
     "case_numbers": [],
