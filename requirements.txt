@@ -15,4 +15,3 @@ Pillow==12.1.0
 # NLP dependencies (Phase 3)
 # (optional) spacy is intentionally not installed by default because it is large
 # and not currently required for core extraction/build/test.
-pdf2image>=1.17.0
