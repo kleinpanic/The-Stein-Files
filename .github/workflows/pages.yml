@@ -77,6 +77,29 @@ jobs:
         env:
           EPPIE_MIRROR_MODE: ${{ steps.lfs-status.outputs.mirror_mode }}
 
+      # GitHub Pages artifacts have a hard 1GB limit. When mirror mode is enabled
+      # (LFS PDFs copied into dist), dist can exceed that limit and deployments may
+      # start failing nondeterministically. Guardrail: if dist is too large, rebuild
+      # with mirroring disabled so PDFs load from source URLs.
+      - name: Check dist size
+        id: dist-size
+        run: |
+          bytes=$(du -sb dist | awk '{print $1}')
+          echo "bytes=$bytes" >> $GITHUB_OUTPUT
+          echo "Dist size (bytes): $bytes"
+          if [ "$bytes" -gt 950000000 ]; then
+            echo "too_big=1" >> $GITHUB_OUTPUT
+            echo "::warning::dist is >950MB ($bytes bytes). This is near/over the 1GB Pages artifact limit. Will rebuild without mirroring."
+          else
+            echo "too_big=0" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Rebuild site without mirroring (Pages size guardrail)
+        if: steps.dist-size.outputs.too_big == '1'
+        run: |
+          rm -rf dist
+          EPPIE_MIRROR_MODE=0 make build
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
