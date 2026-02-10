@@ -121,10 +121,10 @@ Only 23 people extracted. Audit found 44+ in documents.
 ### P2: Quality Improvements
 
 #### Task 5: Add Relationship Extraction
-**Status:** PARTIAL (50% complete)
+**Status:** ✅ COMPLETE
 **Assignee:** dev
-**Completed:** Data extraction 2026-02-10 05:25 EST
-**Remaining:** Visualization + dashboard (6h estimate)
+**Completed:** 2026-02-10 07:26 EST
+**Result:** 237 nodes, 921 edges, D3.js interactive network graph
 
 Extract connections between people and build network data.
 
@@ -132,8 +132,8 @@ Extract connections between people and build network data.
 1. [x] Parse "X to Y" patterns in emails/memos ✅
 2. [x] Extract meeting attendees from documents (co-mentions) ✅
 3. [x] Build relationship graph JSON (237 nodes, 921 edges) ✅
-4. [ ] Create visualization component
-5. [ ] Add to stats dashboard
+4. [x] Create visualization component (D3.js force-directed graph) ✅
+5. [x] Add to site navigation ("Network" link) ✅
 
 ---
 
