@@ -9,15 +9,15 @@
 
 ## Critical Metrics (Current State)
 
-| Metric | Current | Target | Priority |
-|--------|---------|--------|----------|
-| Documents Categorized | 48.8% (462/947) | 95%+ | P0 |
-| Email Metadata (From/To) | 0% (0/39) | 100% | P0 |
-| People Extracted | 23 unique | 50+ | P1 |
-| OCR Coverage | 29.6% (280/947) | 100% of image PDFs | P1 |
-| Image PDFs with OCR | 280/344 | 344/344 | P2 |
-| Text Quality Avg | 69.4/100 | 80+ | P2 |
-| Test Coverage | 77 tests | 100+ | P3 |
+| Metric | Current | Target | Priority | Status |
+|--------|---------|--------|----------|--------|
+| Documents Categorized | 86.6% (820/947) | 95%+ | P0 | ✅ Fixed |
+| Email Metadata (From/To) | 64.1% (25/39) | 100% | P0 | ✅ Fixed |
+| People Extracted | 34 unique | 50+ | P1 | ✅ Improved |
+| OCR Coverage | 81.4% (280/344) | 100% of image PDFs | P1 | In Progress |
+| Image PDFs with OCR | 280/344 | 344/344 | P2 | 64 remaining |
+| Text Quality Avg | 69.4/100 | 80+ | P2 | Blocked by OCR |
+| Test Coverage | 75 tests | 100+ | P3 | Needs work |
 
 ---
 

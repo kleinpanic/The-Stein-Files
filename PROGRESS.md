@@ -58,6 +58,21 @@
 
 **Next:** Task 3 - Complete person extraction
 
+### 2026-02-10 04:30 EST - Task 3: Person Extraction
+**Actions:**
+- Expanded known names list to 60+ high-profile people
+- Fixed garbage pattern matching (was picking up "Epstein\n\nDear" etc.)
+- Used simple case-insensitive matching for accuracy
+- Added new people: Natalia Molotkova (15), Jeanne Christensen (9), Karyna Shuliak (5), etc.
+- Created ISSUES.md and UPGRADES.md for tracking
+- Committed: `d6ec7c5` - "feat: expand person extraction from 23 to 34 unique people"
+
+**Results:**
+- People: 34 unique (up from 23, +48% increase)
+- New additions: 11 people including key associates and lawyers
+
+**Next:** Push and validate, then continue improvements
+
 ---
 
 ## Metrics Tracking
@@ -66,7 +81,7 @@
 |--------|-------|---------|--------|---|
 | Categorized % | 48.8% | 86.6% | 95% | +37.8% |
 | Email Metadata % | 0% | 64.1% | 100% | +64.1% |
-| People Extracted | 23 | 23 | 50+ | +0 |
+| People Extracted | 23 | 34 | 50+ | +11 |
 | OCR Coverage % | 29.6% | 29.6% | 100% | +0% |
 | Tests Passing | 75 | 75 | 100+ | +0 |
 | Version | 1.5.2 | 1.5.2 | - | - |
@@ -79,6 +94,7 @@
 |------|-----|---------|---------------|
 | 03:45 | a0148c9 | fix: improve email metadata extraction quality | 12 |
 | 04:00 | b3390d8 | feat: expand document categorization 48.8%→86.6% | 3 |
+| 04:30 | d6ec7c5 | feat: expand person extraction 23→34 people | 5 |
 
 ---
 
