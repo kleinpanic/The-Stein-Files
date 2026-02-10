@@ -377,6 +377,12 @@ def classify_document_type(title: str, text_sample: str) -> Optional[str]:
     if 'findings' in text_lower or 'investigation' in text_lower:
         return 'report'
     
+    # Fallback: scanned-document for low-quality image PDFs
+    # This catches image PDFs that don't match any specific category
+    text_len = len(text_sample.strip())
+    if text_len < 200:  # Very little extractable text (likely image-only PDF)
+        return 'scanned-document'
+    
     return None
 
 
