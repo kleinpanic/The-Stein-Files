@@ -301,3 +301,24 @@ Task 6 implementation complete. Data population finalizing.
 4/5 critical targets met or exceeded. Tasks 2 & 4 reached diminishing returns (would require manual review or alternative approaches for final gaps). Task 5 (Relationships) is P2 optional work (12h estimate).
 
 **Ready for deployment:** All changes tested and committed.
+
+### 2026-02-10 05:25 EST - Task 5: Relationship Extraction Started
+**Actions:**
+- Created scripts/extract_relationships.py
+- Implemented email From→To relationship extraction
+- Implemented co-mention relationship extraction (people in same doc)
+- Generated relationship graph with 237 nodes, 921 edges
+- Saved to data/meta/relationships.json
+
+**Top Relationships:**
+- Jeffrey Epstein ↔ Ghislaine Maxwell (30 connections)
+- Jeffrey Epstein ↔ Leon Black (6 connections)
+- Lesley Groff ↔ Jeffrey Epstein (4 connections)
+
+**Status:**
+- ✅ Relationship extraction logic complete
+- ✅ Graph data generated
+- 🔄 TODO: Add visualization component
+- 🔄 TODO: Integrate into stats dashboard
+
+Task 5: Relationship Extraction - Implementation in progress
