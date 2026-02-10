@@ -195,3 +195,23 @@ Requires `EPPIE_FORCE_REEXTRACT=1 make extract` to apply to existing docs.
 
 **Next Session:**
 Run force re-extraction to restore 85%+ categorization target.
+
+### 2026-02-10 04:28 EST - Force Re-extraction Complete
+**Actions:**
+- Ran `EPPIE_FORCE_REEXTRACT=1` to apply scanned-document fallback
+- Categorization improved: 79.0% → 80.7% (748 → 764 docs)
+- Scanned-document fallback caught 17 additional docs
+
+**Results:**
+- Categorization: 764/947 (80.7%) - Target: 85% (need 40 more)
+- Email: 36/36 (100%) ✅
+- People: 141 unique ✅ (target 50+)
+- OCR: 308/344 (89.5%)
+- Tests: 134/134 ✅
+
+**Remaining Gap:**
+Need 40 more categorizations to reach 85% target (804/947).
+Current 183 uncategorized docs likely need manual category expansion or remain legitimately uncategorizable.
+
+**Session Achievement:**
+4/5 major targets met. Categorization at 80.7% (close to 85% goal).
