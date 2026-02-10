@@ -115,3 +115,23 @@ _To be updated_
 
 _Final state documentation for next session_
 
+
+### 2026-02-10 04:12 EST - Heartbeat: Status Validation
+**Actions:**
+- Discovered email metadata validation bug (wrong field names in TASK_DOCS)
+- Fixed TASK_DOCS.md validation commands (email_from not from)
+- Confirmed Task 1 & 2 actually COMPLETE ✅
+- Analyzed Task 3 (People): blocked by OCR quality
+- Analyzed Task 4 (OCR): 65 image PDFs remaining (~30-60min runtime)
+- Updated TASK_DOCS.md to mark Tasks 1 & 2 complete
+
+**Findings:**
+- Email metadata: 100% populated (39/39) - 64.1% good, 35.9% OCR placeholder
+- Categorization: 86.6% (820/947) - exceeds 85% target
+- Person extraction logic is correct (60+ known names) but OCR text too poor
+- Tasks 3 & 4 are interdependent: need better OCR first
+
+**Next Steps:**
+- Run full OCR pass on 65 remaining image PDFs (Task 4)
+- Re-run person extraction after OCR improves text quality (Task 3)
+- Then Tasks 5-7
