@@ -114,6 +114,7 @@ def extract_all() -> None:
                     entry["file_size_bytes"] = analysis["file_size_bytes"]
                     entry["extracted_file_numbers"] = analysis["extracted_file_numbers"]
                     entry["extracted_dates"] = analysis["extracted_dates"]
+                    entry["dates_iso8601"] = analysis.get("dates_iso8601", [])  # Normalized ISO8601 dates
                     entry["document_category"] = analysis["document_category"]
                     # Phase 1 fields
                     entry["person_names"] = analysis.get("person_names", [])
