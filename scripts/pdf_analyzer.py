@@ -437,15 +437,16 @@ def analyze_pdf(pdf_path: Path, extracted_text: str, enable_ocr: bool = True) ->
         print(f"[PDF Analysis] Applying OCR to {pdf_path.name}")
         
         if use_enhanced and HAS_ENHANCED_OCR:
-            # Use enhanced OCR with all Phase 1 improvements
-            print(f"[PDF Analysis] Using enhanced OCR for {pdf_path.name}")
-            ocr_result = apply_enhanced_ocr(pdf_path, max_pages=None, multipass=True)
-            if ocr_result["text"]:
-                final_text = ocr_result["text"]
+            # Use enhanced OCR with all Phase 1 improvements (via fallback wrapper)
+            # Note: Enhanced OCR is already integrated into apply_ocr_to_pdf()
+            # This branch is for future direct enhanced_ocr module usage
+            print(f"[PDF Analysis] Enhanced OCR flag set for {pdf_path.name}")
+            ocr_text = apply_ocr_to_pdf(pdf_path, max_pages=None)
+            if ocr_text:
+                final_text = ocr_text
                 ocr_applied = True
-                ocr_confidence = ocr_result["avg_confidence"]
-                quality_score = calculate_text_quality_score(ocr_result["text"])
-                print(f"[PDF Analysis] Enhanced OCR: {ocr_confidence:.1f}% confidence, strategy={ocr_result['ocr_strategy']}")
+                quality_score = calculate_text_quality_score(ocr_text)
+                print(f"[PDF Analysis] Enhanced OCR applied via integrated pipeline")
         else:
             # Fallback to basic OCR
             ocr_text = apply_ocr_to_pdf(pdf_path, max_pages=5)
