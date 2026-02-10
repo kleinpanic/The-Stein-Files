@@ -16,7 +16,7 @@
       "ocr_confidence": 89.0,
       "person_names": [],
       "locations": [],
-      "category": null
+      "category": "scanned-document"
     },
     {
       "id": "2d680fb70402-utilities-efta00008412pdf",
@@ -27,7 +27,7 @@
       "ocr_confidence": 44.7,
       "person_names": [],
       "locations": [],
-      "category": null
+      "category": "scanned-document"
     },
     {
       "id": "a6a116132d8c-utilities-efta00007561pdf",
@@ -38,7 +38,7 @@
       "ocr_confidence": 86.3,
       "person_names": [],
       "locations": [],
-      "category": null
+      "category": "scanned-document"
     },
     {
       "id": "c69982ca6069-utilities-efta00003925pdf",
@@ -49,7 +49,7 @@
       "ocr_confidence": 90.6,
       "person_names": [],
       "locations": [],
-      "category": null
+      "category": "scanned-document"
     },
     {
       "id": "2c50f75a0278-utilities-efta00006039pdf",
@@ -60,7 +60,7 @@
       "ocr_confidence": 75.6,
       "person_names": [],
       "locations": [],
-      "category": null
+      "category": "scanned-document"
     }
   ]
 }
