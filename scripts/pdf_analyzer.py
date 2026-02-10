@@ -237,6 +237,20 @@ def classify_document_type(title: str, text_sample: str) -> Optional[str]:
     has_email_pattern = '@' in text_lower and bool(re.search(r'\b[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}\b', text_lower, re.IGNORECASE))
     if has_email_headers and has_email_pattern:
         return 'email'
+
+    # NEW: Media/filename index pages (often lists of IMG_*.jpg, DSCF*.tif, *.cr2)
+    media_hits = len(re.findall(r"\b[\w\-]+\.(?:jpg|jpeg|tif|tiff|png|cr2)\b", text_lower))
+    if media_hits >= 10:
+        return 'media-index'
+
+    # NEW: Phone bill / call detail record pages (incoming/outgoing/minutes/airtime)
+    phone_log_markers = [
+        'incoming', 'outgoing', 'call detail', 'call minutes', 'minutes used',
+        'airtime', 'local airtime', 'long distance', 'service number',
+        'billing period', 'charges', 'usage'
+    ]
+    if sum(1 for m in phone_log_markers if m in text_lower) >= 3:
+        return 'phone-record'
     
     # NEW: Booking/arrest records
     booking_markers = ['booking system', 'date arrested', 'fbi no:', 'fbi name:', 'charges:', 'trans id:']
@@ -310,7 +324,7 @@ def classify_document_type(title: str, text_sample: str) -> Optional[str]:
     
     # NEW: Internet/data records
     internet_markers = ['ip address', 'subscriber information', 'internet protocol', 'browser history',
-                       'email account', 'login history', 'session log', 'isp records']
+                       'email account', 'login history', 'session log', 'isp records', 'terms of service ip']
     if sum(1 for marker in internet_markers if marker in text_lower) >= 2:
         return 'internet-record'
     
@@ -404,6 +418,11 @@ def classify_document_type(title: str, text_sample: str) -> Optional[str]:
     # This catches image PDFs that don't match any specific category
     text_len = len(text_sample.strip())
     if text_len < 200:  # Very little extractable text (likely image-only PDF)
+        return 'scanned-document'
+
+    # If it made it this far and it's a generic "Utilities" PDF, treat as scanned-document
+    # rather than leaving it uncategorized.
+    if title_lower.startswith('utilities'):
         return 'scanned-document'
     
     return None

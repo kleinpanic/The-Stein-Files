@@ -627,3 +627,22 @@ Planned work:
 3) Replace/augment OCR engine for resistant docs (non-Tesseract)
 4) Re-run extraction + validate coverage metrics
 
+
+---
+
+### 2026-02-10 15:50 EST - Coverage Push: OCR 99.1% + Categorization 100%
+**What changed:**
+- Fixed OCR gating: when OCR is requested, OCR all `pdf_type=image` PDFs (removed `text_quality_score < 30` gate)
+- Fixed OCR fallback bug (`max_pages=None` now handled safely in basic OCR path)
+- Preserved existing categorization on re-extract (avoid regressions)
+- Added new categorization heuristics:
+  - `phone-record` for call-detail/billing pages
+  - `internet-record` for subscriber/IP records
+  - `media-index` for filename/photo lists
+  - Utilities fallback to `scanned-document` when no specific pattern matches
+
+**Results:**
+- OCR: 341/344 image PDFs (99.1%) now have OCR applied
+- Categorization: 947/947 (100.0%) now categorized
+
+**Next:** UI/mobile polish + Pages artifact-size guardrails (mirror-mode PDFs) if needed.
