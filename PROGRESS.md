@@ -84,7 +84,7 @@
 | People Extracted | 23 | 34 | 50+ | +11 |
 | OCR Coverage % | 29.6% | 29.6% | 100% | +0% |
 | Tests Passing | 75 | 75 | 100+ | +0 |
-| Version | 1.5.2 | 1.5.2 | - | - |
+| Version | 1.5.2 | 1.6.0 | - | +0.1 |
 
 ---
 
@@ -95,6 +95,7 @@
 | 03:45 | a0148c9 | fix: improve email metadata extraction quality | 12 |
 | 04:00 | b3390d8 | feat: expand document categorization 48.8%→86.6% | 3 |
 | 04:30 | d6ec7c5 | feat: expand person extraction 23→34 people | 5 |
+| 04:45 | 67c0401 | release: v1.6.0 - major quality improvements | 4 |
 
 ---
 
