@@ -1,0 +1,687 @@
+<section class="hero">
+  <div class="hero-text">
+    <p class="eyebrow">Network Analysis</p>
+    <h1>Relationship Graph</h1>
+    <p>Explore connections between people mentioned in the Epstein files. Relationships are derived from email correspondences and co-mentions in documents.</p>
+  </div>
+</section>
+
+<section class="relationships-container">
+  <div id="graphLoadingState" class="state-banner" role="status">Loading relationship data…</div>
+  <div id="graphEmptyState" class="state-banner empty" hidden>No relationship data available.</div>
+  
+  <div id="graphControls" class="graph-controls" hidden>
+    <div class="control-group">
+      <label for="minWeight">Minimum connections:</label>
+      <input type="range" id="minWeight" min="1" max="10" value="2" />
+      <span id="minWeightValue">2</span>
+    </div>
+    <div class="control-group">
+      <label for="searchPerson">Find person:</label>
+      <input type="search" id="searchPerson" placeholder="Type a name..." />
+    </div>
+    <div class="control-group">
+      <button id="resetZoom" class="btn-secondary">Reset View</button>
+    </div>
+  </div>
+  
+  <div id="graphStats" class="graph-stats" hidden>
+    <div class="stat-item">
+      <span class="stat-label">People:</span>
+      <span id="nodeCount" class="stat-value">0</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-label">Connections:</span>
+      <span id="edgeCount" class="stat-value">0</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-label">Visible:</span>
+      <span id="visibleCount" class="stat-value">0</span>
+    </div>
+  </div>
+  
+  <div id="networkGraph" class="network-graph"></div>
+  
+  <div id="nodeDetails" class="node-details" hidden>
+    <button id="closeDetails" class="close-btn">×</button>
+    <h3 id="selectedPersonName">—</h3>
+    <div id="selectedPersonStats" class="detail-stats"></div>
+    <div id="selectedPersonConnections" class="detail-connections"></div>
+  </div>
+</section>
+
+<style>
+.relationships-container {
+  margin-top: 2rem;
+  position: relative;
+}
+
+.graph-controls {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 1rem;
+  background: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+.control-group {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.control-group label {
+  font-size: 0.9rem;
+  color: #666;
+  white-space: nowrap;
+}
+
+.control-group input[type="range"] {
+  width: 120px;
+}
+
+.control-group input[type="search"] {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  min-width: 200px;
+}
+
+.btn-secondary {
+  padding: 0.5rem 1rem;
+  background: white;
+  border: 1px solid #0066cc;
+  color: #0066cc;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.btn-secondary:hover {
+  background: #0066cc;
+  color: white;
+}
+
+.graph-stats {
+  display: flex;
+  gap: 2rem;
+  padding: 1rem;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.stat-item {
+  display: flex;
+  gap: 0.5rem;
+  align-items: baseline;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.stat-value {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #0066cc;
+}
+
+.network-graph {
+  width: 100%;
+  height: 700px;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+.network-graph svg {
+  width: 100%;
+  height: 100%;
+}
+
+.node-details {
+  position: absolute;
+  top: 80px;
+  right: 20px;
+  width: 300px;
+  max-height: 600px;
+  overflow-y: auto;
+  background: white;
+  border: 2px solid #0066cc;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 100;
+}
+
+.close-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: #666;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s;
+}
+
+.close-btn:hover {
+  background: #f0f0f0;
+  color: #333;
+}
+
+.node-details h3 {
+  margin: 0 0 1rem 0;
+  color: #0066cc;
+  font-size: 1.25rem;
+  padding-right: 30px;
+}
+
+.detail-stats {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.detail-stat-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.detail-stat-label {
+  color: #666;
+}
+
+.detail-stat-value {
+  font-weight: 600;
+  color: #333;
+}
+
+.detail-connections h4 {
+  font-size: 0.9rem;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 0.75rem 0;
+}
+
+.connection-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  background: #f8f9fa;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.connection-item:hover {
+  background: #e8f4ff;
+  border-left: 3px solid #0066cc;
+}
+
+.connection-name {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.connection-weight {
+  background: #0066cc;
+  color: white;
+  padding: 0.2rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.state-banner {
+  padding: 2rem;
+  text-align: center;
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.state-banner.empty {
+  background: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .graph-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .control-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .control-group label {
+    margin-bottom: 0.25rem;
+  }
+  
+  .control-group input[type="search"],
+  .control-group input[type="range"] {
+    width: 100%;
+  }
+  
+  .graph-stats {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .network-graph {
+    height: 500px;
+  }
+  
+  .node-details {
+    position: fixed;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-height: 50vh;
+    border-radius: 8px 8px 0 0;
+  }
+}
+
+/* D3 graph styles */
+.link {
+  stroke: #999;
+  stroke-opacity: 0.6;
+}
+
+.link.highlighted {
+  stroke: #0066cc;
+  stroke-opacity: 1;
+  stroke-width: 3;
+}
+
+.node circle {
+  stroke: #fff;
+  stroke-width: 2;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.node circle:hover {
+  stroke: #0066cc;
+  stroke-width: 3;
+}
+
+.node.selected circle {
+  stroke: #0066cc;
+  stroke-width: 4;
+}
+
+.node.highlighted circle {
+  stroke: #ff6600;
+  stroke-width: 3;
+}
+
+.node text {
+  font: 11px sans-serif;
+  pointer-events: none;
+  fill: #333;
+}
+
+.node.important text {
+  font-weight: 600;
+  font-size: 12px;
+}
+</style>
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script>
+let graphData = null;
+let filteredData = null;
+let simulation = null;
+let svg = null;
+let g = null;
+let zoom = null;
+let selectedNode = null;
+
+async function loadRelationships() {
+  try {
+    const response = await fetch('data/meta/relationships.json');
+    graphData = await response.json();
+    
+    document.getElementById('graphLoadingState').hidden = true;
+    
+    if (!graphData.nodes || graphData.nodes.length === 0) {
+      document.getElementById('graphEmptyState').hidden = false;
+      return;
+    }
+    
+    document.getElementById('graphControls').hidden = false;
+    document.getElementById('graphStats').hidden = false;
+    
+    updateStats(graphData.nodes.length, graphData.edges.length);
+    initializeGraph();
+    
+    // Set up event listeners
+    document.getElementById('minWeight').addEventListener('input', handleFilterChange);
+    document.getElementById('searchPerson').addEventListener('input', handleSearchChange);
+    document.getElementById('resetZoom').addEventListener('click', resetZoom);
+    document.getElementById('closeDetails').addEventListener('click', () => {
+      document.getElementById('nodeDetails').hidden = true;
+      if (selectedNode) {
+        d3.select(selectedNode).classed('selected', false);
+        selectedNode = null;
+      }
+    });
+    
+  } catch (error) {
+    console.error('Failed to load relationship data:', error);
+    document.getElementById('graphLoadingState').textContent = 'Error loading relationship data';
+  }
+}
+
+function updateStats(nodeCount, edgeCount, visibleCount = null) {
+  document.getElementById('nodeCount').textContent = nodeCount;
+  document.getElementById('edgeCount').textContent = edgeCount;
+  if (visibleCount !== null) {
+    document.getElementById('visibleCount').textContent = visibleCount;
+  } else {
+    document.getElementById('visibleCount').textContent = nodeCount;
+  }
+}
+
+function initializeGraph() {
+  const container = document.getElementById('networkGraph');
+  const width = container.clientWidth;
+  const height = container.clientHeight;
+  
+  // Clear any existing SVG
+  container.innerHTML = '';
+  
+  // Create SVG
+  svg = d3.select('#networkGraph')
+    .append('svg')
+    .attr('width', width)
+    .attr('height', height);
+  
+  // Add zoom behavior
+  zoom = d3.zoom()
+    .scaleExtent([0.1, 4])
+    .on('zoom', (event) => {
+      g.attr('transform', event.transform);
+    });
+  
+  svg.call(zoom);
+  
+  // Create container group
+  g = svg.append('g');
+  
+  // Apply initial filter
+  handleFilterChange();
+}
+
+function handleFilterChange() {
+  const minWeight = parseInt(document.getElementById('minWeight').value);
+  document.getElementById('minWeightValue').textContent = minWeight;
+  
+  // Filter edges by weight
+  const filteredEdges = graphData.edges.filter(e => e.weight >= minWeight);
+  
+  // Get nodes that have at least one connection
+  const connectedNodeIds = new Set();
+  filteredEdges.forEach(e => {
+    connectedNodeIds.add(e.source);
+    connectedNodeIds.add(e.target);
+  });
+  
+  const filteredNodes = graphData.nodes.filter(n => connectedNodeIds.has(n.id));
+  
+  filteredData = {
+    nodes: filteredNodes,
+    edges: filteredEdges
+  };
+  
+  updateStats(graphData.nodes.length, graphData.edges.length, filteredNodes.length);
+  renderGraph(filteredData);
+}
+
+function handleSearchChange() {
+  const searchTerm = document.getElementById('searchPerson').value.toLowerCase();
+  
+  if (!searchTerm) {
+    // Clear highlights
+    d3.selectAll('.node').classed('highlighted', false);
+    d3.selectAll('.link').classed('highlighted', false);
+    return;
+  }
+  
+  // Find matching nodes
+  const matchingNodes = filteredData.nodes.filter(n => 
+    n.name.toLowerCase().includes(searchTerm)
+  );
+  
+  if (matchingNodes.length === 0) return;
+  
+  // Highlight matching nodes and their connections
+  d3.selectAll('.node').classed('highlighted', false);
+  d3.selectAll('.link').classed('highlighted', false);
+  
+  matchingNodes.forEach(node => {
+    d3.selectAll(`.node-${node.id}`).classed('highlighted', true);
+    
+    // Highlight connected edges
+    d3.selectAll('.link').each(function(d) {
+      if (d.source.id === node.id || d.target.id === node.id) {
+        d3.select(this).classed('highlighted', true);
+      }
+    });
+  });
+}
+
+function renderGraph(data) {
+  // Clear existing graph
+  g.selectAll('*').remove();
+  
+  const container = document.getElementById('networkGraph');
+  const width = container.clientWidth;
+  const height = container.clientHeight;
+  
+  // Create force simulation
+  simulation = d3.forceSimulation(data.nodes)
+    .force('link', d3.forceLink(data.edges).id(d => d.id).distance(100))
+    .force('charge', d3.forceManyBody().strength(-300))
+    .force('center', d3.forceCenter(width / 2, height / 2))
+    .force('collision', d3.forceCollide().radius(30));
+  
+  // Draw links
+  const link = g.append('g')
+    .selectAll('line')
+    .data(data.edges)
+    .join('line')
+    .attr('class', 'link')
+    .attr('stroke-width', d => Math.sqrt(d.weight));
+  
+  // Draw nodes
+  const node = g.append('g')
+    .selectAll('g')
+    .data(data.nodes)
+    .join('g')
+    .attr('class', d => `node node-${d.id}`)
+    .classed('important', d => {
+      // Mark important nodes (high degree)
+      const connections = data.edges.filter(e => 
+        e.source.id === d.id || e.target.id === d.id
+      );
+      return connections.length > 5;
+    })
+    .call(drag(simulation))
+    .on('click', handleNodeClick);
+  
+  node.append('circle')
+    .attr('r', d => {
+      // Size by number of connections
+      const connections = data.edges.filter(e => 
+        e.source.id === d.id || e.target.id === d.id
+      );
+      return 5 + Math.min(connections.length, 15);
+    })
+    .attr('fill', d => {
+      // Color by connection strength
+      const totalWeight = data.edges
+        .filter(e => e.source.id === d.id || e.target.id === d.id)
+        .reduce((sum, e) => sum + e.weight, 0);
+      
+      if (totalWeight > 20) return '#0066cc';
+      if (totalWeight > 10) return '#3399ff';
+      return '#99ccff';
+    });
+  
+  node.append('text')
+    .attr('dx', 12)
+    .attr('dy', 4)
+    .text(d => d.name.length > 20 ? d.name.substring(0, 20) + '…' : d.name);
+  
+  // Update positions on tick
+  simulation.on('tick', () => {
+    link
+      .attr('x1', d => d.source.x)
+      .attr('y1', d => d.source.y)
+      .attr('x2', d => d.target.x)
+      .attr('y2', d => d.target.y);
+    
+    node.attr('transform', d => `translate(${d.x},${d.y})`);
+  });
+}
+
+function handleNodeClick(event, d) {
+  event.stopPropagation();
+  
+  // Deselect previous node
+  if (selectedNode) {
+    d3.select(selectedNode).classed('selected', false);
+  }
+  
+  // Select clicked node
+  selectedNode = this;
+  d3.select(this).classed('selected', true);
+  
+  // Show details panel
+  showNodeDetails(d);
+}
+
+function showNodeDetails(node) {
+  const detailsPanel = document.getElementById('nodeDetails');
+  detailsPanel.hidden = false;
+  
+  // Update name
+  document.getElementById('selectedPersonName').textContent = node.name;
+  
+  // Calculate stats
+  const connections = filteredData.edges.filter(e => 
+    e.source.id === node.id || e.target.id === node.id
+  );
+  
+  const totalWeight = connections.reduce((sum, e) => sum + e.weight, 0);
+  
+  // Update stats
+  const statsHtml = `
+    <div class="detail-stat-row">
+      <span class="detail-stat-label">Total connections:</span>
+      <span class="detail-stat-value">${connections.length}</span>
+    </div>
+    <div class="detail-stat-row">
+      <span class="detail-stat-label">Total interactions:</span>
+      <span class="detail-stat-value">${totalWeight}</span>
+    </div>
+  `;
+  document.getElementById('selectedPersonStats').innerHTML = statsHtml;
+  
+  // Sort connections by weight
+  const sortedConnections = connections
+    .map(e => ({
+      node: e.source.id === node.id ? e.target : e.source,
+      weight: e.weight
+    }))
+    .sort((a, b) => b.weight - a.weight);
+  
+  // Update connections list
+  const connectionsHtml = `
+    <h4>Connected to (${sortedConnections.length}):</h4>
+    ${sortedConnections.map(c => `
+      <div class="connection-item" data-node-id="${c.node.id}">
+        <span class="connection-name">${c.node.name}</span>
+        <span class="connection-weight">${c.weight}×</span>
+      </div>
+    `).join('')}
+  `;
+  document.getElementById('selectedPersonConnections').innerHTML = connectionsHtml;
+  
+  // Add click handlers to connection items
+  document.querySelectorAll('.connection-item').forEach(item => {
+    item.addEventListener('click', () => {
+      const nodeId = item.dataset.nodeId;
+      const targetNode = filteredData.nodes.find(n => n.id === nodeId);
+      if (targetNode) {
+        const nodeElement = document.querySelector(`.node-${nodeId}`);
+        if (nodeElement) {
+          handleNodeClick.call(nodeElement, event, targetNode);
+        }
+      }
+    });
+  });
+}
+
+function drag(simulation) {
+  function dragstarted(event) {
+    if (!event.active) simulation.alphaTarget(0.3).restart();
+    event.subject.fx = event.subject.x;
+    event.subject.fy = event.subject.y;
+  }
+  
+  function dragged(event) {
+    event.subject.fx = event.x;
+    event.subject.fy = event.y;
+  }
+  
+  function dragended(event) {
+    if (!event.active) simulation.alphaTarget(0);
+    event.subject.fx = null;
+    event.subject.fy = null;
+  }
+  
+  return d3.drag()
+    .on('start', dragstarted)
+    .on('drag', dragged)
+    .on('end', dragended);
+}
+
+function resetZoom() {
+  svg.transition()
+    .duration(750)
+    .call(zoom.transform, d3.zoomIdentity);
+}
+
+document.addEventListener('DOMContentLoaded', loadRelationships);
+</script>
