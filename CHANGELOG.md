@@ -7,6 +7,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.5.2] - 2026-02-10
+
+### Fixed
+- CI/CD build failure caused by duplicate pdf2image dependency
+- Removed conflicting pdf2image>=1.17.0 line from requirements.txt
+
+### Added
+- AUTONOMOUS_WORKFLOW.md: Corrected autonomous work protocol
+- ENDPOINT_CHECKLIST.md: Review checklist for all site endpoints
+- LESSONS_LEARNED.md: Documentation of mistakes and corrections
+
+### Changed
+- Workflow approach: Feature branches, local validation, atomic commits
+- Release cadence: Merge to main only for validated releases
+
 ## [1.5.1] - 2026-02-10
 
 ### Added
