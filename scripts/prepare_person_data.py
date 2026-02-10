@@ -128,11 +128,11 @@ def main():
             category = doc.get('document_category', 'uncategorized')
             person_to_categories[person][category] += 1
     
-    # Filter for major people (3+ mentions)
+    # Filter for major people (1+ mentions - show all)
     major_people = {
         person: docs 
         for person, docs in person_to_docs.items() 
-        if len(docs) >= 3
+        if len(docs) >= 1
     }
     
     # Sort people by mention count
@@ -179,7 +179,7 @@ def main():
     master_output = {
         'generated_at': datetime.now().isoformat(),
         'total_people': len(people_data),
-        'threshold_mentions': 3,
+        'threshold_mentions': 1,
         'people': people_data,
     }
     
@@ -198,7 +198,7 @@ def main():
     print("=" * 80)
     print("PERSON DATA PREPARATION")
     print("=" * 80)
-    print(f"Total major people (3+ mentions): {len(people_data)}")
+    print(f"Total people (1+ mentions): {len(people_data)}")
     print(f"Master file: {output_dir / 'people.json'}")
     print(f"Individual files: {people_dir}/")
     print()
