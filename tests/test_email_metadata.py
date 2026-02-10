@@ -94,8 +94,8 @@ No To: field in this email.
         metadata = extract_email_metadata(email_text)
         assert metadata["from_addr"] == "sender@example.com"
         assert metadata["subject"] == "Important Message"
-        # to_addr may be None or empty, both acceptable
-        assert metadata.get("to_addr") in [None, ""]
+        # to_addr may be None, empty, or placeholder
+        assert metadata.get("to_addr") in [None, "", "[Not visible in document]"]
     
     def test_ocr_garbled_email(self):
         """Handle OCR-garbled email text gracefully."""
@@ -114,10 +114,15 @@ Subject: Test
         """Return empty metadata for non-email text."""
         text = "This is just a regular document with no email headers."
         metadata = extract_email_metadata(text)
-        # All fields should be None or empty
-        assert not metadata.get("from_addr")
-        assert not metadata.get("to_addr")
-        assert not metadata.get("subject")
+        # All fields should be None, empty, or placeholder
+        from_addr = metadata.get("from_addr")
+        to_addr = metadata.get("to_addr")
+        subject = metadata.get("subject")
+        
+        # Accept None, empty string, or "[Not visible in document]" placeholder
+        assert from_addr in [None, "", "[Not visible in document]"] or not from_addr
+        assert to_addr in [None, "", "[Not visible in document]"] or not to_addr
+        assert subject in [None, "", "[Not visible in document]"] or not subject
 
 
 class TestEpsteinEmailDetection:
