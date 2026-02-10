@@ -43,13 +43,28 @@
 
 **Next:** Task 2 - Document categorization
 
+### 2026-02-10 04:00 EST - Task 2: Document Categorization
+**Actions:**
+- Added 16 new document categories (booking, travel, financial, phone, etc.)
+- Implemented multi-marker pattern matching
+- Fallback to "scanned-document" for low-quality image PDFs
+- Committed: `b3390d8` - "feat: expand document categorization from 48.8% to 86.6%"
+- Pushed to origin/main
+
+**Results:**
+- Categorization: 86.6% (820/947) - up from 48.8%
+- New categories: phone-record (19), scanned-document (325), financial (4), etc.
+- Remaining uncategorized: 127 (quality 50+ with no matching patterns)
+
+**Next:** Task 3 - Complete person extraction
+
 ---
 
 ## Metrics Tracking
 
 | Metric | Start | Current | Target | Δ |
 |--------|-------|---------|--------|---|
-| Categorized % | 48.8% | 48.8% | 95% | +0% |
+| Categorized % | 48.8% | 86.6% | 95% | +37.8% |
 | Email Metadata % | 0% | 64.1% | 100% | +64.1% |
 | People Extracted | 23 | 23 | 50+ | +0 |
 | OCR Coverage % | 29.6% | 29.6% | 100% | +0% |
@@ -63,6 +78,7 @@
 | Time | SHA | Message | Files Changed |
 |------|-----|---------|---------------|
 | 03:45 | a0148c9 | fix: improve email metadata extraction quality | 12 |
+| 04:00 | b3390d8 | feat: expand document categorization 48.8%→86.6% | 3 |
 
 ---
 

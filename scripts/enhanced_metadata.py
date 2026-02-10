@@ -71,16 +71,40 @@ def extract_person_names(text: str) -> List[str]:
         matches = re.findall(pattern, text)
         names.update(matches)
     
-    # Common high-profile names (case-specific)
+    # Comprehensive high-profile names (case-specific) - expanded list
     known_names = [
-        'Jeffrey Epstein', 'Ghislaine Maxwell', 'Virginia Giuffre', 'Virginia Roberts',
-        'Prince Andrew', 'Bill Clinton', 'Donald Trump', 'Alan Dershowitz',
-        'Les Wexner', 'Jean-Luc Brunel', 'Sarah Kellen', 'Nadia Marcinkova',
-        'Haley Robson', 'Adriana Ross', 'Lesley Groff'
+        # Primary figures
+        'Jeffrey Epstein', 'Ghislaine Maxwell',
+        # Victims/Accusers
+        'Virginia Giuffre', 'Virginia Roberts', 'Courtney Wild', 'Sarah Ransome',
+        # Associates/Staff
+        'Lesley Groff', 'Sarah Kellen', 'Nadia Marcinkova', 'Adriana Ross',
+        'Haley Robson', 'Juan Alessi', 'Alfredo Rodriguez',
+        # High-profile individuals mentioned
+        'Prince Andrew', 'Bill Clinton', 'Donald Trump', 'Bill Gates',
+        'Alan Dershowitz', 'Les Wexner', 'Jean-Luc Brunel', 'Kevin Spacey',
+        'Chris Tucker', 'George Mitchell', 'Bill Richardson', 'Larry Summers',
+        'Lawrence Krauss', 'Marvin Minsky', 'Stephen Hawking', 'Ehud Barak',
+        # Business/Legal figures
+        'Leon Black', 'Glenn Dubin', 'Thomas Pritzker', 'Mortimer Zuckerman',
+        'Ronald Perelman', 'Harvey Weinstein', 'Leslie Groff',
+        # Lawyers
+        'Roy Black', 'Ken Starr', 'Jay Lefkowitz', 'Darren Indyke',
+        'Reid Weingarten', 'Gerald Lefcourt', 'Martin Weinberg',
+        'Alex Acosta', 'Barry Krischer',
+        # Models/Others
+        'Naomi Campbell', 'Heidi Klum', 'Eva Andersson-Dubin',
+        'Peter Listerman', 'Cindy Lopez', 'Emmy Tayler',
+        # Maxwell family
+        'Robert Maxwell', 'Isabel Maxwell', 'Christine Maxwell',
+        # Other associates
+        'Jean-Luc Brunel', 'Claude Bernard', 'Nadia Bjorlin',
+        'Shelley Lewis', 'Cimberly Espinosa', 'Johanna Sjoberg'
     ]
     
+    text_lower = text.lower()
     for name in known_names:
-        if name.lower() in text.lower():
+        if name.lower() in text_lower:
             names.add(name)
     
     return sorted(names)
