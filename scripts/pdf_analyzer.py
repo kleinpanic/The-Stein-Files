@@ -267,7 +267,10 @@ def classify_document_type(title: str, text_sample: str) -> Optional[str]:
     
     # NEW: Address/contact lists
     contact_markers = ['contact list', 'address book', 'phone numbers', 'directory', 'rolodex']
+    title_contact_markers = ['contact book', 'contact list', 'phone book', 'address book', 'masseuse list']
     if any(marker in text_lower for marker in contact_markers):
+        return 'contact-list'
+    if any(marker in title_lower for marker in title_contact_markers):
         return 'contact-list'
     
     # NEW: Schedules/calendars
