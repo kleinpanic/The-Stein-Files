@@ -25,8 +25,14 @@ jobs:
           VERSION="${{ steps.version.outputs.VERSION }}"
           echo "Extracting changelog for version $VERSION"
           
-          # Extract section between ## $VERSION and next ##
-          awk "/^## $VERSION/,/^## [0-9]/" CHANGELOG.md | sed '1d;$d' > release_notes.md
+          # Extract the section for this version from CHANGELOG.md (Keep a Changelog format):
+          #
+          # Example heading: "## [1.5.1] - 2026-02-10"
+          awk -v ver="$VERSION" ' 
+            $0 ~ "^## \[" ver "\]" { in_section=1; next }
+            in_section && $0 ~ "^## \[" { exit }
+            in_section { print }
+          ' CHANGELOG.md > release_notes.md
           
           # Fallback if extraction failed
           if [ ! -s release_notes.md ]; then
