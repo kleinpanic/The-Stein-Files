@@ -218,6 +218,97 @@ def classify_document_type(title: str, text_sample: str) -> Optional[str]:
     if has_email_headers and has_email_pattern:
         return 'email'
     
+    # NEW: Booking/arrest records
+    booking_markers = ['booking system', 'date arrested', 'fbi no:', 'fbi name:', 'charges:', 'trans id:']
+    if any(marker in text_lower for marker in booking_markers):
+        return 'booking-record'
+    
+    # NEW: Travel/entry records (CBP, TECS, passport control)
+    travel_markers = ['customs and border protection', 'tecs', 'person encounter', 'entry inspection', 
+                     'automated passport control', 'apis', 'on board', 'departure', 'arrival']
+    if sum(1 for marker in travel_markers if marker in text_lower) >= 2:
+        return 'travel-record'
+    
+    # NEW: Government forms (passport applications, etc.)
+    form_markers = ['passport renewal', 'passport application', 'form approved', 'omb no.', 
+                   'application for', 'applicant information', 'department of state']
+    if sum(1 for marker in form_markers if marker in text_lower) >= 2:
+        return 'government-form'
+    
+    # NEW: Financial records (bank statements, wire transfers)
+    financial_markers = ['wire transfer', 'bank statement', 'account number', 'account no.',
+                        'transaction', 'balance', 'deposit', 'withdrawal', 'swift', 'iban']
+    if sum(1 for marker in financial_markers if marker in text_lower) >= 2:
+        return 'financial-record'
+    
+    # NEW: Court orders
+    order_markers = ['it is ordered', 'it is hereby ordered', 'the court orders', 'order of the court',
+                    'this order', 'so ordered', 'judgment is entered']
+    if any(marker in text_lower for marker in order_markers):
+        return 'court-order'
+    
+    # NEW: Receipts/invoices
+    receipt_markers = ['invoice', 'receipt', 'bill to', 'ship to', 'subtotal', 'total amount',
+                      'payment received', 'amount due', 'purchase order']
+    if sum(1 for marker in receipt_markers if marker in text_lower) >= 2:
+        return 'receipt'
+    
+    # NEW: Transcripts (interview, phone, etc.)
+    transcript_markers = ['transcript of', 'interview of', 'interviewed by', 'recording of',
+                         'call transcript', 'phone call', 'begins at', 'ends at']
+    if any(marker in text_lower for marker in transcript_markers):
+        return 'transcript'
+    
+    # NEW: Contracts/agreements
+    contract_markers = ['agreement between', 'contract between', 'party of the first', 'hereby agree',
+                       'terms and conditions', 'in witness whereof', 'executed this']
+    if any(marker in text_lower for marker in contract_markers):
+        return 'contract'
+    
+    # NEW: Address/contact lists
+    contact_markers = ['contact list', 'address book', 'phone numbers', 'directory', 'rolodex']
+    if any(marker in text_lower for marker in contact_markers):
+        return 'contact-list'
+    
+    # NEW: Schedules/calendars
+    schedule_markers = ['schedule', 'calendar', 'itinerary', 'appointment', 'agenda']
+    # Need both a schedule word and date-like patterns
+    has_schedule_word = any(marker in text_lower for marker in schedule_markers)
+    has_dates = bool(re.search(r'\b(?:monday|tuesday|wednesday|thursday|friday|saturday|sunday)\b', text_lower))
+    if has_schedule_word and has_dates:
+        return 'schedule'
+    
+    # NEW: Phone/telecom records (AT&T, Verizon, etc.)
+    telecom_markers = ['at&t', 'verizon', 'sprint', 't-mobile', 'voice usage', 'call record',
+                      'phone records', 'wireline', 'mobility voice', 'originating number',
+                      'terminating number', 'elapsed time', 'queried for records']
+    if sum(1 for marker in telecom_markers if marker in text_lower) >= 2:
+        return 'phone-record'
+    
+    # NEW: Internet/data records
+    internet_markers = ['ip address', 'subscriber information', 'internet protocol', 'browser history',
+                       'email account', 'login history', 'session log', 'isp records']
+    if sum(1 for marker in internet_markers if marker in text_lower) >= 2:
+        return 'internet-record'
+    
+    # NEW: Search warrants/affidavits
+    warrant_markers = ['search warrant', 'affidavit', 'probable cause', 'magistrate judge',
+                      'authorize the search', 'premises described']
+    if any(marker in text_lower for marker in warrant_markers):
+        return 'search-warrant'
+    
+    # NEW: Indictments/criminal charges
+    indictment_markers = ['indictment', 'grand jury', 'count one', 'count two', 'conspiracy to',
+                         'in violation of', 'united states of america v.', 'criminal complaint']
+    if sum(1 for marker in indictment_markers if marker in text_lower) >= 2:
+        return 'indictment'
+    
+    # NEW: FBI/law enforcement records
+    fbi_markers = ['federal bureau of investigation', 'fbi', 'case id:', 'case number:',
+                  'special agent', 'date of report', 'synopsis', 'details:']
+    if sum(1 for marker in fbi_markers if marker in text_lower) >= 2:
+        return 'fbi-record'
+    
     # Deposition detection (new in Phase 1)
     has_qa_pattern = bool(re.search(r'\bQ:.*?\bA:', text_lower, re.DOTALL))
     has_deposition_markers = any(word in text_lower for word in ['deposition', 'deposed', 'sworn testimony', 'court reporter'])

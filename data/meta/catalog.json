@@ -563,7 +563,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:09:24+00:00",
     "etag": "\"69d924f26829477aa939e5b77b1962f0\"",
     "extracted_dates": [],
@@ -606,7 +606,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:09:26+00:00",
     "etag": "\"c76e0d01218c0442714a6da616fb0919\"",
     "extracted_dates": [],
@@ -649,7 +649,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:09:28+00:00",
     "etag": "\"653affc0ad545a9a9909176e7b88de07\"",
     "extracted_dates": [],
@@ -692,7 +692,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:09:30+00:00",
     "etag": "\"d599819ed33e97f10050e1b215bff7fd\"",
     "extracted_dates": [],
@@ -735,7 +735,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:09:32+00:00",
     "etag": "\"83ae8ec1c4b17fe9759fb4374d23611c\"",
     "extracted_dates": [],
@@ -778,7 +778,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:09:34+00:00",
     "etag": "\"8af01e9ae524f814dd29816193946bdf\"",
     "extracted_dates": [],
@@ -821,7 +821,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:09:36+00:00",
     "etag": "\"6291de8415790738ce6950f0e19507f3\"",
     "extracted_dates": [],
@@ -864,7 +864,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:09:38+00:00",
     "etag": "\"eeb6dbc6b23662dd8da6fdc83eab3cc1\"",
     "extracted_dates": [],
@@ -907,7 +907,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:09:40+00:00",
     "etag": "\"f3fb4ab1020477e221c488c312a27ed7\"",
     "extracted_dates": [],
@@ -950,7 +950,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:09:42+00:00",
     "etag": "\"19a3293d9fcfdb8720745cc0eff90351\"",
     "extracted_dates": [],
@@ -993,7 +993,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:09:44+00:00",
     "etag": "\"309cab88cfd3d03038c82e79ceca259c\"",
     "extracted_dates": [],
@@ -1036,7 +1036,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:09:46+00:00",
     "etag": "\"642f62756cef9b6ea5567a892522d876\"",
     "extracted_dates": [],
@@ -1079,7 +1079,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:09:48+00:00",
     "etag": "\"033d92b2ed97d5b507e0c64cbe46fdc8\"",
     "extracted_dates": [],
@@ -1122,7 +1122,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:09:50+00:00",
     "etag": "\"3831a784b2a356660446a3c852b0913a\"",
     "extracted_dates": [],
@@ -1165,7 +1165,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:09:52+00:00",
     "etag": "\"bfd4aecbe27ff82f9d9e19aacdba3067\"",
     "extracted_dates": [],
@@ -1208,7 +1208,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:09:54+00:00",
     "etag": "\"a7ccad458cba9302186f3cee91d23c3e\"",
     "extracted_dates": [],
@@ -1251,7 +1251,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:09:56+00:00",
     "etag": "\"81234a83247425a0884dba8459a612f3\"",
     "extracted_dates": [],
@@ -1343,7 +1343,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:10:00+00:00",
     "etag": "\"4892c9b60b94762b05091a5cf5ce83e9\"",
     "extracted_dates": [],
@@ -1386,7 +1386,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:10:02+00:00",
     "etag": "\"f5191e1ef59e83cdd78e69119835be39\"",
     "extracted_dates": [],
@@ -1429,7 +1429,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:10:04+00:00",
     "etag": "\"80947c0160d014e6f57ec25b03f5af12\"",
     "extracted_dates": [],
@@ -1472,7 +1472,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:10:06+00:00",
     "etag": "\"6bb7419a1e2073dfcab39d322c0b68fb\"",
     "extracted_dates": [],
@@ -1515,7 +1515,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:10:08+00:00",
     "etag": "\"34ebb530a6e964375446b703525743c8\"",
     "extracted_dates": [],
@@ -1558,7 +1558,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:10:10+00:00",
     "etag": "\"4a3e1f6b1471587fd65b0b8682b70b00\"",
     "extracted_dates": [],
@@ -1601,7 +1601,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:10:12+00:00",
     "etag": "\"ccf0bf59d198cdd01354eb58d094bf62\"",
     "extracted_dates": [],
@@ -1644,7 +1644,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:10:14+00:00",
     "etag": "\"6bcf419640a824a04cfa39a429c0abca\"",
     "extracted_dates": [],
@@ -1687,7 +1687,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:10:16+00:00",
     "etag": "\"57dc5e0be24d5ceafb94be0a46ca8440\"",
     "extracted_dates": [],
@@ -1730,7 +1730,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:10:18+00:00",
     "etag": "\"33f75edcb5e6766139df008e7df58388\"",
     "extracted_dates": [],
@@ -1773,7 +1773,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:10:20+00:00",
     "etag": "\"9fcc7f0f427f1300e099a761b7ce9b88\"",
     "extracted_dates": [],
@@ -1816,7 +1816,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:10:22+00:00",
     "etag": "\"c2cfeabcbda926b214395666bc000b65\"",
     "extracted_dates": [],
@@ -1859,7 +1859,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:10:24+00:00",
     "etag": "\"97e2873c2b6a5bf7443602bd44ec9742\"",
     "extracted_dates": [],
@@ -1902,7 +1902,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:10:26+00:00",
     "etag": "\"d18f5c9273cadd23a790d8b999a06362\"",
     "extracted_dates": [],
@@ -1945,7 +1945,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:10:28+00:00",
     "etag": "\"1dd1940dcd0c0eb21726eaf644e7dd50\"",
     "extracted_dates": [],
@@ -1988,7 +1988,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:10:30+00:00",
     "etag": "\"2e79bc592b7f7f674675d3ad2e96ecf2\"",
     "extracted_dates": [],
@@ -2031,7 +2031,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:10:32+00:00",
     "etag": "\"9f83b913ca230ffa64fd42690200d66e\"",
     "extracted_dates": [],
@@ -2074,7 +2074,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:10:34+00:00",
     "etag": "\"294390f1fc1a6ec5ac5c4571b8ad9261\"",
     "extracted_dates": [],
@@ -2117,7 +2117,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:10:36+00:00",
     "etag": "\"778e78014dcaeddb70b8f99e5b2e68e2\"",
     "extracted_dates": [],
@@ -2160,7 +2160,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:10:38+00:00",
     "etag": "\"d9f753932162e784c20adf6c6dbd925c\"",
     "extracted_dates": [],
@@ -2203,7 +2203,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:10:40+00:00",
     "etag": "\"68db6a2c44d97a06414c802bbb3185e1\"",
     "extracted_dates": [],
@@ -2246,7 +2246,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:10:42+00:00",
     "etag": "\"751823c9e9abfba63293d328c5968242\"",
     "extracted_dates": [],
@@ -2289,7 +2289,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:10:44+00:00",
     "etag": "\"6566c55c71e0adfaa4812d9779ee86e7\"",
     "extracted_dates": [],
@@ -2330,7 +2330,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:10:46+00:00",
     "etag": "\"04cf63bcfc9789ca89c6eb9344fe9d0b\"",
     "extracted_dates": [],
@@ -2373,7 +2373,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:10:48+00:00",
     "etag": "\"524bec5a491e9374d8bad7f1e58d4ceb\"",
     "extracted_dates": [],
@@ -2416,7 +2416,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:10:50+00:00",
     "etag": "\"13da750dc44db4814ad37efbb20a72f6\"",
     "extracted_dates": [],
@@ -2459,7 +2459,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:10:52+00:00",
     "etag": "\"da498bae3bad3f24fbb03cba33c26059\"",
     "extracted_dates": [],
@@ -2502,7 +2502,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:10:54+00:00",
     "etag": "\"c306fb4293b40d53662135f4d0686e79\"",
     "extracted_dates": [],
@@ -2545,7 +2545,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:10:56+00:00",
     "etag": "\"3bd17c9eb8af30da335160c3bf084732\"",
     "extracted_dates": [],
@@ -2588,7 +2588,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:10:58+00:00",
     "etag": "\"3faa6c954e46a107dfb274590e800b1b\"",
     "extracted_dates": [],
@@ -2631,7 +2631,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:11:00+00:00",
     "etag": "\"d07cbd520a2adf99b8a0bcb49a655c7c\"",
     "extracted_dates": [],
@@ -2674,7 +2674,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:11:02+00:00",
     "etag": "\"2cdad63697cc16c3d59f7797e8caa7c2\"",
     "extracted_dates": [],
@@ -2717,7 +2717,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:11:04+00:00",
     "etag": "\"0cf1e994d48ebe71d1c975fb6010ad8c\"",
     "extracted_dates": [],
@@ -2760,7 +2760,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:11:06+00:00",
     "etag": "\"f3723730cd612f9c042915505b14617e\"",
     "extracted_dates": [],
@@ -2803,7 +2803,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:11:08+00:00",
     "etag": "\"6eb0379600fe5c5532017b58807c6cf2\"",
     "extracted_dates": [],
@@ -2846,7 +2846,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:11:10+00:00",
     "etag": "\"a966b35b5f7327abf606f8cee704d347\"",
     "extracted_dates": [],
@@ -2889,7 +2889,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:11:12+00:00",
     "etag": "\"02c38ed04bc20c7f644a3ec566efbfe9\"",
     "extracted_dates": [],
@@ -2932,7 +2932,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:11:14+00:00",
     "etag": "\"7c1289cd9c8fcdbf384bff8d82721967\"",
     "extracted_dates": [],
@@ -2975,7 +2975,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:11:16+00:00",
     "etag": "\"c493101e389dc0a35a22cb0d22a86a63\"",
     "extracted_dates": [],
@@ -3018,7 +3018,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:11:18+00:00",
     "etag": "\"ec65023abeee0397e3469ae7fb468606\"",
     "extracted_dates": [],
@@ -3061,7 +3061,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:11:20+00:00",
     "etag": "\"f06a67f114dca0f0df65706e85ebb171\"",
     "extracted_dates": [],
@@ -3104,7 +3104,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:11:22+00:00",
     "etag": "\"ea4966e533ce2971e5d26df1c8a2ae55\"",
     "extracted_dates": [],
@@ -3147,7 +3147,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:11:24+00:00",
     "etag": "\"36e9ecb7ca0f2f83380954ce371fea3d\"",
     "extracted_dates": [],
@@ -3190,7 +3190,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:11:26+00:00",
     "etag": "\"9844e55c31d4edae62b814800aae7914\"",
     "extracted_dates": [],
@@ -3233,7 +3233,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:11:28+00:00",
     "etag": "\"c4beffce2be5c48a6841768a0f2fd49b\"",
     "extracted_dates": [],
@@ -3276,7 +3276,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:11:30+00:00",
     "etag": "\"aecbecb24455b1ad9d58e8a0d007f019\"",
     "extracted_dates": [],
@@ -3319,7 +3319,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:11:32+00:00",
     "etag": "\"75c8eb10775fedc1afc2580847851ad6\"",
     "extracted_dates": [],
@@ -3362,7 +3362,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:11:34+00:00",
     "etag": "\"6f1d0df8f10f98dea5658fa31e2532af\"",
     "extracted_dates": [],
@@ -3405,7 +3405,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:11:36+00:00",
     "etag": "\"9eb506b07bc0868a363f2051a21df25f\"",
     "extracted_dates": [],
@@ -3448,7 +3448,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:11:38+00:00",
     "etag": "\"4c2067cf3db9f541ea6e88be38389c47\"",
     "extracted_dates": [],
@@ -3491,7 +3491,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:11:40+00:00",
     "etag": "\"fb18b4e5dbe93f2a02446ed1e2872335\"",
     "extracted_dates": [],
@@ -3534,7 +3534,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:11:42+00:00",
     "etag": "\"761fe5c6bc7afcbb59c50b2087004fd0\"",
     "extracted_dates": [],
@@ -3577,7 +3577,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:11:44+00:00",
     "etag": "\"24ec7e13a5146c52557f30c56e5fa27e\"",
     "extracted_dates": [],
@@ -3620,7 +3620,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:11:46+00:00",
     "etag": "\"2d23a4f0243b5157428ba10268589720\"",
     "extracted_dates": [],
@@ -3663,7 +3663,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:11:48+00:00",
     "etag": "\"ecd3b37c3e3057368cb563fe8b499579\"",
     "extracted_dates": [],
@@ -3706,7 +3706,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:11:50+00:00",
     "etag": "\"a6e484e5c4a4baca62bb6de0dba2a7df\"",
     "extracted_dates": [],
@@ -3749,7 +3749,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:11:52+00:00",
     "etag": "\"47b28553ed00fd339774bf9126116792\"",
     "extracted_dates": [],
@@ -3792,7 +3792,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:11:54+00:00",
     "etag": "\"e466dae3ac11a934ebf496837c3b3905\"",
     "extracted_dates": [],
@@ -3835,7 +3835,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:11:56+00:00",
     "etag": "\"7d5a4ef6fe634c76925ca000af3ca19f\"",
     "extracted_dates": [],
@@ -3878,7 +3878,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:11:58+00:00",
     "etag": "\"94d5e64b78af719af237fe4881aeee4a\"",
     "extracted_dates": [],
@@ -3921,7 +3921,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:12:00+00:00",
     "etag": "\"a75036c75caa66057db7e49c7f9d8f74\"",
     "extracted_dates": [],
@@ -3964,7 +3964,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:12:02+00:00",
     "etag": "\"769cf4cd7c958062f3ecad7af368b29b\"",
     "extracted_dates": [],
@@ -4007,7 +4007,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:12:04+00:00",
     "etag": "\"15f8840686de047e6b724d4f19ba8d59\"",
     "extracted_dates": [],
@@ -4050,7 +4050,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:12:06+00:00",
     "etag": "\"e28bbaadfe57bcb84f1e363b0876fc32\"",
     "extracted_dates": [],
@@ -4093,7 +4093,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:12:08+00:00",
     "etag": "\"cd4dd2eb9ee296bc6050481b403bbf72\"",
     "extracted_dates": [],
@@ -4136,7 +4136,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:12:10+00:00",
     "etag": "\"3e6a17bd7f8bb318428baba71ca48492\"",
     "extracted_dates": [],
@@ -4179,7 +4179,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:12:12+00:00",
     "etag": "\"4b422656cf61e56eebf681ed42b14f2c\"",
     "extracted_dates": [],
@@ -4222,7 +4222,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:12:14+00:00",
     "etag": "\"3326350226cd1ca40205c1cb57dc0c2b\"",
     "extracted_dates": [],
@@ -4265,7 +4265,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:12:16+00:00",
     "etag": "\"10abab55b1f3c43e28dce270be446059\"",
     "extracted_dates": [],
@@ -4308,7 +4308,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:12:18+00:00",
     "etag": "\"d1b1e8d944b109a97c3cb5c44972b4aa\"",
     "extracted_dates": [],
@@ -4351,7 +4351,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:12:20+00:00",
     "etag": "\"6c45b4ec3a2755debb4072fa68bdd9c3\"",
     "extracted_dates": [],
@@ -4394,7 +4394,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:12:22+00:00",
     "etag": "\"049efb52f3efa35dbcd54e9f9543ea6f\"",
     "extracted_dates": [],
@@ -4437,7 +4437,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:12:24+00:00",
     "etag": "\"fefb2bc362979667dcd59b6e57a636fe\"",
     "extracted_dates": [],
@@ -4480,7 +4480,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:12:26+00:00",
     "etag": "\"ce01b3c4b8e617ee0f250b4d735167c2\"",
     "extracted_dates": [],
@@ -4523,7 +4523,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:12:28+00:00",
     "etag": "\"c30e486cd776439b52c7b931473c2cb5\"",
     "extracted_dates": [],
@@ -4566,7 +4566,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:12:30+00:00",
     "etag": "\"2a27bf69f279c9d466842c95f2288257\"",
     "extracted_dates": [],
@@ -4609,7 +4609,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:12:32+00:00",
     "etag": "\"08ffd29b959002201bbe44f0a305c4ce\"",
     "extracted_dates": [],
@@ -4652,7 +4652,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:12:34+00:00",
     "etag": "\"5469ceedb3821cd2c3a8b50e1670bcc4\"",
     "extracted_dates": [],
@@ -4695,7 +4695,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:12:36+00:00",
     "etag": "\"742b5632f3601d59413c258651fbbf60\"",
     "extracted_dates": [],
@@ -4738,7 +4738,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:12:38+00:00",
     "etag": "\"5007509af2e9b22aab21d31fee014d63\"",
     "extracted_dates": [],
@@ -4781,7 +4781,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:12:40+00:00",
     "etag": "\"c1c2b4205388b6d1f197c4f742934774\"",
     "extracted_dates": [],
@@ -4824,7 +4824,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "booking-record",
     "downloaded_at": "2026-02-07T11:12:42+00:00",
     "etag": "\"44488cc919df0590abbf0ea65a717c95\"",
     "extracted_dates": [
@@ -6211,7 +6211,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "government-form",
     "downloaded_at": "2026-02-07T11:13:24+00:00",
     "etag": "\"d374b5b5ef94c1b9a6d63553ae80a64d\"",
     "extracted_dates": [
@@ -6258,7 +6258,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "government-form",
     "downloaded_at": "2026-02-07T11:13:26+00:00",
     "etag": "\"a6181fd4278f88bce9d833b451292875\"",
     "extracted_dates": [
@@ -6688,7 +6688,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "travel-record",
     "downloaded_at": "2026-02-07T11:13:38+00:00",
     "etag": "\"97077bf0a3b113edfb84262c63b2b310\"",
     "extracted_dates": [
@@ -7489,7 +7489,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "phone-record",
     "downloaded_at": "2026-02-07T11:14:04+00:00",
     "etag": "\"a7210dba0a80ad39c96afcb8820f8141\"",
     "extracted_dates": [
@@ -7547,7 +7547,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "phone-record",
     "downloaded_at": "2026-02-07T11:14:07+00:00",
     "etag": "\"28ba64215143275ff39b10f4ae86cd89-2\"",
     "extracted_dates": [
@@ -7666,7 +7666,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "phone-record",
     "downloaded_at": "2026-02-07T11:14:10+00:00",
     "etag": "\"47df38fe3118befb114538b501713451\"",
     "extracted_dates": [],
@@ -7720,7 +7720,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "phone-record",
     "downloaded_at": "2026-02-07T11:14:13+00:00",
     "etag": "\"90dd23e0644d85d52c8051c53adb23b3-2\"",
     "extracted_dates": [
@@ -7776,7 +7776,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "phone-record",
     "downloaded_at": "2026-02-07T11:14:15+00:00",
     "etag": "\"0dda9d47f04389c464cc4355f3bf1b53-2\"",
     "extracted_dates": [
@@ -7885,7 +7885,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "phone-record",
     "downloaded_at": "2026-02-07T11:14:18+00:00",
     "etag": "\"c37a4447c058f053ce74d4620944967c\"",
     "extracted_dates": [
@@ -7934,7 +7934,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "phone-record",
     "downloaded_at": "2026-02-07T11:14:20+00:00",
     "etag": "\"a70a6bab8aa82eb1fd3319c730aa1efc\"",
     "extracted_dates": [
@@ -7988,7 +7988,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "phone-record",
     "downloaded_at": "2026-02-07T11:14:22+00:00",
     "etag": "\"85d7de3d275b58aafdcf7760894c56aa\"",
     "extracted_dates": [
@@ -8041,7 +8041,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "phone-record",
     "downloaded_at": "2026-02-07T11:14:24+00:00",
     "etag": "\"f38eee94f4a58301316be08773fac9fd\"",
     "extracted_dates": [
@@ -8088,7 +8088,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "phone-record",
     "downloaded_at": "2026-02-07T11:14:26+00:00",
     "etag": "\"315dcb2f1d12c9f8f5cd3392c4ad4271\"",
     "extracted_dates": [
@@ -8145,7 +8145,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "phone-record",
     "downloaded_at": "2026-02-07T11:14:28+00:00",
     "etag": "\"c6842ccf91c10867bd237d36ed5a68a7\"",
     "extracted_dates": [
@@ -8259,7 +8259,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "phone-record",
     "downloaded_at": "2026-02-07T11:14:32+00:00",
     "etag": "\"99dc5016760d20896f66de55ef5fb680\"",
     "extracted_dates": [
@@ -8309,7 +8309,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "phone-record",
     "downloaded_at": "2026-02-07T11:14:34+00:00",
     "etag": "\"dc29b724dad413a5d6ce9677cf21a97a\"",
     "extracted_dates": [
@@ -8557,7 +8557,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "phone-record",
     "downloaded_at": "2026-02-07T11:14:43+00:00",
     "etag": "\"8d443a2203972eb0a278d734a8508e82\"",
     "extracted_dates": [
@@ -8609,7 +8609,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "phone-record",
     "downloaded_at": "2026-02-07T11:14:45+00:00",
     "etag": "\"07177f717f70e5e8ef69aaba180f13fc\"",
     "extracted_dates": [
@@ -8985,7 +8985,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "financial-record",
     "downloaded_at": "2026-02-07T11:14:57+00:00",
     "etag": "\"4ab4dcd8e1b91d1bd016c3512c69e035\"",
     "extracted_dates": [
@@ -9071,7 +9071,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "financial-record",
     "downloaded_at": "2026-02-07T11:14:59+00:00",
     "etag": "\"86ff1d2bbdec8b50ac7ab9549f6f30ac\"",
     "extracted_dates": [],
@@ -10236,7 +10236,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "financial-record",
     "downloaded_at": "2026-02-07T11:15:41+00:00",
     "etag": "\"1b17c316fcf7adf41a005e3b57512695\"",
     "extracted_dates": [],
@@ -10333,7 +10333,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "financial-record",
     "downloaded_at": "2026-02-07T11:15:45+00:00",
     "etag": "\"b486bdeb5b5dafdd16cec6567092bc4c\"",
     "extracted_dates": [],
@@ -17485,7 +17485,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:20:12+00:00",
     "etag": "\"36fb8e42a6ba592f64f15763192f83a8\"",
     "extracted_dates": [],
@@ -17528,7 +17528,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:20:14+00:00",
     "etag": "\"03a88b06382e06b0eef091433faac45b\"",
     "extracted_dates": [],
@@ -17571,7 +17571,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:20:16+00:00",
     "etag": "\"80bd7c8e8fdb7b9308e6e9a1536bc570\"",
     "extracted_dates": [],
@@ -17614,7 +17614,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:20:18+00:00",
     "etag": "\"e3d5f0920c39a6de1da2c6e186744539\"",
     "extracted_dates": [],
@@ -17657,7 +17657,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:20:20+00:00",
     "etag": "\"2ff6169689a1b4431cf520747097e398\"",
     "extracted_dates": [],
@@ -17700,7 +17700,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:20:22+00:00",
     "etag": "\"2a3f47f22018d5577089df8f40ebe057\"",
     "extracted_dates": [],
@@ -17743,7 +17743,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:20:24+00:00",
     "etag": "\"6e3103c51fdf36844751e1f12b342b08\"",
     "extracted_dates": [],
@@ -17786,7 +17786,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:20:26+00:00",
     "etag": "\"b9bc68821f2a680d3fb080bfb3582969\"",
     "extracted_dates": [],
@@ -17829,7 +17829,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:20:28+00:00",
     "etag": "\"6c53ad9ae470ef6c8d5336c33e561651\"",
     "extracted_dates": [],
@@ -17872,7 +17872,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:20:30+00:00",
     "etag": "\"d9d2aa82be75c28d9a9f89706924777f\"",
     "extracted_dates": [],
@@ -18758,7 +18758,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:21:02+00:00",
     "etag": "\"414c78b255dc417dd7d74afc6ba955ed\"",
     "extracted_dates": [],
@@ -18801,7 +18801,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:21:04+00:00",
     "etag": "\"a3eb197f3447fcc87b8fd4d561991b47\"",
     "extracted_dates": [],
@@ -18844,7 +18844,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:21:06+00:00",
     "etag": "\"ade544e78349033d617f7dbe93a0bb6b\"",
     "extracted_dates": [],
@@ -18887,7 +18887,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:21:08+00:00",
     "etag": "\"50d44fdaecabf61e9a09ddf94091309a\"",
     "extracted_dates": [],
@@ -19000,7 +19000,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:21:12+00:00",
     "etag": "\"6dd245ba4d032e1aee9da443e91de933\"",
     "extracted_dates": [],
@@ -19043,7 +19043,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:21:14+00:00",
     "etag": "\"6da83ff1603f9ddff6df494238f2f77b\"",
     "extracted_dates": [],
@@ -19086,7 +19086,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:21:16+00:00",
     "etag": "\"eed41f5db724e767731aa2faf98c1697\"",
     "extracted_dates": [],
@@ -19129,7 +19129,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:21:18+00:00",
     "etag": "\"97b9a7188aba49d374bfa9661551412e\"",
     "extracted_dates": [],
@@ -19447,7 +19447,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:21:30+00:00",
     "etag": "\"f662cb24cba431de1d9a62c9d1d22b9c\"",
     "extracted_dates": [],
@@ -21589,7 +21589,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:22:44+00:00",
     "etag": "\"b6732819e3b8fe8d7152711b6430aa72\"",
     "extracted_dates": [],
@@ -21632,7 +21632,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:22:46+00:00",
     "etag": "\"4774501fa3b6a835edebc3612566ebec\"",
     "extracted_dates": [],
@@ -21675,7 +21675,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:22:48+00:00",
     "etag": "\"6d7a9fc416cef1485800fa3133f3970c\"",
     "extracted_dates": [],
@@ -21718,7 +21718,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:22:50+00:00",
     "etag": "\"89a0201dadbfe63ca1721d3900257ec9\"",
     "extracted_dates": [],
@@ -21761,7 +21761,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:22:52+00:00",
     "etag": "\"bd9e8dd4c6b0a2f20365a004edefb204\"",
     "extracted_dates": [],
@@ -21804,7 +21804,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:22:54+00:00",
     "etag": "\"c4504954dba7915f1fda460044971464\"",
     "extracted_dates": [],
@@ -21847,7 +21847,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:22:56+00:00",
     "etag": "\"b29e9388ec1a288659b9b170a6758616\"",
     "extracted_dates": [],
@@ -21890,7 +21890,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:22:58+00:00",
     "etag": "\"b76917845a1d859eb2b362337b9aa026\"",
     "extracted_dates": [],
@@ -21933,7 +21933,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:23:00+00:00",
     "etag": "\"eef195eb63843fbdf103c9901de72cad\"",
     "extracted_dates": [],
@@ -21976,7 +21976,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:23:02+00:00",
     "etag": "\"ef3e8b00affa9e98a3debc48f8e4009f\"",
     "extracted_dates": [],
@@ -22019,7 +22019,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:23:04+00:00",
     "etag": "\"d25c73e3b4b96d3cb0e69356b5ae021d\"",
     "extracted_dates": [],
@@ -22062,7 +22062,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:23:06+00:00",
     "etag": "\"2ab6f9b0e58ce4079b617e01d5d6a55a\"",
     "extracted_dates": [],
@@ -22105,7 +22105,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:23:08+00:00",
     "etag": "\"17c38907c8f4b605d5346b128ba3e31f\"",
     "extracted_dates": [],
@@ -22148,7 +22148,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:23:10+00:00",
     "etag": "\"5387592c612f852e6626a193bbfb791f\"",
     "extracted_dates": [],
@@ -22191,7 +22191,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:23:12+00:00",
     "etag": "\"0ca142649a7a79ba9ab29a9f7af87551\"",
     "extracted_dates": [],
@@ -22234,7 +22234,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:23:14+00:00",
     "etag": "\"3cc10976008e9dc105fa47fb7fb8af5c\"",
     "extracted_dates": [],
@@ -22277,7 +22277,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:23:16+00:00",
     "etag": "\"ed15abb2d996bf63ecb4756244eb4ec9\"",
     "extracted_dates": [],
@@ -22320,7 +22320,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:23:18+00:00",
     "etag": "\"4df4dabd5f4ae993c78ea480405e996d\"",
     "extracted_dates": [],
@@ -22363,7 +22363,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:23:20+00:00",
     "etag": "\"0767d1aea27780ec87b2d25b6883910e\"",
     "extracted_dates": [],
@@ -22406,7 +22406,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:23:22+00:00",
     "etag": "\"95f14582c57ab64821099c7dfbf83c6b\"",
     "extracted_dates": [],
@@ -22449,7 +22449,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:23:24+00:00",
     "etag": "\"6c72d800e4a3214a398deed7894e1a5f\"",
     "extracted_dates": [],
@@ -22492,7 +22492,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:23:26+00:00",
     "etag": "\"eaf8f2ddb6b50ab6946588335a4e125f\"",
     "extracted_dates": [],
@@ -22535,7 +22535,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:23:28+00:00",
     "etag": "\"945dcf42eab92a889c625c75627ab19d\"",
     "extracted_dates": [],
@@ -22578,7 +22578,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:23:30+00:00",
     "etag": "\"b7301180627fb35740ecd6a29d68311d\"",
     "extracted_dates": [],
@@ -22621,7 +22621,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:23:32+00:00",
     "etag": "\"67320ec10c8b6419dda84f8b0c3640be\"",
     "extracted_dates": [],
@@ -22664,7 +22664,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:23:34+00:00",
     "etag": "\"258443abe37cb6855c5ea0de1e0cf4ca\"",
     "extracted_dates": [],
@@ -22707,7 +22707,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:23:36+00:00",
     "etag": "\"3a24fa06142df99922000c76104f45e3\"",
     "extracted_dates": [],
@@ -22750,7 +22750,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:23:38+00:00",
     "etag": "\"73f53c2e2037cece34f6547c0e61749d\"",
     "extracted_dates": [],
@@ -22793,7 +22793,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:23:40+00:00",
     "etag": "\"629b356c87b8886501e83045d8120777\"",
     "extracted_dates": [],
@@ -22836,7 +22836,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:23:42+00:00",
     "etag": "\"f5ee47d07af2ea059b23ac982b5ff1e3\"",
     "extracted_dates": [],
@@ -22879,7 +22879,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:23:44+00:00",
     "etag": "\"642d553bec7b278397e3c06d3221d58c\"",
     "extracted_dates": [],
@@ -22922,7 +22922,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:23:46+00:00",
     "etag": "\"113ab028b4050a8afe12175a01649209\"",
     "extracted_dates": [],
@@ -22965,7 +22965,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:23:48+00:00",
     "etag": "\"4f0052597d9a0a9ac586f7c104da36a7\"",
     "extracted_dates": [],
@@ -23008,7 +23008,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:23:50+00:00",
     "etag": "\"0db4334ab1d97d5a47791b630ae77ce8\"",
     "extracted_dates": [],
@@ -23051,7 +23051,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:23:52+00:00",
     "etag": "\"6afdf2677432d28ceb8d2d7fc4cb8d07\"",
     "extracted_dates": [],
@@ -23094,7 +23094,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:23:54+00:00",
     "etag": "\"f3f6c6660800a8087dc9eeea4d3e209c\"",
     "extracted_dates": [],
@@ -23137,7 +23137,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:23:56+00:00",
     "etag": "\"aa91907d9ea43bc4f85846210d2ca311\"",
     "extracted_dates": [],
@@ -23180,7 +23180,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:23:58+00:00",
     "etag": "\"5795a6460f48ff56cceea3b46a428569\"",
     "extracted_dates": [],
@@ -23223,7 +23223,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:24:00+00:00",
     "etag": "\"a8f780804d18dfecf2a24e3f46b3a7d3\"",
     "extracted_dates": [],
@@ -23266,7 +23266,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:24:02+00:00",
     "etag": "\"a92354ae9855574ce46d90ed5375246f\"",
     "extracted_dates": [],
@@ -23309,7 +23309,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:24:04+00:00",
     "etag": "\"479af0d581a5540c8f18590b0bf7a6c0\"",
     "extracted_dates": [],
@@ -23352,7 +23352,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:24:06+00:00",
     "etag": "\"e3ac693d2bd0c249509da81947512c05\"",
     "extracted_dates": [],
@@ -23395,7 +23395,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:24:08+00:00",
     "etag": "\"daf078bab0908bd79653038bfae70032\"",
     "extracted_dates": [],
@@ -23438,7 +23438,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:24:10+00:00",
     "etag": "\"4b2a41ec85259ae57ca49ebc30a7a399\"",
     "extracted_dates": [],
@@ -23481,7 +23481,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:24:12+00:00",
     "etag": "\"f073d560c329e7a30e5c6552b78925b1\"",
     "extracted_dates": [],
@@ -23524,7 +23524,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:24:14+00:00",
     "etag": "\"992cc786f7d2915ef4e5bb557c32fe24\"",
     "extracted_dates": [],
@@ -23567,7 +23567,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:24:16+00:00",
     "etag": "\"e0b21f1218b3edf4cb9c3dc3375f56c3\"",
     "extracted_dates": [],
@@ -23610,7 +23610,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:24:18+00:00",
     "etag": "\"3d4e40f0e297bcbf4f25f4f677aae463\"",
     "extracted_dates": [],
@@ -23653,7 +23653,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:24:20+00:00",
     "etag": "\"2c914e72d3d8ebd94e6cb54d5c117831\"",
     "extracted_dates": [],
@@ -23696,7 +23696,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:24:22+00:00",
     "etag": "\"853181d7e65abcbb1b1a72e59a444a24\"",
     "extracted_dates": [],
@@ -23739,7 +23739,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:24:24+00:00",
     "etag": "\"47868b9110884f13f2f5bf895829dd00\"",
     "extracted_dates": [],
@@ -23782,7 +23782,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:24:26+00:00",
     "etag": "\"4033bae23bef40b4272f06750362ca9e\"",
     "extracted_dates": [],
@@ -23825,7 +23825,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:24:28+00:00",
     "etag": "\"27617b506c716d47eab3dec595961ab1\"",
     "extracted_dates": [],
@@ -23911,7 +23911,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:24:32+00:00",
     "etag": "\"f37bc2406c0648e436dabbf621480241\"",
     "extracted_dates": [],
@@ -23954,7 +23954,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:24:34+00:00",
     "etag": "\"984be3e449c4b177208e99762c12558f\"",
     "extracted_dates": [],
@@ -23997,7 +23997,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:24:36+00:00",
     "etag": "\"9d0f635ae53f9e75c026317735e66998\"",
     "extracted_dates": [],
@@ -24347,7 +24347,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:24:51+00:00",
     "etag": "\"f9c0109480769d2618cc21e9a294680a\"",
     "extracted_dates": [],
@@ -24390,7 +24390,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:24:53+00:00",
     "etag": "\"939638396218c07f3d7bfc30065d2d14\"",
     "extracted_dates": [],
@@ -24433,7 +24433,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:24:55+00:00",
     "etag": "\"c291b1fb38ad0ebe8e075390e5b735ae\"",
     "extracted_dates": [],
@@ -24477,7 +24477,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:24:57+00:00",
     "etag": "\"7b5c637f0f350fb095ecc4015a41d7ff\"",
     "extracted_dates": [],
@@ -24521,7 +24521,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:24:59+00:00",
     "etag": "\"5857dfc16592c114713816ef3bd5111c\"",
     "extracted_dates": [],
@@ -24564,7 +24564,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:25:01+00:00",
     "etag": "\"1594c4edf980ceccc5e929d31dc6944f\"",
     "extracted_dates": [],
@@ -24607,7 +24607,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:25:04+00:00",
     "etag": "\"d43b41c5ed8be307b933dc83bbdf0d3e\"",
     "extracted_dates": [],
@@ -24650,7 +24650,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:25:05+00:00",
     "etag": "\"3455e39beddc3b25e89ed12546005d0b\"",
     "extracted_dates": [],
@@ -24693,7 +24693,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:25:07+00:00",
     "etag": "\"ebb922906b50b276008c3302d079442e\"",
     "extracted_dates": [],
@@ -24736,7 +24736,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:25:09+00:00",
     "etag": "\"7cc3773701f14701fe30cf376381d3b6\"",
     "extracted_dates": [],
@@ -24779,7 +24779,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:25:11+00:00",
     "etag": "\"c30a20be86df5616101dcfb0df6b5394\"",
     "extracted_dates": [],
@@ -24822,7 +24822,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:25:13+00:00",
     "etag": "\"39d908330d2229d148fadb77838e5efd\"",
     "extracted_dates": [],
@@ -24865,7 +24865,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:25:15+00:00",
     "etag": "\"7367563bc3a0eb47646aa74601328635\"",
     "extracted_dates": [],
@@ -24908,7 +24908,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:25:17+00:00",
     "etag": "\"212a977f4572fdc5fbe4e817c74b65f1\"",
     "extracted_dates": [],
@@ -24951,7 +24951,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:25:19+00:00",
     "etag": "\"38cd5a858b735c7a8f77a6a80eadb13d\"",
     "extracted_dates": [],
@@ -24994,7 +24994,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:25:21+00:00",
     "etag": "\"c0859520d193fd9970887023da821dac\"",
     "extracted_dates": [],
@@ -25037,7 +25037,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:25:23+00:00",
     "etag": "\"666350cd1fd80c8e15ab4c12afe52bd3\"",
     "extracted_dates": [],
@@ -25080,7 +25080,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:25:25+00:00",
     "etag": "\"de88a33df5ef227d09de80baac6aa1e3\"",
     "extracted_dates": [],
@@ -25123,7 +25123,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:25:27+00:00",
     "etag": "\"d9ea8f6e7ffc7b7ef78af6510727bd83\"",
     "extracted_dates": [],
@@ -25166,7 +25166,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:25:29+00:00",
     "etag": "\"abe108bf71742d78776509eeab03a2c2\"",
     "extracted_dates": [],
@@ -25209,7 +25209,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:25:31+00:00",
     "etag": "\"6f85edc46b547e4a5263a9d448eb89c3\"",
     "extracted_dates": [],
@@ -25252,7 +25252,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:25:33+00:00",
     "etag": "\"6e48332218e54227f12bb8b7f5ab05cc\"",
     "extracted_dates": [],
@@ -25295,7 +25295,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:25:35+00:00",
     "etag": "\"978c87b099f7cf5f576f793d91b49aca\"",
     "extracted_dates": [],
@@ -25338,7 +25338,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:25:37+00:00",
     "etag": "\"3f2a0a209ec32860732798b92be41b9e\"",
     "extracted_dates": [],
@@ -25381,7 +25381,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:25:39+00:00",
     "etag": "\"aa80d9ad56c7dd239055239cc32821c0\"",
     "extracted_dates": [],
@@ -25424,7 +25424,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:25:41+00:00",
     "etag": "\"898af8f9c8c446a87745e483d80092b5\"",
     "extracted_dates": [],
@@ -25467,7 +25467,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:25:43+00:00",
     "etag": "\"9ef33279aa0620b76d840eea381c8fab\"",
     "extracted_dates": [],
@@ -25510,7 +25510,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:25:45+00:00",
     "etag": "\"18a9636dee8878d50d3fbc4b9097c71c\"",
     "extracted_dates": [],
@@ -25553,7 +25553,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:25:47+00:00",
     "etag": "\"22b36659d7296020dc0903e46485d6fa\"",
     "extracted_dates": [],
@@ -25596,7 +25596,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:25:49+00:00",
     "etag": "\"4f6764f6b0acd182ed77ac7c35739b63\"",
     "extracted_dates": [],
@@ -25639,7 +25639,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:25:51+00:00",
     "etag": "\"5a696647a090553f1dd16ae67f3bcd2a\"",
     "extracted_dates": [],
@@ -25682,7 +25682,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:25:53+00:00",
     "etag": "\"7c14dc795f5e149909f8472401fcd81a\"",
     "extracted_dates": [],
@@ -25725,7 +25725,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:25:55+00:00",
     "etag": "\"d1e75801ef194fa615b4affbc48a784b\"",
     "extracted_dates": [],
@@ -25768,7 +25768,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:25:57+00:00",
     "etag": "\"91e7ca27f7d7ea9741fc288ac62cd2ed\"",
     "extracted_dates": [],
@@ -25811,7 +25811,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:26:00+00:00",
     "etag": "\"69684fa2d6dd84ba3782795d68d2482b\"",
     "extracted_dates": [],
@@ -25900,7 +25900,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:26:04+00:00",
     "etag": "\"9f9e724d1a3c481ba76baac86f2667e5\"",
     "extracted_dates": [],
@@ -26011,7 +26011,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:26:08+00:00",
     "etag": "\"032a0b9e0d980b562d2f102abf51c580\"",
     "extracted_dates": [],
@@ -26055,7 +26055,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:26:10+00:00",
     "etag": "\"b3e7dfd7dfd9167ec9edb12c1062f020\"",
     "extracted_dates": [],
@@ -26099,7 +26099,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:26:12+00:00",
     "etag": "\"721a8cd2e288d726ce6821d749c9ae73\"",
     "extracted_dates": [],
@@ -26143,7 +26143,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:26:14+00:00",
     "etag": "\"dfea9a1b861bb7729c356c217730271f\"",
     "extracted_dates": [],
@@ -26187,7 +26187,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:26:16+00:00",
     "etag": "\"3a28bcda3eb623ee76f60ddec7c0c992\"",
     "extracted_dates": [],
@@ -26231,7 +26231,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:26:18+00:00",
     "etag": "\"53a5de0f8fb17d1aae972be4a48d3467\"",
     "extracted_dates": [],
@@ -26275,7 +26275,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:26:20+00:00",
     "etag": "\"dd4d646bc6010aaba97bed800fa26fe3\"",
     "extracted_dates": [],
@@ -26364,7 +26364,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:26:24+00:00",
     "etag": "\"d5d4b332ee6fe3cc2208b8fa372c923d\"",
     "extracted_dates": [],
@@ -26409,7 +26409,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:26:26+00:00",
     "etag": "\"a9ac0aea78573f5e21fdcf6fd85f0639\"",
     "extracted_dates": [],
@@ -26454,7 +26454,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:26:28+00:00",
     "etag": "\"02c56212c2164ede4a07aee6caf2bcad\"",
     "extracted_dates": [],
@@ -26499,7 +26499,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:26:30+00:00",
     "etag": "\"003ced40f07850bc70a346919ca59660\"",
     "extracted_dates": [],
@@ -26697,7 +26697,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:26:38+00:00",
     "etag": "\"61b8b1dcf09fa76d28c1acf31694634a\"",
     "extracted_dates": [],
@@ -26741,7 +26741,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:26:40+00:00",
     "etag": "\"df6f5c6f3d52e7c3ba9377e28a0b665a\"",
     "extracted_dates": [],
@@ -26785,7 +26785,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:26:42+00:00",
     "etag": "\"6a8dd825d1683228032deac5868f71e5\"",
     "extracted_dates": [],
@@ -26830,7 +26830,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:26:44+00:00",
     "etag": "\"912ccae59e0dc3051f97d7b4359e983a\"",
     "extracted_dates": [],
@@ -26875,7 +26875,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:26:46+00:00",
     "etag": "\"f39210c7b37fa2cfdfce71b8c9372945\"",
     "extracted_dates": [],
@@ -26967,7 +26967,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:26:50+00:00",
     "etag": "\"e9ba6282fce30bc9f8365035bb69adf2\"",
     "extracted_dates": [],
@@ -27104,7 +27104,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:26:56+00:00",
     "etag": "\"84f2b42dbf4773d41f2042acd52a39e8\"",
     "extracted_dates": [
@@ -27263,7 +27263,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:27:02+00:00",
     "etag": "\"8fa14467ab8ca025a3dcfcabe5da1449\"",
     "extracted_dates": [],
@@ -27414,7 +27414,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "transcript",
     "downloaded_at": "2026-02-07T11:27:09+00:00",
     "etag": "\"796ff1dd0b5b788819475369143384ee\"",
     "extracted_dates": [],
@@ -27473,7 +27473,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "transcript",
     "downloaded_at": "2026-02-07T11:27:10+00:00",
     "etag": "\"676a936315e4d5cd893e6dcc1ed8d622\"",
     "extracted_dates": [],
@@ -27518,7 +27518,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:27:12+00:00",
     "etag": "\"e9133ae88148156a507803954513ece8\"",
     "extracted_dates": [],
@@ -27569,7 +27569,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:27:14+00:00",
     "etag": "\"b1829c8f145006e91aa04580c27de4ee\"",
     "extracted_dates": [],
@@ -27613,7 +27613,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:27:16+00:00",
     "etag": "\"ee94bd3d7d5f051d81a130562b62c338\"",
     "extracted_dates": [],
@@ -28261,7 +28261,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:27:54+00:00",
     "etag": "\"a536a61454e0479b1467136d4be7cb1b\"",
     "extracted_dates": [],
@@ -28411,7 +28411,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:28:02+00:00",
     "etag": "\"f5f0a7a7e27d3136ed50fcb30ff770af\"",
     "extracted_dates": [],
@@ -28463,7 +28463,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:28:04+00:00",
     "etag": "\"69371cbe2420c6501dbd5696e22de9f8\"",
     "extracted_dates": [],
@@ -28649,7 +28649,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:28:12+00:00",
     "etag": "\"32a645f0f4c3fad7d0d6f789e248f3a0\"",
     "extracted_dates": [],
@@ -28692,7 +28692,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:28:14+00:00",
     "etag": "\"872091aacd5d505400c3c921132d8d43\"",
     "extracted_dates": [],
@@ -29922,7 +29922,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:28:58+00:00",
     "etag": "\"14caa1d07ac47252637f790cf44e98c8\"",
     "extracted_dates": [
@@ -30125,7 +30125,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:29:04+00:00",
     "etag": "\"698284bbce22f69cdb4f01994068931b\"",
     "extracted_dates": [],
@@ -30168,7 +30168,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:29:06+00:00",
     "etag": "\"1f824c3480f2392039552bf5ba2472f4\"",
     "extracted_dates": [],
@@ -30595,7 +30595,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:29:20+00:00",
     "etag": "\"90b7960c585db83d81db857198dbaec6\"",
     "extracted_dates": [],
@@ -31087,7 +31087,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:29:38+00:00",
     "etag": "\"d4d5a34eab73126fd9e78e7f7b934fa3\"",
     "extracted_dates": [],
@@ -31807,7 +31807,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:30:08+00:00",
     "etag": "\"38917f7c76c61d3a5ac3cf7463a8f2f7\"",
     "extracted_dates": [],
@@ -31851,7 +31851,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "phone-record",
     "downloaded_at": "2026-02-07T11:30:11+00:00",
     "etag": "\"416d09ad0781616120de24d37452eea9\"",
     "extracted_dates": [
@@ -31920,7 +31920,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "phone-record",
     "downloaded_at": "2026-02-07T11:30:13+00:00",
     "etag": "\"a109223e86e6335253e07b677cc44117\"",
     "extracted_dates": [
@@ -32073,7 +32073,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "phone-record",
     "downloaded_at": "2026-02-07T11:30:17+00:00",
     "etag": "\"fb7d86b7a3b0f6220473ac3e0cc9476d\"",
     "extracted_dates": [
@@ -32232,7 +32232,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "transcript",
     "downloaded_at": "2026-02-07T11:30:21+00:00",
     "etag": "\"a5b82f9ad0e7887888fb29d364ac3417\"",
     "extracted_dates": [
@@ -32451,7 +32451,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "transcript",
     "downloaded_at": "2026-02-07T11:30:26+00:00",
     "etag": "\"80ccfda46549e5d092bedb3f8ae9b61e\"",
     "extracted_dates": [],
@@ -33023,7 +33023,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "phone-record",
     "downloaded_at": "2026-02-07T11:30:45+00:00",
     "etag": "\"5339e22de0274c06cb9bebcce05e1258\"",
     "extracted_dates": [
@@ -33094,7 +33094,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:30:46+00:00",
     "etag": "\"b33510139de6fe0fc36e1789ac90fd99\"",
     "extracted_dates": [],
@@ -33139,7 +33139,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:30:49+00:00",
     "etag": "\"2105c6944e05f0848d2bb33d6af3bb58\"",
     "extracted_dates": [],
@@ -33279,7 +33279,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:30:54+00:00",
     "etag": "\"5b3ed1229114b61a63d178b84e43e5c5\"",
     "extracted_dates": [],
@@ -33323,7 +33323,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:30:56+00:00",
     "etag": "\"b2aae2aad0f5541df804aa8bf75bea12\"",
     "extracted_dates": [],
@@ -33367,7 +33367,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:30:58+00:00",
     "etag": "\"98414e524c162d79c821b9a6f2c6a42c\"",
     "extracted_dates": [],
@@ -33410,7 +33410,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:31:00+00:00",
     "etag": "\"114ee83e152642beedae92b986088822\"",
     "extracted_dates": [],
@@ -33454,7 +33454,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:31:02+00:00",
     "etag": "\"e9393d0b931ce771ea34f6efc075baae\"",
     "extracted_dates": [],
@@ -33964,7 +33964,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:31:20+00:00",
     "etag": "\"d148e1220152d555888bd0c6fbdadec7\"",
     "extracted_dates": [],
@@ -34011,7 +34011,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:31:22+00:00",
     "etag": "\"3482c06eea135cfb2802a2d5466509fa\"",
     "extracted_dates": [],
@@ -34054,7 +34054,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:31:24+00:00",
     "etag": "\"532ec1eebbc87afd8919044d96aaf469\"",
     "extracted_dates": [],
@@ -34152,7 +34152,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:31:28+00:00",
     "etag": "\"033e9a52089be25fa1b802e3bd377790\"",
     "extracted_dates": [],
@@ -34196,7 +34196,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:31:30+00:00",
     "etag": "\"2f35528a81a55811cc5b1953aa2e1f09\"",
     "extracted_dates": [],
@@ -34239,7 +34239,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:31:32+00:00",
     "etag": "\"aba8a3847889795a9bc02669f6e518af\"",
     "extracted_dates": [],
@@ -34283,7 +34283,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:31:34+00:00",
     "etag": "\"23831f2687743f16b7de1ecd28b0dfd3\"",
     "extracted_dates": [],
@@ -34373,7 +34373,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:31:38+00:00",
     "etag": "\"927ea394a5608ccce5e1b89be351e934\"",
     "extracted_dates": [],
@@ -34597,7 +34597,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:31:48+00:00",
     "etag": "\"c1eebb7f023fb90eb12333cb32d8fac8\"",
     "extracted_dates": [],
@@ -34640,7 +34640,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:31:50+00:00",
     "etag": "\"71db2cdb701f8589a848dcda334773ce\"",
     "extracted_dates": [],
@@ -34683,7 +34683,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:31:52+00:00",
     "etag": "\"40d2c37cef44e9fb602610e100b3b684\"",
     "extracted_dates": [],
@@ -34726,7 +34726,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:31:54+00:00",
     "etag": "\"837c2750d633b74a11434f1bbdad8ce1\"",
     "extracted_dates": [],
@@ -34769,7 +34769,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:31:56+00:00",
     "etag": "\"0449025c043733dccb33c8bab946ff7f\"",
     "extracted_dates": [],
@@ -34855,7 +34855,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:32:00+00:00",
     "etag": "\"12a59035e65fe180870e4e995f66cc56\"",
     "extracted_dates": [],
@@ -34898,7 +34898,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:32:02+00:00",
     "etag": "\"b56c3ea43caa5972cad8caa4d3e080eb\"",
     "extracted_dates": [],
@@ -34941,7 +34941,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:32:05+00:00",
     "etag": "\"8d505562d0b8536c5d083330704e9fb2\"",
     "extracted_dates": [],
@@ -34984,7 +34984,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:32:06+00:00",
     "etag": "\"836330e2ecdd6e46d310e096f76bfb37\"",
     "extracted_dates": [],
@@ -35027,7 +35027,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:32:08+00:00",
     "etag": "\"5167b314965b49019f0a81e8191957cb\"",
     "extracted_dates": [],
@@ -35070,7 +35070,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:32:10+00:00",
     "etag": "\"8fc382e2ecfae06a6a200a3b043ac6fe\"",
     "extracted_dates": [],
@@ -35113,7 +35113,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:32:12+00:00",
     "etag": "\"e98a572e60dbbb574cefb16ef66c8d1e\"",
     "extracted_dates": [],
@@ -35156,7 +35156,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:32:14+00:00",
     "etag": "\"9f133c5f107e149ae452ad4e5d7c7674\"",
     "extracted_dates": [],
@@ -35199,7 +35199,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:32:17+00:00",
     "etag": "\"82081ca65c9d4e3765d44ae65680a24e\"",
     "extracted_dates": [],
@@ -35285,7 +35285,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:32:20+00:00",
     "etag": "\"5fecef235fcc05bf5e9e9ee520b719e6\"",
     "extracted_dates": [],
@@ -35328,7 +35328,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:32:22+00:00",
     "etag": "\"949679a78fd6ca1ae5cff21e5f956042\"",
     "extracted_dates": [],
@@ -35371,7 +35371,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:32:24+00:00",
     "etag": "\"ef7bdbd68cfadd4fa7935ecf89f6faa3\"",
     "extracted_dates": [],
@@ -35414,7 +35414,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:32:26+00:00",
     "etag": "\"0cc6922c73092f51f8cfd01d4ea1aa1b\"",
     "extracted_dates": [],
@@ -35457,7 +35457,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:32:28+00:00",
     "etag": "\"d9f051225824b20979d9715868417ff6\"",
     "extracted_dates": [],
@@ -35500,7 +35500,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:32:30+00:00",
     "etag": "\"18e2cb74081c3cb02a473ebba1ead4ed\"",
     "extracted_dates": [],
@@ -35543,7 +35543,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:32:32+00:00",
     "etag": "\"517be129086786bc5267e6464497a0ea\"",
     "extracted_dates": [],
@@ -35586,7 +35586,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:32:34+00:00",
     "etag": "\"46b05ce8b5dd330681c5dec15faea7f2\"",
     "extracted_dates": [],
@@ -35629,7 +35629,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:32:36+00:00",
     "etag": "\"e0f42f2533b958a59cacb0fc9bba9166\"",
     "extracted_dates": [],
@@ -35715,7 +35715,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:32:40+00:00",
     "etag": "\"269001b43cddb367984ec2a243635b5d\"",
     "extracted_dates": [],
@@ -35758,7 +35758,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:32:42+00:00",
     "etag": "\"9bb0a5835d6ae6fd72591a3859eb7fd3\"",
     "extracted_dates": [],
@@ -35801,7 +35801,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:32:44+00:00",
     "etag": "\"862fbd98e05cc2c3e9b2596e132c2e99\"",
     "extracted_dates": [],
@@ -35887,7 +35887,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:32:48+00:00",
     "etag": "\"71203b7d034b2a4f054d802bc9c8b8ce\"",
     "extracted_dates": [],
@@ -35973,7 +35973,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:32:52+00:00",
     "etag": "\"ec11b7e175d4e443452c2a1ca2a0ec18\"",
     "extracted_dates": [],
@@ -36059,7 +36059,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:32:56+00:00",
     "etag": "\"fac73cf40e466d363c9db716f8493bd9\"",
     "extracted_dates": [],
@@ -36102,7 +36102,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:32:58+00:00",
     "etag": "\"515a5f3b27b3e129e4dd306076a8fa6a\"",
     "extracted_dates": [],
@@ -36145,7 +36145,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:33:00+00:00",
     "etag": "\"2563d1610e565b3f89a5d1d01f428bc2\"",
     "extracted_dates": [],
@@ -36188,7 +36188,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:33:02+00:00",
     "etag": "\"3483128e0e0a6fbe0f6a40c5f5e04c4e\"",
     "extracted_dates": [],
@@ -36231,7 +36231,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:33:05+00:00",
     "etag": "\"d538e101555a694575ebebcae53acc1f\"",
     "extracted_dates": [],
@@ -36274,7 +36274,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:33:06+00:00",
     "etag": "\"3628ccd3d9619575b594fc0524364e5c\"",
     "extracted_dates": [],
@@ -36406,7 +36406,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:33:12+00:00",
     "etag": "\"cb4483923ce49f59772a6084ce81213c\"",
     "extracted_dates": [],
@@ -36449,7 +36449,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:33:14+00:00",
     "etag": "\"cf699f7bc171b32fb0a2a1cb31465843\"",
     "extracted_dates": [],
@@ -36492,7 +36492,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:33:16+00:00",
     "etag": "\"28d3c4e8e0bd46333760a2293ab6b7bc\"",
     "extracted_dates": [],
@@ -36535,7 +36535,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:33:18+00:00",
     "etag": "\"9b51113bdecb6cc3cf38ee3bd89f57d8\"",
     "extracted_dates": [],
@@ -36578,7 +36578,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:33:20+00:00",
     "etag": "\"2827174fc6ed91fd0dac4c18d6f7cb7e\"",
     "extracted_dates": [],
@@ -36621,7 +36621,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:33:23+00:00",
     "etag": "\"a43ad3b300cbf057fd5354b441168712\"",
     "extracted_dates": [],
@@ -36664,7 +36664,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:33:24+00:00",
     "etag": "\"1573f6e1f78be3ef31439137a91e6d99\"",
     "extracted_dates": [],
@@ -36707,7 +36707,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:33:26+00:00",
     "etag": "\"f6291fd174572ea06c3d213902011c89\"",
     "extracted_dates": [],
@@ -36750,7 +36750,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:33:28+00:00",
     "etag": "\"653f0d0f0d4045a88a9632a3bc2c3c05\"",
     "extracted_dates": [],
@@ -36793,7 +36793,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:33:30+00:00",
     "etag": "\"0577045eab29181a93fcb168386b8e26\"",
     "extracted_dates": [],
@@ -36836,7 +36836,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:33:32+00:00",
     "etag": "\"e27333f64679cf85b80677d26445a0af\"",
     "extracted_dates": [],
@@ -36879,7 +36879,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:33:34+00:00",
     "etag": "\"719363c1a6a731b0bd8fc6e781681e6c\"",
     "extracted_dates": [],
@@ -36922,7 +36922,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:33:36+00:00",
     "etag": "\"4e16fccc43fabc9585b0d5e26acd43e5\"",
     "extracted_dates": [],
@@ -36965,7 +36965,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:33:38+00:00",
     "etag": "\"b2a70314768fe042cb5931b32052e832\"",
     "extracted_dates": [],
@@ -37051,7 +37051,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:33:43+00:00",
     "etag": "\"33b5c30b8cedf059479fdc6ea16887a9\"",
     "extracted_dates": [],
@@ -37137,7 +37137,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:33:47+00:00",
     "etag": "\"9d9c62304e2eddec231bf5ba80737186\"",
     "extracted_dates": [],
@@ -37180,7 +37180,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:33:48+00:00",
     "etag": "\"db912a4b029ffa46cd03b919bafbdc7f\"",
     "extracted_dates": [],
@@ -37354,7 +37354,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:33:56+00:00",
     "etag": "\"9ab47322e50f1aee2e39882f1b3dddc4\"",
     "extracted_dates": [],
@@ -37440,7 +37440,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:34:00+00:00",
     "etag": "\"c092e9464d33446abb1fed65ba7715e9\"",
     "extracted_dates": [],
@@ -37483,7 +37483,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:34:03+00:00",
     "etag": "\"dcfa3957f11bee3b6d645ec5c9b5e487\"",
     "extracted_dates": [],
@@ -37744,7 +37744,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "transcript",
     "downloaded_at": "2026-02-07T11:34:14+00:00",
     "etag": "\"d5eabc2781bd14e7c6a3a741f21ffe08\"",
     "extracted_dates": [],
@@ -37918,7 +37918,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:34:23+00:00",
     "etag": "\"f5e2e8e220ed7cabfa67fb7f2f18a2f3\"",
     "extracted_dates": [],
@@ -37961,7 +37961,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:34:25+00:00",
     "etag": "\"a0eb3038312a18ba49ab8ea2871d5b23\"",
     "extracted_dates": [],
@@ -38004,7 +38004,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:34:27+00:00",
     "etag": "\"e04eb5158909a7dd10ae14d50f9b0742\"",
     "extracted_dates": [],
@@ -38090,7 +38090,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:34:30+00:00",
     "etag": "\"042549ceb452a6ad855d3c293449f94d\"",
     "extracted_dates": [],
@@ -38262,7 +38262,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:34:39+00:00",
     "etag": "\"dd1d2382ec60e82c15430867eba58b4e\"",
     "extracted_dates": [],
@@ -38434,7 +38434,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:34:46+00:00",
     "etag": "\"29d17c709babc9500fd38f5234d0182e\"",
     "extracted_dates": [],
@@ -38563,7 +38563,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:34:53+00:00",
     "etag": "\"73c13859c227ee984af5b0f42937d868\"",
     "extracted_dates": [],
@@ -38649,7 +38649,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:34:57+00:00",
     "etag": "\"c8127008edca824ff95e8e7d14b5e7f2\"",
     "extracted_dates": [],
@@ -38692,7 +38692,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:34:59+00:00",
     "etag": "\"1a60756a68abe22f949d557eebf425d5\"",
     "extracted_dates": [],
@@ -39241,7 +39241,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "government-form",
     "downloaded_at": "2026-02-07T11:35:16+00:00",
     "etag": "\"fd2aceb156a50f3bbea8bfb4a4633bf5\"",
     "extracted_dates": [
@@ -42377,7 +42377,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:36:57+00:00",
     "etag": "\"77e9cfef52517e8d57d9a7b0ba3d025d\"",
     "extracted_dates": [
@@ -43274,7 +43274,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:37:31+00:00",
     "etag": "\"22fc6b91eb2e06bd83b206f4c217431c\"",
     "extracted_dates": [
@@ -43366,7 +43366,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:37:35+00:00",
     "etag": "\"3aadd4dbdc4b74866ee25985f3f7405f\"",
     "extracted_dates": [
@@ -44620,7 +44620,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:38:23+00:00",
     "etag": "\"55ab6e3c53a239583452c14fb6226ce6\"",
     "extracted_dates": [],
@@ -46500,7 +46500,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:39:29+00:00",
     "etag": "\"4a72e8b89261aa9442bb13a6815105f0\"",
     "extracted_dates": [],
