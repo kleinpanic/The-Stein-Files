@@ -32,9 +32,7 @@
     "ocr_applied": false,
     "pages": 3,
     "pdf_type": "text",
-    "person_names": [
-      "Jeffrey Epstein"
-    ],
+    "person_names": [],
     "release_date": "2025-02-27",
     "sha256": "a2d4c4624e434b381d523764d51ca8e91da114beea7d658b69e41433f9dd89e5",
     "source_name": "DOJ OPA Press Release \u2014 First Phase Declassified (Feb 27, 2025)",
@@ -125,9 +123,7 @@
     "ocr_applied": false,
     "pages": 20,
     "pdf_type": "text",
-    "person_names": [
-      "Ghislaine Maxwell"
-    ],
+    "person_names": [],
     "release_date": "2025-02-27",
     "sha256": "f2f8c7628ddc9cbc1cf6a7532b847ae45eec1165cb400fccea19213982956d3d",
     "source_name": "DOJ OPA Press Release \u2014 First Phase Declassified (Feb 27, 2025)",
@@ -1318,9 +1314,7 @@
     "ocr_applied": true,
     "pages": 1,
     "pdf_type": "text",
-    "person_names": [
-      "Jeffrey Epstein"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "e5bcc85d963ce1f1b0273c04e7cdfea0ac363c5c4fdff3b229d86835583546f5",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -4853,9 +4847,7 @@
     "ocr_applied": false,
     "pages": 2,
     "pdf_type": "text",
-    "person_names": [
-      "Ghislaine Maxwell"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "bb9ad42fde1cd0b39675efacea60b045fb80645886255de7c3eadf4f0f50ae36",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -5566,9 +5558,7 @@
     "ocr_applied": false,
     "pages": 5,
     "pdf_type": "text",
-    "person_names": [
-      "Jeffrey Epstein"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "1e68a7a5c606eb81a85568adc4dd543237b835beffd443022259af8cbf8b504f",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -5917,8 +5907,8 @@
     "pages": 9,
     "pdf_type": "text",
     "person_names": [
-      "Ghislaine Maxwell",
-      "Jeffrey Epstein"
+      "Jeffrey Epstein",
+      "Ghislaine Maxwell"
     ],
     "release_date": "2026-01-30",
     "sha256": "cf19861c90eae8983084143402f567c4f3e136df71d8aa8948d417407c80cd67",
@@ -6186,8 +6176,7 @@
     "pages": 21,
     "pdf_type": "text",
     "person_names": [
-      "Ghislaine Maxwell",
-      "Jeffrey Epstein"
+      "Ghislaine Maxwell"
     ],
     "release_date": "2026-01-30",
     "sha256": "2d232c81c27a159b181a9700f3be36b7639ca27a60286f2657f646cfd4795178",
@@ -6286,9 +6275,7 @@
     "ocr_applied": false,
     "pages": 4,
     "pdf_type": "text",
-    "person_names": [
-      "Ghislaine Maxwell"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "bf896a2fbd5d03c8465cb7a1ee7c8a7f2056686e47f4c28760fd9fb0da4466bf",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -6344,7 +6331,6 @@
     "pages": 4,
     "pdf_type": "hybrid",
     "person_names": [
-      "Ghislaine Maxwell",
       "Jeffrey Epstein"
     ],
     "release_date": "2026-01-30",
@@ -6437,7 +6423,8 @@
     "pages": 41,
     "pdf_type": "text",
     "person_names": [
-      "Jeffrey Epstein"
+      "Jeffrey Epstein",
+      "Darren Indyke"
     ],
     "release_date": "2026-01-30",
     "sha256": "c5c5e5908b2a31e7d43bd4ca7eebbf391a00d605cb62dedfa79ad6864f6ddb01",
@@ -6513,9 +6500,7 @@
     "ocr_applied": false,
     "pages": 7,
     "pdf_type": "text",
-    "person_names": [
-      "Jeffrey Epstein"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "5f2b619877993add4abf4fab7bef51abcbf95180190e735037a0060fb5fafb3b",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -6588,9 +6573,7 @@
     "ocr_applied": false,
     "pages": 6,
     "pdf_type": "text",
-    "person_names": [
-      "Jeffrey Epstein"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "d3f7f5d74f26b0c050166b3c47073156ea8d3cbc4548534c7733a739c5ec9c0c",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -6663,9 +6646,7 @@
     "ocr_applied": false,
     "pages": 3,
     "pdf_type": "text",
-    "person_names": [
-      "Jeffrey Epstein"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "25d3465c3f6ed6e6c4c81e21e658dfeddb532bfc76a1ac36661e7bd932f47059",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -6747,9 +6728,7 @@
     "ocr_applied": false,
     "pages": 14,
     "pdf_type": "text",
-    "person_names": [
-      "Ghislaine Maxwell"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "1724112dc435be5ebb6e6f281eb02a8116b065285d1e9a7fe56c23f1ec5e24ba",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -6821,8 +6800,8 @@
     "pages": 13,
     "pdf_type": "text",
     "person_names": [
-      "Ghislaine Maxwell",
-      "Jeffrey Epstein"
+      "Jeffrey Epstein",
+      "Ghislaine Maxwell"
     ],
     "release_date": "2026-01-30",
     "sha256": "c03d7aee3af69ad0055c4f742fc032fc2d191effec4f30c464e05e5ee96b3e76",
@@ -6885,8 +6864,8 @@
     "pages": 6,
     "pdf_type": "text",
     "person_names": [
-      "Ghislaine Maxwell",
-      "Jeffrey Epstein"
+      "Jeffrey Epstein",
+      "Ghislaine Maxwell"
     ],
     "release_date": "2026-01-30",
     "sha256": "4932c70b80683fd1df61a428b362db26f1540f9e8dbf51e7368dfdd2ab0a64f9",
@@ -6959,10 +6938,8 @@
     "pages": 26,
     "pdf_type": "text",
     "person_names": [
-      "Alan Dershowitz",
-      "Donald Trump",
-      "Ghislaine Maxwell",
-      "Jeffrey Epstein"
+      "Jeffrey Epstein",
+      "Alan Dershowitz"
     ],
     "release_date": "2026-01-30",
     "sha256": "5ab58cf2f3b021024fbdfa06740950e1326535ae660b06aab34266234d9c7f94",
@@ -7068,9 +7045,7 @@
     "ocr_applied": false,
     "pages": 1,
     "pdf_type": "text",
-    "person_names": [
-      "Ghislaine Maxwell"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "de71ec1d3758680f5ac544a6ebcf3d2939beaec12d0bd375f78f0c2f2e73caf8",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -8960,9 +8935,7 @@
     "ocr_applied": false,
     "pages": 20,
     "pdf_type": "text",
-    "person_names": [
-      "Jeffrey Epstein"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "67e1ca2677d8846d1cbfc65f74759e6d13fbe89642cf572a4df0cad2d17ce1c3",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -9046,9 +9019,7 @@
     "ocr_applied": false,
     "pages": 56,
     "pdf_type": "text",
-    "person_names": [
-      "Jeffrey Epstein"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "849ec924d54d569a6cf126fbba44e1041f48ca847dd2e1066c1de10e4bce862c",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -9298,9 +9269,7 @@
     "ocr_applied": false,
     "pages": 122,
     "pdf_type": "text",
-    "person_names": [
-      "Ghislaine Maxwell"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "3938d60f49be37ca4f5219ad90630736bb43e0baddc9fc9ae03415ef49f7f178",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -9651,8 +9620,7 @@
     "pages": 3,
     "pdf_type": "text",
     "person_names": [
-      "Ghislaine Maxwell",
-      "Jeffrey Epstein"
+      "Ghislaine Maxwell"
     ],
     "release_date": "2026-01-30",
     "sha256": "0d7b8085a91eeb422294ec6c682bda0d33f8f1cda97e660be0157beddf32a8ae",
@@ -10063,7 +10031,9 @@
     "pages": 2,
     "pdf_type": "text",
     "person_names": [
-      "Jeffrey Epstein"
+      "Jeffrey Epstein",
+      "Reid Weingarten",
+      "Martin Weinberg"
     ],
     "release_date": "2026-01-30",
     "sha256": "04bca81b7303fa15f6fbcaaa4dc78febf508c3b37fd106636123ffdbe985831a",
@@ -10645,10 +10615,7 @@
     "ocr_applied": false,
     "pages": 45,
     "pdf_type": "text",
-    "person_names": [
-      "Jeffrey Epstein",
-      "Marvin Minsky"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "64c2566ff38057f282e58038ad69b91fe9ac9dc9fab6f7cc6b0c3744c9694ebc",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -10761,9 +10728,7 @@
     "ocr_applied": false,
     "pages": 2,
     "pdf_type": "text",
-    "person_names": [
-      "Jeffrey Epstein"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "bf9ed7d316334e62f8061919df7f8d6a6ae43afc31cda62388d424f8b9ba05a7",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -10892,7 +10857,9 @@
     "ocr_applied": false,
     "pages": 15,
     "pdf_type": "text",
-    "person_names": [],
+    "person_names": [
+      "Natalia Molotkova"
+    ],
     "release_date": "2026-01-30",
     "sha256": "ae296576ab8a6eb3d77bd9a537c3b7498a0b632eb13991698bb34aa8cb912018",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -10958,7 +10925,8 @@
     "pages": 16,
     "pdf_type": "text",
     "person_names": [
-      "Lesley Groff"
+      "Lesley Groff",
+      "Natalia Molotkova"
     ],
     "release_date": "2026-01-30",
     "sha256": "7b8e3add872fb7fdeb21e7b58b25d5d52e9d15ec31a927cf05bae5903e4fdb27",
@@ -11669,7 +11637,6 @@
     "pages": 1,
     "pdf_type": "text",
     "person_names": [
-      "Jeffrey Epstein",
       "Lesley Groff"
     ],
     "release_date": "2026-01-30",
@@ -11718,7 +11685,9 @@
     "ocr_applied": false,
     "pages": 1,
     "pdf_type": "text",
-    "person_names": [],
+    "person_names": [
+      "Karyna Shuliak"
+    ],
     "release_date": "2026-01-30",
     "sha256": "af2fd371e9786063c83adb61589b092024c5adc0d80c1d8ff1e5465b71dfff98",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -12182,7 +12151,9 @@
     "ocr_applied": false,
     "pages": 1,
     "pdf_type": "text",
-    "person_names": [],
+    "person_names": [
+      "Karyna Shuliak"
+    ],
     "release_date": "2026-01-30",
     "sha256": "a099de3297352f8608b1e68de345dc9c256578b8058c9b2833caac2a4ad3ac26",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -12339,7 +12310,8 @@
     "pages": 3,
     "pdf_type": "text",
     "person_names": [
-      "Lesley Groff"
+      "Lesley Groff",
+      "Natalia Molotkova"
     ],
     "release_date": "2026-01-30",
     "sha256": "12d39864e20d0af05a0e610f9fe40ca7858d94bc53d98f8a9669275e14843eb5",
@@ -12440,7 +12412,9 @@
     "ocr_applied": false,
     "pages": 3,
     "pdf_type": "text",
-    "person_names": [],
+    "person_names": [
+      "Natalia Molotkova"
+    ],
     "release_date": "2026-01-30",
     "sha256": "bf4afa9cbeea7b612b3e8417259e1172029321a40c9e082db9123afbc655e36f",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -12498,7 +12472,8 @@
     "pages": 4,
     "pdf_type": "text",
     "person_names": [
-      "Lesley Groff"
+      "Lesley Groff",
+      "Natalia Molotkova"
     ],
     "release_date": "2026-01-30",
     "sha256": "7156e0f27306cf1187bb132d9229dbc773fcf0b0871ff17e8795bb9185d2c55e",
@@ -12602,7 +12577,9 @@
     "ocr_applied": false,
     "pages": 3,
     "pdf_type": "text",
-    "person_names": [],
+    "person_names": [
+      "Karyna Shuliak"
+    ],
     "release_date": "2026-01-30",
     "sha256": "5058ffec77dd5661467e9c049fd9c6fade432c9a0b53922177e7d8d98252a052",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -12662,7 +12639,9 @@
     "ocr_applied": false,
     "pages": 6,
     "pdf_type": "text",
-    "person_names": [],
+    "person_names": [
+      "Natalia Molotkova"
+    ],
     "release_date": "2026-01-30",
     "sha256": "7ce9143d92c10bb78794ffdbef3bb9f65659492b1b4c12aeb132ae828c62fac9",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -12771,7 +12750,9 @@
     "ocr_applied": false,
     "pages": 4,
     "pdf_type": "text",
-    "person_names": [],
+    "person_names": [
+      "Natalia Molotkova"
+    ],
     "release_date": "2026-01-30",
     "sha256": "63e86b797f951255bee627e914df47068220a4dd16180d897d70bb1c47b532ca",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -12825,7 +12806,9 @@
     "ocr_applied": false,
     "pages": 3,
     "pdf_type": "text",
-    "person_names": [],
+    "person_names": [
+      "Natalia Molotkova"
+    ],
     "release_date": "2026-01-30",
     "sha256": "3423efede5561fddb4276fa3ef1b79adc25767df579c5e1cf12553d858c47453",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -12927,7 +12910,6 @@
     "pages": 1,
     "pdf_type": "text",
     "person_names": [
-      "Jeffrey Epstein",
       "Lesley Groff"
     ],
     "release_date": "2026-01-30",
@@ -13359,7 +13341,9 @@
     "ocr_applied": false,
     "pages": 2,
     "pdf_type": "text",
-    "person_names": [],
+    "person_names": [
+      "Natalia Molotkova"
+    ],
     "release_date": "2026-01-30",
     "sha256": "7190ef45cd1e3a61fb83275536594b5b666490ef5d5790c54029bd34deb5a129",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -13573,7 +13557,9 @@
     "ocr_applied": false,
     "pages": 3,
     "pdf_type": "text",
-    "person_names": [],
+    "person_names": [
+      "Karyna Shuliak"
+    ],
     "release_date": "2026-01-30",
     "sha256": "b520dad0e407fdd3d375e7472f1e3bb332410bed3164cff9385fda7083e345be",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -13629,7 +13615,7 @@
     "pages": 1,
     "pdf_type": "text",
     "person_names": [
-      "Jeffrey Epstein"
+      "Daphne Wallace"
     ],
     "release_date": "2026-01-30",
     "sha256": "22e9eeccb632c8ed1792d479eb272c811e8b0dd415c58c8ea542737001cd6286",
@@ -13683,7 +13669,9 @@
     "ocr_applied": false,
     "pages": 2,
     "pdf_type": "text",
-    "person_names": [],
+    "person_names": [
+      "Natalia Molotkova"
+    ],
     "release_date": "2026-01-30",
     "sha256": "7e72e511597cf26cd238b4fe367cdd52e4771b78d747579ebde401673a81b5ce",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -13792,9 +13780,7 @@
     "ocr_applied": false,
     "pages": 5,
     "pdf_type": "text",
-    "person_names": [
-      "Jeffrey Epstein"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "9745241f132a41f4321215106907f4c8eeb59871ba121b44d85a5ba8fc986ecf",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -13949,7 +13935,9 @@
     "ocr_applied": false,
     "pages": 2,
     "pdf_type": "text",
-    "person_names": [],
+    "person_names": [
+      "Natalia Molotkova"
+    ],
     "release_date": "2026-01-30",
     "sha256": "28da2873a2396fdb6d590945132d06afa255ae3fccb192646b969b5589b65317",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -14291,7 +14279,8 @@
     "pages": 2,
     "pdf_type": "text",
     "person_names": [
-      "Lesley Groff"
+      "Lesley Groff",
+      "Natalia Molotkova"
     ],
     "release_date": "2026-01-30",
     "sha256": "48064ae6e48cead79990ac84e7bf90f799fbe7e50c3f89b0591ca176aa48b1f2",
@@ -14588,7 +14577,6 @@
     "pages": 1,
     "pdf_type": "text",
     "person_names": [
-      "Jeffrey Epstein",
       "Lesley Groff"
     ],
     "release_date": "2026-01-30",
@@ -14685,7 +14673,9 @@
     "ocr_applied": false,
     "pages": 1,
     "pdf_type": "text",
-    "person_names": [],
+    "person_names": [
+      "Karyna Shuliak"
+    ],
     "release_date": "2026-01-30",
     "sha256": "113d2758f5965bc37519a31fb95f02351e91af94398a6318346142609437267e",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -15253,7 +15243,9 @@
     "ocr_applied": false,
     "pages": 3,
     "pdf_type": "text",
-    "person_names": [],
+    "person_names": [
+      "Natalia Molotkova"
+    ],
     "release_date": "2026-01-30",
     "sha256": "a7434cd4dc1e0a8bb2446665415811926b1a7edb4e4908e98a0027a53cccf1e8",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -15354,7 +15346,8 @@
     "pages": 2,
     "pdf_type": "text",
     "person_names": [
-      "Lesley Groff"
+      "Lesley Groff",
+      "Natalia Molotkova"
     ],
     "release_date": "2026-01-30",
     "sha256": "80f1e442fbb4f865c69c8692819949c8326a14ee72ece03d64d59930acf8144e",
@@ -15412,9 +15405,7 @@
     "ocr_applied": false,
     "pages": 2,
     "pdf_type": "text",
-    "person_names": [
-      "Jeffrey Epstein"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "829d8e6d03e883f0495062bcc411883e0010676a43f879c36db49f95e165e510",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -15919,7 +15910,9 @@
     "ocr_applied": false,
     "pages": 2,
     "pdf_type": "text",
-    "person_names": [],
+    "person_names": [
+      "Natalia Molotkova"
+    ],
     "release_date": "2026-01-30",
     "sha256": "bbf0e76dfd9916a75ae3dcdac067c42b74187ff09566b58b04a0bf5ccb174b8b",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -16015,8 +16008,8 @@
     "pages": 2,
     "pdf_type": "text",
     "person_names": [
-      "Bill Gates",
-      "Jeffrey Epstein"
+      "Jeffrey Epstein",
+      "Bill Gates"
     ],
     "release_date": "2026-01-30",
     "sha256": "4ffdabbb392f3126224b15047081c2aa6acc0b813d73943a8fc3792d40f28901",
@@ -16072,8 +16065,8 @@
     "pages": 4,
     "pdf_type": "text",
     "person_names": [
-      "Ghislaine Maxwell",
       "Jeffrey Epstein",
+      "Ghislaine Maxwell",
       "Prince Andrew"
     ],
     "release_date": "2026-01-30",
@@ -16130,8 +16123,8 @@
     "pages": 3,
     "pdf_type": "text",
     "person_names": [
-      "Ghislaine Maxwell",
-      "Jeffrey Epstein"
+      "Jeffrey Epstein",
+      "Ghislaine Maxwell"
     ],
     "release_date": "2026-01-30",
     "sha256": "52693ef15adb03ab0a24028422bafbb774c26be35ac439953c00319c58e6ff54",
@@ -16181,9 +16174,7 @@
     "ocr_applied": false,
     "pages": 1,
     "pdf_type": "text",
-    "person_names": [
-      "Jeffrey Epstein"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "17f4a6cf417e41c68d14c464cffafb3a83939aa16324d0c5bcd4f258fbd333ce",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -16404,8 +16395,8 @@
     "pages": 4,
     "pdf_type": "text",
     "person_names": [
-      "Ghislaine Maxwell",
-      "Jeffrey Epstein"
+      "Jeffrey Epstein",
+      "Ghislaine Maxwell"
     ],
     "release_date": "2026-01-30",
     "sha256": "ed228324eb39978c4780d013b97b7de93533ee79450dc287a7daa9e4296a7871",
@@ -16640,9 +16631,9 @@
     "pages": 255,
     "pdf_type": "text",
     "person_names": [
-      "Alfredo Rodriguez",
+      "Jeffrey Epstein",
       "Ghislaine Maxwell",
-      "Jeffrey Epstein"
+      "Alfredo Rodriguez"
     ],
     "release_date": "2026-01-30",
     "sha256": "449c459f63f58f3ee002ac15e8a7e449ad0606b097f384a0798d2a2fcab04148",
@@ -16935,12 +16926,10 @@
     "pages": 30,
     "pdf_type": "text",
     "person_names": [
-      "Bill Clinton",
-      "Chris Tucker",
       "Jeffrey Epstein",
-      "Kevin Spacey",
-      "Les Wexner",
-      "Lesley Groff"
+      "Lesley Groff",
+      "Bill Clinton",
+      "Chris Tucker"
     ],
     "release_date": "2026-01-30",
     "sha256": "218a9f1225e1deacd34f0568afcf451b8b98cda1dff8361ea4b72e1966d926af",
@@ -17008,8 +16997,7 @@
     "pages": 13,
     "pdf_type": "text",
     "person_names": [
-      "Jeffrey Epstein",
-      "Les Wexner"
+      "Jeffrey Epstein"
     ],
     "release_date": "2026-01-30",
     "sha256": "378b76f74b8b3064a8163144ee561d52f4e4184a84e538d1f520188b66824904",
@@ -17077,8 +17065,8 @@
     "pages": 32,
     "pdf_type": "text",
     "person_names": [
-      "Ghislaine Maxwell",
       "Jeffrey Epstein",
+      "Ghislaine Maxwell",
       "Juan Alessi"
     ],
     "release_date": "2026-01-30",
@@ -17152,9 +17140,10 @@
     "pages": 28,
     "pdf_type": "text",
     "person_names": [
-      "Ghislaine Maxwell",
       "Jeffrey Epstein",
-      "Juan Alessi"
+      "Ghislaine Maxwell",
+      "Juan Alessi",
+      "Harvey Weinstein"
     ],
     "release_date": "2026-01-30",
     "sha256": "98193bf1d112ab43ff2437bc4a929ab47812a5b51c10072c1057c64dbd73c8d0",
@@ -17401,9 +17390,7 @@
     "ocr_applied": false,
     "pages": 32,
     "pdf_type": "hybrid",
-    "person_names": [
-      "Jean-Luc Brunel"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "76d55209038b76b67254be86ffe3fd30b2e4f79a9a4beb914a9fdcaed5703cda",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -18019,9 +18006,7 @@
     "ocr_applied": false,
     "pages": 32,
     "pdf_type": "hybrid",
-    "person_names": [
-      "Donald Trump"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "4a7fa1caac9c4c1e7d2c2c4db84370bea0802c68750c519a8ac50089686b874e",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -18075,10 +18060,7 @@
     "ocr_applied": false,
     "pages": 8,
     "pdf_type": "text",
-    "person_names": [
-      "Lawrence Krauss",
-      "Marvin Minsky"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "90e0fb7b59723fc692ff7ac7457177582dc5a1d456497b338c7b1db621fa0c25",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -18139,8 +18121,6 @@
     "pages": 2,
     "pdf_type": "text",
     "person_names": [
-      "Ghislaine Maxwell",
-      "Jeffrey Epstein",
       "Leon Black"
     ],
     "release_date": "2026-01-30",
@@ -18237,7 +18217,8 @@
     "pages": 1,
     "pdf_type": "text",
     "person_names": [
-      "Leon Black"
+      "Leon Black",
+      "Jeanne Christensen"
     ],
     "release_date": "2026-01-30",
     "sha256": "06efab54df1fd59cc262c926513d3aa37f930f7404c6d39371e1c41ed5455e55",
@@ -18286,7 +18267,9 @@
     "ocr_applied": false,
     "pages": 1,
     "pdf_type": "text",
-    "person_names": [],
+    "person_names": [
+      "Jeanne Christensen"
+    ],
     "release_date": "2026-01-30",
     "sha256": "8aecc068c4591441f96932f382a2af2efc2e32e329f26a61f2a14557268ecab3",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -18454,7 +18437,9 @@
     "ocr_applied": false,
     "pages": 2,
     "pdf_type": "text",
-    "person_names": [],
+    "person_names": [
+      "Jeanne Christensen"
+    ],
     "release_date": "2026-01-30",
     "sha256": "b4017d4c19d40785c87198ebf213e8fe8e200de060f5b3081a5a780458c0b09d",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -18507,8 +18492,6 @@
     "pages": 1,
     "pdf_type": "text",
     "person_names": [
-      "Ghislaine Maxwell",
-      "Jeffrey Epstein",
       "Leon Black"
     ],
     "release_date": "2026-01-30",
@@ -18556,7 +18539,8 @@
     "pages": 1,
     "pdf_type": "text",
     "person_names": [
-      "Leon Black"
+      "Leon Black",
+      "Jeanne Christensen"
     ],
     "release_date": "2026-01-30",
     "sha256": "8203a023de0bb84fd77728af4ea5840f9d651addedf8cec2803b632a26f9fb03",
@@ -18604,8 +18588,6 @@
     "pages": 2,
     "pdf_type": "text",
     "person_names": [
-      "Ghislaine Maxwell",
-      "Jeffrey Epstein",
       "Leon Black"
     ],
     "release_date": "2026-01-30",
@@ -18660,9 +18642,8 @@
     "pages": 2,
     "pdf_type": "text",
     "person_names": [
-      "Ghislaine Maxwell",
-      "Jeffrey Epstein",
-      "Leon Black"
+      "Leon Black",
+      "Jeanne Christensen"
     ],
     "release_date": "2026-01-30",
     "sha256": "e8e3b128b2e1c27bb7777cb6d863c11946604e9fbd779647c0f3c021c7fcc58a",
@@ -18733,7 +18714,6 @@
     "pages": 7,
     "pdf_type": "text",
     "person_names": [
-      "Ghislaine Maxwell",
       "Leon Black"
     ],
     "release_date": "2026-01-30",
@@ -18975,9 +18955,7 @@
     "ocr_applied": false,
     "pages": 6,
     "pdf_type": "text",
-    "person_names": [
-      "Ghislaine Maxwell"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "5d658d598cab73053c7ad920db87c552cf630f7f40444e47493ff5269b32f091",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -19253,9 +19231,7 @@
     "ocr_applied": false,
     "pages": 2,
     "pdf_type": "text",
-    "person_names": [
-      "Ghislaine Maxwell"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "0e7ab540ddb5a36ba839975fee8f4d9e7575517d1a963ff6499953d9664ea1f4",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -19422,9 +19398,7 @@
     "ocr_applied": false,
     "pages": 4,
     "pdf_type": "text",
-    "person_names": [
-      "Ghislaine Maxwell"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "a8e06f876e51040db4a6438d573ff606c7f4f84ca03cd2d0e1351a4f3226c87a",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -19928,7 +19902,8 @@
     "pdf_type": "text",
     "person_names": [
       "Jeffrey Epstein",
-      "Leon Black"
+      "Leon Black",
+      "Doug Wigdor"
     ],
     "release_date": "2026-01-30",
     "sha256": "50c8f8b9e9f06d2dc5254ae279331fd69db01a5ae0ce1a41d66db2b494082ce2",
@@ -19989,7 +19964,6 @@
     "pages": 4,
     "pdf_type": "text",
     "person_names": [
-      "Jeffrey Epstein",
       "Leon Black"
     ],
     "release_date": "2026-01-30",
@@ -20049,8 +20023,6 @@
     "pages": 1,
     "pdf_type": "text",
     "person_names": [
-      "Ghislaine Maxwell",
-      "Jeffrey Epstein",
       "Leon Black"
     ],
     "release_date": "2026-01-30",
@@ -20118,7 +20090,6 @@
     "pages": 4,
     "pdf_type": "text",
     "person_names": [
-      "Ghislaine Maxwell",
       "Leon Black"
     ],
     "release_date": "2026-01-30",
@@ -20192,8 +20163,6 @@
     "pages": 6,
     "pdf_type": "text",
     "person_names": [
-      "Ghislaine Maxwell",
-      "Jeffrey Epstein",
       "Leon Black"
     ],
     "release_date": "2026-01-30",
@@ -20278,8 +20247,6 @@
     "pages": 11,
     "pdf_type": "text",
     "person_names": [
-      "Ghislaine Maxwell",
-      "Jeffrey Epstein",
       "Leon Black"
     ],
     "release_date": "2026-01-30",
@@ -20334,10 +20301,7 @@
     "ocr_applied": false,
     "pages": 4,
     "pdf_type": "text",
-    "person_names": [
-      "Ghislaine Maxwell",
-      "Jeffrey Epstein"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "cdf64a0871d5f4675def93156dc0dd01bc4b1374b5ff75b64556dfd75f48aac0",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -20389,10 +20353,7 @@
     "ocr_applied": false,
     "pages": 4,
     "pdf_type": "text",
-    "person_names": [
-      "Ghislaine Maxwell",
-      "Jeffrey Epstein"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "ffd6906139676a619c4d9861ec82298bfe394658e0216c06800febfb8744923e",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -20449,10 +20410,7 @@
     "ocr_applied": false,
     "pages": 3,
     "pdf_type": "text",
-    "person_names": [
-      "Ghislaine Maxwell",
-      "Jeffrey Epstein"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "b1791ea11d74149bf8e7d68a0d43a70093a941977423cd17cb1c2d432351549f",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -20507,9 +20465,7 @@
     "ocr_applied": false,
     "pages": 2,
     "pdf_type": "text",
-    "person_names": [
-      "Ghislaine Maxwell"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "10bc144bd2e253482ff07ec2dcf6968c73f3c4abdddfcb69b6429337d0fc79e7",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -20561,9 +20517,7 @@
     "ocr_applied": false,
     "pages": 1,
     "pdf_type": "text",
-    "person_names": [
-      "Ghislaine Maxwell"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "0a6888af5d4ae3af5f8b63401f352131e760059dccf88fbdc1508b12d26fd420",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -20617,10 +20571,7 @@
     "ocr_applied": false,
     "pages": 5,
     "pdf_type": "text",
-    "person_names": [
-      "Ghislaine Maxwell",
-      "Jeffrey Epstein"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "fb1f31b4013b1f8871f05b20e274d9263bcc5343e45c6338227c9c2371cf369a",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -20690,7 +20641,6 @@
     "pages": 5,
     "pdf_type": "text",
     "person_names": [
-      "Ghislaine Maxwell",
       "Leon Black"
     ],
     "release_date": "2026-01-30",
@@ -20980,7 +20930,8 @@
     "pages": 1,
     "pdf_type": "text",
     "person_names": [
-      "Leon Black"
+      "Leon Black",
+      "Jeanne Christensen"
     ],
     "release_date": "2026-01-30",
     "sha256": "6d803977db135207f5fb573612f99beb12a35126fcad57bb4ccdfc28a981ba2f",
@@ -21030,7 +20981,8 @@
     "pages": 1,
     "pdf_type": "text",
     "person_names": [
-      "Leon Black"
+      "Leon Black",
+      "Jeanne Christensen"
     ],
     "release_date": "2026-01-30",
     "sha256": "8715a3349397c96737b7a33baf2c2b77a0c75d235ec599e6658f82bbd06dbc1f",
@@ -21087,7 +21039,8 @@
     "pages": 2,
     "pdf_type": "text",
     "person_names": [
-      "Leon Black"
+      "Leon Black",
+      "Jeanne Christensen"
     ],
     "release_date": "2026-01-30",
     "sha256": "472e17671a6a038645c2981ab3e7631a7b32d28d57e3d86ab29f0d060ca61c17",
@@ -21207,9 +21160,7 @@
     "ocr_applied": false,
     "pages": 1,
     "pdf_type": "text",
-    "person_names": [
-      "Jeffrey Epstein"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "705ed0fcaf2db90e059c0788f78e9f7b5ae1e619b5ba86b727b009283cf9b0a4",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -21264,9 +21215,7 @@
     "ocr_applied": false,
     "pages": 2,
     "pdf_type": "text",
-    "person_names": [
-      "Jeffrey Epstein"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "aac7e8600cc9c39a2cbc64a0f5bbb190e8a726a0789e48ce791f00b91a8121c2",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -21321,9 +21270,7 @@
     "ocr_applied": false,
     "pages": 2,
     "pdf_type": "text",
-    "person_names": [
-      "Jeffrey Epstein"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "47fcd856cb8bddeba354a1d4bf2db244442a2d21b5bfb8a0829e63597a3c8ce7",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -21384,8 +21331,6 @@
     "pages": 3,
     "pdf_type": "text",
     "person_names": [
-      "Ghislaine Maxwell",
-      "Jeffrey Epstein",
       "Leon Black"
     ],
     "release_date": "2026-01-30",
@@ -21512,9 +21457,8 @@
     "pages": 4,
     "pdf_type": "text",
     "person_names": [
-      "Ghislaine Maxwell",
-      "Jeffrey Epstein",
-      "Leon Black"
+      "Leon Black",
+      "Jeanne Christensen"
     ],
     "release_date": "2026-01-30",
     "sha256": "fec2b22454e012e8efda73682688f4065e6d81be921999b389473ddd7abb2e27",
@@ -25986,9 +25930,7 @@
     "ocr_applied": false,
     "pages": 51,
     "pdf_type": "hybrid",
-    "person_names": [
-      "Jeffrey Epstein"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "758ec411ce57d897b6477b22daa6bef3b7b9b744e2c18fbb9284c0d1e01292de",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -28236,9 +28178,7 @@
     "ocr_applied": false,
     "pages": 97,
     "pdf_type": "hybrid",
-    "person_names": [
-      "Bill Clinton"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "95061f536bf33d757df0a44bd80b7245bb4100f8b77d9bfa9f38fd73263afdf6",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -28830,8 +28770,8 @@
     "pages": 8,
     "pdf_type": "text",
     "person_names": [
-      "Ghislaine Maxwell",
-      "Jeffrey Epstein"
+      "Jeffrey Epstein",
+      "Ghislaine Maxwell"
     ],
     "release_date": "2026-01-30",
     "sha256": "5ada6e3be90b882812bfd32f6fab9c24c1d327ad99cebf6c562bf81c1571cb1a",
@@ -28985,8 +28925,8 @@
     "pages": 4,
     "pdf_type": "text",
     "person_names": [
-      "Ghislaine Maxwell",
-      "Jeffrey Epstein"
+      "Jeffrey Epstein",
+      "Ghislaine Maxwell"
     ],
     "release_date": "2026-01-30",
     "sha256": "fa16419cde338d9665c918bb70e2253f357f96b562017670de01e46539c6dedd",
@@ -29044,9 +28984,7 @@
     "ocr_applied": false,
     "pages": 3,
     "pdf_type": "text",
-    "person_names": [
-      "Jeffrey Epstein"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "21e6df4ba150bff1c1504be0a33835c6644ec7829a14892bba18283820f6044d",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -29101,8 +29039,8 @@
     "pages": 2,
     "pdf_type": "text",
     "person_names": [
-      "Ghislaine Maxwell",
-      "Jeffrey Epstein"
+      "Jeffrey Epstein",
+      "Ghislaine Maxwell"
     ],
     "release_date": "2026-01-30",
     "sha256": "36ce9b87fc95b321d5a6e412dacea897c4393ae7870cb10db22a74520314ab56",
@@ -29151,9 +29089,7 @@
     "ocr_applied": false,
     "pages": 1,
     "pdf_type": "text",
-    "person_names": [
-      "Jeffrey Epstein"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "ad88ca2e62518ea8636d384febbd3fac686bba391f7b729800467f0be17b9f8a",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -29202,9 +29138,7 @@
     "ocr_applied": false,
     "pages": 1,
     "pdf_type": "text",
-    "person_names": [
-      "Jeffrey Epstein"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "364e384d4538062ff2b614665198a48f7ffd12b007ff5e9421aa37123e9bbf5b",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -29793,9 +29727,7 @@
     "ocr_applied": false,
     "pages": 23,
     "pdf_type": "hybrid",
-    "person_names": [
-      "Jeffrey Epstein"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "ea1435a41f399fc6d8ff46f5242feed8e526b0da1ebb05674e27f076a889fc0c",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -30569,9 +30501,8 @@
     "pages": 3,
     "pdf_type": "hybrid",
     "person_names": [
-      "Bill Clinton",
-      "Ghislaine Maxwell",
-      "Jeffrey Epstein"
+      "Jeffrey Epstein",
+      "Ghislaine Maxwell"
     ],
     "release_date": "2026-01-30",
     "sha256": "41be550dcdc244faa2b92b244a02ae788b55e901e81685f53ef1c3335a2394ad",
@@ -30836,9 +30767,7 @@
     "ocr_applied": false,
     "pages": 3,
     "pdf_type": "text",
-    "person_names": [
-      "Jeffrey Epstein"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "48194ac83ce946d6fa9ee15b446b5fff49a8aaf1358cbfe7abed15b8a32d0e44",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -31648,9 +31577,7 @@
     "ocr_applied": false,
     "pages": 4,
     "pdf_type": "text",
-    "person_names": [
-      "Jeffrey Epstein"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "02c0a3b1bdb83e164ee05a117abc0761df1589197f2fab9abcec3de9fd94c969",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -32207,9 +32134,7 @@
     "ocr_applied": false,
     "pages": 100,
     "pdf_type": "text",
-    "person_names": [
-      "Jeffrey Epstein"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "43f85fa9d1b6863b0f5304ee054f7d7c12b102876cb788b2ba0cae415fa7a0f0",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -32580,9 +32505,7 @@
     "ocr_applied": false,
     "pages": 6,
     "pdf_type": "hybrid",
-    "person_names": [
-      "Jeffrey Epstein"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "af24c152c24664ee49ce84c9c97e68885f2a284ec91ac08eafc70bfaec2ee70b",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -32752,11 +32675,10 @@
     "pages": 96,
     "pdf_type": "text",
     "person_names": [
-      "Alan Dershowitz",
-      "Ghislaine Maxwell",
       "Jeffrey Epstein",
-      "Les Wexner",
-      "Roy Black"
+      "Alan Dershowitz",
+      "Roy Black",
+      "Barry Krischer"
     ],
     "release_date": "2026-01-30",
     "sha256": "df59e401dc3a2b5fc46232ecfcef74f91bfd5b0b11ab8574f81da06ab850ba7b",
@@ -32840,9 +32762,7 @@
     "ocr_applied": false,
     "pages": 48,
     "pdf_type": "text",
-    "person_names": [
-      "Jeffrey Epstein"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "f6e21f8da64d8c7e6a864d03b49e741fab108f4d28f4ce6c6ba7460ee1ed77ca",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -33752,8 +33672,8 @@
     "pages": 15,
     "pdf_type": "hybrid",
     "person_names": [
-      "Ghislaine Maxwell",
-      "Jeffrey Epstein"
+      "Jeffrey Epstein",
+      "Ghislaine Maxwell"
     ],
     "release_date": "2026-01-30",
     "sha256": "aba7445b2808f75c228dce22196ba252947083f5711c56a9cb17246639208a02",
@@ -33986,9 +33906,7 @@
     "ocr_applied": true,
     "pages": 3,
     "pdf_type": "image",
-    "person_names": [
-      "Jeffrey Epstein"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "3de7c5b7cb322178a9ca83e8bbf676a10ea3d720439864ad81b57559f117fbe9",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -34127,8 +34045,7 @@
     "pages": 15,
     "pdf_type": "text",
     "person_names": [
-      "Ghislaine Maxwell",
-      "Jeffrey Epstein"
+      "Ghislaine Maxwell"
     ],
     "release_date": "2026-01-30",
     "sha256": "876b19e23e0e19295a8a4a3e8177ff365c193f2ddda6ee6c9de868674dd02e4f",
@@ -38924,8 +38841,8 @@
     "pages": 77,
     "pdf_type": "text",
     "person_names": [
-      "Ghislaine Maxwell",
-      "Jeffrey Epstein"
+      "Jeffrey Epstein",
+      "Ghislaine Maxwell"
     ],
     "release_date": "2026-01-30",
     "sha256": "ce91ee3e7e23acd15f1c99eefd0ab9af1fda3fe1d8b5e9e0ea8a66706d3cfbe6",
@@ -38991,8 +38908,8 @@
     "pages": 8,
     "pdf_type": "text",
     "person_names": [
-      "Ghislaine Maxwell",
-      "Jeffrey Epstein"
+      "Jeffrey Epstein",
+      "Ghislaine Maxwell"
     ],
     "release_date": "2026-01-30",
     "sha256": "4cbf5cf54bd3b1891d4b0d548fbd26e57a2ffecc15c6455ffe632aa8664cdedb",
@@ -39072,8 +38989,8 @@
     "pages": 28,
     "pdf_type": "text",
     "person_names": [
-      "Ghislaine Maxwell",
-      "Jeffrey Epstein"
+      "Jeffrey Epstein",
+      "Ghislaine Maxwell"
     ],
     "release_date": "2026-01-30",
     "sha256": "6cb4fa1c9774def2aa8e8d01db1f5cf3872574e531287f566e035ab76fe800a2",
@@ -39156,8 +39073,8 @@
     "pages": 119,
     "pdf_type": "text",
     "person_names": [
-      "Ghislaine Maxwell",
-      "Jeffrey Epstein"
+      "Jeffrey Epstein",
+      "Ghislaine Maxwell"
     ],
     "release_date": "2026-01-30",
     "sha256": "ba14d2070e9bb05c7292af3fce5c84ccb762e8c47fc750d735ade2af6907aa63",
@@ -39216,8 +39133,7 @@
     "pages": 7,
     "pdf_type": "text",
     "person_names": [
-      "Ghislaine Maxwell",
-      "Jeffrey Epstein"
+      "Ghislaine Maxwell"
     ],
     "release_date": "2026-01-30",
     "sha256": "4f29e60129eb5c23a981e2fb848339ef6b86147557e9522dbbfd460386ef2d5f",
@@ -39275,8 +39191,8 @@
     "pages": 4,
     "pdf_type": "text",
     "person_names": [
-      "Ghislaine Maxwell",
-      "Jeffrey Epstein"
+      "Jeffrey Epstein",
+      "Ghislaine Maxwell"
     ],
     "release_date": "2026-01-30",
     "sha256": "77a6d46dd1b71fb3d7260406bcd1a63f022baa2276b3cc8a8c578b459a3276dc",
@@ -39344,8 +39260,8 @@
     "pages": 18,
     "pdf_type": "hybrid",
     "person_names": [
-      "Ghislaine Maxwell",
-      "Jeffrey Epstein"
+      "Jeffrey Epstein",
+      "Ghislaine Maxwell"
     ],
     "release_date": "2026-01-30",
     "sha256": "da562b204e8a04a1a9f27b155011cd8b12bc80776231944de7739ad8b3604f92",
@@ -39425,8 +39341,8 @@
     "pages": 28,
     "pdf_type": "hybrid",
     "person_names": [
-      "Ghislaine Maxwell",
-      "Jeffrey Epstein"
+      "Jeffrey Epstein",
+      "Ghislaine Maxwell"
     ],
     "release_date": "2026-01-30",
     "sha256": "2189bf6a337dcf122e242611998c9561c66e53733ee55d7a0c396d304971215a",
@@ -39500,8 +39416,8 @@
     "pages": 78,
     "pdf_type": "hybrid",
     "person_names": [
-      "Ghislaine Maxwell",
-      "Jeffrey Epstein"
+      "Jeffrey Epstein",
+      "Ghislaine Maxwell"
     ],
     "release_date": "2026-01-30",
     "sha256": "048de59a937ff6521d3477e37b17cca17e1eb1e5ad93e611d1c4da76c2a459c6",
@@ -39569,8 +39485,8 @@
     "pages": 18,
     "pdf_type": "hybrid",
     "person_names": [
-      "Ghislaine Maxwell",
-      "Jeffrey Epstein"
+      "Jeffrey Epstein",
+      "Ghislaine Maxwell"
     ],
     "release_date": "2026-01-30",
     "sha256": "4fd76f4c2115739cba74934e6df1274127d4a393daa074731d9602da8f42a97b",
@@ -39635,9 +39551,9 @@
     "pages": 100,
     "pdf_type": "text",
     "person_names": [
-      "Jay Lefkowitz",
       "Jeffrey Epstein",
-      "Ken Starr"
+      "Ken Starr",
+      "Jay Lefkowitz"
     ],
     "release_date": "2026-01-30",
     "sha256": "96c34df552b30a4dd46176c1818468e9bbddb64bb0a5c9dd7d56bbdc5c444465",
@@ -39706,12 +39622,10 @@
     "pages": 113,
     "pdf_type": "text",
     "person_names": [
-      "Alan Dershowitz",
-      "Bill Clinton",
-      "Jay Lefkowitz",
       "Jeffrey Epstein",
+      "Prince Andrew",
       "Ken Starr",
-      "Prince Andrew"
+      "Jay Lefkowitz"
     ],
     "release_date": "2026-01-30",
     "sha256": "584b092789c3718a1e2081aedeb69f3febcf5f370eaaac79f870ae741a559926",
@@ -39779,10 +39693,11 @@
     "pages": 100,
     "pdf_type": "text",
     "person_names": [
-      "Jay Lefkowitz",
       "Jeffrey Epstein",
+      "Roy Black",
       "Ken Starr",
-      "Roy Black"
+      "Jay Lefkowitz",
+      "Barry Krischer"
     ],
     "release_date": "2026-01-30",
     "sha256": "3703cbb62d6af5d6a037bdac89413cdf3adab5f733a47ae5a07db94245925991",
@@ -39852,10 +39767,9 @@
     "pdf_type": "text",
     "person_names": [
       "Alan Dershowitz",
-      "Jay Lefkowitz",
-      "Jeffrey Epstein",
+      "Roy Black",
       "Ken Starr",
-      "Roy Black"
+      "Gerald Lefcourt"
     ],
     "release_date": "2026-01-30",
     "sha256": "7f113fabbb5f76cde9e5addee29a0f6b8c0eb785dc7357b5b1128c12e143229e",
@@ -40189,9 +40103,7 @@
     "ocr_applied": false,
     "pages": 10,
     "pdf_type": "hybrid",
-    "person_names": [
-      "Jeffrey Epstein"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "088b7d62b4611a8210ae0260f0eb73f80def205d2a9c9326a22eb70052dda115",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -40571,8 +40483,7 @@
     "pages": 4,
     "pdf_type": "text",
     "person_names": [
-      "Ghislaine Maxwell",
-      "Jeffrey Epstein"
+      "Ghislaine Maxwell"
     ],
     "release_date": "2026-01-30",
     "sha256": "c8efcca27e17a0f12c90983ddf1f9349ac532bfefd7b9723eaae9139a6052e42",
@@ -40637,7 +40548,9 @@
     "pages": 6,
     "pdf_type": "text",
     "person_names": [
-      "Jeffrey Epstein"
+      "Jeffrey Epstein",
+      "Reid Weingarten",
+      "Martin Weinberg"
     ],
     "release_date": "2026-01-30",
     "sha256": "8e88155e518f85933c76f5698b0340a389ca44a9edd2ec1cce8785003636d1a1",
@@ -41504,9 +41417,7 @@
     "ocr_applied": false,
     "pages": 5,
     "pdf_type": "text",
-    "person_names": [
-      "Jeffrey Epstein"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "001b60e99de373a8012de2f79ca3af9053f812ebb6e601dea011754e98e5b50a",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -41557,9 +41468,7 @@
     "ocr_applied": false,
     "pages": 1,
     "pdf_type": "text",
-    "person_names": [
-      "Jeffrey Epstein"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "73457b869ecc5e21d332cbac5f0bd0eb46a37bc41e76d54464a22f0c37e59ec1",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -41610,9 +41519,7 @@
     "ocr_applied": false,
     "pages": 1,
     "pdf_type": "text",
-    "person_names": [
-      "Jeffrey Epstein"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "14821daa7647ad21a95f3189940f7eb8044ebbb148cf75c4636417237304af5c",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -41778,9 +41685,7 @@
     "ocr_applied": false,
     "pages": 1,
     "pdf_type": "text",
-    "person_names": [
-      "Jeffrey Epstein"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "3fe3c495af52a7e65bbc7cadc16917a76a98d72058f7e766fc734e75f827d99a",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -41825,9 +41730,7 @@
     "ocr_applied": false,
     "pages": 1,
     "pdf_type": "text",
-    "person_names": [
-      "Jeffrey Epstein"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "bc19ebba30d6e0287e86e8e8c86a394319493c9ae7bdbf08fecccf54ebc32d1b",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -41937,9 +41840,7 @@
     "ocr_applied": false,
     "pages": 2,
     "pdf_type": "text",
-    "person_names": [
-      "Jeffrey Epstein"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "eabe818b2f176308446a03e34890eb248c02c4a2cf1d3c03ac2e615ef8a289e9",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -41993,7 +41894,8 @@
     "pages": 1,
     "pdf_type": "text",
     "person_names": [
-      "Ghislaine Maxwell"
+      "Ghislaine Maxwell",
+      "Christian Everdell"
     ],
     "release_date": "2026-01-30",
     "sha256": "1718fc4f92912074efc9b2334fa8f96e7d64dbcb82f471341ed57f33a2999ecb",
@@ -42049,9 +41951,7 @@
     "ocr_applied": false,
     "pages": 2,
     "pdf_type": "text",
-    "person_names": [
-      "Ghislaine Maxwell"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "38535aa4f4855c1291dcd61d6f7d36649fd11ddc34e208ff2673152fb60ff9f1",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -42135,9 +42035,7 @@
     "ocr_applied": false,
     "pages": 19,
     "pdf_type": "text",
-    "person_names": [
-      "Jeffrey Epstein"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "8992f9eae233112d5ee10f4c6b6d7f9b8b0fb489237de3d4b795c6cd6f216731",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -42191,9 +42089,7 @@
     "ocr_applied": false,
     "pages": 1,
     "pdf_type": "text",
-    "person_names": [
-      "Jeffrey Epstein"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "2ab03a41c925e7916148964e7f12003d23766a9c7d756f8906eb5988cac53f39",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -42250,9 +42146,7 @@
     "ocr_applied": false,
     "pages": 2,
     "pdf_type": "text",
-    "person_names": [
-      "Jeffrey Epstein"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "14f479cfcc7b281762d126698b02c319630f799233fa3f58dead577f92dc15e3",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -42309,9 +42203,7 @@
     "ocr_applied": false,
     "pages": 2,
     "pdf_type": "text",
-    "person_names": [
-      "Jeffrey Epstein"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "d368f95f61cd8b8a92ca47bef72a90ea1be4a4f42f41a5d74403192178dc486b",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -42401,9 +42293,7 @@
     "ocr_applied": false,
     "pages": 1,
     "pdf_type": "text",
-    "person_names": [
-      "Jeffrey Epstein"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "0f218d20b717abf915edab37b7a082e4c5bb9c7efb1e12a064515b024e880dee",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -42466,8 +42356,8 @@
     "pages": 3,
     "pdf_type": "text",
     "person_names": [
-      "Ghislaine Maxwell",
-      "Jeffrey Epstein"
+      "Jeffrey Epstein",
+      "Ghislaine Maxwell"
     ],
     "release_date": "2026-01-30",
     "sha256": "7c7cf9b7c9c83331491961f4b9b1f06611b5cfbdb5f5ea161698593df7f9a2ed",
@@ -42633,7 +42523,7 @@
     "pdf_type": "text",
     "person_names": [
       "Ghislaine Maxwell",
-      "Jeffrey Epstein"
+      "Sigrid McCawley"
     ],
     "release_date": "2026-01-30",
     "sha256": "4c13c335b0b1c00c584181b89f1bcef485a85f632629d41f4aaa7888f4311f63",
@@ -42845,8 +42735,7 @@
     "pages": 4,
     "pdf_type": "text",
     "person_names": [
-      "Ghislaine Maxwell",
-      "Jeffrey Epstein"
+      "Ghislaine Maxwell"
     ],
     "release_date": "2026-01-30",
     "sha256": "01a115c2acf13a0c7f62d942d852ae7c7038e71df590d77ef6710396283e4444",
@@ -42897,8 +42786,8 @@
     "pages": 2,
     "pdf_type": "text",
     "person_names": [
-      "Ghislaine Maxwell",
-      "Jeffrey Epstein"
+      "Jeffrey Epstein",
+      "Ghislaine Maxwell"
     ],
     "release_date": "2026-01-30",
     "sha256": "bc3039abe892c6da6aeca5a5d4c5919e76928777ae8a7d97cc54bb6fa4bc6db3",
@@ -43005,9 +42894,7 @@
     "ocr_applied": false,
     "pages": 1,
     "pdf_type": "text",
-    "person_names": [
-      "Jeffrey Epstein"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "dd56c8502dcf738ae1c92b7863e98a6aa6a571234e746a909dadead7b98c579a",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -43058,9 +42945,7 @@
     "ocr_applied": false,
     "pages": 1,
     "pdf_type": "text",
-    "person_names": [
-      "Jeffrey Epstein"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "2681a773b34592dce3ca314e905c83e9b1352d0a600882e1dcc7a2b21f3386b1",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -43112,9 +42997,7 @@
     "ocr_applied": false,
     "pages": 1,
     "pdf_type": "text",
-    "person_names": [
-      "Jeffrey Epstein"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "d0676ecf910d7ce7c703a247d1b6f9098a8276606554aa9a113de6aaad9e4158",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -43157,9 +43040,7 @@
     "ocr_applied": false,
     "pages": 1,
     "pdf_type": "text",
-    "person_names": [
-      "Jeffrey Epstein"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "032d69756347ce10ad21770d42fef0b1e531b9eefd1e25262b898bdfc06552e7",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -43204,9 +43085,7 @@
     "ocr_applied": false,
     "pages": 1,
     "pdf_type": "text",
-    "person_names": [
-      "Jeffrey Epstein"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "d5f1571f9828675fe19fab90b0768afd549515154b3161eb144af24f016da706",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -43249,9 +43128,7 @@
     "ocr_applied": false,
     "pages": 1,
     "pdf_type": "text",
-    "person_names": [
-      "Jeffrey Epstein"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "8abb8f2d12dd3d28fe0cbff20558f98e2bdf8f202cc44285d206f4bce31c5581",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -43296,9 +43173,7 @@
     "ocr_applied": false,
     "pages": 1,
     "pdf_type": "text",
-    "person_names": [
-      "Jeffrey Epstein"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "d1712679491190a6d51534fe4452646602a545e0a49d805c739c3b37733a36a2",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -43341,9 +43216,7 @@
     "ocr_applied": false,
     "pages": 1,
     "pdf_type": "text",
-    "person_names": [
-      "Jeffrey Epstein"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "2f3acd462033a0f3e48a4f7be93f62cf72b77b55d25c9d6577390c833911488e",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -43389,9 +43262,7 @@
     "ocr_applied": false,
     "pages": 1,
     "pdf_type": "text",
-    "person_names": [
-      "Jeffrey Epstein"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "0885669c9e3215829dc2bf48afc3c01530d74a3cf3b0ada35a5a44195a3f7237",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -43453,9 +43324,7 @@
     "ocr_applied": false,
     "pages": 5,
     "pdf_type": "text",
-    "person_names": [
-      "Ghislaine Maxwell"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "ee13b6d7b1609b3c267da58b3b5969968336a22e92ace49eea4e5a1c3a582f42",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -43507,7 +43376,8 @@
     "pages": 1,
     "pdf_type": "text",
     "person_names": [
-      "Ghislaine Maxwell"
+      "Laura Menninger",
+      "Christian Everdell"
     ],
     "release_date": "2026-01-30",
     "sha256": "d265b4dd6cf5ea17e5284ed1e78a3f9b780690b9cfb78451da0b12b50bba71d1",
@@ -43788,9 +43658,9 @@
     "pages": 10,
     "pdf_type": "text",
     "person_names": [
-      "Donald Trump",
       "Jeffrey Epstein",
-      "Leon Black"
+      "Leon Black",
+      "Robert Mueller"
     ],
     "release_date": "2026-01-30",
     "sha256": "5394d1e5e0fb9bb3e8ef4f7a518ff512648ea095de6d6c85321cf7da25993ee9",
@@ -43836,9 +43706,7 @@
     "ocr_applied": false,
     "pages": 1,
     "pdf_type": "text",
-    "person_names": [
-      "Jeffrey Epstein"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "47113c4bb89be1a49c59ab57dd929623d39271395c928d3aa2497f0e6d755e3d",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -43886,9 +43754,7 @@
     "ocr_applied": false,
     "pages": 2,
     "pdf_type": "text",
-    "person_names": [
-      "Jeffrey Epstein"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "3f113cda6fb620957d65425da4f2c6f964a5b18ceef6c81991c66f83f6f43f07",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -43939,10 +43805,7 @@
     "ocr_applied": false,
     "pages": 1,
     "pdf_type": "text",
-    "person_names": [
-      "Ghislaine Maxwell",
-      "Jeffrey Epstein"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "26c109203a52cee99772b64c59998b54936929ea7845a620965805d434f85a53",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -44267,9 +44130,7 @@
     "ocr_applied": false,
     "pages": 1,
     "pdf_type": "text",
-    "person_names": [
-      "Ghislaine Maxwell"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "deef76844982123c9060a0c62913d8e4f15d10abb96e11cb2acccba5fecba331",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -44369,9 +44230,7 @@
     "ocr_applied": false,
     "pages": 1,
     "pdf_type": "text",
-    "person_names": [
-      "Jeffrey Epstein"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "d512dcd53649855302222e77f949ddc219441748ddcdc5b8311070f6bdc0110c",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -44422,9 +44281,7 @@
     "ocr_applied": false,
     "pages": 1,
     "pdf_type": "text",
-    "person_names": [
-      "Jeffrey Epstein"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "21ed7e71135925e31e7da27c2c9714ea13a19c7aeb7f6a48d447db9d45a0792e",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -44476,9 +44333,7 @@
     "ocr_applied": false,
     "pages": 1,
     "pdf_type": "text",
-    "person_names": [
-      "Jeffrey Epstein"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "2e28bced1b2b0eec09184b7a231afcd3b7100f6c20331c40134a12d72419f5a2",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -44532,9 +44387,7 @@
     "ocr_applied": false,
     "pages": 2,
     "pdf_type": "text",
-    "person_names": [
-      "Jeffrey Epstein"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "7ee2ae26323336f966bbaca8bed4332e7da48c5b06dae0fc0690f404c747aec9",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -44595,9 +44448,7 @@
     "ocr_applied": false,
     "pages": 2,
     "pdf_type": "text",
-    "person_names": [
-      "Jeffrey Epstein"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "3b44b653c768f65556f6f85cafe910a601f056e8858c20f26b5edda37351a592",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -44689,9 +44540,7 @@
     "ocr_applied": false,
     "pages": 1,
     "pdf_type": "text",
-    "person_names": [
-      "Jeffrey Epstein"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "36e42b47444f1a75f2efd898096490d93fdc491da97bdc08c8d06d52576e071e",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -44749,7 +44598,6 @@
     "pages": 2,
     "pdf_type": "text",
     "person_names": [
-      "Ghislaine Maxwell",
       "Jeffrey Epstein"
     ],
     "release_date": "2026-01-30",
@@ -44808,9 +44656,7 @@
     "ocr_applied": false,
     "pages": 2,
     "pdf_type": "text",
-    "person_names": [
-      "Jeffrey Epstein"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "6a03a843cab1dcd16956ff6a879a7734d3c04f5f9d5c84c567c9916fe2804d5a",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -44895,9 +44741,7 @@
     "ocr_applied": false,
     "pages": 11,
     "pdf_type": "text",
-    "person_names": [
-      "Jeffrey Epstein"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "6c89b31e9e6325baf15634f7033efd4979eef5b57e62afc9e4c46bf204c45a1c",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -44943,9 +44787,7 @@
     "ocr_applied": false,
     "pages": 2,
     "pdf_type": "text",
-    "person_names": [
-      "Jeffrey Epstein"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "44deb5b8a547c4d438142a57c2d4af8de1646cb1f4d0986bf6422c3174c4e649",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -44991,9 +44833,7 @@
     "ocr_applied": false,
     "pages": 2,
     "pdf_type": "text",
-    "person_names": [
-      "Jeffrey Epstein"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "7cd73896e1126e0a2ffd3cbc4ca9b7aa399a40c5e8a90147d7d186df2350ac00",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -45312,9 +45152,7 @@
     "ocr_applied": false,
     "pages": 1,
     "pdf_type": "text",
-    "person_names": [
-      "Jeffrey Epstein"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "89451aaba50fb7d46ba9689ab9c33b54c6cd9f057838c508c7560565b32aed7a",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -45472,9 +45310,7 @@
     "ocr_applied": false,
     "pages": 1,
     "pdf_type": "text",
-    "person_names": [
-      "Jeffrey Epstein"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "bda394ad8c96351e6ba4d4293a26c706e4695c230bbffb161a4c638b1ed2b850",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -45522,9 +45358,7 @@
     "ocr_applied": false,
     "pages": 1,
     "pdf_type": "text",
-    "person_names": [
-      "Jeffrey Epstein"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "7fb46d6a9036d879f7ee232342a1f5eb353abd721a03d3eab61f9ffea712a754",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -45573,9 +45407,7 @@
     "ocr_applied": false,
     "pages": 1,
     "pdf_type": "text",
-    "person_names": [
-      "Jeffrey Epstein"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "b04f8b20f66a80a31c5cbe81b8c6243d4ea73302d9e22a408ace1c5212c785c0",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -45626,9 +45458,7 @@
     "ocr_applied": false,
     "pages": 1,
     "pdf_type": "text",
-    "person_names": [
-      "Jeffrey Epstein"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "58409a3c4654f631971489118be1b45ad1444733f81eac91b4bf6c935c0d5e83",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -45854,9 +45684,7 @@
     "ocr_applied": false,
     "pages": 3,
     "pdf_type": "text",
-    "person_names": [
-      "Jeffrey Epstein"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "62ab7236289ba0ba04fc1dd00bb55cea6f7e9cd5b155cfc54234f0deb671d909",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -45908,7 +45736,8 @@
     "pages": 1,
     "pdf_type": "text",
     "person_names": [
-      "Ghislaine Maxwell"
+      "Laura Menninger",
+      "Christian Everdell"
     ],
     "release_date": "2026-01-30",
     "sha256": "630996c37e71eaacbced073c7482615506945e66d56487d437321d1f9b36653e",
@@ -45965,7 +45794,7 @@
     "pages": 2,
     "pdf_type": "text",
     "person_names": [
-      "Ghislaine Maxwell"
+      "Laura Menninger"
     ],
     "release_date": "2026-01-30",
     "sha256": "ad0cffd2a4c7691f0af1b6c3e94eb2efa706add70a6617c957c6857cd3832a2f",
@@ -46069,7 +45898,10 @@
     "ocr_applied": false,
     "pages": 1,
     "pdf_type": "text",
-    "person_names": [],
+    "person_names": [
+      "Laura Menninger",
+      "Christian Everdell"
+    ],
     "release_date": "2026-01-30",
     "sha256": "9399ceec2fee9d2e5a5d587bb0131b05c083f08a651a1a1e833176b818e43473",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -46204,8 +46036,8 @@
     "pages": 128,
     "pdf_type": "text",
     "person_names": [
-      "Ghislaine Maxwell",
-      "Jeffrey Epstein"
+      "Jeffrey Epstein",
+      "Ghislaine Maxwell"
     ],
     "release_date": "2026-01-30",
     "sha256": "d64b26a941fa743d702e6a1a6daa32d4851576e2233ce920b6b770b7cb7ca070",
@@ -47052,8 +46884,8 @@
     "pages": 16,
     "pdf_type": "text",
     "person_names": [
-      "Ghislaine Maxwell",
-      "Jeffrey Epstein"
+      "Jeffrey Epstein",
+      "Ghislaine Maxwell"
     ],
     "release_date": "2026-01-30",
     "sha256": "3a270833ae74cb71a7189167e48346b73738b205576ee2d987cd7ddfb84c4df0",
@@ -47255,8 +47087,8 @@
     "pages": 1,
     "pdf_type": "text",
     "person_names": [
-      "Ghislaine Maxwell",
-      "Jeffrey Epstein"
+      "Jeffrey Epstein",
+      "Ghislaine Maxwell"
     ],
     "release_date": "2026-01-30",
     "sha256": "d5e231ff64593a43ca3d6a129dbeb87cec515f7d011bdb0e72cef9adaeaf05e9",
@@ -47306,7 +47138,7 @@
     "pages": 1,
     "pdf_type": "text",
     "person_names": [
-      "Ghislaine Maxwell"
+      "Bobbi Sternheim"
     ],
     "release_date": "2026-01-30",
     "sha256": "4366ed31b40305db274befb8e711e3467680ba04cff508893739c03b37fdc065",
@@ -47356,9 +47188,7 @@
     "ocr_applied": false,
     "pages": 2,
     "pdf_type": "text",
-    "person_names": [
-      "Jeffrey Epstein"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "8e58a3e00dbf73353eead65fa0d8b33aaf6fec26aadffbbf0ba44adc55b314da",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -47411,9 +47241,7 @@
     "ocr_applied": false,
     "pages": 1,
     "pdf_type": "text",
-    "person_names": [
-      "Jeffrey Epstein"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "90348498fa7af4ebced2c1b3b70b3fdd50f2adcfaf93432125b3f88259e47b70",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -47470,9 +47298,7 @@
     "ocr_applied": false,
     "pages": 2,
     "pdf_type": "text",
-    "person_names": [
-      "Jeffrey Epstein"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "20479adb9b50ef25df488c33fca56245dc04ca318b0af49578282f5278aac586",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -47557,9 +47383,6 @@
     "pages": 24,
     "pdf_type": "text",
     "person_names": [
-      "Bill Clinton",
-      "Donald Trump",
-      "Jeffrey Epstein",
       "Leon Black"
     ],
     "release_date": "2026-01-30",
@@ -47648,10 +47471,8 @@
     "pages": 101,
     "pdf_type": "text",
     "person_names": [
-      "Bill Clinton",
-      "Bill Richardson",
       "Donald Trump",
-      "Jeffrey Epstein",
+      "Bill Richardson",
       "Leon Black"
     ],
     "release_date": "2026-01-30",
@@ -47696,9 +47517,7 @@
     "ocr_applied": false,
     "pages": 1,
     "pdf_type": "text",
-    "person_names": [
-      "Ghislaine Maxwell"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "84e0325c529a8b8d6918dc99c3dee784ce36c325fe91d28c784c9503ee84d568",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -47867,8 +47686,8 @@
     "pages": 1,
     "pdf_type": "text",
     "person_names": [
-      "Ghislaine Maxwell",
-      "Jeffrey Epstein"
+      "Jeffrey Epstein",
+      "Ghislaine Maxwell"
     ],
     "release_date": "2026-01-30",
     "sha256": "97486e20cb2f74168aa63181f6efdc5054a4d61bcbe3405d8fd5ae4d6446da9d",
@@ -47976,9 +47795,7 @@
     "ocr_applied": false,
     "pages": 1,
     "pdf_type": "text",
-    "person_names": [
-      "Jeffrey Epstein"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "6ef3a862b79d41385e5d505f10a900dcdd0f99a9a58f4bff7e6cc94b1289cce7",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -48095,7 +47912,7 @@
     "pdf_type": "text",
     "person_names": [
       "Ghislaine Maxwell",
-      "Jeffrey Epstein"
+      "Sigrid McCawley"
     ],
     "release_date": "2026-01-30",
     "sha256": "9bcf7064a2216b5097c59e03d6d25fa03ec45bbfbf865c387854308d65e98c38",
@@ -48222,7 +48039,7 @@
     "pdf_type": "text",
     "person_names": [
       "Ghislaine Maxwell",
-      "Jeffrey Epstein"
+      "Sigrid McCawley"
     ],
     "release_date": "2026-01-30",
     "sha256": "b35438874a821e4e4c5d38355a397e732ded80c8e27e9e66f8323310f05c7607",
@@ -48319,9 +48136,7 @@
     "ocr_applied": false,
     "pages": 1,
     "pdf_type": "text",
-    "person_names": [
-      "Ghislaine Maxwell"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "835ee8f736ce7376a47099e4eec99bac8f7c9846cbf97602983a4ea001f98547",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -48375,7 +48190,7 @@
     "pages": 1,
     "pdf_type": "text",
     "person_names": [
-      "Ghislaine Maxwell"
+      "Laura Menninger"
     ],
     "release_date": "2026-01-30",
     "sha256": "ae228e1e93b5ce4102f4d61b8307e98992067338954cbfa2db48111727322b27",
@@ -48502,9 +48317,7 @@
     "ocr_applied": false,
     "pages": 5,
     "pdf_type": "text",
-    "person_names": [
-      "Ghislaine Maxwell"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "441b2465ca6bcdb291c6d0a6a3ac31aa1894a795ac2ca81ece431338f5275299",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -48550,9 +48363,7 @@
     "ocr_applied": false,
     "pages": 1,
     "pdf_type": "text",
-    "person_names": [
-      "Ghislaine Maxwell"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "3340ec45780af94ca438c7730eb9c0dd8039aea1c8791b5396f17634b371789f",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -48691,9 +48502,6 @@
     "pages": 39,
     "pdf_type": "text",
     "person_names": [
-      "Bill Clinton",
-      "Donald Trump",
-      "Jeffrey Epstein",
       "Leon Black"
     ],
     "release_date": "2026-01-30",
@@ -49036,9 +48844,7 @@
     "ocr_applied": false,
     "pages": 1,
     "pdf_type": "text",
-    "person_names": [
-      "Ghislaine Maxwell"
-    ],
+    "person_names": [],
     "release_date": "2026-01-30",
     "sha256": "b282f2e3682a36c6dc0004c0a3d9a15dc67cc6d59101cb948e8b364d655ab04a",
     "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
@@ -49249,8 +49055,8 @@
     "pages": 9,
     "pdf_type": "text",
     "person_names": [
-      "Ghislaine Maxwell",
-      "Jeffrey Epstein"
+      "Jeffrey Epstein",
+      "Ghislaine Maxwell"
     ],
     "release_date": "2026-01-30",
     "sha256": "eff4797fa8485116c82948d7d73dea83fd5914451db275a9f05d75d340d3c2e4",
