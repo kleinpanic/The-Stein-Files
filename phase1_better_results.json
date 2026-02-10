@@ -1,8 +1,8 @@
 {
   "summary": {
-    "avg_old_quality": 19.759999999999998,
+    "avg_old_quality": 14.36,
     "avg_new_quality": 13.86,
-    "avg_improvement": -5.899999999999999,
+    "avg_improvement": -0.5,
     "total_with_names": 0,
     "total_with_locations": 0
   },
@@ -10,9 +10,9 @@
     {
       "id": "c6ef324b12e9-utilities-efta00003185pdf",
       "title": "Utilities \u2014 EFTA00003185.pdf",
-      "old_quality": 22.2,
+      "old_quality": 0,
       "new_quality": 0,
-      "improvement": -22.2,
+      "improvement": 0,
       "ocr_confidence": 89.0,
       "person_names": [],
       "locations": [],
@@ -21,9 +21,9 @@
     {
       "id": "2d680fb70402-utilities-efta00008412pdf",
       "title": "Utilities \u2014 EFTA00008412.pdf",
-      "old_quality": 15.0,
+      "old_quality": 0,
       "new_quality": 0,
-      "improvement": -15.0,
+      "improvement": 0,
       "ocr_confidence": 44.7,
       "person_names": [],
       "locations": [],
@@ -32,9 +32,9 @@
     {
       "id": "a6a116132d8c-utilities-efta00007561pdf",
       "title": "Utilities \u2014 EFTA00007561.pdf",
-      "old_quality": 19.4,
+      "old_quality": 26.9,
       "new_quality": 26.8,
-      "improvement": 7.400000000000002,
+      "improvement": -0.09999999999999787,
       "ocr_confidence": 86.3,
       "person_names": [],
       "locations": [],
@@ -43,9 +43,9 @@
     {
       "id": "c69982ca6069-utilities-efta00003925pdf",
       "title": "Utilities \u2014 EFTA00003925.pdf",
-      "old_quality": 27.0,
+      "old_quality": 18.1,
       "new_quality": 26.2,
-      "improvement": -0.8000000000000007,
+      "improvement": 8.099999999999998,
       "ocr_confidence": 90.6,
       "person_names": [],
       "locations": [],
@@ -54,9 +54,9 @@
     {
       "id": "2c50f75a0278-utilities-efta00006039pdf",
       "title": "Utilities \u2014 EFTA00006039.pdf",
-      "old_quality": 15.2,
+      "old_quality": 26.8,
       "new_quality": 16.3,
-      "improvement": 1.1000000000000014,
+      "improvement": -10.5,
       "ocr_confidence": 75.6,
       "person_names": [],
       "locations": [],
