@@ -651,6 +651,13 @@
     "title": "Attorney General Letter (Feb 27, 2025)"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence",
+      "evidence-photo",
+      "fbi",
+      "investigation"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "evidence-photo",
@@ -695,15 +702,18 @@
   },
   {
     "auto_tags": [
-      "2020s"
+      "2020s",
+      "evidence-photo"
     ],
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:09:24+00:00",
     "etag": "\"69d924f26829477aa939e5b77b1962f0\"",
     "extracted_dates": [],
-    "extracted_file_numbers": [],
+    "extracted_file_numbers": [
+      "EFTA00000002"
+    ],
     "file_path": "data/raw/ecc2e2d3d973-utilities-efta00000002pdf/EFTA00000002.pdf",
     "file_size_bytes": 575611,
     "has_extractable_text": false,
@@ -739,6 +749,10 @@
     "title": "Utilities \u2014 EFTA00000002.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -782,6 +796,10 @@
     "title": "Utilities \u2014 EFTA00000003.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -825,6 +843,10 @@
     "title": "Utilities \u2014 EFTA00000004.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -868,6 +890,10 @@
     "title": "Utilities \u2014 EFTA00000005.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -911,6 +937,10 @@
     "title": "Utilities \u2014 EFTA00000006.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -954,6 +984,10 @@
     "title": "Utilities \u2014 EFTA00000007.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -997,6 +1031,10 @@
     "title": "Utilities \u2014 EFTA00000008.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -1046,7 +1084,7 @@
     ],
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:09:40+00:00",
     "etag": "\"f3fb4ab1020477e221c488c312a27ed7\"",
     "extracted_dates": [],
@@ -1094,7 +1132,7 @@
     ],
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:09:42+00:00",
     "etag": "\"19a3293d9fcfdb8720745cc0eff90351\"",
     "extracted_dates": [],
@@ -1142,7 +1180,7 @@
     ],
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:09:44+00:00",
     "etag": "\"309cab88cfd3d03038c82e79ceca259c\"",
     "extracted_dates": [],
@@ -1184,6 +1222,10 @@
     "title": "Utilities \u2014 EFTA00000012.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -1233,7 +1275,7 @@
     ],
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:09:48+00:00",
     "etag": "\"033d92b2ed97d5b507e0c64cbe46fdc8\"",
     "extracted_dates": [],
@@ -1275,6 +1317,10 @@
     "title": "Utilities \u2014 EFTA00000014.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -1318,6 +1364,10 @@
     "title": "Utilities \u2014 EFTA00000015.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -1361,6 +1411,10 @@
     "title": "Utilities \u2014 EFTA00000016.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -1404,6 +1458,10 @@
     "title": "Utilities \u2014 EFTA00000017.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -1447,11 +1505,17 @@
     "title": "Utilities \u2014 EFTA00000018.pdf"
   },
   {
+    "auto_tags": [
+      "2010s",
+      "2020s",
+      "evidence-photo",
+      "location:litho-wa"
+    ],
     "case_numbers": [],
     "category_confidence": 0.73,
     "category_method": "fuzzy",
     "content_disposition": "",
-    "document_category": "maintenance",
+    "document_category": null,
     "downloaded_at": "2026-02-07T11:09:58+00:00",
     "etag": "\"af2a3b91400d6742bd75f4e6b35b5c2a\"",
     "extracted_dates": [],
@@ -1490,10 +1554,14 @@
       "epstein-library",
       "doj-disclosures"
     ],
-    "text_quality_score": 73.4,
+    "text_quality_score": 83.6,
     "title": "Utilities \u2014 EFTA00000019.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -1537,6 +1605,10 @@
     "title": "Utilities \u2014 EFTA00000020.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -1580,6 +1652,10 @@
     "title": "Utilities \u2014 EFTA00000021.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -1623,6 +1699,10 @@
     "title": "Utilities \u2014 EFTA00000022.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -1672,7 +1752,7 @@
     ],
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:10:08+00:00",
     "etag": "\"34ebb530a6e964375446b703525743c8\"",
     "extracted_dates": [],
@@ -1720,7 +1800,7 @@
     ],
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:10:10+00:00",
     "etag": "\"4a3e1f6b1471587fd65b0b8682b70b00\"",
     "extracted_dates": [],
@@ -1762,6 +1842,10 @@
     "title": "Utilities \u2014 EFTA00000025.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -1805,6 +1889,10 @@
     "title": "Utilities \u2014 EFTA00000026.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -1848,6 +1936,10 @@
     "title": "Utilities \u2014 EFTA00000027.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -1891,6 +1983,10 @@
     "title": "Utilities \u2014 EFTA00000028.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -1934,6 +2030,10 @@
     "title": "Utilities \u2014 EFTA00000029.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -1977,6 +2077,10 @@
     "title": "Utilities \u2014 EFTA00000030.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -2020,6 +2124,10 @@
     "title": "Utilities \u2014 EFTA00000031.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -2063,6 +2171,10 @@
     "title": "Utilities \u2014 EFTA00000032.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -2106,6 +2218,10 @@
     "title": "Utilities \u2014 EFTA00000033.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -2149,6 +2265,10 @@
     "title": "Utilities \u2014 EFTA00000034.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -2188,10 +2308,14 @@
       "epstein-library",
       "doj-disclosures"
     ],
-    "text_quality_score": 15.7,
+    "text_quality_score": 0,
     "title": "Utilities \u2014 EFTA00000035.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -2235,6 +2359,10 @@
     "title": "Utilities \u2014 EFTA00000036.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -2278,6 +2406,10 @@
     "title": "Utilities \u2014 EFTA00000037.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -2321,6 +2453,10 @@
     "title": "Utilities \u2014 EFTA00000038.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -2364,6 +2500,10 @@
     "title": "Utilities \u2014 EFTA00000039.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -2407,6 +2547,10 @@
     "title": "Utilities \u2014 EFTA00000040.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -2450,13 +2594,19 @@
     "title": "Utilities \u2014 EFTA00000041.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:10:44+00:00",
     "etag": "\"6566c55c71e0adfaa4812d9779ee86e7\"",
     "extracted_dates": [],
-    "extracted_file_numbers": [],
+    "extracted_file_numbers": [
+      "EFTA00000042"
+    ],
     "file_path": "data/raw/c88310918679-utilities-efta00000042pdf/EFTA00000042.pdf",
     "file_size_bytes": 398436,
     "has_extractable_text": false,
@@ -2487,7 +2637,7 @@
       "epstein-library",
       "doj-disclosures"
     ],
-    "text_quality_score": 22.6,
+    "text_quality_score": 0,
     "title": "Utilities \u2014 EFTA00000042.pdf"
   },
   {
@@ -2497,7 +2647,7 @@
     ],
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:10:46+00:00",
     "etag": "\"04cf63bcfc9789ca89c6eb9344fe9d0b\"",
     "extracted_dates": [],
@@ -2539,6 +2689,10 @@
     "title": "Utilities \u2014 EFTA00000043.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -2582,6 +2736,10 @@
     "title": "Utilities \u2014 EFTA00000044.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -2626,18 +2784,21 @@
   },
   {
     "auto_tags": [
-      "2020s"
+      "2020s",
+      "evidence-photo"
     ],
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:10:52+00:00",
     "etag": "\"da498bae3bad3f24fbb03cba33c26059\"",
     "extracted_dates": [],
-    "extracted_file_numbers": [],
+    "extracted_file_numbers": [
+      "EFTA00000046"
+    ],
     "file_path": "data/raw/2ce90599cf64-utilities-efta00000046pdf/EFTA00000046.pdf",
     "file_size_bytes": 388305,
-    "has_extractable_text": false,
+    "has_extractable_text": true,
     "id": "2ce90599cf64-utilities-efta00000046pdf",
     "is_official": true,
     "last_modified": "Fri, 19 Dec 2025 21:25:37 GMT",
@@ -2666,10 +2827,14 @@
       "epstein-library",
       "doj-disclosures"
     ],
-    "text_quality_score": 0,
+    "text_quality_score": 10.3,
     "title": "Utilities \u2014 EFTA00000046.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -2713,6 +2878,10 @@
     "title": "Utilities \u2014 EFTA00000047.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -2756,6 +2925,10 @@
     "title": "Utilities \u2014 EFTA00000048.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -2799,6 +2972,10 @@
     "title": "Utilities \u2014 EFTA00000049.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -2842,6 +3019,10 @@
     "title": "Utilities \u2014 EFTA00000050.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -2885,9 +3066,13 @@
     "title": "Utilities \u2014 EFTA00000051.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": "scanned-document",
+    "document_category": null,
     "downloaded_at": "2026-02-07T11:11:04+00:00",
     "etag": "\"0cf1e994d48ebe71d1c975fb6010ad8c\"",
     "extracted_dates": [],
@@ -2928,6 +3113,10 @@
     "title": "Utilities \u2014 EFTA00000052.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -2971,6 +3160,10 @@
     "title": "Utilities \u2014 EFTA00000053.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -3014,6 +3207,10 @@
     "title": "Utilities \u2014 EFTA00000054.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -3057,6 +3254,10 @@
     "title": "Utilities \u2014 EFTA00000055.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -3100,6 +3301,10 @@
     "title": "Utilities \u2014 EFTA00000056.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -3143,6 +3348,10 @@
     "title": "Utilities \u2014 EFTA00000057.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -3186,6 +3395,10 @@
     "title": "Utilities \u2014 EFTA00000058.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -3235,7 +3448,7 @@
     ],
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:11:20+00:00",
     "etag": "\"f06a67f114dca0f0df65706e85ebb171\"",
     "extracted_dates": [],
@@ -3277,6 +3490,10 @@
     "title": "Utilities \u2014 EFTA00000060.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -3320,6 +3537,10 @@
     "title": "Utilities \u2014 EFTA00000061.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -3363,6 +3584,10 @@
     "title": "Utilities \u2014 EFTA00000062.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -3406,6 +3631,10 @@
     "title": "Utilities \u2014 EFTA00000063.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -3449,6 +3678,10 @@
     "title": "Utilities \u2014 EFTA00000064.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -3498,7 +3731,7 @@
     ],
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:11:32+00:00",
     "etag": "\"75c8eb10775fedc1afc2580847851ad6\"",
     "extracted_dates": [],
@@ -3540,6 +3773,10 @@
     "title": "Utilities \u2014 EFTA00000066.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -3631,18 +3868,21 @@
   },
   {
     "auto_tags": [
-      "2020s"
+      "2020s",
+      "evidence-photo"
     ],
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:11:38+00:00",
     "etag": "\"4c2067cf3db9f541ea6e88be38389c47\"",
     "extracted_dates": [],
-    "extracted_file_numbers": [],
+    "extracted_file_numbers": [
+      "EFTA00000069"
+    ],
     "file_path": "data/raw/34030c2a72f1-utilities-efta00000069pdf/EFTA00000069.pdf",
     "file_size_bytes": 425495,
-    "has_extractable_text": true,
+    "has_extractable_text": false,
     "id": "34030c2a72f1-utilities-efta00000069pdf",
     "is_official": true,
     "last_modified": "Fri, 19 Dec 2025 21:25:35 GMT",
@@ -3671,10 +3911,14 @@
       "epstein-library",
       "doj-disclosures"
     ],
-    "text_quality_score": 13.5,
+    "text_quality_score": 0,
     "title": "Utilities \u2014 EFTA00000069.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -3718,6 +3962,10 @@
     "title": "Utilities \u2014 EFTA00000070.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -3761,6 +4009,10 @@
     "title": "Utilities \u2014 EFTA00000071.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -3804,6 +4056,10 @@
     "title": "Utilities \u2014 EFTA00000072.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -3847,6 +4103,10 @@
     "title": "Utilities \u2014 EFTA00000073.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -3890,6 +4150,10 @@
     "title": "Utilities \u2014 EFTA00000074.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -3933,6 +4197,10 @@
     "title": "Utilities \u2014 EFTA00000075.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -3976,6 +4244,10 @@
     "title": "Utilities \u2014 EFTA00000076.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -4019,6 +4291,10 @@
     "title": "Utilities \u2014 EFTA00000077.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -4062,6 +4338,10 @@
     "title": "Utilities \u2014 EFTA00000078.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -4105,6 +4385,10 @@
     "title": "Utilities \u2014 EFTA00000079.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -4148,6 +4432,10 @@
     "title": "Utilities \u2014 EFTA00000080.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -4191,6 +4479,10 @@
     "title": "Utilities \u2014 EFTA00000081.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -4234,6 +4526,10 @@
     "title": "Utilities \u2014 EFTA00000082.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -4324,6 +4620,10 @@
     "title": "Utilities \u2014 EFTA00000084.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -4367,6 +4667,10 @@
     "title": "Utilities \u2014 EFTA00000085.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -4410,6 +4714,10 @@
     "title": "Utilities \u2014 EFTA00000086.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -4453,6 +4761,10 @@
     "title": "Utilities \u2014 EFTA00000087.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -4496,6 +4808,10 @@
     "title": "Utilities \u2014 EFTA00000088.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -4539,6 +4855,10 @@
     "title": "Utilities \u2014 EFTA00000089.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -4582,6 +4902,10 @@
     "title": "Utilities \u2014 EFTA00000090.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -4625,6 +4949,10 @@
     "title": "Utilities \u2014 EFTA00000091.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -4668,6 +4996,10 @@
     "title": "Utilities \u2014 EFTA00000092.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -4711,6 +5043,10 @@
     "title": "Utilities \u2014 EFTA00000093.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -4754,6 +5090,10 @@
     "title": "Utilities \u2014 EFTA00000094.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -4797,6 +5137,10 @@
     "title": "Utilities \u2014 EFTA00000095.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -4840,6 +5184,10 @@
     "title": "Utilities \u2014 EFTA00000096.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -4883,6 +5231,10 @@
     "title": "Utilities \u2014 EFTA00000097.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -4926,6 +5278,10 @@
     "title": "Utilities \u2014 EFTA00000098.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -4975,7 +5331,7 @@
     ],
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:12:40+00:00",
     "etag": "\"c1c2b4205388b6d1f197c4f742934774\"",
     "extracted_dates": [],
@@ -20538,6 +20894,10 @@
     "title": "Utilities \u2014 EFTA02731410.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -20581,6 +20941,10 @@
     "title": "Utilities \u2014 EFTA02731411.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -20624,6 +20988,10 @@
     "title": "Utilities \u2014 EFTA02731412.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -20667,6 +21035,10 @@
     "title": "Utilities \u2014 EFTA02731413.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -20710,6 +21082,10 @@
     "title": "Utilities \u2014 EFTA02731414.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -20755,12 +21131,11 @@
   {
     "auto_tags": [
       "2020s",
-      "evidence-photo",
-      "location:bd-pe-we"
+      "evidence-photo"
     ],
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:20:24+00:00",
     "etag": "\"6e3103c51fdf36844751e1f12b342b08\"",
     "extracted_dates": [],
@@ -20774,9 +21149,7 @@
     "is_official": true,
     "last_modified": "Sat, 31 Jan 2026 02:43:48 GMT",
     "license_or_terms": "as published by source",
-    "locations": [
-      "Bd Pe, we"
-    ],
+    "locations": [],
     "mime_type": "application/pdf",
     "notes": "DOJ Epstein Library disclosures released under the Epstein Files Transparency Act, including data set files and supplemental releases.",
     "ocr_applied": true,
@@ -20800,7 +21173,7 @@
       "epstein-library",
       "doj-disclosures"
     ],
-    "text_quality_score": 21.8,
+    "text_quality_score": 0,
     "title": "Utilities \u2014 EFTA02731416.pdf"
   },
   {
@@ -20810,7 +21183,7 @@
     ],
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:20:26+00:00",
     "etag": "\"b9bc68821f2a680d3fb080bfb3582969\"",
     "extracted_dates": [],
@@ -20852,9 +21225,13 @@
     "title": "Utilities \u2014 EFTA02731417.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": "scanned-document",
+    "document_category": null,
     "downloaded_at": "2026-02-07T11:20:28+00:00",
     "etag": "\"6c53ad9ae470ef6c8d5336c33e561651\"",
     "extracted_dates": [],
@@ -20895,6 +21272,10 @@
     "title": "Utilities \u2014 EFTA02731418.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -21953,6 +22334,10 @@
     "title": "Utilities \u2014 EFTA02731490.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -21996,6 +22381,10 @@
     "title": "Utilities \u2014 EFTA02731497.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -22039,6 +22428,10 @@
     "title": "Utilities \u2014 EFTA02731498.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -22082,6 +22475,10 @@
     "title": "Utilities \u2014 EFTA02731499.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -22211,6 +22608,10 @@
     "title": "Utilities \u2014 EFTA02731501.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -22254,6 +22655,10 @@
     "title": "Utilities \u2014 EFTA02731507.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -22297,6 +22702,10 @@
     "title": "Utilities \u2014 EFTA02731508.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -22340,6 +22749,10 @@
     "title": "Utilities \u2014 EFTA02731509.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -25252,7 +25665,7 @@
     ],
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:22:44+00:00",
     "etag": "\"b6732819e3b8fe8d7152711b6430aa72\"",
     "extracted_dates": [],
@@ -25294,6 +25707,10 @@
     "title": "Utilities \u2014 EFTA00003159.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -25337,6 +25754,10 @@
     "title": "Utilities \u2014 EFTA00003160.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -25380,6 +25801,10 @@
     "title": "Utilities \u2014 EFTA00003161.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -25423,6 +25848,10 @@
     "title": "Utilities \u2014 EFTA00003162.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -25466,6 +25895,10 @@
     "title": "Utilities \u2014 EFTA00003163.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -25509,6 +25942,10 @@
     "title": "Utilities \u2014 EFTA00003164.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -25558,7 +25995,7 @@
     ],
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:22:58+00:00",
     "etag": "\"b76917845a1d859eb2b362337b9aa026\"",
     "extracted_dates": [],
@@ -25600,6 +26037,10 @@
     "title": "Utilities \u2014 EFTA00003166.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -25643,6 +26084,10 @@
     "title": "Utilities \u2014 EFTA00003167.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -25686,6 +26131,10 @@
     "title": "Utilities \u2014 EFTA00003168.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -25729,6 +26178,10 @@
     "title": "Utilities \u2014 EFTA00003169.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -25772,6 +26225,10 @@
     "title": "Utilities \u2014 EFTA00003170.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -25815,6 +26272,10 @@
     "title": "Utilities \u2014 EFTA00003171.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -25858,6 +26319,10 @@
     "title": "Utilities \u2014 EFTA00003172.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -25901,6 +26366,10 @@
     "title": "Utilities \u2014 EFTA00003173.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -25944,9 +26413,13 @@
     "title": "Utilities \u2014 EFTA00003174.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": "scanned-document",
+    "document_category": null,
     "downloaded_at": "2026-02-07T11:23:16+00:00",
     "etag": "\"ed15abb2d996bf63ecb4756244eb4ec9\"",
     "extracted_dates": [],
@@ -25987,6 +26460,10 @@
     "title": "Utilities \u2014 EFTA00003175.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -26030,6 +26507,10 @@
     "title": "Utilities \u2014 EFTA00003176.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -26073,6 +26554,10 @@
     "title": "Utilities \u2014 EFTA00003177.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -26116,6 +26601,10 @@
     "title": "Utilities \u2014 EFTA00003178.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -26159,6 +26648,10 @@
     "title": "Utilities \u2014 EFTA00003179.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -26202,6 +26695,10 @@
     "title": "Utilities \u2014 EFTA00003180.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -26245,6 +26742,10 @@
     "title": "Utilities \u2014 EFTA00003181.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -26288,6 +26789,10 @@
     "title": "Utilities \u2014 EFTA00003182.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -26331,6 +26836,10 @@
     "title": "Utilities \u2014 EFTA00003183.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -26374,6 +26883,10 @@
     "title": "Utilities \u2014 EFTA00003184.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -26417,6 +26930,10 @@
     "title": "Utilities \u2014 EFTA00003185.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -26460,6 +26977,10 @@
     "title": "Utilities \u2014 EFTA00003186.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -26509,7 +27030,7 @@
     ],
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:23:42+00:00",
     "etag": "\"f5ee47d07af2ea059b23ac982b5ff1e3\"",
     "extracted_dates": [],
@@ -26550,6 +27071,10 @@
     "title": "Utilities \u2014 EFTA00003188.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -26593,6 +27118,10 @@
     "title": "Utilities \u2014 EFTA00003189.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -26636,6 +27165,10 @@
     "title": "Utilities \u2014 EFTA00003190.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -26679,6 +27212,10 @@
     "title": "Utilities \u2014 EFTA00003191.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -26722,6 +27259,10 @@
     "title": "Utilities \u2014 EFTA00003192.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -26765,6 +27306,10 @@
     "title": "Utilities \u2014 EFTA00003193.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -26814,11 +27359,13 @@
     ],
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:23:56+00:00",
     "etag": "\"aa91907d9ea43bc4f85846210d2ca311\"",
     "extracted_dates": [],
-    "extracted_file_numbers": [],
+    "extracted_file_numbers": [
+      "EFTA00003195"
+    ],
     "file_path": "data/raw/92791fc743b5-utilities-efta00003195pdf/EFTA00003195.pdf",
     "file_size_bytes": 322244,
     "has_extractable_text": false,
@@ -26850,10 +27397,14 @@
       "epstein-library",
       "doj-disclosures"
     ],
-    "text_quality_score": 14.8,
+    "text_quality_score": 0,
     "title": "Utilities \u2014 EFTA00003195.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -26897,6 +27448,10 @@
     "title": "Utilities \u2014 EFTA00003196.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -26940,6 +27495,10 @@
     "title": "Utilities \u2014 EFTA00003197.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -26983,6 +27542,10 @@
     "title": "Utilities \u2014 EFTA00003198.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -27026,6 +27589,10 @@
     "title": "Utilities \u2014 EFTA00003199.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -27069,6 +27636,10 @@
     "title": "Utilities \u2014 EFTA00003200.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -27112,6 +27683,10 @@
     "title": "Utilities \u2014 EFTA00003201.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -27155,6 +27730,10 @@
     "title": "Utilities \u2014 EFTA00003202.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -27198,6 +27777,10 @@
     "title": "Utilities \u2014 EFTA00003203.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -27241,6 +27824,10 @@
     "title": "Utilities \u2014 EFTA00003204.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -27284,6 +27871,10 @@
     "title": "Utilities \u2014 EFTA00003205.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -27327,6 +27918,10 @@
     "title": "Utilities \u2014 EFTA00003206.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -27370,6 +27965,10 @@
     "title": "Utilities \u2014 EFTA00003207.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -27413,6 +28012,10 @@
     "title": "Utilities \u2014 EFTA00003208.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -27456,6 +28059,10 @@
     "title": "Utilities \u2014 EFTA00003209.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -27499,6 +28106,10 @@
     "title": "Utilities \u2014 EFTA00003210.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -27542,6 +28153,11 @@
     "title": "Utilities \u2014 EFTA00003211.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "case-photo",
@@ -27585,6 +28201,10 @@
     "title": "Utilities \u2014 EFTA00003212.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -27628,6 +28248,10 @@
     "title": "Utilities \u2014 EFTA00003213.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -27671,6 +28295,10 @@
     "title": "Utilities \u2014 EFTA00003214.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -28047,6 +28675,10 @@
     "title": "Utilities \u2014 EFTA00003316.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -28090,6 +28722,10 @@
     "title": "Utilities \u2014 EFTA00003317.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -28133,6 +28769,10 @@
     "title": "Utilities \u2014 EFTA00003318.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -28177,6 +28817,10 @@
     "title": "Utilities \u2014 EFTA00003319.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -28221,6 +28865,10 @@
     "title": "Utilities \u2014 EFTA00003321.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -28264,6 +28912,10 @@
     "title": "Utilities \u2014 EFTA00003323.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -28307,6 +28959,10 @@
     "title": "Utilities \u2014 EFTA00003324.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -28350,6 +29006,10 @@
     "title": "Utilities \u2014 EFTA00003325.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -28393,6 +29053,10 @@
     "title": "Utilities \u2014 EFTA00003326.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -28436,6 +29100,10 @@
     "title": "Utilities \u2014 EFTA00003327.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -28479,6 +29147,10 @@
     "title": "Utilities \u2014 EFTA00003328.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -28522,6 +29194,10 @@
     "title": "Utilities \u2014 EFTA00003329.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -28565,6 +29241,10 @@
     "title": "Utilities \u2014 EFTA00003330.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -28608,6 +29288,10 @@
     "title": "Utilities \u2014 EFTA00003331.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -28651,6 +29335,10 @@
     "title": "Utilities \u2014 EFTA00003332.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -28694,6 +29382,10 @@
     "title": "Utilities \u2014 EFTA00003333.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -28737,6 +29429,10 @@
     "title": "Utilities \u2014 EFTA00003334.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -28780,6 +29476,10 @@
     "title": "Utilities \u2014 EFTA00003335.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -28823,6 +29523,10 @@
     "title": "Utilities \u2014 EFTA00003336.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -28866,6 +29570,10 @@
     "title": "Utilities \u2014 EFTA00003337.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -28909,6 +29617,10 @@
     "title": "Utilities \u2014 EFTA00003338.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -28952,6 +29664,10 @@
     "title": "Utilities \u2014 EFTA00003339.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -28995,6 +29711,10 @@
     "title": "Utilities \u2014 EFTA00003340.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -29038,6 +29758,10 @@
     "title": "Utilities \u2014 EFTA00003341.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -29081,6 +29805,10 @@
     "title": "Utilities \u2014 EFTA00003342.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -29124,6 +29852,10 @@
     "title": "Utilities \u2014 EFTA00003343.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -29167,6 +29899,10 @@
     "title": "Utilities \u2014 EFTA00003344.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -29210,6 +29946,10 @@
     "title": "Utilities \u2014 EFTA00003345.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -29253,6 +29993,10 @@
     "title": "Utilities \u2014 EFTA00003346.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -29296,6 +30040,10 @@
     "title": "Utilities \u2014 EFTA00003347.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -29339,6 +30087,10 @@
     "title": "Utilities \u2014 EFTA00003348.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -29382,6 +30134,10 @@
     "title": "Utilities \u2014 EFTA00003349.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -29425,6 +30181,10 @@
     "title": "Utilities \u2014 EFTA00003350.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -29468,6 +30228,10 @@
     "title": "Utilities \u2014 EFTA00003351.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -29511,6 +30275,10 @@
     "title": "Utilities \u2014 EFTA00003352.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -29605,6 +30373,10 @@
     "title": "Utilities \u2014 EFTA00003858.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -29726,6 +30498,10 @@
     "title": "Utilities \u2014 EFTA00003868.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -29818,6 +30594,10 @@
     "title": "Utilities \u2014 EFTA00003921.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -29862,6 +30642,10 @@
     "title": "Utilities \u2014 EFTA00003923.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -29906,6 +30690,10 @@
     "title": "Utilities \u2014 EFTA00003925.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -29950,6 +30738,10 @@
     "title": "Utilities \u2014 EFTA00003927.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -29994,6 +30786,10 @@
     "title": "Utilities \u2014 EFTA00003929.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -30087,6 +30883,10 @@
     "title": "Utilities \u2014 EFTA00003933.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -30132,6 +30932,10 @@
     "title": "Utilities \u2014 EFTA00003936.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -30177,6 +30981,10 @@
     "title": "Utilities \u2014 EFTA00003939.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -30222,6 +31030,10 @@
     "title": "Utilities \u2014 EFTA00003942.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -30438,6 +31250,10 @@
     "title": "Utilities \u2014 EFTA00004012.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -30482,6 +31298,10 @@
     "title": "Utilities \u2014 EFTA00004039.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -30526,6 +31346,10 @@
     "title": "Utilities \u2014 EFTA00004041.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -30571,6 +31395,10 @@
     "title": "Utilities \u2014 EFTA00004043.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -30616,6 +31444,10 @@
     "title": "Utilities \u2014 EFTA00004046.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -30716,9 +31548,13 @@
     "title": "Utilities \u2014 EFTA00004051.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": "scanned-document",
+    "document_category": null,
     "downloaded_at": "2026-02-07T11:26:50+00:00",
     "etag": "\"e9ba6282fce30bc9f8365035bb69adf2\"",
     "extracted_dates": [],
@@ -30868,7 +31704,7 @@
     ],
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:26:56+00:00",
     "etag": "\"84f2b42dbf4773d41f2042acd52a39e8\"",
     "extracted_dates": [
@@ -31052,6 +31888,10 @@
     "title": "Utilities \u2014 EFTA00004070.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -31334,6 +32174,10 @@
     "title": "Utilities \u2014 EFTA00004231.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -31385,6 +32229,10 @@
     "title": "Utilities \u2014 EFTA00004234.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -31429,6 +32277,10 @@
     "title": "Utilities \u2014 EFTA00004243.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -32151,6 +33003,10 @@
     "title": "Utilities \u2014 EFTA00005284.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -32310,6 +33166,10 @@
     "title": "Utilities \u2014 EFTA00005495.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -32362,6 +33222,10 @@
     "title": "Utilities \u2014 EFTA00005524.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -32560,6 +33424,10 @@
     "title": "Utilities \u2014 EFTA00005563.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -32603,6 +33471,10 @@
     "title": "Utilities \u2014 EFTA00005567.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -34305,6 +35177,10 @@
     "title": "Utilities \u2014 EFTA00005932.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -34348,9 +35224,13 @@
     "title": "Utilities \u2014 EFTA00005945.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": "scanned-document",
+    "document_category": null,
     "downloaded_at": "2026-02-07T11:29:06+00:00",
     "etag": "\"1f824c3480f2392039552bf5ba2472f4\"",
     "extracted_dates": [],
@@ -34868,9 +35748,13 @@
     "title": "Utilities \u2014 EFTA00006036.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": "scanned-document",
+    "document_category": null,
     "downloaded_at": "2026-02-07T11:29:20+00:00",
     "etag": "\"90b7960c585db83d81db857198dbaec6\"",
     "extracted_dates": [],
@@ -35461,6 +36345,10 @@
     "title": "Utilities \u2014 EFTA00006093.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -36264,6 +37152,10 @@
     "title": "Utilities \u2014 EFTA00006383.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -37848,6 +38740,10 @@
     "title": "Utilities \u2014 EFTA00007501.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -37893,6 +38789,10 @@
     "title": "Utilities \u2014 EFTA00007543.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -38044,6 +38944,10 @@
     "title": "Utilities \u2014 EFTA00007553.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -38088,6 +38992,10 @@
     "title": "Utilities \u2014 EFTA00007556.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -38132,6 +39040,10 @@
     "title": "Utilities \u2014 EFTA00007558.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -38175,6 +39087,10 @@
     "title": "Utilities \u2014 EFTA00007560.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -38219,9 +39135,13 @@
     "title": "Utilities \u2014 EFTA00007561.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": "scanned-document",
+    "document_category": null,
     "downloaded_at": "2026-02-07T11:31:02+00:00",
     "etag": "\"e9393d0b931ce771ea34f6efc075baae\"",
     "extracted_dates": [],
@@ -38825,6 +39745,10 @@
     "title": "Utilities \u2014 EFTA00007609.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -38870,6 +39794,10 @@
     "title": "Utilities \u2014 EFTA00007612.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -38913,6 +39841,10 @@
     "title": "Utilities \u2014 EFTA00007615.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -39015,6 +39947,10 @@
     "title": "Utilities \u2014 EFTA00007617.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -39059,9 +39995,13 @@
     "title": "Utilities \u2014 EFTA00007632.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": "scanned-document",
+    "document_category": null,
     "downloaded_at": "2026-02-07T11:31:30+00:00",
     "etag": "\"2f35528a81a55811cc5b1953aa2e1f09\"",
     "extracted_dates": [],
@@ -39102,6 +40042,10 @@
     "title": "Utilities \u2014 EFTA00007634.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -39146,6 +40090,10 @@
     "title": "Utilities \u2014 EFTA00007635.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -39241,6 +40189,10 @@
     "title": "Utilities \u2014 EFTA00007639.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -39342,6 +40294,11 @@
     "title": "Utilities \u2014 EFTA00007643.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "case-photo",
@@ -39479,6 +40436,10 @@
     "title": "Utilities \u2014 EFTA00008411.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -39569,6 +40530,10 @@
     "title": "Utilities \u2014 EFTA00008413.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -39659,6 +40624,10 @@
     "title": "Utilities \u2014 EFTA00008415.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -39749,6 +40718,10 @@
     "title": "Utilities \u2014 EFTA00008417.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -39792,6 +40765,10 @@
     "title": "Utilities \u2014 EFTA00008418.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -39841,7 +40818,7 @@
     ],
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:32:05+00:00",
     "etag": "\"8d505562d0b8536c5d083330704e9fb2\"",
     "extracted_dates": [],
@@ -39883,6 +40860,10 @@
     "title": "Utilities \u2014 EFTA00008420.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -39926,6 +40907,10 @@
     "title": "Utilities \u2014 EFTA00008421.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -39969,6 +40954,10 @@
     "title": "Utilities \u2014 EFTA00008422.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -40012,6 +41001,10 @@
     "title": "Utilities \u2014 EFTA00008423.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -40055,9 +41048,13 @@
     "title": "Utilities \u2014 EFTA00008424.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": "scanned-document",
+    "document_category": null,
     "downloaded_at": "2026-02-07T11:32:14+00:00",
     "etag": "\"9f133c5f107e149ae452ad4e5d7c7674\"",
     "extracted_dates": [],
@@ -40104,7 +41101,7 @@
     ],
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:32:17+00:00",
     "etag": "\"82081ca65c9d4e3765d44ae65680a24e\"",
     "extracted_dates": [],
@@ -40199,7 +41196,7 @@
     ],
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:32:20+00:00",
     "etag": "\"5fecef235fcc05bf5e9e9ee520b719e6\"",
     "extracted_dates": [],
@@ -40237,10 +41234,14 @@
       "epstein-library",
       "doj-disclosures"
     ],
-    "text_quality_score": 0,
+    "text_quality_score": 22.2,
     "title": "Utilities \u2014 EFTA00008428.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -40284,6 +41285,10 @@
     "title": "Utilities \u2014 EFTA00008429.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -40327,6 +41332,10 @@
     "title": "Utilities \u2014 EFTA00008430.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -40370,6 +41379,10 @@
     "title": "Utilities \u2014 EFTA00008431.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -40460,6 +41473,10 @@
     "title": "Utilities \u2014 EFTA00008433.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -40503,6 +41520,10 @@
     "title": "Utilities \u2014 EFTA00008434.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -40546,6 +41567,10 @@
     "title": "Utilities \u2014 EFTA00008435.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -40683,6 +41708,10 @@
     "title": "Utilities \u2014 EFTA00008438.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -40915,9 +41944,13 @@
     "title": "Utilities \u2014 EFTA00008443.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": "scanned-document",
+    "document_category": null,
     "downloaded_at": "2026-02-07T11:32:52+00:00",
     "etag": "\"ec11b7e175d4e443452c2a1ca2a0ec18\"",
     "extracted_dates": [],
@@ -41005,6 +42038,10 @@
     "title": "Utilities \u2014 EFTA00008445.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -41048,6 +42085,10 @@
     "title": "Utilities \u2014 EFTA00008446.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -41091,6 +42132,10 @@
     "title": "Utilities \u2014 EFTA00008447.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -41144,7 +42189,9 @@
     "downloaded_at": "2026-02-07T11:33:02+00:00",
     "etag": "\"3483128e0e0a6fbe0f6a40c5f5e04c4e\"",
     "extracted_dates": [],
-    "extracted_file_numbers": [],
+    "extracted_file_numbers": [
+      "EFTA00008449"
+    ],
     "file_path": "data/raw/025aaa2fd733-utilities-efta00008449pdf/EFTA00008449.pdf",
     "file_size_bytes": 474333,
     "has_extractable_text": true,
@@ -41176,10 +42223,14 @@
       "epstein-library",
       "doj-disclosures"
     ],
-    "text_quality_score": 19.9,
+    "text_quality_score": 24.7,
     "title": "Utilities \u2014 EFTA00008449.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -41223,6 +42274,10 @@
     "title": "Utilities \u2014 EFTA00008450.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -41367,6 +42422,10 @@
     "title": "Utilities \u2014 EFTA00008453.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -41410,6 +42469,10 @@
     "title": "Utilities \u2014 EFTA00008454.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -41453,6 +42516,10 @@
     "title": "Utilities \u2014 EFTA00008455.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -41543,6 +42610,10 @@
     "title": "Utilities \u2014 EFTA00008457.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -41586,6 +42657,10 @@
     "title": "Utilities \u2014 EFTA00008458.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -41635,7 +42710,7 @@
     ],
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:33:24+00:00",
     "etag": "\"1573f6e1f78be3ef31439137a91e6d99\"",
     "extracted_dates": [],
@@ -41677,6 +42752,10 @@
     "title": "Utilities \u2014 EFTA00008460.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -41767,6 +42846,10 @@
     "title": "Utilities \u2014 EFTA00008462.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -41810,6 +42893,10 @@
     "title": "Utilities \u2014 EFTA00008463.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -41859,11 +42946,13 @@
     ],
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:33:34+00:00",
     "etag": "\"719363c1a6a731b0bd8fc6e781681e6c\"",
     "extracted_dates": [],
-    "extracted_file_numbers": [],
+    "extracted_file_numbers": [
+      "EFTA00008465"
+    ],
     "file_path": "data/raw/24e5a98080c7-utilities-efta00008465pdf/EFTA00008465.pdf",
     "file_size_bytes": 591996,
     "has_extractable_text": false,
@@ -41895,10 +42984,14 @@
       "epstein-library",
       "doj-disclosures"
     ],
-    "text_quality_score": 0.6,
+    "text_quality_score": 0,
     "title": "Utilities \u2014 EFTA00008465.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -41942,6 +43035,10 @@
     "title": "Utilities \u2014 EFTA00008466.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -42133,7 +43230,7 @@
     ],
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:33:47+00:00",
     "etag": "\"9d9c62304e2eddec231bf5ba80737186\"",
     "extracted_dates": [],
@@ -42171,10 +43268,14 @@
       "epstein-library",
       "doj-disclosures"
     ],
-    "text_quality_score": 0,
+    "text_quality_score": 7.3,
     "title": "Utilities \u2014 EFTA00008471.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -42364,6 +43465,10 @@
     "title": "Utilities \u2014 EFTA00008475.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -42454,9 +43559,13 @@
     "title": "Utilities \u2014 EFTA00008477.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": "scanned-document",
+    "document_category": null,
     "downloaded_at": "2026-02-07T11:34:00+00:00",
     "etag": "\"c092e9464d33446abb1fed65ba7715e9\"",
     "extracted_dates": [],
@@ -42497,6 +43606,10 @@
     "title": "Utilities \u2014 EFTA00008478.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -42587,6 +43700,11 @@
     "title": "Utilities \u2014 EFTA00008480.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "evidence-photo",
@@ -43016,7 +44134,7 @@
     ],
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:34:23+00:00",
     "etag": "\"f5e2e8e220ed7cabfa67fb7f2f18a2f3\"",
     "extracted_dates": [],
@@ -43054,10 +44172,14 @@
       "epstein-library",
       "doj-disclosures"
     ],
-    "text_quality_score": 0,
+    "text_quality_score": 21.3,
     "title": "Utilities \u2014 EFTA00008490.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -43101,9 +44223,13 @@
     "title": "Utilities \u2014 EFTA00008491.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": "scanned-document",
+    "document_category": null,
     "downloaded_at": "2026-02-07T11:34:27+00:00",
     "etag": "\"e04eb5158909a7dd10ae14d50f9b0742\"",
     "extracted_dates": [],
@@ -43380,6 +44506,10 @@
     "title": "Utilities \u2014 EFTA00008497.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -43564,6 +44694,10 @@
     "title": "Utilities \u2014 EFTA00008501.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -43701,6 +44835,10 @@
     "title": "Utilities \u2014 EFTA00008504.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
@@ -43797,7 +44935,7 @@
     ],
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:34:57+00:00",
     "etag": "\"c8127008edca824ff95e8e7d14b5e7f2\"",
     "extracted_dates": [],
@@ -43845,7 +44983,7 @@
     ],
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:34:59+00:00",
     "etag": "\"1a60756a68abe22f949d557eebf425d5\"",
     "extracted_dates": [],
@@ -53394,6 +54532,10 @@
     "title": "Utilities \u2014 EFTA00039208.pdf"
   },
   {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
     "case_numbers": [],
     "content_disposition": "",
     "document_category": "scanned-document",
