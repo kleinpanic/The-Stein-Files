@@ -174,3 +174,24 @@ Person extraction has noise (OCR artifacts like "Epstein Charged", "Epstein Has 
 - Remaining 36 docs likely OCR-resistant (may need manual review)
 - Person extraction could be improved with better filtering (UPGRADES.md)
 - Tasks 5-6 available if needed
+
+### 2026-02-10 04:22 EST - Test Fixes + Categorization Regression Identified
+**Actions:**
+- Fixed 3 test failures (134/134 now passing)
+- Identified categorization regression: 86.6% → 79.0% (73 docs lost categories)
+- Added scanned-document fallback logic to pdf_analyzer.py
+- Committed test fixes and fallback logic
+
+**Issue:**
+OCR re-extraction overwrote improved categorization from b3390d8. Lost categories:
+- scanned-document: 50 docs
+- contact-list: 8 docs  
+- email: 3 docs
+- Other categories: 12 docs
+
+**Solution:**
+Added fallback: image PDFs with <200 chars text → scanned-document
+Requires `EPPIE_FORCE_REEXTRACT=1 make extract` to apply to existing docs.
+
+**Next Session:**
+Run force re-extraction to restore 85%+ categorization target.
