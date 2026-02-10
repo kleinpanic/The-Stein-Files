@@ -21,9 +21,10 @@ _None - live site works correctly_
 
 ### Low Priority
 
-**Category dropdown outdated on live site**
-- Live site shows old categories (pre-v1.5.2)
-- Will update after next push + CI/CD completion
+**~~Category dropdown outdated on live site~~** ✅ RESOLVED
+- ~~Live site shows old categories (pre-v1.5.2)~~
+- **FIXED**: New categories now visible in deployed site (as of b3390d8)
+- booking-record, contact-list, financial-record, government-form, maintenance, phone-record, scanned-document, transcript, travel-record all showing
 
 ---
 

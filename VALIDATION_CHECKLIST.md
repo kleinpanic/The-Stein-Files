@@ -56,10 +56,39 @@
 - [ ] Contrast ratios adequate
 - [ ] Screen reader compatible
 
-## Issues Found
+## Validation Results (2026-02-10 05:00 EST)
 
-_To be populated during validation_
+### ✅ Passed
 
-## Upgrade Ideas
+1. **Main Page**
+   - [x] 947 results displayed
+   - [x] 3/3 shards loaded
+   - [x] Export CSV + Share buttons present
+   - [x] **New categories visible in dropdown**
+   - [x] Filters functional (Sources, Years, Tags, Type, Category, Quality)
+   - [x] Search modes present
 
-_To be populated during validation_
+2. **People Page**
+   - [x] 34 people displayed (up from 23)
+   - [x] New people visible: Natalia Molotkova (15), Jeanne Christensen (9), Karyna Shuliak (5), Laura Menninger (5)
+   - [x] Single-page accordion design (minimal preference met)
+   - [x] Document counts accurate
+   - [x] Category breakdowns showing
+
+### ⚠️  Not Fully Tested (Page Size Limitations)
+
+- Individual file pages (PDF viewer)
+- Search functionality (typing/filtering)
+- Emails section
+- Mobile responsiveness
+- Full navigation flows
+
+### Issues Found
+
+**None critical** - Site is functional and improvements are visible
+
+### Upgrade Ideas
+
+1. **Optimize page size** - 947 documents make browser automation difficult
+2. **Add pagination** - Could help with performance and browser compatibility
+3. **Lazy loading** - Load document cards as user scrolls
