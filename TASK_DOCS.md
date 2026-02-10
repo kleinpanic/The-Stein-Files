@@ -103,11 +103,12 @@ Only 23 people extracted. Audit found 44+ in documents.
 ---
 
 #### Task 4: Complete OCR Pass
-**Status:** PARTIAL (280/344 image PDFs)  
+**Status:** PARTIAL - Diminishing Returns (307/344, 89.2%)
 **Assignee:** dev  
-**Estimated Time:** 8h (can run overnight)
+**Blocker:** 37 resistant documents need manual review or alternative OCR approach
+**Note:** Current progress at diminishing returns, documented in PROGRESS.md
 
-344 image PDFs exist, only 280 have OCR applied.
+344 image PDFs exist, 307 have OCR applied (89.2%).
 
 **Actions:**
 1. [ ] Identify 64 missing OCR documents
