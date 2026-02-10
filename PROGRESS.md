@@ -255,3 +255,21 @@ Reached diminishing returns on categorization. Remaining 38 docs (4.0%) likely l
 - Extraction running to populate dates_iso8601 field for all documents
 
 **Next:** Complete extraction and validate timeline data
+
+### 2026-02-10 05:20 EST - Task 6: Bug Fix & Final Implementation
+**Actions:**
+- Fixed bug: extract.py wasn't saving dates_iso8601 to catalog
+- Added: entry["dates_iso8601"] = analysis.get("dates_iso8601", [])
+- Running final extraction to populate all 947 documents
+
+**Task 6 Complete:**
+- ✅ normalize_dates.py module created
+- ✅ Integrated into pdf_analyzer.py
+- ✅ extract.py updated to save field
+- 🔄 Final data population in progress
+
+**Commits:**
+- 83ee751: feat: add ISO8601 date normalization
+- afe8ef4: fix: save dates_iso8601 field to catalog
+
+Task 6 implementation complete. Data population finalizing.
