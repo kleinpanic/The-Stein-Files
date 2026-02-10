@@ -1,44 +1,110 @@
 # Changelog
 
-## 1.5.0
-- **OCR Extraction**: Applied Tesseract OCR to 279 image PDFs for improved text extraction and searchability
-- **Stats Dashboard**: Added comprehensive `/stats.html` page with quality breakdowns, type distributions, OCR status, and source-level analytics
-- **Enhanced Classification**: Improved document categorization with robust FBI evidence photo detection (handles OCR errors), redaction detection, and better pattern matching
-- **Photo Detection**: Added evidence-photo category for FBI evidence photographs with case ID, photographer, and location metadata
-- **Redaction Detection**: Identifies heavily redacted documents based on FOIA markers and sparse text patterns
-- **Quality Analysis**: 
-  - Text PDFs: 497 docs @ 78.1/100 avg quality
-  - Hybrid PDFs: 106 docs @ 76.0/100 avg quality  
-  - Image PDFs: 344 docs @ 11.0/100 avg quality (279 OCR'd)
-- **Category Distribution**: 416 categorized documents across correspondence, memorandum, legal filings, evidence lists, flight logs, reports, and photos
-- **Batch Re-classification**: Added `reclassify_catalog.py` script for applying improved classification logic to existing catalog
-- **Mirror Mode**: Enabled PDF mirroring in GitHub Pages deployment to serve all PDFs locally (solves CORS issues with DOJ sources)
-- **Mobile Optimizations**: Enhanced CSS for iOS/mobile devices with better touch targets and responsive layouts
+All notable changes to The Stein Files (Epstein Files Library) will be documented in this file.
 
-## 1.4.0
-- Added in-page PDF viewer with GitHub raw integration for lightweight Pages deployment (viewer.html + build-sha/repo-slug meta tags).
-- Implemented case-insensitive search with query normalization (toLowerCase) for better UX.
-- Added asset cache-busting using git SHA as version parameter for CSS/JS to prevent stale cache issues.
-- Fixed DOJ age-verify gate with automatic cookie injection (justiceGovAgeVerified=true) for PDF URL access.
-- Fixed ingest crash on 404 responses due to falsey HTTPError.response handling (added status_code_from_http_error utility).
-- Strengthened index completeness validation to ensure all catalog entries are present in search shards (bidirectional check).
-- Updated verify-doj cookie jar fallback to match ingest behavior (.txt → .json).
-- Raised CI ingest limits for bulk ingestion (EPPIE_MAX_DOWNLOADS_PER_SOURCE=0, EPPIE_TIME_BUDGET_SECONDS=20000).
-- Successfully ingested 946 PDFs from DOJ Epstein Library disclosures (4 URLs returned 404).
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## 1.3.0
-- Removed default ingest caps and added explicit throttling/backoff knobs with time budgets for CI.
-- Made ingest resumable with per-source seen/failed tracking and conditional requests (ETag/Last-Modified).
-- Added mirror mode toggle for build output and improved tests for backoff, state, and shard extraction.
+## [Unreleased]
 
-## 1.2.0
-- Added interactive DOJ auth capture (`make auth-doj`) with local cookie jar handling for gated sources.
-- Added explicit search modes (full/title/tags/source/file) with shareable URL params.
-- Treat `data/derived/` as build output and expand test coverage for cookies, gating, and manifests.
-- Added cookie jar format support for both JSON and Netscape plus incremental ingest cursors and CI caps.
+## [1.5.1] - 2026-02-10
 
-## 1.1.0
-- UI overhaul with a clearer layout, improved results cards, mobile filter drawer, loading and empty states, and shareable URL filters.
-- Expanded ingestion architecture with official DOJ Epstein Library adapters, deterministic discovery, size caps, and sharded search index output.
-- Developer ergonomics updates: `make venv`, `make node`, and `make setup` with venv-first execution.
-- CI updates to rely on Makefile targets for setup, test, and build.
+### Added
+- Fuzzy categorization for OCR-garbled text (edit distance matching)
+- Batch OCR processing script (process documents by ID file)
+- Maintenance document category for service/inspection records
+- Autonomous progress tracking and documentation
+- Comprehensive UX audit with 7-phase roadmap (157h estimated)
+- CHANGELOG.md following Keep a Changelog format
+- REVIEW_CHECKLIST.md for post-change validation
+
+### Changed
+- Person threshold lowered from 3+ to 1+ mentions (now showing 23 people)
+- Email metadata now shows "[Not visible in document]" instead of blank fields
+- Improved email metadata re-extraction from document text
+
+### Fixed
+- Empty email From/To/Subject fields now display meaningful text (35% had blank fields)
+- Re-extracted metadata for 59 emails from document text
+- OCR text quality acknowledged as categorization blocker
+
+## [1.5.0] - 2026-02-09
+
+### Added
+- Enhanced OCR module with adaptive DPI (200-300) and preprocessing
+- Enhanced metadata extraction (FBI numbers, person names, locations, case numbers)
+- New document categories: email, deposition, subpoena, case-photo, handwritten-note
+- Person profiles with expandable accordion UI (single page)
+- Stats dashboard with comprehensive analytics
+- Phase 3 UX enhancements: CSV export, keyboard shortcuts, share URL
+- Mobile optimization: swipe gestures, WCAG 2.1 AAA touch targets, optimized rendering
+- OCR extraction for 279 image PDFs
+- Comprehensive person extraction (44 known people)
+- Auto-categorization for uncategorized documents
+
+### Changed
+- Person data threshold from 5+ to 3+ mentions
+- Site-wide people.json generation during CI/CD build
+- Person profiles converted from multiple pages to single accordion page
+
+### Fixed
+- PDF viewer and asset loading issues post-deployment
+- Person extraction gaps (added Leon Black, Ken Starr, Jay Lefkowitz, Roy Black)
+- Email metadata cleanup (removed OCR noise from From/To fields)
+
+## [1.4.0] - 2026-02-08
+
+### Added
+- In-page PDF viewer with GitHub raw integration
+- Git LFS for binary storage (947 PDFs, ~1.5GB)
+- LFS caching in GitHub Actions workflow
+- Auto-release workflow for future tags
+
+### Changed
+- Switched to Git LFS media CDN for PDF storage
+- Base tag for asset path resolution
+
+### Fixed
+- GitHub Actions for LFS compatibility
+- Text extraction after LFS migration
+- Ingest workflow optimized (skip LFS downloads)
+
+## [1.3.0] - 2026-02-07
+
+### Added
+- DOJ Memoranda source with DirectListAdapter
+- Index completeness validation with bidirectional checks
+- Search UI case-sensitivity fixes
+- Asset cache-busting using git SHA versioning
+
+### Changed
+- DOJ cookie jar fallback for verification
+- Ingest robustness for HTTP 404 handling
+
+### Fixed
+- DOJ "age-verify" gate with automatic cookie injection
+- Local environment (.venv recreation after breakage)
+
+### Removed
+- Non-existent DOJ sources (court-records, foia)
+
+## [1.2.0] - 2026-02-06
+
+### Added
+- Massive ingest completed: 947 PDFs (~1.5GB) from DOJ disclosures
+- Document categorization system
+- Phase 1 metadata extraction (file numbers, person names, locations)
+
+## [1.1.0] - 2026-02-05
+
+### Added
+- Initial site structure with search functionality
+- Basic document metadata extraction
+- Source configuration system
+
+## [1.0.0] - 2026-02-04
+
+### Added
+- Initial release
+- Basic document ingestion from DOJ sources
+- Simple catalog and index generation
