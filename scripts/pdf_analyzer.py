@@ -36,9 +36,10 @@ except ImportError:
 
 # Phase 1: Import enhanced modules
 try:
-    from scripts.enhanced_ocr import apply_enhanced_ocr, HAS_OCR as HAS_ENHANCED_OCR
+    from scripts.enhanced_ocr import apply_ocr_with_fallback as enhanced_apply_ocr, HAS_OCR as HAS_ENHANCED_OCR
 except ImportError:
     HAS_ENHANCED_OCR = False
+    enhanced_apply_ocr = None
 
 try:
     from scripts.enhanced_metadata import extract_case_metadata
@@ -128,6 +129,8 @@ def apply_ocr_to_pdf(pdf_path: Path, max_pages: int = 5) -> str:
     """
     Apply OCR to PDF using Tesseract.
     
+    Uses enhanced OCR with preprocessing if available, falls back to basic OCR.
+    
     Args:
         pdf_path: Path to PDF file
         max_pages: Max pages to OCR (prevent long processing)
@@ -135,6 +138,14 @@ def apply_ocr_to_pdf(pdf_path: Path, max_pages: int = 5) -> str:
     Returns:
         Extracted text from OCR
     """
+    # Try enhanced OCR first if available
+    if HAS_ENHANCED_OCR and enhanced_apply_ocr is not None:
+        try:
+            return enhanced_apply_ocr(pdf_path, max_pages=max_pages)
+        except Exception as e:
+            print(f"Enhanced OCR failed for {pdf_path.name}, falling back to basic: {e}")
+    
+    # Fallback to basic OCR
     if not HAS_OCR:
         return ""
     
