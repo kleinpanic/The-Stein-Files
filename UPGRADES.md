@@ -34,7 +34,10 @@
 
 ## Ideas from Browser Review
 
-_To be populated after site validation_
+1. **Category dropdown not showing new categories** - Need to rebuild site JS to include new category options
+2. **Local testing broken** - Add `EPPIE_LOCAL_DEV=1` env to use root base href
+3. **Scanned-document category is catch-all** - Consider splitting into more specific categories when OCR improves
+4. **More people could be extracted** - Some documents mention people not in our known names list
 
 ---
 
