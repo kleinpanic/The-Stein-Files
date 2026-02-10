@@ -386,7 +386,7 @@
   {
     "case_numbers": [],
     "content_disposition": "inline; filename=\"C. Contact Book_Redacted_0.pdf\"",
-    "document_category": null,
+    "document_category": "contact-list",
     "downloaded_at": "2026-02-07T11:41:18+00:00",
     "extracted_dates": [],
     "extracted_file_numbers": [],
@@ -427,12 +427,13 @@
       "press-release"
     ],
     "text_quality_score": 74.3,
-    "title": "C. Contact Book_Redacted"
+    "title": "C. Contact Book_Redacted",
+    "category_confidence": 0.95
   },
   {
     "case_numbers": [],
     "content_disposition": "inline; filename=\"D. Masseuse List_Redacted_0.pdf\"",
-    "document_category": null,
+    "document_category": "contact-list",
     "downloaded_at": "2026-02-07T11:41:19+00:00",
     "extracted_dates": [],
     "extracted_file_numbers": [],
@@ -467,7 +468,8 @@
       "press-release"
     ],
     "text_quality_score": 67.0,
-    "title": "D. Masseuse List_Redacted"
+    "title": "D. Masseuse List_Redacted",
+    "category_confidence": 0.95
   },
   {
     "case_numbers": [],
@@ -6309,7 +6311,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "flight-log",
     "downloaded_at": "2026-02-07T11:13:28+00:00",
     "etag": "\"f352cbd2d26d8ad47d5bede9acc5067a\"",
     "extracted_dates": [
@@ -6361,7 +6363,8 @@
       "doj-disclosures"
     ],
     "text_quality_score": 89.8,
-    "title": "Utilities \u2014 EFTA01263152.pdf"
+    "title": "Utilities \u2014 EFTA01263152.pdf",
+    "category_confidence": 1.0
   },
   {
     "case_numbers": [],
@@ -6457,7 +6460,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "flight-log",
     "downloaded_at": "2026-02-07T11:13:32+00:00",
     "etag": "\"78894becc47bf3c832c319961f8a9254\"",
     "extracted_dates": [
@@ -6528,12 +6531,13 @@
       "doj-disclosures"
     ],
     "text_quality_score": 76.4,
-    "title": "Utilities \u2014 EFTA01263197.pdf"
+    "title": "Utilities \u2014 EFTA01263197.pdf",
+    "category_confidence": 1.0
   },
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "flight-log",
     "downloaded_at": "2026-02-07T11:13:34+00:00",
     "etag": "\"7fe2fd1f1a1646b2304a8e46b55cd754\"",
     "extracted_dates": [
@@ -6602,12 +6606,13 @@
       "doj-disclosures"
     ],
     "text_quality_score": 76.6,
-    "title": "Utilities \u2014 EFTA01263204.pdf"
+    "title": "Utilities \u2014 EFTA01263204.pdf",
+    "category_confidence": 1.0
   },
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "flight-log",
     "downloaded_at": "2026-02-07T11:13:36+00:00",
     "etag": "\"1f9dc379ebff3b2f748979a4510085c8\"",
     "extracted_dates": [
@@ -6676,7 +6681,8 @@
       "doj-disclosures"
     ],
     "text_quality_score": 84.5,
-    "title": "Utilities \u2014 EFTA01263210.pdf"
+    "title": "Utilities \u2014 EFTA01263210.pdf",
+    "category_confidence": 1.0
   },
   {
     "case_numbers": [],
@@ -7594,7 +7600,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "contact-list",
     "downloaded_at": "2026-02-07T11:14:09+00:00",
     "etag": "\"3260d9f8e69dec8f6935df45954d3b28-2\"",
     "extracted_dates": [
@@ -7649,7 +7655,8 @@
       "doj-disclosures"
     ],
     "text_quality_score": 80.6,
-    "title": "Utilities \u2014 EFTA01263776.pdf"
+    "title": "Utilities \u2014 EFTA01263776.pdf",
+    "category_confidence": 1.0
   },
   {
     "case_numbers": [],
@@ -8355,7 +8362,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "contact-list",
     "downloaded_at": "2026-02-07T11:14:38+00:00",
     "etag": "\"84ce9afc283cf61110976e53019a5512-5\"",
     "extracted_dates": [
@@ -8417,7 +8424,8 @@
       "doj-disclosures"
     ],
     "text_quality_score": 84.8,
-    "title": "Utilities \u2014 EFTA01264713.pdf"
+    "title": "Utilities \u2014 EFTA01264713.pdf",
+    "category_confidence": 1.0
   },
   {
     "case_numbers": [],
@@ -8480,7 +8488,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "contact-list",
     "downloaded_at": "2026-02-07T11:14:41+00:00",
     "etag": "\"3bdabc42f1a6fa93627a93cf25bd8150\"",
     "extracted_dates": [
@@ -8532,7 +8540,8 @@
       "doj-disclosures"
     ],
     "text_quality_score": 87.8,
-    "title": "Utilities \u2014 EFTA01265168.pdf"
+    "title": "Utilities \u2014 EFTA01265168.pdf",
+    "category_confidence": 1.0
   },
   {
     "case_numbers": [],
@@ -8871,7 +8880,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "report",
     "downloaded_at": "2026-02-07T11:14:55+00:00",
     "etag": "\"f94a14c1b781c9d10ac9a9168832cb4a\"",
     "extracted_dates": [
@@ -8952,7 +8961,8 @@
       "doj-disclosures"
     ],
     "text_quality_score": 87.0,
-    "title": "Utilities \u2014 EFTA01265225.pdf"
+    "title": "Utilities \u2014 EFTA01265225.pdf",
+    "category_confidence": 0.5
   },
   {
     "case_numbers": [],
@@ -9699,7 +9709,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "email",
     "downloaded_at": "2026-02-07T11:15:21+00:00",
     "etag": "\"73db8ab7486a4985af439f2e5b0eeb83\"",
     "extracted_dates": [],
@@ -9737,12 +9747,13 @@
       "doj-disclosures"
     ],
     "text_quality_score": 64.0,
-    "title": "Utilities \u2014 EFTA01265483.pdf"
+    "title": "Utilities \u2014 EFTA01265483.pdf",
+    "category_confidence": 0.5
   },
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "contact-list",
     "downloaded_at": "2026-02-07T11:15:23+00:00",
     "etag": "\"a64cd4017628830e1b9ee5c97eff3e7e\"",
     "extracted_dates": [],
@@ -9782,12 +9793,13 @@
       "doj-disclosures"
     ],
     "text_quality_score": 69.3,
-    "title": "Utilities \u2014 EFTA01265484.pdf"
+    "title": "Utilities \u2014 EFTA01265484.pdf",
+    "category_confidence": 0.75
   },
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "contact-list",
     "downloaded_at": "2026-02-07T11:15:25+00:00",
     "etag": "\"1ced23a74cdeb08d99f9c4689ea10071\"",
     "extracted_dates": [
@@ -9829,12 +9841,13 @@
       "doj-disclosures"
     ],
     "text_quality_score": 70.4,
-    "title": "Utilities \u2014 EFTA01265485.pdf"
+    "title": "Utilities \u2014 EFTA01265485.pdf",
+    "category_confidence": 1.0
   },
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "contact-list",
     "downloaded_at": "2026-02-07T11:15:27+00:00",
     "etag": "\"2e48c9e9d8b5293e98cdef8ad3761a36\"",
     "extracted_dates": [],
@@ -9872,7 +9885,8 @@
       "doj-disclosures"
     ],
     "text_quality_score": 64.9,
-    "title": "Utilities \u2014 EFTA01265486.pdf"
+    "title": "Utilities \u2014 EFTA01265486.pdf",
+    "category_confidence": 0.75
   },
   {
     "case_numbers": [],
@@ -9935,7 +9949,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "contact-list",
     "downloaded_at": "2026-02-07T11:15:31+00:00",
     "etag": "\"971691f1116593088c6d2343a4bf46e6\"",
     "extracted_dates": [
@@ -9985,7 +9999,8 @@
       "doj-disclosures"
     ],
     "text_quality_score": 94.6,
-    "title": "Utilities \u2014 EFTA01265491.pdf"
+    "title": "Utilities \u2014 EFTA01265491.pdf",
+    "category_confidence": 0.67
   },
   {
     "case_numbers": [],
@@ -10384,7 +10399,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "email",
     "downloaded_at": "2026-02-07T11:15:49+00:00",
     "etag": "\"b03143d9fe68b583e390c8d6a4995989\"",
     "extracted_dates": [],
@@ -10427,7 +10442,8 @@
       "doj-disclosures"
     ],
     "text_quality_score": 67.5,
-    "title": "Utilities \u2014 EFTA01265807.pdf"
+    "title": "Utilities \u2014 EFTA01265807.pdf",
+    "category_confidence": 0.67
   },
   {
     "case_numbers": [],
@@ -29617,7 +29633,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "contact-list",
     "downloaded_at": "2026-02-07T11:28:52+00:00",
     "etag": "\"ccfb765183fdaf826e4954261e3c829d\"",
     "extracted_dates": [
@@ -29674,7 +29690,8 @@
       "doj-disclosures"
     ],
     "text_quality_score": 80.6,
-    "title": "Utilities \u2014 EFTA00005855.pdf"
+    "title": "Utilities \u2014 EFTA00005855.pdf",
+    "category_confidence": 1.0
   },
   {
     "case_numbers": [],
@@ -30081,7 +30098,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "contact-list",
     "downloaded_at": "2026-02-07T11:29:08+00:00",
     "etag": "\"e69615f5c1032b6391acea9313f85c9f\"",
     "extracted_dates": [
@@ -30138,7 +30155,8 @@
       "doj-disclosures"
     ],
     "text_quality_score": 85.1,
-    "title": "Utilities \u2014 EFTA00005959.pdf"
+    "title": "Utilities \u2014 EFTA00005959.pdf",
+    "category_confidence": 1.0
   },
   {
     "case_numbers": [],
@@ -30269,7 +30287,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "flight-log",
     "downloaded_at": "2026-02-07T11:29:15+00:00",
     "etag": "\"c035f6a82f251331faf90bc20995e70a-2\"",
     "extracted_dates": [],
@@ -30326,12 +30344,13 @@
       "doj-disclosures"
     ],
     "text_quality_score": 74.6,
-    "title": "Utilities \u2014 EFTA00005994.pdf"
+    "title": "Utilities \u2014 EFTA00005994.pdf",
+    "category_confidence": 1.0
   },
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "contact-list",
     "downloaded_at": "2026-02-07T11:29:16+00:00",
     "etag": "\"1ffe24e435f9162c55e97c4724de8004\"",
     "extracted_dates": [],
@@ -30389,7 +30408,8 @@
       "doj-disclosures"
     ],
     "text_quality_score": 87.8,
-    "title": "Utilities \u2014 EFTA00006025.pdf"
+    "title": "Utilities \u2014 EFTA00006025.pdf",
+    "category_confidence": 1.0
   },
   {
     "case_numbers": [],
@@ -30818,7 +30838,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "report",
     "downloaded_at": "2026-02-07T11:29:34+00:00",
     "etag": "\"d8062a12a82eb4304321ea68ed1ad2d7\"",
     "extracted_dates": [
@@ -30870,7 +30890,8 @@
       "doj-disclosures"
     ],
     "text_quality_score": 87.5,
-    "title": "Utilities \u2014 EFTA00006085.pdf"
+    "title": "Utilities \u2014 EFTA00006085.pdf",
+    "category_confidence": 1.0
   },
   {
     "case_numbers": [],
@@ -31562,7 +31583,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "deposition",
     "downloaded_at": "2026-02-07T11:30:04+00:00",
     "etag": "\"ca1119cdc5f25cbb2398fac352f41b18\"",
     "extracted_dates": [],
@@ -31602,7 +31623,8 @@
       "doj-disclosures"
     ],
     "text_quality_score": 86.6,
-    "title": "Utilities \u2014 EFTA00006380.pdf"
+    "title": "Utilities \u2014 EFTA00006380.pdf",
+    "category_confidence": 1.0
   },
   {
     "case_numbers": [],
@@ -32775,7 +32797,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "flight-log",
     "downloaded_at": "2026-02-07T11:30:43+00:00",
     "etag": "\"43bd33445e632fabe5105c4005c2fcd4-2\"",
     "extracted_dates": [
@@ -32849,7 +32871,8 @@
       "doj-disclosures"
     ],
     "text_quality_score": 84.0,
-    "title": "Utilities \u2014 EFTA00007401.pdf"
+    "title": "Utilities \u2014 EFTA00007401.pdf",
+    "category_confidence": 0.5
   },
   {
     "case_numbers": [],
@@ -33477,7 +33500,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "correspondence",
     "downloaded_at": "2026-02-07T11:31:10+00:00",
     "etag": "\"5903af7954df8b39e5e6c96951da84a6\"",
     "extracted_dates": [],
@@ -33522,7 +33545,8 @@
       "doj-disclosures"
     ],
     "text_quality_score": 83.2,
-    "title": "Utilities \u2014 EFTA00007582.pdf"
+    "title": "Utilities \u2014 EFTA00007582.pdf",
+    "category_confidence": 0.67
   },
   {
     "case_numbers": [],
@@ -33661,7 +33685,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "contact-list",
     "downloaded_at": "2026-02-07T11:31:17+00:00",
     "etag": "\"591983486d0e3db1c00773f57302d63e\"",
     "extracted_dates": [
@@ -33712,12 +33736,13 @@
       "doj-disclosures"
     ],
     "text_quality_score": 87.7,
-    "title": "Utilities \u2014 EFTA00007606.pdf"
+    "title": "Utilities \u2014 EFTA00007606.pdf",
+    "category_confidence": 1.0
   },
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "correspondence",
     "downloaded_at": "2026-02-07T11:31:18+00:00",
     "etag": "\"c3e469242cc4ee57231bddc29431be14\"",
     "extracted_dates": [],
@@ -33763,7 +33788,8 @@
       "doj-disclosures"
     ],
     "text_quality_score": 83.2,
-    "title": "Utilities \u2014 EFTA00007609.pdf"
+    "title": "Utilities \u2014 EFTA00007609.pdf",
+    "category_confidence": 0.67
   },
   {
     "case_numbers": [],
@@ -38985,7 +39011,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "flight-log",
     "downloaded_at": "2026-02-07T11:35:15+00:00",
     "etag": "\"f7ee514d92410ba8a81635693823d022\"",
     "extracted_dates": [
@@ -39039,7 +39065,8 @@
       "doj-disclosures"
     ],
     "text_quality_score": 75.2,
-    "title": "Utilities \u2014 EFTA00008863.pdf"
+    "title": "Utilities \u2014 EFTA00008863.pdf",
+    "category_confidence": 1.0
   },
   {
     "case_numbers": [],
@@ -40800,7 +40827,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "deposition",
     "downloaded_at": "2026-02-07T11:36:09+00:00",
     "etag": "\"6d8f74a340ccd1eb0778765bf83170a2\"",
     "extracted_dates": [
@@ -40853,7 +40880,8 @@
       "doj-disclosures"
     ],
     "text_quality_score": 85.4,
-    "title": "Utilities \u2014 EFTA00009775.pdf"
+    "title": "Utilities \u2014 EFTA00009775.pdf",
+    "category_confidence": 1.0
   },
   {
     "case_numbers": [
@@ -41102,7 +41130,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "correspondence",
     "downloaded_at": "2026-02-07T11:36:19+00:00",
     "etag": "\"25a991b6491fb42537aa22411d719cf6\"",
     "extracted_dates": [],
@@ -41144,7 +41172,8 @@
       "doj-disclosures"
     ],
     "text_quality_score": 89.1,
-    "title": "Utilities \u2014 EFTA00009796.pdf"
+    "title": "Utilities \u2014 EFTA00009796.pdf",
+    "category_confidence": 1.0
   },
   {
     "case_numbers": [],
@@ -42507,7 +42536,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "evidence-list",
     "downloaded_at": "2026-02-07T11:37:11+00:00",
     "etag": "\"a14034896385f1e7b5bcfe4657b9758b\"",
     "extracted_dates": [
@@ -42552,7 +42581,8 @@
       "doj-disclosures"
     ],
     "text_quality_score": 67.2,
-    "title": "Utilities \u2014 EFTA00009870.pdf"
+    "title": "Utilities \u2014 EFTA00009870.pdf",
+    "category_confidence": 0.67
   },
   {
     "case_numbers": [],
@@ -43589,7 +43619,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "contact-list",
     "downloaded_at": "2026-02-07T11:37:55+00:00",
     "etag": "\"3ae3a8736d3a3d30141a9daeae3ab225\"",
     "extracted_dates": [
@@ -43633,7 +43663,8 @@
       "doj-disclosures"
     ],
     "text_quality_score": 75.7,
-    "title": "Utilities \u2014 EFTA00009915.pdf"
+    "title": "Utilities \u2014 EFTA00009915.pdf",
+    "category_confidence": 1.0
   },
   {
     "case_numbers": [],
@@ -47610,7 +47641,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "evidence-list",
     "downloaded_at": "2026-02-07T11:40:17+00:00",
     "etag": "\"c441bc8e174da1914e2c60436ca26d30\"",
     "extracted_dates": [
@@ -47658,7 +47689,8 @@
       "doj-disclosures"
     ],
     "text_quality_score": 75.1,
-    "title": "Utilities \u2014 EFTA00039799.pdf"
+    "title": "Utilities \u2014 EFTA00039799.pdf",
+    "category_confidence": 0.67
   },
   {
     "case_numbers": [],
@@ -47726,7 +47758,7 @@
   {
     "case_numbers": [],
     "content_disposition": "",
-    "document_category": null,
+    "document_category": "email",
     "downloaded_at": "2026-02-07T11:40:21+00:00",
     "etag": "\"097d9dfa44f3c4c347586c58e4638e7c\"",
     "extracted_dates": [
@@ -47775,7 +47807,8 @@
       "doj-disclosures"
     ],
     "text_quality_score": 76.0,
-    "title": "Utilities \u2014 EFTA00039806.pdf"
+    "title": "Utilities \u2014 EFTA00039806.pdf",
+    "category_confidence": 0.4
   },
   {
     "case_numbers": [],
