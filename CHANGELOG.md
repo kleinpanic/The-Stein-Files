@@ -7,6 +7,29 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.6.0] - 2026-02-10
+
+### Added
+- 16 new document categories: booking-record, travel-record, government-form, financial-record, court-order, receipt, transcript, contract, contact-list, schedule, phone-record, internet-record, search-warrant, indictment, fbi-record, scanned-document
+- Expanded known names list: 60+ high-profile people for extraction
+- ISSUES.md for tracking found issues during autonomous work
+- UPGRADES.md for suggested improvements
+
+### Improved
+- Document categorization: 48.8% → 86.6% (820/947 documents)
+- Email metadata extraction: smarter pattern matching, rejects garbage captures
+- Person extraction: 23 → 34 unique people identified
+- Email metadata quality: 64.1% have valid From field
+
+### Fixed
+- Email extraction picking up wrong fields (Sent/To/Subject captured as From)
+- Pattern matching generating garbage names like "Epstein\n\nDear"
+
+### Technical
+- Multi-marker pattern matching for document categories
+- Fallback to "scanned-document" for low-quality image PDFs
+- Simple case-insensitive name matching for accuracy
+
 ## [1.5.2] - 2026-02-10
 
 ### Fixed
