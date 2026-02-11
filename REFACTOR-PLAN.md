@@ -191,10 +191,10 @@
 
 ## Resource Requirements
 
-### mt server needs:
-- **RAM:** 8GB minimum (4GB for MeiliSearch, 2GB for PostgreSQL, 2GB for OS/web)
-- **CPU:** 4+ cores (ingestion is CPU-heavy for OCR)
-- **Storage:** 700GB ✅ (already allocated)
+### mt server specs (VERIFIED):
+- **RAM:** 125GB total, 117GB available ✅ (far exceeds 8GB minimum)
+- **CPU:** 56 cores ✅ (excellent for parallel OCR)
+- **Storage:** 688GB dedicated LV, 653GB available ✅
 - **Network:** Stable connection to edge-gateway via WireGuard
 
 ### edge-gateway VPS needs:
