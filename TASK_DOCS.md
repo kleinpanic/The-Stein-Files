@@ -1,9 +1,9 @@
-# Task Documentation - Autonomous Improvement System
+# Task Documentation - Production Refactor
 
 ## Project: The Stein Files (Epstein Document Archive)
-**Version:** 1.5.2  
-**Last Updated:** 2026-02-10 03:30 EST  
-**Mode:** Fully Autonomous Recursive Improvement
+**Version:** 2.0.0-alpha  
+**Last Updated:** 2026-02-11 01:53 EST  
+**Mode:** Production Migration to mt Server
 
 ---
 
@@ -20,7 +20,91 @@
 
 ---
 
-## Active Tasks (Priority Order)
+## PRODUCTION REFACTOR STATUS
+
+### Overview
+Moving from prototype (broklein, GitHub Pages) to production (mt server, 700GB dedicated storage).
+Goal: Host full 3.5M pages with rich search, people/email sections, proper infrastructure.
+
+### Phase 1: Infrastructure Setup ⏳
+**Timeline:** Week 1  
+**Status:** In Progress
+
+| Task | Status | Notes |
+|------|--------|-------|
+| Clone repo to mt | ✅ Complete | /srv/epstein/epstein-archive |
+| Initialize fresh git | ✅ Complete | Commit 2a4405a |
+| Verify mt specs | ✅ Complete | 125GB RAM, 56 cores, 688GB storage |
+| Domain decision | ⏸️ BLOCKED | Klein needs to choose: epsteinlibrary.org vs archive.kleinpanic.com |
+| Install production stack | 📋 Ready | Caddy, MeiliSearch, PostgreSQL, Python |
+| Configure HAProxy | ⏸️ BLOCKED | Needs domain decision |
+| DNS setup | ⏸️ BLOCKED | Needs domain decision |
+
+### Phase 2: Enumeration Ingestion ⏳
+**Timeline:** Week 1-2  
+**Status:** Script Ready, Testing Needed
+
+| Task | Status | Notes |
+|------|--------|-------|
+| Write enumeration script | ✅ Complete | scripts/ingest_enumerate.py |
+| Test on DataSet 1-5 | 📋 Next | Validate approach, measure time/storage |
+| Optimize boundary detection | 📋 Next | Use binary search for file ranges |
+| Full ingestion (DataSets 1-100) | ⏸️ Blocked | Needs test validation |
+| Verify 3.5M pages achieved | ⏸️ Blocked | Needs full ingestion |
+
+### Phase 3: Search Backend (Week 2-3)
+| Task | Status | Notes |
+|------|--------|-------|
+| PostgreSQL schema design | 📋 Next | Documents, people, relationships |
+| Import metadata to DB | ⏸️ Blocked | Needs Phase 2 data |
+| MeiliSearch indexing | ⏸️ Blocked | Needs Phase 2 data |
+| Build API endpoints | ⏸️ Blocked | Needs backend setup |
+| Test search performance | ⏸️ Blocked | Needs indexing complete |
+
+### Phase 4: Frontend (Week 3-4)
+| Task | Status | Notes |
+|------|--------|-------|
+| Redesign with backend integration | ⏸️ Blocked | Needs Phase 3 |
+| Person pages with relationships | ⏸️ Blocked | Needs Phase 3 |
+| Email browser/threading | ⏸️ Blocked | Needs Phase 3 |
+| Document viewer | ⏸️ Blocked | Needs Phase 3 |
+| Bulk download features | ⏸️ Blocked | Needs Phase 3 |
+
+### Phase 5: Deploy & Test (Week 4)
+| Task | Status | Notes |
+|------|--------|-------|
+| Full deployment to mt | ⏸️ Blocked | Needs Phase 4 |
+| HAProxy configuration | ⏸️ Blocked | Needs domain decision |
+| DNS cutover | ⏸️ Blocked | Needs domain decision |
+| Load testing | ⏸️ Blocked | Needs deployment |
+| Public announcement | ⏸️ Blocked | Needs testing |
+
+---
+
+## CRITICAL BLOCKERS
+
+### 🚫 Blocker 1: Domain Decision (Klein)
+**Impact:** Blocks HAProxy config, DNS setup, SSL certificates  
+**Options:**
+1. **epsteinlibrary.org** (RECOMMENDED) - Dedicated domain, professional, neutral
+2. **archive.kleinpanic.com** - Subdomain, no cost, part of personal brand
+
+**Next:** Klein chooses domain, then we can proceed with deployment config
+
+---
+
+## PARALLEL WORK (Can Do Now)
+
+While blocked on domain decision, working on:
+- ✅ Enumeration script (complete)
+- 📋 PostgreSQL schema design
+- 📋 MeiliSearch configuration planning
+- 📋 API structure design
+- 📋 Test ingestion on small dataset
+
+---
+
+## Active Tasks (Priority Order - Legacy Prototype)
 
 ### P0: Critical Fixes (Must Complete First)
 
