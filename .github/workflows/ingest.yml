@@ -19,14 +19,16 @@ jobs:
       EPPIE_TIME_BUDGET_SECONDS: "20000"
       EPPIE_REQUESTS_PER_SECOND: "1"
     steps:
-      - name: Checkout (skip LFS download)
+      - name: Checkout (with LFS)
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          lfs: false
+          lfs: true
 
-      - name: Ensure Git LFS installed
-        run: git lfs install
+      - name: Ensure Git LFS objects present
+        run: |
+          git lfs install --local
+          git lfs pull
 
       - name: Set up Python
         uses: actions/setup-python@v5
