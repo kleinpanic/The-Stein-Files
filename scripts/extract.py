@@ -115,7 +115,9 @@ def extract_all() -> None:
                     entry["extracted_file_numbers"] = analysis["extracted_file_numbers"]
                     entry["extracted_dates"] = analysis["extracted_dates"]
                     entry["dates_iso8601"] = analysis.get("dates_iso8601", [])  # Normalized ISO8601 dates
-                    entry["document_category"] = analysis["document_category"]
+                    # Preserve existing categorization if analysis can't classify.
+                    # (OCR-driven re-extraction previously regressed categorization by overwriting with None.)
+                    entry["document_category"] = analysis["document_category"] or entry.get("document_category")
                     # Phase 1 fields
                     entry["person_names"] = analysis.get("person_names", [])
                     entry["locations"] = analysis.get("locations", [])
