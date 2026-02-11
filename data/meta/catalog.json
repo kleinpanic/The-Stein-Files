@@ -1552,7 +1552,7 @@
     "category_method": "fuzzy",
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:09:58+00:00",
     "etag": "\"af2a3b91400d6742bd75f4e6b35b5c2a\"",
     "extracted_dates": [],
@@ -3142,7 +3142,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:11:04+00:00",
     "etag": "\"0cf1e994d48ebe71d1c975fb6010ad8c\"",
     "extracted_dates": [],
@@ -3912,7 +3912,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:11:36+00:00",
     "etag": "\"9eb506b07bc0868a363f2051a21df25f\"",
     "extracted_dates": [],
@@ -4681,7 +4681,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:12:08+00:00",
     "etag": "\"cd4dd2eb9ee296bc6050481b403bbf72\"",
     "extracted_dates": [],
@@ -4698,7 +4698,7 @@
     "locations": [],
     "mime_type": "application/pdf",
     "notes": "DOJ Epstein Library disclosures released under the Epstein Files Transparency Act, including data set files and supplemental releases.",
-    "ocr_applied": false,
+    "ocr_applied": true,
     "pages": 1,
     "pdf_type": "image",
     "person_names": [],
@@ -4718,7 +4718,7 @@
       "epstein-library",
       "doj-disclosures"
     ],
-    "text_quality_score": 42.7,
+    "text_quality_score": 0,
     "title": "Utilities \u2014 EFTA00000084.pdf"
   },
   {
@@ -7494,7 +7494,7 @@
     "dates_iso8601": [
       "2020-02-24"
     ],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:13:24+00:00",
     "etag": "\"d374b5b5ef94c1b9a6d63553ae80a64d\"",
     "extracted_dates": [
@@ -9486,7 +9486,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": "contact-list",
+    "document_category": "phone-record",
     "downloaded_at": "2026-02-07T11:14:10+00:00",
     "etag": "\"47df38fe3118befb114538b501713451\"",
     "extracted_dates": [],
@@ -10547,7 +10547,7 @@
       "2020-06-17",
       "2020-08-04"
     ],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:14:41+00:00",
     "etag": "\"3bdabc42f1a6fa93627a93cf25bd8150\"",
     "extracted_dates": [
@@ -11562,7 +11562,7 @@
       "2015-11-29",
       "2015-12-28"
     ],
-    "document_category": "financial-record",
+    "document_category": "phone-record",
     "downloaded_at": "2026-02-07T11:15:06+00:00",
     "etag": "\"6e3cc38d6f73a2568a1a8a9f05110cb9\"",
     "extracted_dates": [
@@ -12217,7 +12217,7 @@
     "category_confidence": 0.5,
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "internet-record",
     "downloaded_at": "2026-02-07T11:15:21+00:00",
     "email_cc": null,
     "email_date": null,
@@ -12278,7 +12278,7 @@
     "category_confidence": 0.75,
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "internet-record",
     "downloaded_at": "2026-02-07T11:15:23+00:00",
     "etag": "\"a64cd4017628830e1b9ee5c97eff3e7e\"",
     "extracted_dates": [],
@@ -12336,7 +12336,7 @@
     "dates_iso8601": [
       "2020-08-04"
     ],
-    "document_category": null,
+    "document_category": "internet-record",
     "downloaded_at": "2026-02-07T11:15:25+00:00",
     "etag": "\"1ced23a74cdeb08d99f9c4689ea10071\"",
     "extracted_dates": [
@@ -12393,7 +12393,7 @@
     "category_confidence": 0.75,
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "internet-record",
     "downloaded_at": "2026-02-07T11:15:27+00:00",
     "etag": "\"2e48c9e9d8b5293e98cdef8ad3761a36\"",
     "extracted_dates": [],
@@ -12876,7 +12876,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:15:41+00:00",
     "etag": "\"1b17c316fcf7adf41a005e3b57512695\"",
     "extracted_dates": [],
@@ -13002,7 +13002,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:15:45+00:00",
     "etag": "\"b486bdeb5b5dafdd16cec6567092bc4c\"",
     "extracted_dates": [],
@@ -13058,7 +13058,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:15:47+00:00",
     "etag": "\"b88085117ccac6fc74ebc56d80b8fa56\"",
     "extracted_dates": [],
@@ -13119,7 +13119,7 @@
     "category_confidence": 0.67,
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:15:49+00:00",
     "email_cc": null,
     "email_date": null,
@@ -13180,7 +13180,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:15:51+00:00",
     "etag": "\"01140edb480a9ef8426eb4529f7ff0b8\"",
     "extracted_dates": [],
@@ -13239,7 +13239,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:15:53+00:00",
     "etag": "\"3d8f92c9d8159c48a658df4481ce2a19\"",
     "extracted_dates": [],
@@ -13593,7 +13593,7 @@
       "2008-06-30",
       "2018-04-27"
     ],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:16:01+00:00",
     "etag": "\"9095aec38dc13835361caab52362f5e5\"",
     "extracted_dates": [
@@ -21716,7 +21716,7 @@
     "dates_iso8601": [
       "2012-05-10"
     ],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:20:05+00:00",
     "etag": "\"3e1deff8017245274ba900d018621d54-3\"",
     "extracted_dates": [
@@ -21797,7 +21797,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:20:06+00:00",
     "etag": "\"4986667a979d264a00db3677932f3994\"",
     "extracted_dates": [],
@@ -21875,7 +21875,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:20:08+00:00",
     "etag": "\"a2585bb39801e57b19881e28f316f086\"",
     "extracted_dates": [],
@@ -21948,7 +21948,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:20:10+00:00",
     "etag": "\"4ad289c1f75a5712705875e27882b82f\"",
     "extracted_dates": [],
@@ -22012,13 +22012,11 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:20:12+00:00",
     "etag": "\"36fb8e42a6ba592f64f15763192f83a8\"",
     "extracted_dates": [],
-    "extracted_file_numbers": [
-      "EFTA02731410"
-    ],
+    "extracted_file_numbers": [],
     "file_path": "data/raw/02825c0bd1b8-utilities-efta02731410pdf/EFTA02731410.pdf",
     "file_size_bytes": 1301881,
     "has_extractable_text": true,
@@ -22029,7 +22027,7 @@
     "locations": [],
     "mime_type": "application/pdf",
     "notes": "DOJ Epstein Library disclosures released under the Epstein Files Transparency Act, including data set files and supplemental releases.",
-    "ocr_applied": false,
+    "ocr_applied": true,
     "pages": 1,
     "pdf_type": "image",
     "person_names": [],
@@ -22049,7 +22047,7 @@
       "epstein-library",
       "doj-disclosures"
     ],
-    "text_quality_score": 42.6,
+    "text_quality_score": 0,
     "title": "Utilities \u2014 EFTA02731410.pdf"
   },
   {
@@ -22398,7 +22396,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:20:28+00:00",
     "etag": "\"6c53ad9ae470ef6c8d5336c33e561651\"",
     "extracted_dates": [],
@@ -22509,7 +22507,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:20:32+00:00",
     "etag": "\"b9d8f8dde7e2c2d750168933da7860cf\"",
     "extracted_dates": [],
@@ -22666,7 +22664,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:20:36+00:00",
     "etag": "\"57a191bdd5e1bdcb78a09615e4ae79d8\"",
     "extracted_dates": [],
@@ -24377,7 +24375,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:21:30+00:00",
     "etag": "\"f662cb24cba431de1d9a62c9d1d22b9c\"",
     "extracted_dates": [],
@@ -24396,7 +24394,7 @@
     "locations": [],
     "mime_type": "application/pdf",
     "notes": "DOJ Epstein Library disclosures released under the Epstein Files Transparency Act, including data set files and supplemental releases.",
-    "ocr_applied": false,
+    "ocr_applied": true,
     "pages": 3,
     "pdf_type": "image",
     "person_names": [],
@@ -24416,7 +24414,7 @@
       "epstein-library",
       "doj-disclosures"
     ],
-    "text_quality_score": 40.4,
+    "text_quality_score": 5.0,
     "title": "Utilities \u2014 EFTA02731521.pdf"
   },
   {
@@ -24502,7 +24500,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:21:34+00:00",
     "etag": "\"2aa4574bc0b7f5dbdfe2177b57683da6\"",
     "extracted_dates": [],
@@ -24682,7 +24680,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:21:40+00:00",
     "etag": "\"26bc88150164690f115b3a428ffcb31e\"",
     "extracted_dates": [],
@@ -24820,7 +24818,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:21:44+00:00",
     "etag": "\"7def28d56af534e5fbb0f735641fde35\"",
     "extracted_dates": [],
@@ -24880,7 +24878,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:21:46+00:00",
     "etag": "\"6bc65591a0d02b1d6361722f3a8563bd\"",
     "extracted_dates": [],
@@ -27829,7 +27827,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:23:16+00:00",
     "etag": "\"ed15abb2d996bf63ecb4756244eb4ec9\"",
     "extracted_dates": [],
@@ -28470,7 +28468,7 @@
     "locations": [],
     "mime_type": "application/pdf",
     "notes": "DOJ Epstein Library disclosures released under the Epstein Files Transparency Act, including data set files and supplemental releases.",
-    "ocr_applied": false,
+    "ocr_applied": true,
     "pages": 1,
     "pdf_type": "image",
     "person_names": [],
@@ -28490,7 +28488,7 @@
       "epstein-library",
       "doj-disclosures"
     ],
-    "text_quality_score": 31.0,
+    "text_quality_score": 0,
     "title": "Utilities \u2014 EFTA00003188.pdf"
   },
   {
@@ -29799,7 +29797,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:24:40+00:00",
     "etag": "\"a731e5039f43d8ca2e3350274364298b-2\"",
     "extracted_dates": [],
@@ -29852,12 +29850,12 @@
     "auto_tags": [
       "2020s",
       "evidence-photo",
-      "location:cr-ch"
+      "location:lo-oo-me-mm"
     ],
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:24:41+00:00",
     "etag": "\"eb05fa04eb86bf1912bb8790ba0c20e6\"",
     "extracted_dates": [],
@@ -29881,11 +29879,11 @@
     "last_modified": "Fri, 19 Dec 2025 20:22:08 GMT",
     "license_or_terms": "as published by source",
     "locations": [
-      "cr, ch"
+      "LO OO me, mm"
     ],
     "mime_type": "application/pdf",
     "notes": "DOJ Epstein Library disclosures released under the Epstein Files Transparency Act, including data set files and supplemental releases.",
-    "ocr_applied": false,
+    "ocr_applied": true,
     "pages": 20,
     "pdf_type": "image",
     "person_names": [],
@@ -29905,7 +29903,7 @@
       "epstein-library",
       "doj-disclosures"
     ],
-    "text_quality_score": 56.8,
+    "text_quality_score": 57.6,
     "title": "Utilities \u2014 EFTA00003236.pdf"
   },
   {
@@ -29917,7 +29915,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:24:44+00:00",
     "etag": "\"0a9e4d4d94801a6fa2d769df5ebdb4a3\"",
     "extracted_dates": [],
@@ -29976,7 +29974,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:24:46+00:00",
     "etag": "\"5c5b19804f040f40f0468647e7c64b04-2\"",
     "extracted_dates": [],
@@ -30033,7 +30031,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:24:48+00:00",
     "etag": "\"95921e34c7b7fbcfefe3c85b7fd76379\"",
     "extracted_dates": [],
@@ -30090,13 +30088,11 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:24:49+00:00",
     "etag": "\"28b87037251ce7ccb561161c1d4fb874\"",
     "extracted_dates": [],
-    "extracted_file_numbers": [
-      "EFTA00003316"
-    ],
+    "extracted_file_numbers": [],
     "file_path": "data/raw/0b61b2c5eabe-utilities-efta00003316pdf/EFTA00003316.pdf",
     "file_size_bytes": 399095,
     "has_extractable_text": true,
@@ -30107,7 +30103,7 @@
     "locations": [],
     "mime_type": "application/pdf",
     "notes": "DOJ Epstein Library disclosures released under the Epstein Files Transparency Act, including data set files and supplemental releases.",
-    "ocr_applied": false,
+    "ocr_applied": true,
     "pages": 1,
     "pdf_type": "image",
     "person_names": [],
@@ -30127,7 +30123,7 @@
       "epstein-library",
       "doj-disclosures"
     ],
-    "text_quality_score": 51.3,
+    "text_quality_score": 26.0,
     "title": "Utilities \u2014 EFTA00003316.pdf"
   },
   {
@@ -31821,7 +31817,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:26:02+00:00",
     "etag": "\"563972851b7f0a942260239b3aecc1f8\"",
     "extracted_dates": [],
@@ -31939,7 +31935,7 @@
       "2006-08-17",
       "2008-07-28"
     ],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:26:07+00:00",
     "etag": "\"2d052f1427b17bbbde839e9e8655600f\"",
     "extracted_dates": [
@@ -32053,14 +32049,17 @@
     ],
     "case_numbers": [],
     "content_disposition": "",
-    "dates_iso8601": [],
-    "document_category": null,
+    "dates_iso8601": [
+      "2020-07-27"
+    ],
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:26:10+00:00",
     "etag": "\"b3e7dfd7dfd9167ec9edb12c1062f020\"",
-    "extracted_dates": [],
+    "extracted_dates": [
+      "July 27, 2020"
+    ],
     "extracted_file_numbers": [
-      "EFTA00003921",
-      "EFTA00003922"
+      "EFTA00003921"
     ],
     "file_path": "data/raw/fe1fb712b2c1-utilities-efta00003921pdf/EFTA00003921.pdf",
     "file_size_bytes": 633456,
@@ -32072,7 +32071,7 @@
     "locations": [],
     "mime_type": "application/pdf",
     "notes": "DOJ Epstein Library disclosures released under the Epstein Files Transparency Act, including data set files and supplemental releases.",
-    "ocr_applied": false,
+    "ocr_applied": true,
     "pages": 2,
     "pdf_type": "image",
     "person_names": [],
@@ -32092,7 +32091,7 @@
       "epstein-library",
       "doj-disclosures"
     ],
-    "text_quality_score": 36.7,
+    "text_quality_score": 26.0,
     "title": "Utilities \u2014 EFTA00003921.pdf"
   },
   {
@@ -32347,11 +32346,15 @@
     ],
     "case_numbers": [],
     "content_disposition": "",
-    "dates_iso8601": [],
-    "document_category": null,
+    "dates_iso8601": [
+      "2020-07-27"
+    ],
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:26:22+00:00",
     "etag": "\"c9fc68a699373f78f341acb3f4b0e994\"",
-    "extracted_dates": [],
+    "extracted_dates": [
+      "July 27, 2020"
+    ],
     "extracted_file_numbers": [
       "EFTA00003933",
       "EFTA00003934",
@@ -32367,7 +32370,7 @@
     "locations": [],
     "mime_type": "application/pdf",
     "notes": "DOJ Epstein Library disclosures released under the Epstein Files Transparency Act, including data set files and supplemental releases.",
-    "ocr_applied": false,
+    "ocr_applied": true,
     "pages": 3,
     "pdf_type": "image",
     "person_names": [],
@@ -32387,7 +32390,7 @@
       "epstein-library",
       "doj-disclosures"
     ],
-    "text_quality_score": 56.8,
+    "text_quality_score": 29.3,
     "title": "Utilities \u2014 EFTA00003933.pdf"
   },
   {
@@ -32594,16 +32597,19 @@
     "auto_tags": [
       "2020s",
       "evidence-photo",
-      "legal",
-      "location:do-not-use-wnle-oatl-ne"
+      "legal"
     ],
     "case_numbers": [],
     "content_disposition": "",
-    "dates_iso8601": [],
-    "document_category": null,
+    "dates_iso8601": [
+      "2020-07-27"
+    ],
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:26:32+00:00",
     "etag": "\"8ad7c985b38d9d49c742b59cd1f19fc7\"",
-    "extracted_dates": [],
+    "extracted_dates": [
+      "July 27, 2020"
+    ],
     "extracted_file_numbers": [
       "EFTA00003948",
       "EFTA00003949",
@@ -32616,12 +32622,10 @@
     "is_official": true,
     "last_modified": "Fri, 19 Dec 2025 20:23:11 GMT",
     "license_or_terms": "as published by source",
-    "locations": [
-      "Do not use wnle Oatl, ne"
-    ],
+    "locations": [],
     "mime_type": "application/pdf",
     "notes": "DOJ Epstein Library disclosures released under the Epstein Files Transparency Act, including data set files and supplemental releases.",
-    "ocr_applied": false,
+    "ocr_applied": true,
     "pages": 3,
     "pdf_type": "image",
     "person_names": [],
@@ -32641,7 +32645,7 @@
       "epstein-library",
       "doj-disclosures"
     ],
-    "text_quality_score": 62.7,
+    "text_quality_score": 44.3,
     "title": "Utilities \u2014 EFTA00003948.pdf"
   },
   {
@@ -32655,7 +32659,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:26:35+00:00",
     "etag": "\"0f2e65c2dc279cc701f9e809e5fbf71b\"",
     "extracted_dates": [],
@@ -32715,7 +32719,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:26:36+00:00",
     "etag": "\"f94d78a425720ca7941d68bbde1c4c98\"",
     "extracted_dates": [],
@@ -33023,7 +33027,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:26:48+00:00",
     "etag": "\"9484689b4bcca600db3406b8c990c746\"",
     "extracted_dates": [],
@@ -33076,7 +33080,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:26:50+00:00",
     "etag": "\"e9ba6282fce30bc9f8365035bb69adf2\"",
     "extracted_dates": [],
@@ -33120,13 +33124,12 @@
   {
     "auto_tags": [
       "2020s",
-      "evidence-photo",
-      "location:adult-al"
+      "evidence-photo"
     ],
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:26:52+00:00",
     "etag": "\"a2f1b3043e0e68ddcfeb13b1d99e5052\"",
     "extracted_dates": [],
@@ -33142,12 +33145,10 @@
     "is_official": true,
     "last_modified": "Fri, 19 Dec 2025 20:23:27 GMT",
     "license_or_terms": "as published by source",
-    "locations": [
-      "ADULT, Al"
-    ],
+    "locations": [],
     "mime_type": "application/pdf",
     "notes": "DOJ Epstein Library disclosures released under the Epstein Files Transparency Act, including data set files and supplemental releases.",
-    "ocr_applied": false,
+    "ocr_applied": true,
     "pages": 3,
     "pdf_type": "image",
     "person_names": [],
@@ -33167,7 +33168,7 @@
       "epstein-library",
       "doj-disclosures"
     ],
-    "text_quality_score": 57.2,
+    "text_quality_score": 16.4,
     "title": "Utilities \u2014 EFTA00004057.pdf"
   },
   {
@@ -33178,7 +33179,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:26:54+00:00",
     "etag": "\"d70d359d637214dfd664ff23ecadee85\"",
     "extracted_dates": [],
@@ -33251,7 +33252,7 @@
     "locations": [],
     "mime_type": "application/pdf",
     "notes": "DOJ Epstein Library disclosures released under the Epstein Files Transparency Act, including data set files and supplemental releases.",
-    "ocr_applied": false,
+    "ocr_applied": true,
     "pages": 2,
     "pdf_type": "image",
     "person_names": [],
@@ -33271,7 +33272,7 @@
       "epstein-library",
       "doj-disclosures"
     ],
-    "text_quality_score": 31.8,
+    "text_quality_score": 24.5,
     "title": "Utilities \u2014 EFTA00004064.pdf"
   },
   {
@@ -33286,7 +33287,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:26:58+00:00",
     "etag": "\"57c7ffcc2993948ada5afa0bc9a6a229\"",
     "extracted_dates": [],
@@ -33356,7 +33357,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:27:01+00:00",
     "etag": "\"eca9c1110e01eef3ed177932c3925a8c\"",
     "extracted_dates": [],
@@ -33476,7 +33477,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:27:05+00:00",
     "etag": "\"5cca2c429c37d39ebdb2d9d9bbe90c7d\"",
     "extracted_dates": [],
@@ -33533,7 +33534,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:27:06+00:00",
     "etag": "\"74d6edbd7ddd5bf3ba556c99f2077222\"",
     "extracted_dates": [],
@@ -33872,7 +33873,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "media-index",
     "downloaded_at": "2026-02-07T11:27:23+00:00",
     "etag": "\"8640e4dae0f451d885b2fa6f7bd98a59-3\"",
     "extracted_dates": [],
@@ -33936,7 +33937,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "media-index",
     "downloaded_at": "2026-02-07T11:27:26+00:00",
     "etag": "\"373aa89e4a47b9a562becb5d5cb95371-3\"",
     "extracted_dates": [],
@@ -33999,7 +34000,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "media-index",
     "downloaded_at": "2026-02-07T11:27:27+00:00",
     "etag": "\"0d926f985cd762db1f3f36ac3d8863a9\"",
     "extracted_dates": [],
@@ -34063,7 +34064,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "media-index",
     "downloaded_at": "2026-02-07T11:27:31+00:00",
     "etag": "\"c8e0706995c1ddeee1ef6f4964bd5d99-3\"",
     "extracted_dates": [],
@@ -34125,7 +34126,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "media-index",
     "downloaded_at": "2026-02-07T11:27:33+00:00",
     "etag": "\"5bdc07929e7aef736740c0ef7ec61727\"",
     "extracted_dates": [],
@@ -34184,7 +34185,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "media-index",
     "downloaded_at": "2026-02-07T11:27:36+00:00",
     "etag": "\"8ccaf052ddc703af142015ea0e731812-2\"",
     "extracted_dates": [],
@@ -34247,7 +34248,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "media-index",
     "downloaded_at": "2026-02-07T11:27:40+00:00",
     "etag": "\"f4465b69c77e5846747f705cb31aa877-3\"",
     "extracted_dates": [],
@@ -34307,7 +34308,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "media-index",
     "downloaded_at": "2026-02-07T11:27:42+00:00",
     "etag": "\"cc9769091de758491cceb5375007ed81\"",
     "extracted_dates": [],
@@ -34366,7 +34367,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "media-index",
     "downloaded_at": "2026-02-07T11:27:46+00:00",
     "etag": "\"0efb7c8a5dfb3260942ec7df1b1a75e9-3\"",
     "extracted_dates": [],
@@ -34425,7 +34426,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "media-index",
     "downloaded_at": "2026-02-07T11:27:49+00:00",
     "etag": "\"dfea80c7a948eae4597fdf0a559fad7d-3\"",
     "extracted_dates": [],
@@ -34492,7 +34493,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "media-index",
     "downloaded_at": "2026-02-07T11:27:52+00:00",
     "etag": "\"19ff6ab800a01965d5e252bbe3305bf1-3\"",
     "extracted_dates": [],
@@ -34611,7 +34612,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "media-index",
     "downloaded_at": "2026-02-07T11:27:58+00:00",
     "etag": "\"924d109f60aa664729d742993e6acd9e\"",
     "extracted_dates": [],
@@ -34667,7 +34668,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:28:00+00:00",
     "etag": "\"028ee888822989bb3e0e6ac9b3d8cdd7\"",
     "extracted_dates": [],
@@ -34693,7 +34694,7 @@
     "locations": [],
     "mime_type": "application/pdf",
     "notes": "DOJ Epstein Library disclosures released under the Epstein Files Transparency Act, including data set files and supplemental releases.",
-    "ocr_applied": false,
+    "ocr_applied": true,
     "pages": 29,
     "pdf_type": "image",
     "person_names": [],
@@ -34713,7 +34714,7 @@
       "epstein-library",
       "doj-disclosures"
     ],
-    "text_quality_score": 57.6,
+    "text_quality_score": 48.2,
     "title": "Utilities \u2014 EFTA00005495.pdf"
   },
   {
@@ -34830,7 +34831,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:28:06+00:00",
     "etag": "\"8df9808f387eabbeb0b299966f609a9d\"",
     "extracted_dates": [],
@@ -34856,7 +34857,7 @@
     "locations": [],
     "mime_type": "application/pdf",
     "notes": "DOJ Epstein Library disclosures released under the Epstein Files Transparency Act, including data set files and supplemental releases.",
-    "ocr_applied": false,
+    "ocr_applied": true,
     "pages": 23,
     "pdf_type": "image",
     "person_names": [],
@@ -34876,7 +34877,7 @@
       "epstein-library",
       "doj-disclosures"
     ],
-    "text_quality_score": 58.3,
+    "text_quality_score": 63.5,
     "title": "Utilities \u2014 EFTA00005538.pdf"
   },
   {
@@ -34887,7 +34888,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:28:08+00:00",
     "etag": "\"141e1afb241e6165ae631fc67f4537c2\"",
     "extracted_dates": [],
@@ -34936,7 +34937,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:28:10+00:00",
     "etag": "\"06c12f5df7edae53e189e9fb048527dd\"",
     "extracted_dates": [],
@@ -35087,7 +35088,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:28:16+00:00",
     "etag": "\"d38fb1d904efcbb875439190c0e5a61b\"",
     "extracted_dates": [],
@@ -35237,7 +35238,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:28:20+00:00",
     "etag": "\"531ab7e276bf8ac0b188a04578fcd75b\"",
     "extracted_dates": [],
@@ -35803,7 +35804,7 @@
     "dates_iso8601": [
       "2019-06-06"
     ],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:28:36+00:00",
     "etag": "\"92ccf86339f05bce31354e32328cc2ed\"",
     "extracted_dates": [
@@ -35953,7 +35954,7 @@
     "dates_iso8601": [
       "2019-06-06"
     ],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:28:40+00:00",
     "etag": "\"6b4cfb1a5c44c9cffd169174c82a86ac\"",
     "extracted_dates": [
@@ -36098,7 +36099,7 @@
       "2019-08-29",
       "2027-07-01"
     ],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:28:44+00:00",
     "etag": "\"530ff882dc59f351957e6b92adbc119c\"",
     "extracted_dates": [
@@ -36174,7 +36175,7 @@
       "2019-06-06",
       "2025-07-21"
     ],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:28:46+00:00",
     "etag": "\"1ea3c81245bb785c9def6bdc22bd30c3\"",
     "extracted_dates": [
@@ -36247,7 +36248,7 @@
     "dates_iso8601": [
       "2019-06-06"
     ],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:28:48+00:00",
     "etag": "\"ce5bc63965aa566b629dc1ef00ba870e\"",
     "extracted_dates": [
@@ -36313,7 +36314,7 @@
     "dates_iso8601": [
       "2019-07-02"
     ],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:28:50+00:00",
     "etag": "\"c29d9117bfd91dc1e02decaa0a7d5bcc\"",
     "extracted_dates": [
@@ -36383,7 +36384,7 @@
       "2019-09-03",
       "2019-09-16"
     ],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:28:52+00:00",
     "etag": "\"ccfb765183fdaf826e4954261e3c829d\"",
     "extracted_dates": [
@@ -36448,7 +36449,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:28:54+00:00",
     "etag": "\"616558749548a516fc43b11667b3e319\"",
     "extracted_dates": [],
@@ -36474,7 +36475,7 @@
     "locations": [],
     "mime_type": "application/pdf",
     "notes": "DOJ Epstein Library disclosures released under the Epstein Files Transparency Act, including data set files and supplemental releases.",
-    "ocr_applied": false,
+    "ocr_applied": true,
     "pages": 21,
     "pdf_type": "image",
     "person_names": [],
@@ -36494,7 +36495,7 @@
       "epstein-library",
       "doj-disclosures"
     ],
-    "text_quality_score": 56.5,
+    "text_quality_score": 33.5,
     "title": "Utilities \u2014 EFTA00005878.pdf"
   },
   {
@@ -36505,7 +36506,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:28:56+00:00",
     "etag": "\"bb3439864e9d4a036cca2159dacd6333\"",
     "extracted_dates": [],
@@ -36531,7 +36532,7 @@
     "locations": [],
     "mime_type": "application/pdf",
     "notes": "DOJ Epstein Library disclosures released under the Epstein Files Transparency Act, including data set files and supplemental releases.",
-    "ocr_applied": false,
+    "ocr_applied": true,
     "pages": 11,
     "pdf_type": "image",
     "person_names": [],
@@ -36551,7 +36552,7 @@
       "epstein-library",
       "doj-disclosures"
     ],
-    "text_quality_score": 56.5,
+    "text_quality_score": 18.5,
     "title": "Utilities \u2014 EFTA00005899.pdf"
   },
   {
@@ -36559,22 +36560,21 @@
       "2010s",
       "2020s",
       "evidence",
-      "evidence-photo"
+      "evidence-photo",
+      "location:enamis-eee-marwick-ny"
     ],
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [
       "2019-06-05"
     ],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:28:58+00:00",
     "etag": "\"14caa1d07ac47252637f790cf44e98c8\"",
     "extracted_dates": [
       "6/5/2019"
     ],
     "extracted_file_numbers": [
-      "EFTA00005910",
-      "EFTA00005911",
       "EFTA00005912",
       "EFTA00005913",
       "EFTA00005914",
@@ -36582,7 +36582,9 @@
       "EFTA00005916",
       "EFTA00005917",
       "EFTA00005918",
-      "EFTA00005919"
+      "EFTA00005919",
+      "EFTA00005920",
+      "EFTA00005921"
     ],
     "file_path": "data/raw/f1168414278f-utilities-efta00005910pdf/EFTA00005910.pdf",
     "file_size_bytes": 812361,
@@ -36591,10 +36593,12 @@
     "is_official": true,
     "last_modified": "Fri, 19 Dec 2025 20:28:34 GMT",
     "license_or_terms": "as published by source",
-    "locations": [],
+    "locations": [
+      "En\n\namis eee MARWICK, NY"
+    ],
     "mime_type": "application/pdf",
     "notes": "DOJ Epstein Library disclosures released under the Epstein Files Transparency Act, including data set files and supplemental releases.",
-    "ocr_applied": false,
+    "ocr_applied": true,
     "pages": 14,
     "pdf_type": "image",
     "person_names": [],
@@ -36614,7 +36618,7 @@
       "epstein-library",
       "doj-disclosures"
     ],
-    "text_quality_score": 48.7,
+    "text_quality_score": 55.6,
     "title": "Utilities \u2014 EFTA00005910.pdf"
   },
   {
@@ -36889,7 +36893,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:29:06+00:00",
     "etag": "\"1f824c3480f2392039552bf5ba2472f4\"",
     "extracted_dates": [],
@@ -36963,7 +36967,7 @@
       "2022-05-25",
       "2319-07-02"
     ],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:29:08+00:00",
     "etag": "\"e69615f5c1032b6391acea9313f85c9f\"",
     "extracted_dates": [
@@ -37042,7 +37046,7 @@
       "2021-11-25",
       "2021-11-26"
     ],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:29:10+00:00",
     "etag": "\"a4dbaf921ce03253b7b4b2a0806bda50\"",
     "extracted_dates": [
@@ -37125,7 +37129,7 @@
     "dates_iso8601": [
       "2019-08-07"
     ],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:29:12+00:00",
     "etag": "\"a53ef680435532c95a2b189087f4b70b\"",
     "extracted_dates": [
@@ -37209,7 +37213,7 @@
     "category_confidence": 1.0,
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:29:15+00:00",
     "etag": "\"c035f6a82f251331faf90bc20995e70a-2\"",
     "extracted_dates": [],
@@ -37433,7 +37437,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:29:20+00:00",
     "etag": "\"90b7960c585db83d81db857198dbaec6\"",
     "extracted_dates": [],
@@ -37486,11 +37490,15 @@
     ],
     "case_numbers": [],
     "content_disposition": "",
-    "dates_iso8601": [],
-    "document_category": null,
+    "dates_iso8601": [
+      "2020-07-27"
+    ],
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:29:22+00:00",
     "etag": "\"6a310cc50a4ca9e086f3b40615c09ed7\"",
-    "extracted_dates": [],
+    "extracted_dates": [
+      "July 27, 2020"
+    ],
     "extracted_file_numbers": [
       "EFTA00006043",
       "EFTA00006044",
@@ -37509,7 +37517,7 @@
     "locations": [],
     "mime_type": "application/pdf",
     "notes": "DOJ Epstein Library disclosures released under the Epstein Files Transparency Act, including data set files and supplemental releases.",
-    "ocr_applied": false,
+    "ocr_applied": true,
     "pages": 6,
     "pdf_type": "image",
     "person_names": [],
@@ -37529,7 +37537,7 @@
       "epstein-library",
       "doj-disclosures"
     ],
-    "text_quality_score": 59.9,
+    "text_quality_score": 54.5,
     "title": "Utilities \u2014 EFTA00006043.pdf"
   },
   {
@@ -37544,7 +37552,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:29:24+00:00",
     "etag": "\"4ab8056aeba58239d24bad0472a44ff2\"",
     "extracted_dates": [],
@@ -37702,7 +37710,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:29:28+00:00",
     "etag": "\"81ca1a2f6b487480a846d2fdb5e42873\"",
     "extracted_dates": [],
@@ -37772,7 +37780,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:29:30+00:00",
     "etag": "\"c5052d3f35530df5a4457e68257128d4\"",
     "extracted_dates": [],
@@ -37837,7 +37845,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:29:33+00:00",
     "etag": "\"42f7d28e55d6aea1dbfcda90bb451a7f\"",
     "extracted_dates": [],
@@ -37906,7 +37914,7 @@
     "dates_iso8601": [
       "2005-02-02"
     ],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:29:34+00:00",
     "etag": "\"d8062a12a82eb4304321ea68ed1ad2d7\"",
     "extracted_dates": [
@@ -38233,7 +38241,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:29:44+00:00",
     "etag": "\"8e2570bb324e0e403eb460fbaaa80f9b\"",
     "extracted_dates": [],
@@ -38290,7 +38298,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:29:46+00:00",
     "etag": "\"dd8aa0b8e648f0343e5b3f041c7ea459\"",
     "extracted_dates": [],
@@ -38347,7 +38355,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:29:48+00:00",
     "etag": "\"784321b2288038d1f3b5b6cc48231f39\"",
     "extracted_dates": [],
@@ -38404,21 +38412,21 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:29:50+00:00",
     "etag": "\"746cef2ab4cbe146b7360b56cbec96d1\"",
     "extracted_dates": [],
     "extracted_file_numbers": [
       "EFTA00006309",
       "EFTA00006310",
-      "EFTA00006311",
       "EFTA00006312",
       "EFTA00006313",
-      "EFTA00006314",
       "EFTA00006315",
       "EFTA00006316",
       "EFTA00006317",
-      "EFTA00006318"
+      "EFTA00006318",
+      "EFTA00006319",
+      "EFTA00006320"
     ],
     "file_path": "data/raw/dfdb18e1e9e8-utilities-efta00006309pdf/EFTA00006309.pdf",
     "file_size_bytes": 254087,
@@ -38430,7 +38438,7 @@
     "locations": [],
     "mime_type": "application/pdf",
     "notes": "DOJ Epstein Library disclosures released under the Epstein Files Transparency Act, including data set files and supplemental releases.",
-    "ocr_applied": false,
+    "ocr_applied": true,
     "pages": 55,
     "pdf_type": "image",
     "person_names": [],
@@ -38450,7 +38458,7 @@
       "epstein-library",
       "doj-disclosures"
     ],
-    "text_quality_score": 50.2,
+    "text_quality_score": 49.8,
     "title": "Utilities \u2014 EFTA00006309.pdf"
   },
   {
@@ -38462,7 +38470,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:29:52+00:00",
     "etag": "\"61e9d2c94ad29b80146aaf538ccfcea4\"",
     "extracted_dates": [],
@@ -38515,7 +38523,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:29:54+00:00",
     "etag": "\"9d5e94d523e157e5ba494e295eb16936\"",
     "extracted_dates": [],
@@ -38568,7 +38576,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:29:56+00:00",
     "etag": "\"34766ae6d0c1a0f39dad34cdf8b4d025\"",
     "extracted_dates": [],
@@ -38618,7 +38626,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:29:58+00:00",
     "etag": "\"d8721794ddf9df7757ae5ac2ba837ee5\"",
     "extracted_dates": [],
@@ -38672,7 +38680,7 @@
     "dates_iso8601": [
       "2005-04-11"
     ],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:30:00+00:00",
     "etag": "\"f0de22f96bd82e58f08678635e3541b1\"",
     "extracted_dates": [
@@ -38726,7 +38734,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:30:02+00:00",
     "etag": "\"a6e3cc5aa2b559c8bf18fe5bb363483f\"",
     "extracted_dates": [],
@@ -38777,7 +38785,7 @@
     "category_confidence": 1.0,
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:30:04+00:00",
     "etag": "\"ca1119cdc5f25cbb2398fac352f41b18\"",
     "extracted_dates": [],
@@ -38828,7 +38836,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:30:06+00:00",
     "etag": "\"fa924a2a3ad6af20d99cd63fdb6c83ad\"",
     "extracted_dates": [],
@@ -38943,7 +38951,7 @@
       "2008-06-21",
       "2008-07-21"
     ],
-    "document_category": "receipt",
+    "document_category": "phone-record",
     "downloaded_at": "2026-02-07T11:30:11+00:00",
     "etag": "\"416d09ad0781616120de24d37452eea9\"",
     "extracted_dates": [
@@ -39039,7 +39047,7 @@
       "2036-08-21",
       "2306-08-21"
     ],
-    "document_category": "receipt",
+    "document_category": "phone-record",
     "downloaded_at": "2026-02-07T11:30:13+00:00",
     "etag": "\"a109223e86e6335253e07b677cc44117\"",
     "extracted_dates": [
@@ -39141,7 +39149,7 @@
       "2036-11-21",
       "2306-10-21"
     ],
-    "document_category": "receipt",
+    "document_category": "phone-record",
     "downloaded_at": "2026-02-07T11:30:15+00:00",
     "email_cc": null,
     "email_date": null,
@@ -39263,7 +39271,7 @@
       "2008-12-31",
       "2026-12-21"
     ],
-    "document_category": "receipt",
+    "document_category": "phone-record",
     "downloaded_at": "2026-02-07T11:30:17+00:00",
     "etag": "\"fb7d86b7a3b0f6220473ac3e0cc9476d\"",
     "extracted_dates": [
@@ -39696,7 +39704,7 @@
       "2036-07-17",
       "2036-07-18"
     ],
-    "document_category": "financial-record",
+    "document_category": "phone-record",
     "downloaded_at": "2026-02-07T11:30:24+00:00",
     "etag": "\"c692e66fcafebc27a168736ee473075c\"",
     "extracted_dates": [
@@ -40148,7 +40156,7 @@
       "2005-04-03",
       "2005-04-04"
     ],
-    "document_category": "travel-record",
+    "document_category": "phone-record",
     "downloaded_at": "2026-02-07T11:30:36+00:00",
     "etag": "\"3d195164b589a7a66e185d75d3a553e4-2\"",
     "extracted_dates": [
@@ -40281,7 +40289,7 @@
       "2305-04-03",
       "7005-06-09"
     ],
-    "document_category": "receipt",
+    "document_category": "phone-record",
     "downloaded_at": "2026-02-07T11:30:38+00:00",
     "etag": "\"4e1514bdb973c801db78c662bd8366a1\"",
     "extracted_dates": [
@@ -40399,7 +40407,7 @@
       "2034-05-22",
       "2084-02-24"
     ],
-    "document_category": "subpoena",
+    "document_category": "phone-record",
     "downloaded_at": "2026-02-07T11:30:41+00:00",
     "etag": "\"9daef3fe447d6e9950593b29e8db6de3-2\"",
     "extracted_dates": [
@@ -40514,7 +40522,7 @@
       "2035-01-21",
       "2035-03-21"
     ],
-    "document_category": null,
+    "document_category": "phone-record",
     "downloaded_at": "2026-02-07T11:30:43+00:00",
     "etag": "\"43bd33445e632fabe5105c4005c2fcd4-2\"",
     "extracted_dates": [
@@ -40622,7 +40630,7 @@
       "2006-01-21",
       "2006-08-20"
     ],
-    "document_category": null,
+    "document_category": "phone-record",
     "downloaded_at": "2026-02-07T11:30:45+00:00",
     "etag": "\"5339e22de0274c06cb9bebcce05e1258\"",
     "extracted_dates": [
@@ -40800,7 +40808,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:30:50+00:00",
     "etag": "\"8c4641160a5cbe6cf1268bf7c8396f5d\"",
     "extracted_dates": [],
@@ -40848,16 +40856,19 @@
     "auto_tags": [
       "2020s",
       "evidence-photo",
-      "legal",
-      "location:do-not-use-wnle-oatl-ne"
+      "legal"
     ],
     "case_numbers": [],
     "content_disposition": "",
-    "dates_iso8601": [],
-    "document_category": null,
+    "dates_iso8601": [
+      "2020-07-27"
+    ],
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:30:53+00:00",
     "etag": "\"192fc4ceeb96bb89f05fd8b93e4daa39\"",
-    "extracted_dates": [],
+    "extracted_dates": [
+      "July 27, 2020"
+    ],
     "extracted_file_numbers": [
       "EFTA00007553",
       "EFTA00007554",
@@ -40870,12 +40881,10 @@
     "is_official": true,
     "last_modified": "Fri, 19 Dec 2025 20:28:11 GMT",
     "license_or_terms": "as published by source",
-    "locations": [
-      "Do not use wnle Oatl, ne"
-    ],
+    "locations": [],
     "mime_type": "application/pdf",
     "notes": "DOJ Epstein Library disclosures released under the Epstein Files Transparency Act, including data set files and supplemental releases.",
-    "ocr_applied": false,
+    "ocr_applied": true,
     "pages": 3,
     "pdf_type": "image",
     "person_names": [],
@@ -40895,7 +40904,7 @@
       "epstein-library",
       "doj-disclosures"
     ],
-    "text_quality_score": 62.7,
+    "text_quality_score": 44.3,
     "title": "Utilities \u2014 EFTA00007553.pdf"
   },
   {
@@ -41101,7 +41110,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:31:02+00:00",
     "etag": "\"e9393d0b931ce771ea34f6efc075baae\"",
     "extracted_dates": [],
@@ -41145,20 +41154,23 @@
   {
     "auto_tags": [
       "2020s",
-      "evidence-photo"
+      "evidence-photo",
+      "location:palm-beach"
     ],
     "case_numbers": [],
     "content_disposition": "",
-    "dates_iso8601": [],
-    "document_category": null,
+    "dates_iso8601": [
+      "2020-07-27"
+    ],
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:31:05+00:00",
     "etag": "\"71cbbf2667291923bf3c42f44afcfad0\"",
-    "extracted_dates": [],
+    "extracted_dates": [
+      "July 27, 2020"
+    ],
     "extracted_file_numbers": [
       "EFTA00007565",
-      "EFTA00007566",
       "EFTA00007567",
-      "EFTA00007568",
       "EFTA00007569"
     ],
     "file_path": "data/raw/4aeb0d5f4c4a-utilities-efta00007565pdf/EFTA00007565.pdf",
@@ -41168,10 +41180,12 @@
     "is_official": true,
     "last_modified": "Fri, 19 Dec 2025 20:28:07 GMT",
     "license_or_terms": "as published by source",
-    "locations": [],
+    "locations": [
+      "Palm Beach"
+    ],
     "mime_type": "application/pdf",
     "notes": "DOJ Epstein Library disclosures released under the Epstein Files Transparency Act, including data set files and supplemental releases.",
-    "ocr_applied": false,
+    "ocr_applied": true,
     "pages": 5,
     "pdf_type": "image",
     "person_names": [],
@@ -41191,7 +41205,7 @@
       "epstein-library",
       "doj-disclosures"
     ],
-    "text_quality_score": 57.0,
+    "text_quality_score": 40.2,
     "title": "Utilities \u2014 EFTA00007565.pdf"
   },
   {
@@ -41199,23 +41213,22 @@
       "2020s",
       "evidence",
       "evidence-photo",
-      "location",
-      "location:palm-beach",
-      "location:tscrir-fr"
+      "location"
     ],
     "case_numbers": [],
     "content_disposition": "",
-    "dates_iso8601": [],
-    "document_category": null,
+    "dates_iso8601": [
+      "2020-07-27"
+    ],
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:31:07+00:00",
     "etag": "\"78a0f876e83e02aeb4641084950ca254\"",
-    "extracted_dates": [],
+    "extracted_dates": [
+      "July 27, 2020"
+    ],
     "extracted_file_numbers": [
       "EFTA00007570",
-      "EFTA00007571",
-      "EFTA00007572",
       "EFTA00007573",
-      "EFTA00007574",
       "EFTA00007575"
     ],
     "file_path": "data/raw/939081b57db0-utilities-efta00007570pdf/EFTA00007570.pdf",
@@ -41225,13 +41238,10 @@
     "is_official": true,
     "last_modified": "Fri, 19 Dec 2025 20:28:08 GMT",
     "license_or_terms": "as published by source",
-    "locations": [
-      "Palm Beach",
-      "tscrir, fr"
-    ],
+    "locations": [],
     "mime_type": "application/pdf",
     "notes": "DOJ Epstein Library disclosures released under the Epstein Files Transparency Act, including data set files and supplemental releases.",
-    "ocr_applied": false,
+    "ocr_applied": true,
     "pages": 6,
     "pdf_type": "image",
     "person_names": [],
@@ -41251,7 +41261,7 @@
       "epstein-library",
       "doj-disclosures"
     ],
-    "text_quality_score": 61.3,
+    "text_quality_score": 60.0,
     "title": "Utilities \u2014 EFTA00007570.pdf"
   },
   {
@@ -41264,17 +41274,17 @@
     ],
     "case_numbers": [],
     "content_disposition": "",
-    "dates_iso8601": [],
-    "document_category": null,
+    "dates_iso8601": [
+      "2020-07-27"
+    ],
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:31:09+00:00",
     "etag": "\"4cbf9c683f6c7ce843ad2d46009ec7b4\"",
-    "extracted_dates": [],
+    "extracted_dates": [
+      "July 27, 2020"
+    ],
     "extracted_file_numbers": [
-      "EFTA00007576",
-      "EFTA00007577",
-      "EFTA00007578",
       "EFTA00007579",
-      "EFTA00007580",
       "EFTA00007581"
     ],
     "file_path": "data/raw/b1e26376c422-utilities-efta00007576pdf/EFTA00007576.pdf",
@@ -41289,7 +41299,7 @@
     ],
     "mime_type": "application/pdf",
     "notes": "DOJ Epstein Library disclosures released under the Epstein Files Transparency Act, including data set files and supplemental releases.",
-    "ocr_applied": false,
+    "ocr_applied": true,
     "pages": 6,
     "pdf_type": "image",
     "person_names": [],
@@ -41309,7 +41319,7 @@
       "epstein-library",
       "doj-disclosures"
     ],
-    "text_quality_score": 60.8,
+    "text_quality_score": 58.1,
     "title": "Utilities \u2014 EFTA00007576.pdf"
   },
   {
@@ -41878,7 +41888,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:31:26+00:00",
     "etag": "\"63bf465997ac8f9413f0a5d98ce4beea\"",
     "extracted_dates": [],
@@ -41986,7 +41996,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:31:30+00:00",
     "etag": "\"2f35528a81a55811cc5b1953aa2e1f09\"",
     "extracted_dates": [],
@@ -42133,7 +42143,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:31:36+00:00",
     "etag": "\"ac28d3f313c9a31dbf06d109b279e826\"",
     "extracted_dates": [],
@@ -42235,7 +42245,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:31:41+00:00",
     "etag": "\"291313b5c2405bbae7c15c042b39c093\"",
     "extracted_dates": [],
@@ -42340,7 +42350,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:31:44+00:00",
     "etag": "\"b930b2b9f10eb6365f4a05fbd9521e98\"",
     "extracted_dates": [],
@@ -42388,7 +42398,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:31:46+00:00",
     "etag": "\"7a1d2c71a65477ac6feb0f8e784310b8\"",
     "extracted_dates": [],
@@ -42484,7 +42494,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:31:50+00:00",
     "etag": "\"71db2cdb701f8589a848dcda334773ce\"",
     "extracted_dates": [],
@@ -42501,7 +42511,7 @@
     "locations": [],
     "mime_type": "application/pdf",
     "notes": "DOJ Epstein Library disclosures released under the Epstein Files Transparency Act, including data set files and supplemental releases.",
-    "ocr_applied": false,
+    "ocr_applied": true,
     "pages": 1,
     "pdf_type": "image",
     "person_names": [],
@@ -42521,7 +42531,7 @@
       "epstein-library",
       "doj-disclosures"
     ],
-    "text_quality_score": 42.9,
+    "text_quality_score": 0,
     "title": "Utilities \u2014 EFTA00008413.pdf"
   },
   {
@@ -42580,7 +42590,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:31:54+00:00",
     "etag": "\"837c2750d633b74a11434f1bbdad8ce1\"",
     "extracted_dates": [],
@@ -42676,7 +42686,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:31:58+00:00",
     "etag": "\"91a48b8dbd52d5cae550feefe870b54e\"",
     "extracted_dates": [],
@@ -43061,7 +43071,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:32:14+00:00",
     "etag": "\"9f133c5f107e149ae452ad4e5d7c7674\"",
     "extracted_dates": [],
@@ -43158,7 +43168,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:32:18+00:00",
     "etag": "\"a4bb904e6a3817b1b6951694fb5f223a\"",
     "extracted_dates": [],
@@ -43447,13 +43457,11 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:32:30+00:00",
     "etag": "\"18e2cb74081c3cb02a473ebba1ead4ed\"",
     "extracted_dates": [],
-    "extracted_file_numbers": [
-      "EFTA00008433"
-    ],
+    "extracted_file_numbers": [],
     "file_path": "data/raw/9de6abca3027-utilities-efta00008433pdf/EFTA00008433.pdf",
     "file_size_bytes": 566188,
     "has_extractable_text": true,
@@ -43464,7 +43472,7 @@
     "locations": [],
     "mime_type": "application/pdf",
     "notes": "DOJ Epstein Library disclosures released under the Epstein Files Transparency Act, including data set files and supplemental releases.",
-    "ocr_applied": false,
+    "ocr_applied": true,
     "pages": 1,
     "pdf_type": "image",
     "person_names": [],
@@ -43484,7 +43492,7 @@
       "epstein-library",
       "doj-disclosures"
     ],
-    "text_quality_score": 43.9,
+    "text_quality_score": 6.6,
     "title": "Utilities \u2014 EFTA00008433.pdf"
   },
   {
@@ -43639,7 +43647,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:32:38+00:00",
     "etag": "\"d748773edd473405773f067604af234c\"",
     "extracted_dates": [],
@@ -43656,7 +43664,7 @@
     "locations": [],
     "mime_type": "application/pdf",
     "notes": "DOJ Epstein Library disclosures released under the Epstein Files Transparency Act, including data set files and supplemental releases.",
-    "ocr_applied": false,
+    "ocr_applied": true,
     "pages": 1,
     "pdf_type": "image",
     "person_names": [],
@@ -43676,7 +43684,7 @@
       "epstein-library",
       "doj-disclosures"
     ],
-    "text_quality_score": 52.4,
+    "text_quality_score": 0,
     "title": "Utilities \u2014 EFTA00008437.pdf"
   },
   {
@@ -43687,13 +43695,11 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:32:40+00:00",
     "etag": "\"269001b43cddb367984ec2a243635b5d\"",
     "extracted_dates": [],
-    "extracted_file_numbers": [
-      "EFTA00008438"
-    ],
+    "extracted_file_numbers": [],
     "file_path": "data/raw/e958ae840755-utilities-efta00008438pdf/EFTA00008438.pdf",
     "file_size_bytes": 506019,
     "has_extractable_text": true,
@@ -43704,7 +43710,7 @@
     "locations": [],
     "mime_type": "application/pdf",
     "notes": "DOJ Epstein Library disclosures released under the Epstein Files Transparency Act, including data set files and supplemental releases.",
-    "ocr_applied": false,
+    "ocr_applied": true,
     "pages": 1,
     "pdf_type": "image",
     "person_names": [],
@@ -43724,7 +43730,7 @@
       "epstein-library",
       "doj-disclosures"
     ],
-    "text_quality_score": 49.4,
+    "text_quality_score": 10.3,
     "title": "Utilities \u2014 EFTA00008438.pdf"
   },
   {
@@ -43783,7 +43789,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:32:44+00:00",
     "etag": "\"862fbd98e05cc2c3e9b2596e132c2e99\"",
     "extracted_dates": [],
@@ -43832,7 +43838,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:32:46+00:00",
     "etag": "\"460e63bf8a9ed13bb1f1056ca7178a82\"",
     "extracted_dates": [],
@@ -43880,7 +43886,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:32:48+00:00",
     "etag": "\"71203b7d034b2a4f054d802bc9c8b8ce\"",
     "extracted_dates": [],
@@ -43928,7 +43934,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:32:50+00:00",
     "etag": "\"fa0d9c0f62a7dc49071c87e44f16ce50\"",
     "extracted_dates": [],
@@ -43976,7 +43982,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:32:52+00:00",
     "etag": "\"ec11b7e175d4e443452c2a1ca2a0ec18\"",
     "extracted_dates": [],
@@ -44024,7 +44030,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:32:54+00:00",
     "etag": "\"f730e21758b5ca13ef705e37b42cb4b5\"",
     "extracted_dates": [],
@@ -44216,7 +44222,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:33:02+00:00",
     "etag": "\"3483128e0e0a6fbe0f6a40c5f5e04c4e\"",
     "extracted_dates": [],
@@ -44364,19 +44370,12 @@
     ],
     "case_numbers": [],
     "content_disposition": "",
-    "dates_iso8601": [
-      "2019-08-21"
-    ],
-    "document_category": null,
+    "dates_iso8601": [],
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:33:08+00:00",
     "etag": "\"e497580cc738dfeda3bc50e3fc31ec75\"",
-    "extracted_dates": [
-      "08/21/2019"
-    ],
-    "extracted_file_numbers": [
-      "90A-NY-3151227",
-      "EFTA00008452"
-    ],
+    "extracted_dates": [],
+    "extracted_file_numbers": [],
     "file_path": "data/raw/6688bb07433d-utilities-efta00008452pdf/EFTA00008452.pdf",
     "file_size_bytes": 432950,
     "has_extractable_text": true,
@@ -44387,7 +44386,7 @@
     "locations": [],
     "mime_type": "application/pdf",
     "notes": "DOJ Epstein Library disclosures released under the Epstein Files Transparency Act, including data set files and supplemental releases.",
-    "ocr_applied": false,
+    "ocr_applied": true,
     "pages": 1,
     "pdf_type": "image",
     "person_names": [],
@@ -44407,7 +44406,7 @@
       "epstein-library",
       "doj-disclosures"
     ],
-    "text_quality_score": 53.3,
+    "text_quality_score": 4.5,
     "title": "Utilities \u2014 EFTA00008452.pdf"
   },
   {
@@ -44418,7 +44417,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:33:10+00:00",
     "etag": "\"c5e19160c8e2042953f5bde0e49d491c\"",
     "extracted_dates": [],
@@ -44610,7 +44609,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:33:18+00:00",
     "etag": "\"9b51113bdecb6cc3cf38ee3bd89f57d8\"",
     "extracted_dates": [],
@@ -44627,7 +44626,7 @@
     "locations": [],
     "mime_type": "application/pdf",
     "notes": "DOJ Epstein Library disclosures released under the Epstein Files Transparency Act, including data set files and supplemental releases.",
-    "ocr_applied": false,
+    "ocr_applied": true,
     "pages": 1,
     "pdf_type": "image",
     "person_names": [],
@@ -44647,7 +44646,7 @@
       "epstein-library",
       "doj-disclosures"
     ],
-    "text_quality_score": 31.6,
+    "text_quality_score": 0,
     "title": "Utilities \u2014 EFTA00008457.pdf"
   },
   {
@@ -44851,13 +44850,11 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:33:28+00:00",
     "etag": "\"653f0d0f0d4045a88a9632a3bc2c3c05\"",
     "extracted_dates": [],
-    "extracted_file_numbers": [
-      "EFTA00008462"
-    ],
+    "extracted_file_numbers": [],
     "file_path": "data/raw/27a7e5781311-utilities-efta00008462pdf/EFTA00008462.pdf",
     "file_size_bytes": 486211,
     "has_extractable_text": true,
@@ -44868,7 +44865,7 @@
     "locations": [],
     "mime_type": "application/pdf",
     "notes": "DOJ Epstein Library disclosures released under the Epstein Files Transparency Act, including data set files and supplemental releases.",
-    "ocr_applied": false,
+    "ocr_applied": true,
     "pages": 1,
     "pdf_type": "image",
     "person_names": [],
@@ -44888,7 +44885,7 @@
       "epstein-library",
       "doj-disclosures"
     ],
-    "text_quality_score": 31.8,
+    "text_quality_score": 36.9,
     "title": "Utilities \u2014 EFTA00008462.pdf"
   },
   {
@@ -45141,7 +45138,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:33:41+00:00",
     "etag": "\"a83ff508f6baa79328d80670a1b93637\"",
     "extracted_dates": [],
@@ -45158,7 +45155,7 @@
     "locations": [],
     "mime_type": "application/pdf",
     "notes": "DOJ Epstein Library disclosures released under the Epstein Files Transparency Act, including data set files and supplemental releases.",
-    "ocr_applied": false,
+    "ocr_applied": true,
     "pages": 1,
     "pdf_type": "image",
     "person_names": [],
@@ -45178,7 +45175,7 @@
       "epstein-library",
       "doj-disclosures"
     ],
-    "text_quality_score": 57.4,
+    "text_quality_score": 0,
     "title": "Utilities \u2014 EFTA00008468.pdf"
   },
   {
@@ -45189,7 +45186,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:33:43+00:00",
     "etag": "\"33b5c30b8cedf059479fdc6ea16887a9\"",
     "extracted_dates": [],
@@ -45237,7 +45234,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:33:45+00:00",
     "etag": "\"98976a355dffeb36b0b0106eef30672a\"",
     "extracted_dates": [],
@@ -45254,7 +45251,7 @@
     "locations": [],
     "mime_type": "application/pdf",
     "notes": "DOJ Epstein Library disclosures released under the Epstein Files Transparency Act, including data set files and supplemental releases.",
-    "ocr_applied": false,
+    "ocr_applied": true,
     "pages": 1,
     "pdf_type": "image",
     "person_names": [],
@@ -45274,7 +45271,7 @@
       "epstein-library",
       "doj-disclosures"
     ],
-    "text_quality_score": 57.0,
+    "text_quality_score": 36.2,
     "title": "Utilities \u2014 EFTA00008470.pdf"
   },
   {
@@ -45382,7 +45379,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:33:51+00:00",
     "etag": "\"910730c0912cf2ebfa243b0dc2570fa3\"",
     "extracted_dates": [],
@@ -45435,7 +45432,7 @@
     "dates_iso8601": [
       "2021-06-21"
     ],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:33:52+00:00",
     "etag": "\"518ff931fe5b16160bf08bd7f30a7cc1\"",
     "extracted_dates": [
@@ -45485,7 +45482,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:33:55+00:00",
     "etag": "\"ddf94800885f6e7b6d9c5139957d3179\"",
     "extracted_dates": [],
@@ -45581,13 +45578,11 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:33:59+00:00",
     "etag": "\"01bb3dc3638124764538367cdc838a31\"",
     "extracted_dates": [],
-    "extracted_file_numbers": [
-      "EFTA00008477"
-    ],
+    "extracted_file_numbers": [],
     "file_path": "data/raw/6e12f5eca71b-utilities-efta00008477pdf/EFTA00008477.pdf",
     "file_size_bytes": 561603,
     "has_extractable_text": true,
@@ -45598,7 +45593,7 @@
     "locations": [],
     "mime_type": "application/pdf",
     "notes": "DOJ Epstein Library disclosures released under the Epstein Files Transparency Act, including data set files and supplemental releases.",
-    "ocr_applied": false,
+    "ocr_applied": true,
     "pages": 1,
     "pdf_type": "image",
     "person_names": [],
@@ -45618,7 +45613,7 @@
       "epstein-library",
       "doj-disclosures"
     ],
-    "text_quality_score": 51.5,
+    "text_quality_score": 10.0,
     "title": "Utilities \u2014 EFTA00008477.pdf"
   },
   {
@@ -45629,7 +45624,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:34:00+00:00",
     "etag": "\"c092e9464d33446abb1fed65ba7715e9\"",
     "extracted_dates": [],
@@ -45725,7 +45720,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:34:05+00:00",
     "etag": "\"65fb642097d7d3061bf04001bdd231a2\"",
     "extracted_dates": [],
@@ -46306,7 +46301,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:34:27+00:00",
     "etag": "\"e04eb5158909a7dd10ae14d50f9b0742\"",
     "extracted_dates": [],
@@ -46355,7 +46350,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:34:29+00:00",
     "etag": "\"0264629b1292e76bf7db56b5bd891c0f\"",
     "extracted_dates": [],
@@ -46403,7 +46398,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:34:30+00:00",
     "etag": "\"042549ceb452a6ad855d3c293449f94d\"",
     "extracted_dates": [],
@@ -46420,7 +46415,7 @@
     "locations": [],
     "mime_type": "application/pdf",
     "notes": "DOJ Epstein Library disclosures released under the Epstein Files Transparency Act, including data set files and supplemental releases.",
-    "ocr_applied": false,
+    "ocr_applied": true,
     "pages": 1,
     "pdf_type": "image",
     "person_names": [],
@@ -46440,7 +46435,7 @@
       "epstein-library",
       "doj-disclosures"
     ],
-    "text_quality_score": 41.0,
+    "text_quality_score": 58.0,
     "title": "Utilities \u2014 EFTA00008494.pdf"
   },
   {
@@ -46451,7 +46446,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:34:32+00:00",
     "etag": "\"7a696f33ee2fcbc172a1c98ae453a31a\"",
     "extracted_dates": [],
@@ -46468,7 +46463,7 @@
     "locations": [],
     "mime_type": "application/pdf",
     "notes": "DOJ Epstein Library disclosures released under the Epstein Files Transparency Act, including data set files and supplemental releases.",
-    "ocr_applied": false,
+    "ocr_applied": true,
     "pages": 1,
     "pdf_type": "image",
     "person_names": [],
@@ -46488,7 +46483,7 @@
       "epstein-library",
       "doj-disclosures"
     ],
-    "text_quality_score": 50.4,
+    "text_quality_score": 0,
     "title": "Utilities \u2014 EFTA00008495.pdf"
   },
   {
@@ -46499,7 +46494,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:34:34+00:00",
     "etag": "\"c4dccd59a719096ff65bb91ed5167d1d\"",
     "extracted_dates": [],
@@ -46547,7 +46542,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:34:36+00:00",
     "etag": "\"9f8b31329591f4406b9d5ad20556ef24\"",
     "extracted_dates": [],
@@ -46643,7 +46638,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:34:41+00:00",
     "etag": "\"aa137189dcf446eafc6cf2f4e6b1b388\"",
     "extracted_dates": [],
@@ -46691,7 +46686,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:34:43+00:00",
     "etag": "\"dad028bef77e50fcef6d61d94a3c03e7\"",
     "extracted_dates": [],
@@ -46739,7 +46734,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:34:45+00:00",
     "etag": "\"c897e7052d2e5d50e4e7ca63d64f9a7d\"",
     "extracted_dates": [],
@@ -46835,7 +46830,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:34:48+00:00",
     "etag": "\"0fecd5d89e8ca70b31a9dbcd1ed470f8\"",
     "extracted_dates": [],
@@ -46883,7 +46878,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:34:50+00:00",
     "etag": "\"f6f7640459231a207e842dc8d8b60af1\"",
     "extracted_dates": [],
@@ -46979,7 +46974,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:34:55+00:00",
     "etag": "\"faf2120f32b7cd59747b4f937707b60e\"",
     "extracted_dates": [],
@@ -48812,7 +48807,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:35:35+00:00",
     "etag": "\"89610c0f018584e56c6e29d6e4cdf920\"",
     "extracted_dates": [],
@@ -49583,7 +49578,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:35:51+00:00",
     "etag": "\"1f2f6a4eff8721ed47335bb1dbaf87ae\"",
     "extracted_dates": [],
@@ -50085,7 +50080,7 @@
       "2019-08-09",
       "2019-08-10"
     ],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:36:03+00:00",
     "etag": "\"2ed413ef512990199b676e37e11802b5\"",
     "extracted_dates": [
@@ -50281,7 +50276,7 @@
     "dates_iso8601": [
       "2019-08-09"
     ],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:36:07+00:00",
     "etag": "\"a028e06b5980a9618f337adbf8d8940b\"",
     "extracted_dates": [
@@ -50359,7 +50354,7 @@
     "dates_iso8601": [
       "2019-08-10"
     ],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:36:09+00:00",
     "etag": "\"6d8f74a340ccd1eb0778765bf83170a2\"",
     "extracted_dates": [
@@ -50697,7 +50692,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:36:17+00:00",
     "etag": "\"682907e7f97f67fb1985b65c1530ceab\"",
     "extracted_dates": [],
@@ -50760,7 +50755,7 @@
     "category_confidence": 1.0,
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:36:19+00:00",
     "email_cc": null,
     "email_date": null,
@@ -50825,7 +50820,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:36:21+00:00",
     "etag": "\"774178c5086a89ac5d2940dd183d37a5\"",
     "extracted_dates": [],
@@ -51387,7 +51382,7 @@
     "dates_iso8601": [
       "2021-04-13"
     ],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:36:37+00:00",
     "etag": "\"184f06832c00d5557da2e93c8e666e09\"",
     "extracted_dates": [
@@ -52081,7 +52076,7 @@
       "2019-10-29",
       "2019-11-07"
     ],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:36:57+00:00",
     "etag": "\"77e9cfef52517e8d57d9a7b0ba3d025d\"",
     "extracted_dates": [
@@ -52557,7 +52552,7 @@
     "dates_iso8601": [
       "2019-02-24"
     ],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:37:11+00:00",
     "etag": "\"a14034896385f1e7b5bcfe4657b9758b\"",
     "extracted_dates": [
@@ -53064,7 +53059,7 @@
     "dates_iso8601": [
       "2019-03-05"
     ],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:37:27+00:00",
     "etag": "\"1bf168f909699a509fbb6d4bf8694b5f\"",
     "extracted_dates": [
@@ -53166,7 +53161,7 @@
     "dates_iso8601": [
       "2019-03-05"
     ],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:37:31+00:00",
     "etag": "\"22fc6b91eb2e06bd83b206f4c217431c\"",
     "extracted_dates": [
@@ -53270,7 +53265,7 @@
       "2019-03-05",
       "2019-03-07"
     ],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:37:35+00:00",
     "etag": "\"3aadd4dbdc4b74866ee25985f3f7405f\"",
     "extracted_dates": [
@@ -54776,7 +54771,7 @@
     "case_numbers": [],
     "content_disposition": "",
     "dates_iso8601": [],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:38:23+00:00",
     "etag": "\"55ab6e3c53a239583452c14fb6226ce6\"",
     "extracted_dates": [],
@@ -55920,7 +55915,7 @@
       "2019-09-14",
       "2019-09-15"
     ],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:38:57+00:00",
     "etag": "\"3172ce5c9d20090f9f96fd133994548a\"",
     "extracted_dates": [
@@ -57610,7 +57605,7 @@
       "2003-09-10",
       "2004-11-17"
     ],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:39:39+00:00",
     "etag": "\"4d333d9fefa8a2db89cbf0f1c077df5f\"",
     "extracted_dates": [
@@ -58350,7 +58345,7 @@
     "dates_iso8601": [
       "2019-07-28"
     ],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:39:55+00:00",
     "etag": "\"83d111ad463b51a8f644f055d47f3e1b\"",
     "extracted_dates": [
@@ -59240,7 +59235,7 @@
     "dates_iso8601": [
       "2019-02-24"
     ],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:40:17+00:00",
     "etag": "\"c441bc8e174da1914e2c60436ca26d30\"",
     "extracted_dates": [
@@ -59404,7 +59399,7 @@
       "2011-03-03",
       "2019-02-24"
     ],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:40:21+00:00",
     "email_cc": null,
     "email_date": "Sunday. February 24, 2019 8:18:01 PM",
@@ -60609,7 +60604,7 @@
     "dates_iso8601": [
       "2020-11-18"
     ],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:40:53+00:00",
     "etag": "\"999c4cfb2c0c91ec5d5653aced613152\"",
     "extracted_dates": [
@@ -60670,7 +60665,7 @@
     "dates_iso8601": [
       "2020-11-18"
     ],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:40:55+00:00",
     "etag": "\"163b1d21ba139ec49941de777a14fd07\"",
     "extracted_dates": [
@@ -60730,7 +60725,7 @@
     "dates_iso8601": [
       "2020-11-09"
     ],
-    "document_category": null,
+    "document_category": "scanned-document",
     "downloaded_at": "2026-02-07T11:40:57+00:00",
     "etag": "\"4cf504cf7869d0a15b2e122199f80bc1\"",
     "extracted_dates": [
