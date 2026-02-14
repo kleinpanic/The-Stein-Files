@@ -60864,5 +60864,54 @@
     ],
     "text_quality_score": 100,
     "title": "EFTA First Level Review Protocol"
+  },
+  {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
+    "case_numbers": [],
+    "content_disposition": "",
+    "dates_iso8601": [],
+    "document_category": "scanned-document",
+    "downloaded_at": "2026-02-14T04:46:18+00:00",
+    "etag": "\"1be51b4093a1ff963a0997d89386df08\"",
+    "extracted_dates": [],
+    "extracted_file_numbers": [
+      "EFTA00004248",
+      "EFTA00004249"
+    ],
+    "file_path": "data/raw/d7f6b7f7b827-utilities-efta00004248pdf/EFTA00004248.pdf",
+    "file_size_bytes": 383611,
+    "has_extractable_text": false,
+    "id": "d7f6b7f7b827-utilities-efta00004248pdf",
+    "is_official": true,
+    "last_modified": "Thu, 12 Feb 2026 14:08:08 GMT",
+    "license_or_terms": "as published by source",
+    "locations": [],
+    "mime_type": "application/pdf",
+    "notes": "DOJ Epstein Library disclosures released under the Epstein Files Transparency Act, including data set files and supplemental releases.",
+    "ocr_applied": false,
+    "pages": 2,
+    "pdf_type": "image",
+    "person_names": [],
+    "release_date": "2026-01-30",
+    "sha256": "d7f6b7f7b8277eb66a41b1475269d766fc943cc9646ab5cf66d4ad7794730f54",
+    "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
+    "source_page": "https://www.justice.gov/epstein/doj-disclosures/data-set-3-files",
+    "source_url": "https://www.justice.gov/epstein/files/DataSet%203/EFTA00004248.pdf",
+    "sources": [
+      {
+        "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
+        "source_url": "https://www.justice.gov/epstein/doj-disclosures/data-set-3-files"
+      }
+    ],
+    "tags": [
+      "doj",
+      "epstein-library",
+      "doj-disclosures"
+    ],
+    "text_quality_score": 0,
+    "title": "Utilities \u2014 EFTA00004248.pdf"
   }
 ]
