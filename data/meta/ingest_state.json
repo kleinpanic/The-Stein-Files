@@ -19,7 +19,7 @@
         "status": 404
       }
     },
-    "last_run": "2026-02-16T05:05:11+00:00",
+    "last_run": "2026-02-17T04:58:30+00:00",
     "seen_urls": [
       "https://www.justice.gov/epstein/files/DataSet%201/EFTA00000001.pdf",
       "https://www.justice.gov/epstein/files/DataSet%201/EFTA00000002.pdf",
@@ -962,13 +962,13 @@
   "doj-epstein-hub": {
     "cursor": 0,
     "failed_urls": {},
-    "last_run": "2026-02-16T05:04:47+00:00",
+    "last_run": "2026-02-17T04:58:06+00:00",
     "seen_urls": []
   },
   "doj-epstein-memoranda": {
     "cursor": 1,
     "failed_urls": {},
-    "last_run": "2026-02-16T05:05:12+00:00",
+    "last_run": "2026-02-17T04:58:31+00:00",
     "seen_urls": [
       "https://www.justice.gov/media/1426281/dl?inline"
     ]
@@ -976,7 +976,7 @@
   "doj-opa-2025-02-27": {
     "cursor": 11,
     "failed_urls": {},
-    "last_run": "2026-02-16T05:05:12+00:00",
+    "last_run": "2026-02-17T04:58:31+00:00",
     "seen_urls": [
       "https://www.justice.gov/ag/media/1391271/dl?inline",
       "https://www.justice.gov/ag/media/1391276/dl?inline",
