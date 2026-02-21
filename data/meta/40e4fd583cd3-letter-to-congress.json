@@ -1,0 +1,30 @@
+{
+  "content_disposition": "inline; filename=\"Letter re Compliance with Act - Jan 26 - 508.pdf\"",
+  "downloaded_at": "2026-02-21T04:41:53+00:00",
+  "etag": "",
+  "file_path": "data/raw/40e4fd583cd3-letter-to-congress/Letter re Compliance with Act - Jan 26 - 508.pdf",
+  "id": "40e4fd583cd3-letter-to-congress",
+  "is_official": true,
+  "last_modified": "Fri, 30 Jan 2026 16:07:05 GMT",
+  "license_or_terms": "as published by source",
+  "mime_type": "application/pdf",
+  "notes": "DOJ Epstein Library disclosures released under the Epstein Files Transparency Act, including data set files and supplemental releases.",
+  "pages": 6,
+  "release_date": "2026-01-30",
+  "sha256": "40e4fd583cd30e927da99ccf822abb1196408243e053034a314fdcbc08b05206",
+  "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
+  "source_page": "https://www.justice.gov/epstein/doj-disclosures",
+  "source_url": "https://www.justice.gov/opa/media/1426091/dl",
+  "sources": [
+    {
+      "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
+      "source_url": "https://www.justice.gov/epstein/doj-disclosures"
+    }
+  ],
+  "tags": [
+    "doj",
+    "epstein-library",
+    "doj-disclosures"
+  ],
+  "title": "Letter to Congress"
+}

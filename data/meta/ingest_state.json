@@ -1,6 +1,6 @@
 {
   "doj-epstein-doj-disclosures": {
-    "cursor": 287,
+    "cursor": 525,
     "failed_urls": {
       "https://www.justice.gov/epstein/files/DataSet%203/EFTA00004248.pdf": {
         "at": "2026-02-08T05:15:08+00:00",
@@ -19,7 +19,7 @@
         "status": 404
       }
     },
-    "last_run": "2026-02-20T04:52:23+00:00",
+    "last_run": "2026-02-21T04:41:53+00:00",
     "seen_urls": [
       "https://www.justice.gov/epstein/files/DataSet%201/EFTA00000001.pdf",
       "https://www.justice.gov/epstein/files/DataSet%201/EFTA00000002.pdf",
@@ -956,19 +956,20 @@
       "https://www.justice.gov/epstein/files/DataSet%209/EFTA00039879.pdf",
       "https://www.justice.gov/epstein/files/DataSet%209/EFTA00039880.pdf",
       "https://www.justice.gov/epstein/files/DataSet%209/EFTA00039881.pdf",
-      "https://www.justice.gov/epstein/files/DataSet%209/EFTA00039882.pdf"
+      "https://www.justice.gov/epstein/files/DataSet%209/EFTA00039882.pdf",
+      "https://www.justice.gov/letter-to-congress.pdf"
     ]
   },
   "doj-epstein-hub": {
     "cursor": 0,
     "failed_urls": {},
-    "last_run": "2026-02-20T04:51:59+00:00",
+    "last_run": "2026-02-21T04:41:27+00:00",
     "seen_urls": []
   },
   "doj-epstein-memoranda": {
     "cursor": 1,
     "failed_urls": {},
-    "last_run": "2026-02-20T04:52:24+00:00",
+    "last_run": "2026-02-21T04:41:54+00:00",
     "seen_urls": [
       "https://www.justice.gov/media/1426281/dl?inline"
     ]
@@ -976,7 +977,7 @@
   "doj-opa-2025-02-27": {
     "cursor": 11,
     "failed_urls": {},
-    "last_run": "2026-02-20T04:52:24+00:00",
+    "last_run": "2026-02-21T04:41:54+00:00",
     "seen_urls": [
       "https://www.justice.gov/ag/media/1391271/dl?inline",
       "https://www.justice.gov/ag/media/1391276/dl?inline",
