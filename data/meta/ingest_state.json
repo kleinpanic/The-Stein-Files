@@ -1,6 +1,6 @@
 {
   "doj-epstein-doj-disclosures": {
-    "cursor": 525,
+    "cursor": 260,
     "failed_urls": {
       "https://www.justice.gov/epstein/files/DataSet%203/EFTA00004248.pdf": {
         "at": "2026-02-08T05:15:08+00:00",
@@ -19,7 +19,7 @@
         "status": 404
       }
     },
-    "last_run": "2026-02-21T04:41:53+00:00",
+    "last_run": "2026-02-22T04:54:41+00:00",
     "seen_urls": [
       "https://www.justice.gov/epstein/files/DataSet%201/EFTA00000001.pdf",
       "https://www.justice.gov/epstein/files/DataSet%201/EFTA00000002.pdf",
@@ -338,7 +338,9 @@
       "https://www.justice.gov/epstein/files/DataSet%2012/EFTA02731023.pdf",
       "https://www.justice.gov/epstein/files/DataSet%2012/EFTA02731039.pdf",
       "https://www.justice.gov/epstein/files/DataSet%2012/EFTA02731069.pdf",
+      "https://www.justice.gov/epstein/files/DataSet%2012/EFTA02731082.pdf",
       "https://www.justice.gov/epstein/files/DataSet%2012/EFTA02731168.pdf",
+      "https://www.justice.gov/epstein/files/DataSet%2012/EFTA02731200.pdf",
       "https://www.justice.gov/epstein/files/DataSet%2012/EFTA02731226.pdf",
       "https://www.justice.gov/epstein/files/DataSet%2012/EFTA02731254.pdf",
       "https://www.justice.gov/epstein/files/DataSet%2012/EFTA02731260.pdf",
@@ -519,6 +521,17 @@
       "https://www.justice.gov/epstein/files/DataSet%202/EFTA00003351.pdf",
       "https://www.justice.gov/epstein/files/DataSet%202/EFTA00003352.pdf",
       "https://www.justice.gov/epstein/files/DataSet%202/EFTA00003353.pdf",
+      "https://www.justice.gov/epstein/files/DataSet%203/EFTA00003380.pdf",
+      "https://www.justice.gov/epstein/files/DataSet%203/EFTA00003434.pdf",
+      "https://www.justice.gov/epstein/files/DataSet%203/EFTA00003435.pdf",
+      "https://www.justice.gov/epstein/files/DataSet%203/EFTA00003436.pdf",
+      "https://www.justice.gov/epstein/files/DataSet%203/EFTA00003437.pdf",
+      "https://www.justice.gov/epstein/files/DataSet%203/EFTA00003438.pdf",
+      "https://www.justice.gov/epstein/files/DataSet%203/EFTA00003439.pdf",
+      "https://www.justice.gov/epstein/files/DataSet%203/EFTA00003440.pdf",
+      "https://www.justice.gov/epstein/files/DataSet%203/EFTA00003441.pdf",
+      "https://www.justice.gov/epstein/files/DataSet%203/EFTA00003488.pdf",
+      "https://www.justice.gov/epstein/files/DataSet%203/EFTA00003855.pdf",
       "https://www.justice.gov/epstein/files/DataSet%203/EFTA00003858.pdf",
       "https://www.justice.gov/epstein/files/DataSet%203/EFTA00003862.pdf",
       "https://www.justice.gov/epstein/files/DataSet%203/EFTA00003868.pdf",
@@ -963,13 +976,13 @@
   "doj-epstein-hub": {
     "cursor": 0,
     "failed_urls": {},
-    "last_run": "2026-02-21T04:41:27+00:00",
+    "last_run": "2026-02-22T04:53:51+00:00",
     "seen_urls": []
   },
   "doj-epstein-memoranda": {
     "cursor": 1,
     "failed_urls": {},
-    "last_run": "2026-02-21T04:41:54+00:00",
+    "last_run": "2026-02-22T04:54:42+00:00",
     "seen_urls": [
       "https://www.justice.gov/media/1426281/dl?inline"
     ]
@@ -977,7 +990,7 @@
   "doj-opa-2025-02-27": {
     "cursor": 11,
     "failed_urls": {},
-    "last_run": "2026-02-21T04:41:54+00:00",
+    "last_run": "2026-02-22T04:54:42+00:00",
     "seen_urls": [
       "https://www.justice.gov/ag/media/1391271/dl?inline",
       "https://www.justice.gov/ag/media/1391276/dl?inline",

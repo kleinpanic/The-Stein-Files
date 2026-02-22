@@ -61002,5 +61002,803 @@
     ],
     "text_quality_score": 100,
     "title": "Letter to Congress"
+  },
+  {
+    "auto_tags": [
+      "1990s",
+      "2000s",
+      "2010s",
+      "2020s",
+      "communication",
+      "deposition",
+      "evidence",
+      "evidence-photo",
+      "fbi",
+      "financial",
+      "flight",
+      "investigation",
+      "legal",
+      "location",
+      "location:200-and-said-that-she-ave",
+      "location:additional-document-review-finally-as",
+      "location:additional-investigative-steps-in-addition-to-conducting-numerous-witness-interviews-we",
+      "location:additionally-as",
+      "location:additionally-in",
+      "location:additionally-we",
+      "location:after-that-first-encounter-be",
+      "location:after-the-first-massage-to",
+      "location:alessi-later-learned-was-named-of-the-car-and-went-to-speak-with-same-day-mr",
+      "location:although-epstein-refused-to-many-her-he",
+      "person:alan-dershowitz",
+      "person:bill-clinton",
+      "person:darren-indyke",
+      "person:epstein-this",
+      "person:ghislaine-maxwell",
+      "person:gregory-bledsoe",
+      "person:harvey-weinstein",
+      "person:jeffrey-epstein",
+      "person:juan-alessi",
+      "person:leon-black",
+      "person:leslie-groff",
+      "person:maxwell-on-october",
+      "person:prince-andrew",
+      "victim",
+      "witness"
+    ],
+    "case_numbers": [],
+    "content_disposition": "",
+    "dates_iso8601": [
+      "2019-07-02",
+      "2019-07-05",
+      "2019-07-06",
+      "2019-07-08",
+      "2019-07-11",
+      "2019-07-12",
+      "2019-07-13",
+      "2019-07-14",
+      "2019-07-17",
+      "2019-07-18",
+      "2019-07-22",
+      "2019-07-25",
+      "2019-07-26",
+      "2019-07-31",
+      "2019-08-01",
+      "2019-08-06",
+      "2019-08-07",
+      "2019-08-10",
+      "2019-08-26",
+      "2019-08-27"
+    ],
+    "document_category": "travel-record",
+    "downloaded_at": "2026-02-22T04:54:17+00:00",
+    "etag": "\"25fc2b4ad6f50033cdd4ef9d46458dd3\"",
+    "extracted_dates": [
+      "August 1, 2019",
+      "August 10, 2019",
+      "August 26, 2019",
+      "August 27, 2019",
+      "August 28, 2019",
+      "August 6, 2019",
+      "August 7, 2019",
+      "December 15, 2019",
+      "December 17, 2019",
+      "December 19, 2019",
+      "Jul  17, 2019",
+      "July 11, 2019",
+      "July 12, 2019",
+      "July 13, 2019",
+      "July 14, 2019",
+      "July 18, 2019",
+      "July 2, 2019",
+      "July 22, 2019",
+      "July 25, 2019",
+      "July 26, 2019"
+    ],
+    "extracted_file_numbers": [
+      "EFTA02731082",
+      "EFTA02731083",
+      "EFTA02731084",
+      "EFTA02731085",
+      "EFTA02731086",
+      "EFTA02731087",
+      "EFTA02731088",
+      "EFTA02731089",
+      "EFTA02731090",
+      "EFTA02731091"
+    ],
+    "file_path": "data/raw/e91a38d07640-utilities-efta02731082pdf/EFTA02731082.pdf",
+    "file_size_bytes": 7438419,
+    "has_extractable_text": true,
+    "id": "e91a38d07640-utilities-efta02731082pdf",
+    "is_official": true,
+    "last_modified": "Thu, 19 Feb 2026 23:13:56 GMT",
+    "license_or_terms": "as published by source",
+    "locations": [
+      "200 and said that she \n\nave",
+      "Additional Document Review \n\nFinally, as",
+      "Additional Investigative Steps \n\nIn addition to conducting numerous witness interviews, we",
+      "Additionally, as",
+      "Additionally, in",
+      "Additionally, we",
+      "After that first encounter, be",
+      "After the first massage, to",
+      "Alessi later \nlearned was named \nof the car and went to speak with \nsame day, Mr",
+      "Although Epstein refused to many her, he"
+    ],
+    "mime_type": "application/pdf",
+    "notes": "DOJ Epstein Library disclosures released under the Epstein Files Transparency Act, including data set files and supplemental releases.",
+    "ocr_applied": false,
+    "pages": 86,
+    "pdf_type": "text",
+    "person_names": [
+      "Alan Dershowitz",
+      "Bill Clinton",
+      "Darren Indyke",
+      "Epstein \n\nThis",
+      "Ghislaine Maxwell",
+      "Gregory Bledsoe",
+      "Harvey Weinstein",
+      "Jeffrey Epstein",
+      "Juan Alessi",
+      "Leon Black",
+      "Leslie Groff",
+      "Maxwell \n\nOn October",
+      "Prince Andrew"
+    ],
+    "release_date": "2026-01-30",
+    "sha256": "e91a38d07640db923fc7e4971571846f615209b7064eb07362633660bbb4963f",
+    "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
+    "source_page": "https://www.justice.gov/epstein/doj-disclosures/data-set-12-files",
+    "source_url": "https://www.justice.gov/epstein/files/DataSet%2012/EFTA02731082.pdf",
+    "sources": [
+      {
+        "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
+        "source_url": "https://www.justice.gov/epstein/doj-disclosures/data-set-12-files"
+      }
+    ],
+    "tags": [
+      "doj",
+      "epstein-library",
+      "doj-disclosures"
+    ],
+    "text_quality_score": 100,
+    "title": "Utilities \u2014 EFTA02731082.pdf"
+  },
+  {
+    "auto_tags": [
+      "1990s",
+      "2000s",
+      "2010s",
+      "2020s",
+      "communication",
+      "deposition",
+      "evidence",
+      "evidence-photo",
+      "fbi",
+      "financial",
+      "flight",
+      "investigation",
+      "legal",
+      "location",
+      "location:although-there-are-many-victims-who-interacted-with-in-connection-with-their-victimization-by-epstein-in",
+      "location:based--on-our--interviews-with-other-epstein-were--paid--substantially--less--than--other-employees-we",
+      "location:during-this-time-in",
+      "location:manhattan",
+      "location:mie-recounts-li",
+      "location:new--mexico",
+      "location:new--york",
+      "location:new-exico-or",
+      "location:new-mexico",
+      "location:new-rest--ence-ut",
+      "person:darren-indyke",
+      "person:ghislaine-maxwell",
+      "person:jeffrey-epstein",
+      "person:leslie-groff",
+      "victim",
+      "witness"
+    ],
+    "case_numbers": [],
+    "content_disposition": "",
+    "dates_iso8601": [
+      "2019-06-17",
+      "2019-12-19",
+      "2020-04-14"
+    ],
+    "document_category": "transcript",
+    "downloaded_at": "2026-02-22T04:54:19+00:00",
+    "etag": "\"add6211c19fe9200939eb850e7fab0cf\"",
+    "extracted_dates": [
+      "April 14, 2020",
+      "December \n19, 2019",
+      "June 17, 2019"
+    ],
+    "extracted_file_numbers": [
+      "EFTA02731200",
+      "EFTA02731201",
+      "EFTA02731202",
+      "EFTA02731203",
+      "EFTA02731204",
+      "EFTA02731205",
+      "EFTA02731206",
+      "EFTA02731207",
+      "EFTA02731208",
+      "EFTA02731209"
+    ],
+    "file_path": "data/raw/467fce4cef18-utilities-efta02731200pdf/EFTA02731200.pdf",
+    "file_size_bytes": 1389197,
+    "has_extractable_text": true,
+    "id": "467fce4cef18-utilities-efta02731200pdf",
+    "is_official": true,
+    "last_modified": "Thu, 19 Feb 2026 23:13:56 GMT",
+    "license_or_terms": "as published by source",
+    "locations": [
+      "Although there are many victims who interacted with \n\nin connection with their \nvictimization by Epstein, in",
+      "Based  on our  interviews with other Epstein \nwere  paid  substantially  less  than  other \nemployees, we",
+      "During this time, in",
+      "MIE recounts, li",
+      "Manhattan",
+      "New \nexico, or",
+      "New \nrest  ence, ut",
+      "New  Mexico",
+      "New  York",
+      "New Mexico"
+    ],
+    "mime_type": "application/pdf",
+    "notes": "DOJ Epstein Library disclosures released under the Epstein Files Transparency Act, including data set files and supplemental releases.",
+    "ocr_applied": false,
+    "pages": 26,
+    "pdf_type": "text",
+    "person_names": [
+      "Darren Indyke",
+      "Ghislaine Maxwell",
+      "Jeffrey Epstein",
+      "Leslie Groff"
+    ],
+    "release_date": "2026-01-30",
+    "sha256": "467fce4cef183cba2f5d1757bf7eb2c3cab856ed2a146cdef57c03eb47bc6b6f",
+    "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
+    "source_page": "https://www.justice.gov/epstein/doj-disclosures/data-set-12-files",
+    "source_url": "https://www.justice.gov/epstein/files/DataSet%2012/EFTA02731200.pdf",
+    "sources": [
+      {
+        "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
+        "source_url": "https://www.justice.gov/epstein/doj-disclosures/data-set-12-files"
+      }
+    ],
+    "tags": [
+      "doj",
+      "epstein-library",
+      "doj-disclosures"
+    ],
+    "text_quality_score": 100,
+    "title": "Utilities \u2014 EFTA02731200.pdf"
+  },
+  {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
+    "case_numbers": [],
+    "content_disposition": "",
+    "dates_iso8601": [],
+    "document_category": "scanned-document",
+    "downloaded_at": "2026-02-22T04:54:21+00:00",
+    "etag": "\"38426a93a78fd908745fead1c36c23fc\"",
+    "extracted_dates": [],
+    "extracted_file_numbers": [
+      "EFTA00003380"
+    ],
+    "file_path": "data/raw/fe4b320ec77b-utilities-efta00003380pdf/EFTA00003380.pdf",
+    "file_size_bytes": 249732,
+    "has_extractable_text": false,
+    "id": "fe4b320ec77b-utilities-efta00003380pdf",
+    "is_official": true,
+    "last_modified": "Thu, 19 Feb 2026 23:13:56 GMT",
+    "license_or_terms": "as published by source",
+    "locations": [],
+    "mime_type": "application/pdf",
+    "notes": "DOJ Epstein Library disclosures released under the Epstein Files Transparency Act, including data set files and supplemental releases.",
+    "ocr_applied": false,
+    "pages": 1,
+    "pdf_type": "image",
+    "person_names": [],
+    "release_date": "2026-01-30",
+    "sha256": "fe4b320ec77b2d0827741ef55944c6e9bf7481dbc5c5581b41c99166f49a2c41",
+    "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
+    "source_page": "https://www.justice.gov/epstein/doj-disclosures/data-set-3-files",
+    "source_url": "https://www.justice.gov/epstein/files/DataSet%203/EFTA00003380.pdf",
+    "sources": [
+      {
+        "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
+        "source_url": "https://www.justice.gov/epstein/doj-disclosures/data-set-3-files"
+      }
+    ],
+    "tags": [
+      "doj",
+      "epstein-library",
+      "doj-disclosures"
+    ],
+    "text_quality_score": 0,
+    "title": "Utilities \u2014 EFTA00003380.pdf"
+  },
+  {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
+    "case_numbers": [],
+    "content_disposition": "",
+    "dates_iso8601": [],
+    "document_category": "scanned-document",
+    "downloaded_at": "2026-02-22T04:54:23+00:00",
+    "etag": "\"c595c67b2d54774bfc7751ed4dd4119e\"",
+    "extracted_dates": [],
+    "extracted_file_numbers": [
+      "EFTA00003434"
+    ],
+    "file_path": "data/raw/913ab68537d9-utilities-efta00003434pdf/EFTA00003434.pdf",
+    "file_size_bytes": 1223469,
+    "has_extractable_text": false,
+    "id": "913ab68537d9-utilities-efta00003434pdf",
+    "is_official": true,
+    "last_modified": "Thu, 19 Feb 2026 23:13:56 GMT",
+    "license_or_terms": "as published by source",
+    "locations": [],
+    "mime_type": "application/pdf",
+    "notes": "DOJ Epstein Library disclosures released under the Epstein Files Transparency Act, including data set files and supplemental releases.",
+    "ocr_applied": false,
+    "pages": 1,
+    "pdf_type": "image",
+    "person_names": [],
+    "release_date": "2026-01-30",
+    "sha256": "913ab68537d96bbeb2c02b101b704f316e13a2284c27ea14678616edf1815ff8",
+    "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
+    "source_page": "https://www.justice.gov/epstein/doj-disclosures/data-set-3-files",
+    "source_url": "https://www.justice.gov/epstein/files/DataSet%203/EFTA00003434.pdf",
+    "sources": [
+      {
+        "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
+        "source_url": "https://www.justice.gov/epstein/doj-disclosures/data-set-3-files"
+      }
+    ],
+    "tags": [
+      "doj",
+      "epstein-library",
+      "doj-disclosures"
+    ],
+    "text_quality_score": 0,
+    "title": "Utilities \u2014 EFTA00003434.pdf"
+  },
+  {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
+    "case_numbers": [],
+    "content_disposition": "",
+    "dates_iso8601": [],
+    "document_category": "scanned-document",
+    "downloaded_at": "2026-02-22T04:54:25+00:00",
+    "etag": "\"395fe935945f15eb2a68366dc69aca72\"",
+    "extracted_dates": [],
+    "extracted_file_numbers": [
+      "EFTA00003435"
+    ],
+    "file_path": "data/raw/95a95b8952d8-utilities-efta00003435pdf/EFTA00003435.pdf",
+    "file_size_bytes": 1351513,
+    "has_extractable_text": false,
+    "id": "95a95b8952d8-utilities-efta00003435pdf",
+    "is_official": true,
+    "last_modified": "Thu, 19 Feb 2026 23:13:56 GMT",
+    "license_or_terms": "as published by source",
+    "locations": [],
+    "mime_type": "application/pdf",
+    "notes": "DOJ Epstein Library disclosures released under the Epstein Files Transparency Act, including data set files and supplemental releases.",
+    "ocr_applied": false,
+    "pages": 1,
+    "pdf_type": "image",
+    "person_names": [],
+    "release_date": "2026-01-30",
+    "sha256": "95a95b8952d8cac244a8c827c157aac16403fece401e112d7413477cf27b0608",
+    "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
+    "source_page": "https://www.justice.gov/epstein/doj-disclosures/data-set-3-files",
+    "source_url": "https://www.justice.gov/epstein/files/DataSet%203/EFTA00003435.pdf",
+    "sources": [
+      {
+        "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
+        "source_url": "https://www.justice.gov/epstein/doj-disclosures/data-set-3-files"
+      }
+    ],
+    "tags": [
+      "doj",
+      "epstein-library",
+      "doj-disclosures"
+    ],
+    "text_quality_score": 0,
+    "title": "Utilities \u2014 EFTA00003435.pdf"
+  },
+  {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
+    "case_numbers": [],
+    "content_disposition": "",
+    "dates_iso8601": [],
+    "document_category": "scanned-document",
+    "downloaded_at": "2026-02-22T04:54:27+00:00",
+    "etag": "\"2fc12db8e14bee185b0844b50d644cf6\"",
+    "extracted_dates": [],
+    "extracted_file_numbers": [
+      "EFTA00003436"
+    ],
+    "file_path": "data/raw/ac77778f7e6f-utilities-efta00003436pdf/EFTA00003436.pdf",
+    "file_size_bytes": 1396272,
+    "has_extractable_text": false,
+    "id": "ac77778f7e6f-utilities-efta00003436pdf",
+    "is_official": true,
+    "last_modified": "Thu, 19 Feb 2026 23:13:56 GMT",
+    "license_or_terms": "as published by source",
+    "locations": [],
+    "mime_type": "application/pdf",
+    "notes": "DOJ Epstein Library disclosures released under the Epstein Files Transparency Act, including data set files and supplemental releases.",
+    "ocr_applied": false,
+    "pages": 1,
+    "pdf_type": "image",
+    "person_names": [],
+    "release_date": "2026-01-30",
+    "sha256": "ac77778f7e6f8a373cf46ace72a35901df6abca7c1ce8c712a06923862be2e8e",
+    "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
+    "source_page": "https://www.justice.gov/epstein/doj-disclosures/data-set-3-files",
+    "source_url": "https://www.justice.gov/epstein/files/DataSet%203/EFTA00003436.pdf",
+    "sources": [
+      {
+        "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
+        "source_url": "https://www.justice.gov/epstein/doj-disclosures/data-set-3-files"
+      }
+    ],
+    "tags": [
+      "doj",
+      "epstein-library",
+      "doj-disclosures"
+    ],
+    "text_quality_score": 0,
+    "title": "Utilities \u2014 EFTA00003436.pdf"
+  },
+  {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
+    "case_numbers": [],
+    "content_disposition": "",
+    "dates_iso8601": [],
+    "document_category": "scanned-document",
+    "downloaded_at": "2026-02-22T04:54:29+00:00",
+    "etag": "\"e86ec56946f86928be52992a8263e46c\"",
+    "extracted_dates": [],
+    "extracted_file_numbers": [
+      "EFTA00003437"
+    ],
+    "file_path": "data/raw/175b5ff455db-utilities-efta00003437pdf/EFTA00003437.pdf",
+    "file_size_bytes": 1396455,
+    "has_extractable_text": true,
+    "id": "175b5ff455db-utilities-efta00003437pdf",
+    "is_official": true,
+    "last_modified": "Thu, 19 Feb 2026 23:13:56 GMT",
+    "license_or_terms": "as published by source",
+    "locations": [],
+    "mime_type": "application/pdf",
+    "notes": "DOJ Epstein Library disclosures released under the Epstein Files Transparency Act, including data set files and supplemental releases.",
+    "ocr_applied": false,
+    "pages": 1,
+    "pdf_type": "image",
+    "person_names": [],
+    "release_date": "2026-01-30",
+    "sha256": "175b5ff455dbfeab071cd8c8a209ca7bc4bd45e09c6e7f7105ea1f36cb821b8a",
+    "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
+    "source_page": "https://www.justice.gov/epstein/doj-disclosures/data-set-3-files",
+    "source_url": "https://www.justice.gov/epstein/files/DataSet%203/EFTA00003437.pdf",
+    "sources": [
+      {
+        "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
+        "source_url": "https://www.justice.gov/epstein/doj-disclosures/data-set-3-files"
+      }
+    ],
+    "tags": [
+      "doj",
+      "epstein-library",
+      "doj-disclosures"
+    ],
+    "text_quality_score": 17.4,
+    "title": "Utilities \u2014 EFTA00003437.pdf"
+  },
+  {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
+    "case_numbers": [],
+    "content_disposition": "",
+    "dates_iso8601": [],
+    "document_category": "scanned-document",
+    "downloaded_at": "2026-02-22T04:54:31+00:00",
+    "etag": "\"c3d1030aa5b62836c754ba13130f65a4\"",
+    "extracted_dates": [],
+    "extracted_file_numbers": [
+      "EFTA00003438"
+    ],
+    "file_path": "data/raw/d149ee886642-utilities-efta00003438pdf/EFTA00003438.pdf",
+    "file_size_bytes": 905517,
+    "has_extractable_text": false,
+    "id": "d149ee886642-utilities-efta00003438pdf",
+    "is_official": true,
+    "last_modified": "Thu, 19 Feb 2026 23:13:56 GMT",
+    "license_or_terms": "as published by source",
+    "locations": [],
+    "mime_type": "application/pdf",
+    "notes": "DOJ Epstein Library disclosures released under the Epstein Files Transparency Act, including data set files and supplemental releases.",
+    "ocr_applied": false,
+    "pages": 1,
+    "pdf_type": "image",
+    "person_names": [],
+    "release_date": "2026-01-30",
+    "sha256": "d149ee8866420e93bf00f1053e447fabbfe1a7b186584bc46dc22bbbc91c2b50",
+    "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
+    "source_page": "https://www.justice.gov/epstein/doj-disclosures/data-set-3-files",
+    "source_url": "https://www.justice.gov/epstein/files/DataSet%203/EFTA00003438.pdf",
+    "sources": [
+      {
+        "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
+        "source_url": "https://www.justice.gov/epstein/doj-disclosures/data-set-3-files"
+      }
+    ],
+    "tags": [
+      "doj",
+      "epstein-library",
+      "doj-disclosures"
+    ],
+    "text_quality_score": 0,
+    "title": "Utilities \u2014 EFTA00003438.pdf"
+  },
+  {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
+    "case_numbers": [],
+    "content_disposition": "",
+    "dates_iso8601": [],
+    "document_category": "scanned-document",
+    "downloaded_at": "2026-02-22T04:54:33+00:00",
+    "etag": "\"03dc5422201e5ccd877e925c9152450f\"",
+    "extracted_dates": [],
+    "extracted_file_numbers": [
+      "EFTA00003439"
+    ],
+    "file_path": "data/raw/35fe64a09de1-utilities-efta00003439pdf/EFTA00003439.pdf",
+    "file_size_bytes": 1295403,
+    "has_extractable_text": false,
+    "id": "35fe64a09de1-utilities-efta00003439pdf",
+    "is_official": true,
+    "last_modified": "Thu, 19 Feb 2026 23:13:56 GMT",
+    "license_or_terms": "as published by source",
+    "locations": [],
+    "mime_type": "application/pdf",
+    "notes": "DOJ Epstein Library disclosures released under the Epstein Files Transparency Act, including data set files and supplemental releases.",
+    "ocr_applied": false,
+    "pages": 1,
+    "pdf_type": "image",
+    "person_names": [],
+    "release_date": "2026-01-30",
+    "sha256": "35fe64a09de1c8f4a20db14ee159f84c4eecd1f3a1a6acfec0373f445cc95f6f",
+    "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
+    "source_page": "https://www.justice.gov/epstein/doj-disclosures/data-set-3-files",
+    "source_url": "https://www.justice.gov/epstein/files/DataSet%203/EFTA00003439.pdf",
+    "sources": [
+      {
+        "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
+        "source_url": "https://www.justice.gov/epstein/doj-disclosures/data-set-3-files"
+      }
+    ],
+    "tags": [
+      "doj",
+      "epstein-library",
+      "doj-disclosures"
+    ],
+    "text_quality_score": 0,
+    "title": "Utilities \u2014 EFTA00003439.pdf"
+  },
+  {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
+    "case_numbers": [],
+    "content_disposition": "",
+    "dates_iso8601": [],
+    "document_category": "scanned-document",
+    "downloaded_at": "2026-02-22T04:54:35+00:00",
+    "etag": "\"d83435485f0c522aac0a3be8ad5a4617\"",
+    "extracted_dates": [],
+    "extracted_file_numbers": [
+      "EFTA00003440"
+    ],
+    "file_path": "data/raw/ed63ea426fd4-utilities-efta00003440pdf/EFTA00003440.pdf",
+    "file_size_bytes": 1015638,
+    "has_extractable_text": false,
+    "id": "ed63ea426fd4-utilities-efta00003440pdf",
+    "is_official": true,
+    "last_modified": "Thu, 19 Feb 2026 23:13:56 GMT",
+    "license_or_terms": "as published by source",
+    "locations": [],
+    "mime_type": "application/pdf",
+    "notes": "DOJ Epstein Library disclosures released under the Epstein Files Transparency Act, including data set files and supplemental releases.",
+    "ocr_applied": false,
+    "pages": 1,
+    "pdf_type": "image",
+    "person_names": [],
+    "release_date": "2026-01-30",
+    "sha256": "ed63ea426fd472c46d15d3ed3c6adcae9f08e316f752fd5a8b48030ed0bfa5e1",
+    "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
+    "source_page": "https://www.justice.gov/epstein/doj-disclosures/data-set-3-files",
+    "source_url": "https://www.justice.gov/epstein/files/DataSet%203/EFTA00003440.pdf",
+    "sources": [
+      {
+        "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
+        "source_url": "https://www.justice.gov/epstein/doj-disclosures/data-set-3-files"
+      }
+    ],
+    "tags": [
+      "doj",
+      "epstein-library",
+      "doj-disclosures"
+    ],
+    "text_quality_score": 0,
+    "title": "Utilities \u2014 EFTA00003440.pdf"
+  },
+  {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
+    "case_numbers": [],
+    "content_disposition": "",
+    "dates_iso8601": [],
+    "document_category": "scanned-document",
+    "downloaded_at": "2026-02-22T04:54:37+00:00",
+    "etag": "\"6afbc14a5504dddd4ed431767eeea8af\"",
+    "extracted_dates": [],
+    "extracted_file_numbers": [
+      "EFTA00003441"
+    ],
+    "file_path": "data/raw/7d90dcff5798-utilities-efta00003441pdf/EFTA00003441.pdf",
+    "file_size_bytes": 1369886,
+    "has_extractable_text": false,
+    "id": "7d90dcff5798-utilities-efta00003441pdf",
+    "is_official": true,
+    "last_modified": "Thu, 19 Feb 2026 23:13:56 GMT",
+    "license_or_terms": "as published by source",
+    "locations": [],
+    "mime_type": "application/pdf",
+    "notes": "DOJ Epstein Library disclosures released under the Epstein Files Transparency Act, including data set files and supplemental releases.",
+    "ocr_applied": false,
+    "pages": 1,
+    "pdf_type": "image",
+    "person_names": [],
+    "release_date": "2026-01-30",
+    "sha256": "7d90dcff5798d360cb3db79519eeeb8c2bb0930fe6bd28faa1a7975564bac717",
+    "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
+    "source_page": "https://www.justice.gov/epstein/doj-disclosures/data-set-3-files",
+    "source_url": "https://www.justice.gov/epstein/files/DataSet%203/EFTA00003441.pdf",
+    "sources": [
+      {
+        "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
+        "source_url": "https://www.justice.gov/epstein/doj-disclosures/data-set-3-files"
+      }
+    ],
+    "tags": [
+      "doj",
+      "epstein-library",
+      "doj-disclosures"
+    ],
+    "text_quality_score": 0,
+    "title": "Utilities \u2014 EFTA00003441.pdf"
+  },
+  {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
+    "case_numbers": [],
+    "content_disposition": "",
+    "dates_iso8601": [],
+    "document_category": "scanned-document",
+    "downloaded_at": "2026-02-22T04:54:39+00:00",
+    "etag": "\"f3983a3f19ab681b1de688b3e8d3b08b\"",
+    "extracted_dates": [],
+    "extracted_file_numbers": [
+      "EFTA00003488"
+    ],
+    "file_path": "data/raw/8200ddcac940-utilities-efta00003488pdf/EFTA00003488.pdf",
+    "file_size_bytes": 1041013,
+    "has_extractable_text": false,
+    "id": "8200ddcac940-utilities-efta00003488pdf",
+    "is_official": true,
+    "last_modified": "Thu, 19 Feb 2026 23:13:56 GMT",
+    "license_or_terms": "as published by source",
+    "locations": [],
+    "mime_type": "application/pdf",
+    "notes": "DOJ Epstein Library disclosures released under the Epstein Files Transparency Act, including data set files and supplemental releases.",
+    "ocr_applied": false,
+    "pages": 1,
+    "pdf_type": "image",
+    "person_names": [],
+    "release_date": "2026-01-30",
+    "sha256": "8200ddcac940f36a877f449a03ad2dbe404d6becc3b59fa34128ed876cfbb9b4",
+    "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
+    "source_page": "https://www.justice.gov/epstein/doj-disclosures/data-set-3-files",
+    "source_url": "https://www.justice.gov/epstein/files/DataSet%203/EFTA00003488.pdf",
+    "sources": [
+      {
+        "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
+        "source_url": "https://www.justice.gov/epstein/doj-disclosures/data-set-3-files"
+      }
+    ],
+    "tags": [
+      "doj",
+      "epstein-library",
+      "doj-disclosures"
+    ],
+    "text_quality_score": 0,
+    "title": "Utilities \u2014 EFTA00003488.pdf"
+  },
+  {
+    "auto_tags": [
+      "2020s",
+      "evidence-photo"
+    ],
+    "case_numbers": [],
+    "content_disposition": "",
+    "dates_iso8601": [],
+    "document_category": "scanned-document",
+    "downloaded_at": "2026-02-22T04:54:41+00:00",
+    "etag": "\"0ac816fa9e7ed97bcae15c911f21ece0\"",
+    "extracted_dates": [],
+    "extracted_file_numbers": [
+      "EFTA00003855"
+    ],
+    "file_path": "data/raw/9da165653289-utilities-efta00003855pdf/EFTA00003855.pdf",
+    "file_size_bytes": 128857,
+    "has_extractable_text": false,
+    "id": "9da165653289-utilities-efta00003855pdf",
+    "is_official": true,
+    "last_modified": "Thu, 19 Feb 2026 23:13:56 GMT",
+    "license_or_terms": "as published by source",
+    "locations": [],
+    "mime_type": "application/pdf",
+    "notes": "DOJ Epstein Library disclosures released under the Epstein Files Transparency Act, including data set files and supplemental releases.",
+    "ocr_applied": false,
+    "pages": 1,
+    "pdf_type": "image",
+    "person_names": [],
+    "release_date": "2026-01-30",
+    "sha256": "9da1656532897717a2b112bde819936c400d5c47d17385d132c2b89e68a6f971",
+    "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
+    "source_page": "https://www.justice.gov/epstein/doj-disclosures/data-set-3-files",
+    "source_url": "https://www.justice.gov/epstein/files/DataSet%203/EFTA00003855.pdf",
+    "sources": [
+      {
+        "source_name": "DOJ Epstein Library \u2014 DOJ Disclosures",
+        "source_url": "https://www.justice.gov/epstein/doj-disclosures/data-set-3-files"
+      }
+    ],
+    "tags": [
+      "doj",
+      "epstein-library",
+      "doj-disclosures"
+    ],
+    "text_quality_score": 0,
+    "title": "Utilities \u2014 EFTA00003855.pdf"
   }
 ]
